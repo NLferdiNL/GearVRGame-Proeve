@@ -1,22 +1,16 @@
 fileFormatVersion: 2
-guid: cfc1af434f1221e4abb358403e7989fd
-timeCreated: 1523470028
+guid: b9c3b70c7a12e8e40a4cde4776c1422f
+timeCreated: 1523520040
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: turret draai-effect
     400000: //RootNode
-    400002: turret draai-effect
     2100000: No Name
     2300000: //RootNode
-    2300002: turret draai-effect
     3300000: //RootNode
-    3300002: turret draai-effect
-    4300000: turret
-    4300002: turret draai-effect
-    7400000: Take 001
+    4300000: target-disc
     9500000: //RootNode
   externalObjects: {}
   materials:

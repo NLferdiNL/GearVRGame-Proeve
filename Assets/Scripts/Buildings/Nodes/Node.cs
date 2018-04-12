@@ -6,7 +6,7 @@ public class Node : MonoBehaviour
 {
     // This script will act as a "Node" or "Target" and when it is hit it will "charge" the "Tower" or "Building" its connected to.
 
-    public GameObject parentBuilding;
+    public Building parentBuilding;
 
     // _nodeMaxEnergy is called this way because: it tracks the amount of "Power" it passes to the "building".
     [SerializeField]
@@ -23,12 +23,23 @@ public class Node : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        parentBuilding = GetComponentInParent<GameObject>();
+        parentBuilding = GetComponentInParent<Building>();
+    }
+
+    public void OnHitStay()
+    {
+        parentBuilding.LvlOfPower = _energyBoost;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKey(KeyCode.T))
+        {
+            OnHitStay();
+        }
+
         if (_currentNodeEnergy >= _nodeMaxEnergy)
         {
             Destroy(gameObject);
