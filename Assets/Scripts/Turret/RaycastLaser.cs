@@ -23,17 +23,16 @@ public class RaycastLaser : MonoBehaviour {
         laserLine.SetWidth(0.1f, 0.25f);
         //
     }
-
-    void FixedUpdate() // Checks if person hit space or touched on phone and runs Shoot();
+    void Update()
     {
-        Debug.Log(isShooting);
         if (Input.GetKeyDown("space"))
         {
             if (isShooting)
             {
                 DisableEffects();
             }
-            else if(isShooting == false) {
+            else if (isShooting == false)
+            {
                 EnableEffects();
             }
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
@@ -42,11 +41,16 @@ public class RaycastLaser : MonoBehaviour {
                 {
                     DisableEffects();
                 }
-                else if (isShooting == false) {
+                else if (isShooting == false)
+                {
                     EnableEffects();
                 }
             }
         }
+    }
+
+    void FixedUpdate() // Checks if person hit space or touched on phone and runs Shoot();
+    {
         Shoot();
     }
     void DisableEffects() // Disables the laserLine.
