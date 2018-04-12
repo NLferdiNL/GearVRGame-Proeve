@@ -1,21 +1,28 @@
 fileFormatVersion: 2
-guid: 43e9cc5ae64c7fc4f8c5073bac60f9e5
-timeCreated: 1523522014
+guid: 8514afc6ab3489c4597b964ba60ef11f
+timeCreated: 1523530025
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Box002
-    100002: //RootNode
-    400000: Box002
-    400002: //RootNode
+    100000: animation-thing-1
+    100002: animation-thing-2
+    100004: building
+    100006: //RootNode
+    400000: animation-thing-1
+    400002: animation-thing-2
+    400004: building
+    400006: //RootNode
     2100000: No Name
-    2300000: Box002
-    2300002: //RootNode
-    3300000: Box002
-    3300002: //RootNode
-    4300000: graybox building 2
-    4300002: Box002
+    2300000: animation-thing-1
+    2300002: animation-thing-2
+    2300004: building
+    3300000: animation-thing-1
+    3300002: animation-thing-2
+    3300004: building
+    4300000: building
+    4300002: animation-thing-2
+    4300004: animation-thing-1
     7400000: Take 001
     9500000: //RootNode
   externalObjects: {}
@@ -48,7 +55,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.2
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -67,7 +74,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
