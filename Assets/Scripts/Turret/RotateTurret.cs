@@ -10,7 +10,7 @@ public class RotateTurret : MonoBehaviour {
     Quaternion targetRotation;
 
     public Transform target;
-    public float speed = 0.001f;
+    public float speed;
 
     float rotationTime;
 
@@ -24,7 +24,7 @@ public class RotateTurret : MonoBehaviour {
         relativePosition = target.position - transform.position;
         targetRotation = Quaternion.LookRotation(relativePosition);
 
-        rotationTime += Time.deltaTime * speed;
+        rotationTime = speed;
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationTime);
     }
 }

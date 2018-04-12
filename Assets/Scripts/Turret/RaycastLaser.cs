@@ -6,9 +6,7 @@ public class RaycastLaser : MonoBehaviour {
 
     public float range; // Sets Range of Line.
 
-    Ray shootRay; // Gets the Ray.
-    //RaycastHit shootHit;
-    //int shootableMask;
+    [SerializeField]LayerMask shootableMask;
 
     LineRenderer laserLine; // Line for the laser.
 
@@ -16,11 +14,10 @@ public class RaycastLaser : MonoBehaviour {
 
     void Awake() // Gets the laserLine component and enables it true at start of the scene.
     {
-        //shootableMask = LayerMask.GetMask("Shootable");
         laserLine = GetComponent<LineRenderer>();
         laserLine.enabled = true;
         range = 18;
-        laserLine.SetWidth(0.1f, 0.25f);
+        //laserLine.SetWidth(0.1f, 0.25f);
         //
     }
     void Update()
@@ -66,13 +63,23 @@ public class RaycastLaser : MonoBehaviour {
 
     void Shoot() // Creates the line visable in game if laserLine.enabled = true.
     {
-        //laserLine.enabled = true;
+        Ray ray = new Ray(transform.position, transform.forward);
+        RaycastHit hit;
+
         laserLine.SetPosition(0, transform.position);
 
-        shootRay.origin = transform.position;
-        shootRay.direction = transform.forward;
 
-        laserLine.SetPosition(1, shootRay.origin + shootRay.direction * range);
+        if (Physics.Raycast(ray, out hit, range, shootableMask))
+        {
+            laserLine.SetPosition(1, hit.point);
+            hit.collider.gameObject.SendMessage("OnHitStay", SendMessageOptions.DontRequireReceiver);
+        }
+        else {
+
+            //laserLine.enabled = true;
+
+            laserLine.SetPosition(1, ray.origin + ray.direction * range);
+        }
     }
 
 }
