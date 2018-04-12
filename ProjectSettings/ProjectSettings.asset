@@ -263,7 +263,11 @@ PlayerSettings:
   - m_BuildTarget: Android
     m_Enabled: 1
     m_Devices:
+<<<<<<< HEAD
     - cardboard
+=======
+    - Oculus
+>>>>>>> eb6c1c19820c9e77a97d237e47f61f6c1ed49847
   m_BuildTargetEnableVuforiaSettings: []
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
