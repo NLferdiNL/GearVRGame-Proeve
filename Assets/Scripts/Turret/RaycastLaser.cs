@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RaycastLaser : MonoBehaviour {
 
-    public float range = 16f; // Sets Range of Line.
+    public float range; // Sets Range of Line.
 
     Ray shootRay; // Gets the Ray.
     //RaycastHit shootHit;
@@ -19,11 +19,12 @@ public class RaycastLaser : MonoBehaviour {
         //shootableMask = LayerMask.GetMask("Shootable");
         laserLine = GetComponent<LineRenderer>();
         laserLine.enabled = true;
+        range = 18;
         laserLine.SetWidth(0.1f, 0.25f);
         //
     }
 
-    void Update() // Checks if person hit space or touched on phone and runs Shoot();
+    void FixedUpdate() // Checks if person hit space or touched on phone and runs Shoot();
     {
         Debug.Log(isShooting);
         if (Input.GetKeyDown("space"))

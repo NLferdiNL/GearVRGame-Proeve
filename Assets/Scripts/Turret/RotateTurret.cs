@@ -10,7 +10,7 @@ public class RotateTurret : MonoBehaviour {
     Quaternion targetRotation;
 
     public Transform target;
-    public float speed = 0.005f;
+    public float speed = 0.002f;
 
     float rotationTime;
 
