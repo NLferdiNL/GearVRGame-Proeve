@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -56,6 +56,7 @@ public class RaycastLaser : MonoBehaviour {
     void FixedUpdate() // Checks if person hit space or touched on phone and runs Shoot();
     {
         Shoot();
+
     }
     void DisableEffects() // Disables the laserLine.
     {
