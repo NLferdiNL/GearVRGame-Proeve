@@ -333,6 +333,18 @@ MonoBehaviour:
   _nodeMaxEnergy: 25
   _currentNodeEnergy: 0
   _energyBoost: 1
+--- !u!65 &428815426
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 428815420}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2419485, y: 1.2230806, z: 0.1963176}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &480096953
 Prefab:
   m_ObjectHideFlags: 0
@@ -418,6 +430,18 @@ MonoBehaviour:
   _nodeMaxEnergy: 25
   _currentNodeEnergy: 0
   _energyBoost: 1
+--- !u!65 &480096960
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 480096954}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2419486, y: 1.2230806, z: 0.1963176}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &500859517
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,6 +651,18 @@ MonoBehaviour:
   _nodeMaxEnergy: 25
   _currentNodeEnergy: 0
   _energyBoost: 1
+--- !u!65 &692202735
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 692202729}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2419487, y: 1.2230808, z: 0.19631769}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1406855968
 GameObject:
   m_ObjectHideFlags: 0
