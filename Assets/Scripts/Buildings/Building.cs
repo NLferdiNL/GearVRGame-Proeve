@@ -11,7 +11,7 @@ public class Building : MonoBehaviour, IDamagable
     public Animator buildingAnimator;
 
     // _lvlOfPower is called this way because: it tracks the amount of "Power" the "building" has.
-    private float _lvlOfPower = 100;
+    private float _lvlOfPower = 0;
 
     [SerializeField]
     private float _maxLvlOfPower = 100;
@@ -50,7 +50,6 @@ public class Building : MonoBehaviour, IDamagable
     // Use this for initialization
     void Start()
     {
-        _lvlOfPower = _maxLvlOfPower;
         if (buildingAnimator == null)
         {
             buildingAnimator = GetComponentInParent<Animator>();
