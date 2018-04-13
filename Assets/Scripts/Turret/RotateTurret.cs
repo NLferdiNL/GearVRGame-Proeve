@@ -6,17 +6,17 @@ public class RotateTurret : MonoBehaviour {
 
     //This script is to track where the camera center looks at and lerp the Turret to it.
 
-    Vector3 relativePosition;
+    Vector3 relativePosition; // Holds position of target.
     Quaternion targetRotation;
 
-    public Transform target;
-    public float speed;
+    public Transform target; // Target that script owner rotates to.
+    public float speed; // Speed of the rotation.
 
-    float rotationTime;
+    //float rotationTime;
 
     void FixedUpdate() // Makes the Lerp follows smoothly.
     {
-        TurretRotation();
+        TurretRotation(); // Rotate script owner at fixedupdate.
     }
 
     private void TurretRotation() // Lerps this object to look at target.
@@ -24,7 +24,7 @@ public class RotateTurret : MonoBehaviour {
         relativePosition = target.position - transform.position;
         targetRotation = Quaternion.LookRotation(relativePosition);
 
-        rotationTime = speed;
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationTime);
+        //rotationTime = speed;
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, speed);
     }
 }
