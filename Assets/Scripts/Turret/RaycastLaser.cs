@@ -1,8 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RaycastLaser : MonoBehaviour {
+
+    //This script creates the laser and the controls for space and touch.
 
     public float range; // Sets Range of Line.
 
@@ -21,6 +23,11 @@ public class RaycastLaser : MonoBehaviour {
         //
     }
     void Update()
+    {
+        TempControls();
+    }
+
+    void TempControls()
     {
         if (Input.GetKeyDown("space"))
         {
