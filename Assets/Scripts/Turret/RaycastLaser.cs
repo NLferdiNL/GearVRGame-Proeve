@@ -72,7 +72,7 @@ public class RaycastLaser : MonoBehaviour {
         if (Physics.Raycast(ray, out hit, range, shootableMask))
         {
             laserLine.SetPosition(1, hit.point);
-            hit.collider.gameObject.SendMessage("OnHitStay", SendMessageOptions.DontRequireReceiver);
+            hit.collider.gameObject.SendMessage("Heal", SendMessageOptions.DontRequireReceiver);
         }
         else {
 
