@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class SwarmNavigation : MonoBehaviour {
 
+	public enum NavigationState {
+		NoTarget = 0,
+		GoingToCenter = 1,
+		GoingToTarget = 2
+	}
+
 	// Use this for initialization
 	void Start () {
 		
