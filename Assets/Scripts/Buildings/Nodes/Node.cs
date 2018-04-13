@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,6 +42,18 @@ public class Node : MonoBehaviour, IDamagable
         parentBuilding = GetComponentInParent<Building>();
     }
     
+    // Use this for initialization
+    void Start()
+    {
+        parentBuilding = GetComponentInParent<Building>();
+    }
+
+    public void OnHitStay()
+    {
+        parentBuilding.LvlOfPower = _energyBoost;
+    }
+
+    // Update is called once per frame
     void Update()
     {
 
