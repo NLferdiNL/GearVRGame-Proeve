@@ -8,7 +8,7 @@ public class RaycastLaser : MonoBehaviour {
 
     public float range; // Sets Range of Line.
 
-    [SerializeField]LayerMask shootableMask;
+    [SerializeField]LayerMask hitMask;
 
     LineRenderer laserLine; // Line for the laser.
 
@@ -77,7 +77,7 @@ public class RaycastLaser : MonoBehaviour {
         laserLine.SetPosition(0, transform.position);
 
 
-        if (Physics.Raycast(ray, out hit, range, shootableMask))
+        if (Physics.Raycast(ray, out hit, range, hitMask))
         {
             laserLine.SetPosition(1, hit.point);
             hit.collider.gameObject.SendMessage("Heal", SendMessageOptions.DontRequireReceiver);
