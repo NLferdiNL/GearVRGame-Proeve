@@ -6,21 +6,19 @@ public class RaycastLaser : MonoBehaviour {
 
     //This script creates the laser and the controls for space and touch.
 
-    public float range; // Sets Range of Line.
+    [SerializeField] private float range; // Sets Range of Line.
 
-    [SerializeField]LayerMask hitMask;
+    [SerializeField] private LayerMask hitMask;
 
-    LineRenderer laserLine; // Line for the laser.
+    private LineRenderer laserLine; // Line for the laser.
 
-    bool isShooting = true;
+    private bool isShooting = true;
 
     void Awake() // Gets the laserLine component and enables it true at start of the scene.
     {
         laserLine = GetComponent<LineRenderer>();
         laserLine.enabled = true;
         range = 18;
-        //laserLine.SetWidth(0.1f, 0.25f);
-        //
     }
     void Update()
     {
@@ -83,9 +81,6 @@ public class RaycastLaser : MonoBehaviour {
             hit.collider.gameObject.SendMessage("Heal", 0, SendMessageOptions.DontRequireReceiver);
         }
         else {
-
-            //laserLine.enabled = true;
-
             laserLine.SetPosition(1, ray.origin + ray.direction * range);
         }
     }
