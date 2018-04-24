@@ -17,18 +17,30 @@ public class SwarmNavigation : MonoBehaviour {
 	Transform target;
 
 	[SerializeField]
-	Vector3 node;
+	Vector3 currentPathTarget;
 
 	[SerializeField]
 	float moveSpeed = 10f;
 
 	[SerializeField]
-	NavigationState navigationState = NavigationState.NoTarget;
+	NavigationState navigationState = NavigationState.ToNode;
+
+	public void SetPathTarget(Vector3 spawnPathTarget, bool setNavigationState = true) {
+		currentPathTarget = spawnPathTarget;
+		if(setNavigationState)
+			navigationState = NavigationState.ToNode;
+	}
+
+	public void SetTarget(Transform transform, bool setNavigationState = true) {
+		target = transform;
+		if(setNavigationState)
+			navigationState = NavigationState.UnknownPath;
+	}
 
 	private void FixedUpdate() {
 		if(nearCurrentTarget) {
 			if(navigationState == NavigationState.ToNode) {
-				if(Vector3.Distance(transform.position, node) <= 3) {
+				if(Vector3.Distance(transform.position, currentPathTarget) <= 3) {
 					navigationState = NavigationState.UnknownPath;
 				}
 			} else if(navigationState == NavigationState.NoTarget) {
@@ -41,7 +53,7 @@ public class SwarmNavigation : MonoBehaviour {
 						navigationState = NavigationState.ToTarget;
 					} else {
 						navigationState = NavigationState.ToNode;
-						node = NavMesh.GetNearestNodePos(target.position, transform.position);
+						currentPathTarget = NavMesh.GetNearestNodePos(target.position, transform.position);
 					}
 				} else {
 					navigationState = NavigationState.NoTarget;
@@ -51,7 +63,7 @@ public class SwarmNavigation : MonoBehaviour {
 
 		switch(navigationState) {
 			case NavigationState.ToNode:
-				MoveTo(node, 0);
+				MoveTo(currentPathTarget, 0);
 				break;
 			case NavigationState.ToTarget:
 				MoveTo(target.position, 5);
@@ -69,7 +81,8 @@ public class SwarmNavigation : MonoBehaviour {
 			nearCurrentTarget = true;
 			return;
 		}
-
+		
+		//Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation((target - transform.position)), Time.deltaTime);
 		transform.position += (target - transform.position).normalized * Time.deltaTime * moveSpeed;
 		transform.LookAt(target, Vector3.up);
 	}

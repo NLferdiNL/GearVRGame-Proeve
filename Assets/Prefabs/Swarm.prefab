@@ -4395,6 +4395,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e615622373e27f449e498a7bf3da5f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  currentPathTarget: {x: 0, y: 0, z: 0}
+  moveSpeed: 15
+  navigationState: 1
 --- !u!114 &114661444926144360
 MonoBehaviour:
   m_ObjectHideFlags: 1

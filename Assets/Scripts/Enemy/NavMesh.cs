@@ -73,8 +73,8 @@ public class NavMesh : MonoBehaviour {
 			if(currNodeDistanceToAgent < distanceToAgent && currNodeDistanceToTarget < distanceToTarget) {
 				if(!Physics.Linecast(agent, node.position)) {
 					distanceToTarget = currNodeDistanceToTarget;
-
 					distanceToAgent = currNodeDistanceToAgent;
+
 					nodePosToReturn = node.position;
 				}
 			}

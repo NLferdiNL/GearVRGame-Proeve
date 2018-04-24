@@ -26,6 +26,10 @@ public class Drone : MonoBehaviour {
 	}
 
 	public void Kill() {
+		if(dying)
+			return;
+
+		dying = true;
 		rb.isKinematic = false;
 		transform.parent = null;
 		smoke.Play();

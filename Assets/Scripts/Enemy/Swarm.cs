@@ -58,8 +58,10 @@ public class Swarm : MonoBehaviour, IDamagable {
 				_enemyBodies.RemoveAt(i);
 			}
 
-			if(_enemyBodies.Count == 0)
+			if(_enemyBodies.Count == 0) {
+				SwarmSpawner.currentEnemyCount--;
 				Destroy(gameObject);
+			}
 		}
 	}
 
