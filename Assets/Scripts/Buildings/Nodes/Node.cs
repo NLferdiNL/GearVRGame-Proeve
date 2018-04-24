@@ -21,7 +21,7 @@ public class Node : MonoBehaviour, IDamagable
     [SerializeField]
     private float _energyBoost = 1;
 
-    public int maxHealth
+    public int MaxHealth
     {
         get
         {
@@ -29,11 +29,11 @@ public class Node : MonoBehaviour, IDamagable
         }
     }
 
-    public int health
+    public int Health
     {
         get
         {
-            return parentBuilding.health;
+            return parentBuilding.Health;
         }
     }
     

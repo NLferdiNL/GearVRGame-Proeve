@@ -31,7 +31,7 @@ public class Building : MonoBehaviour, IDamagable
         }
     }
     
-    public int maxHealth
+    public int MaxHealth
     {
         get
         {
@@ -39,7 +39,7 @@ public class Building : MonoBehaviour, IDamagable
         }
     }
 
-    public int health
+    public int Health
     {
         get
         {

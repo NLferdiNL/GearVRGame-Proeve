@@ -13,13 +13,13 @@ public class Swarm : MonoBehaviour, IDamagable {
 
 	int _totalDrones = 0;
 
-	public int health {
+	public int Health {
 		get {
 			return _health;
 		}
 	}
 
-	public int maxHealth {
+	public int MaxHealth {
 		get {
 			return _maxHealth;
 		}
@@ -68,6 +68,6 @@ public class Swarm : MonoBehaviour, IDamagable {
 	}
 
 	private void OnMouseDown() {
-		Damage(maxHealth);
+		Damage(MaxHealth);
 	}
 }

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public interface IDamagable {
 
-	int maxHealth {
+	int MaxHealth {
 		get;
 	}
 
-	int health {
+	int Health {
 		get;
 	}
 
