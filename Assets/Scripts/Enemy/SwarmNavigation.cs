@@ -23,6 +23,9 @@ public class SwarmNavigation : MonoBehaviour {
 	float moveSpeed = 10f;
 
 	[SerializeField]
+	float rotationSpeed = 20f;
+
+	[SerializeField]
 	NavigationState navigationState = NavigationState.ToNode;
 
 	public void SetPathTarget(Vector3 spawnPathTarget, bool setNavigationState = true) {
@@ -82,8 +85,8 @@ public class SwarmNavigation : MonoBehaviour {
 			return;
 		}
 		
-		//Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation((target - transform.position)), Time.deltaTime);
-		transform.position += (target - transform.position).normalized * Time.deltaTime * moveSpeed;
-		transform.LookAt(target, Vector3.up);
+		transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation((target - transform.position)), Time.deltaTime * rotationSpeed);
+		transform.position += transform.forward * Time.deltaTime * moveSpeed; //(target - transform.position).normalized * Time.deltaTime * moveSpeed;
+		//transform.LookAt(target, Vector3.up);
 	}
 }

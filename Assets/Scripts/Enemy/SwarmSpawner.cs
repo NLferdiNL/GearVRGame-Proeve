@@ -34,12 +34,15 @@ public class SwarmSpawner : MonoBehaviour {
 	IEnumerator Start() {
 		while(!endWhileLoop) {
 			yield return new WaitForSeconds(timeBetweenSpawns);
-			if(spawnEnemy && currentEnemyCount < maxEnemies);
+			if(spawnEnemy)
 				SpawnEnemy();
 		}
 	}
 
 	void SpawnEnemy() {
+		if(currentEnemyCount >= maxEnemies)
+			return;
+
 		currentEnemyCount++;
 		GameObject enemyInstance = Instantiate(enemyPrefab, transform.forward * radius, Quaternion.identity);
 		enemyInstance.transform.LookAt(transform);
