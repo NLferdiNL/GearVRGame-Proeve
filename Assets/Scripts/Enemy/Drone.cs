@@ -7,7 +7,7 @@ public class Drone : MonoBehaviour {
 	bool inTheAir = true;
 
 	[SerializeField]
-	string groundLayer;
+	LayerMask groundLayer;
 
 	[SerializeField]
 	ParticleSystem smoke;
@@ -38,8 +38,9 @@ public class Drone : MonoBehaviour {
 	}
 
 	private void OnCollisionEnter(Collision coll) {
-		if(coll.gameObject.layer == LayerMask.NameToLayer(groundLayer)) {
+		if(((1 << coll.gameObject.layer) & groundLayer) != 0) {
 			inTheAir = false;
+			rb.isKinematic = true;
 		}
 	}
 
@@ -54,7 +55,6 @@ public class Drone : MonoBehaviour {
 		}
 
 		Instantiate(explosionParticles, transform.position, Quaternion.identity);
-		rb.isKinematic = true;
 		yield return new WaitForSeconds(5);
 		smoke.Stop();
 		Destroy(gameObject, 5);
