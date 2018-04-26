@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RaycastLaser : MonoBehaviour {
+public class RaycastLaser : MonoBehaviour
+{
 
     //This script creates the laser and the controls for space and touch.
 
     public float range; // Sets Range of Line.
 
-    [SerializeField]LayerMask hitMask;
+    [SerializeField]
+    LayerMask hitMask;
 
     LineRenderer laserLine; // Line for the laser.
 
@@ -82,7 +84,8 @@ public class RaycastLaser : MonoBehaviour {
             laserLine.SetPosition(1, hit.point);
             hit.collider.gameObject.SendMessage("Heal", 1, SendMessageOptions.DontRequireReceiver);
         }
-        else {
+        else
+        {
 
             //laserLine.enabled = true;
 
