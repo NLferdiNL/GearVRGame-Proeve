@@ -4337,7 +4337,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  smoke: {fileID: 0}
+  smoke: {fileID: 198706698447203510}
   explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
     type: 2}
 --- !u!114 &114180730535966444
@@ -4367,7 +4367,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  smoke: {fileID: 0}
+  smoke: {fileID: 198189343690142714}
   explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
     type: 2}
 --- !u!114 &114419279159696860
@@ -4384,7 +4384,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  smoke: {fileID: 0}
+  smoke: {fileID: 198118916435683736}
   explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
     type: 2}
 --- !u!114 &114462881333205798
@@ -4400,8 +4400,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
-  smoke: {fileID: 0}
+    m_Bits: 8388608
+  smoke: {fileID: 198238658659342138}
   explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
     type: 2}
 --- !u!114 &114580111811411552
@@ -4434,7 +4434,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  smoke: {fileID: 0}
+  smoke: {fileID: 198248094714850776}
   explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
     type: 2}
 --- !u!114 &114689569259198756
@@ -4451,7 +4451,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  smoke: {fileID: 0}
+  smoke: {fileID: 198619731651291386}
   explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
     type: 2}
 --- !u!114 &114813902604883462
@@ -4468,7 +4468,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  smoke: {fileID: 0}
+  smoke: {fileID: 198141919798815118}
   explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
     type: 2}
 --- !u!114 &114869888370728094
@@ -4485,7 +4485,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  smoke: {fileID: 0}
+  smoke: {fileID: 198877563374665924}
   explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
     type: 2}
 --- !u!114 &114884564158435540
@@ -4502,7 +4502,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  smoke: {fileID: 0}
+  smoke: {fileID: 198047454030732998}
   explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
     type: 2}
 --- !u!114 &114897996881586634

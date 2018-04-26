@@ -68,7 +68,7 @@ public class Swarm : MonoBehaviour, IDamagable {
 	public void Heal(int value) {
 		// So that the laser doesn't have to check and just heals enemies.
 		// Which harms them.
-		Damage(MaxHealth);
+		Damage(value);
 	}
 
 	private void OnMouseDown() {

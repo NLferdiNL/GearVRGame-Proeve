@@ -18,7 +18,7 @@ public class RaycastLaser : MonoBehaviour {
     {
         laserLine = GetComponent<LineRenderer>();
         laserLine.enabled = true;
-        range = 18;
+        //range = 18; y u do dis?
         //laserLine.SetWidth(0.1f, 0.25f);
         //
     }
@@ -80,7 +80,7 @@ public class RaycastLaser : MonoBehaviour {
         if (Physics.Raycast(ray, out hit, range, hitMask))
         {
             laserLine.SetPosition(1, hit.point);
-            hit.collider.gameObject.SendMessage("Heal", 0, SendMessageOptions.DontRequireReceiver);
+            hit.collider.gameObject.SendMessage("Heal", 1, SendMessageOptions.DontRequireReceiver);
         }
         else {
 
