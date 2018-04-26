@@ -58,13 +58,17 @@ public class Swarm : MonoBehaviour, IDamagable {
 				_enemyBodies.RemoveAt(i);
 			}
 
-			if(_enemyBodies.Count == 0)
+			if(_enemyBodies.Count == 0) {
+				SwarmSpawner.currentEnemyCount--;
 				Destroy(gameObject);
+			}
 		}
 	}
 
 	public void Heal(int value) {
-		// Do nothing.
+		// So that the laser doesn't have to check and just heals enemies.
+		// Which harms them.
+		Damage(value);
 	}
 
 	private void OnMouseDown() {

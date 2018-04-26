@@ -707,6 +707,7 @@ GameObject:
   - component: {fileID: 114180730535966444}
   - component: {fileID: 114580111811411552}
   - component: {fileID: 114082892935055294}
+  - component: {fileID: 54245520055986370}
   m_Layer: 21
   m_Name: Swarm
   m_TagString: Untagged
@@ -1879,7 +1880,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1647615563743034}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5917788, y: -0.026863098, z: 6.9328237}
+  m_LocalPosition: {x: 2.478362, y: 5.48, z: -2.1659524}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4977140890886300}
@@ -4006,6 +4007,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!54 &54245520055986370
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1647615563743034}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!54 &54322415851358172
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -4321,8 +4337,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  smoke: {fileID: 0}
-  explosionParticles: {fileID: 0}
+  smoke: {fileID: 198706698447203510}
+  explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
+    type: 2}
 --- !u!114 &114180730535966444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4350,8 +4367,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  smoke: {fileID: 0}
-  explosionParticles: {fileID: 0}
+  smoke: {fileID: 198189343690142714}
+  explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
+    type: 2}
 --- !u!114 &114419279159696860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4366,8 +4384,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  smoke: {fileID: 0}
-  explosionParticles: {fileID: 0}
+  smoke: {fileID: 198118916435683736}
+  explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
+    type: 2}
 --- !u!114 &114462881333205798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4381,9 +4400,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
-  smoke: {fileID: 0}
-  explosionParticles: {fileID: 0}
+    m_Bits: 8388608
+  smoke: {fileID: 198238658659342138}
+  explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
+    type: 2}
 --- !u!114 &114580111811411552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4395,6 +4415,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e615622373e27f449e498a7bf3da5f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  currentPathTarget: {x: 0, y: 0, z: 0}
+  moveSpeed: 15
+  rotationSpeed: 100
+  navigationState: 1
 --- !u!114 &114661444926144360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4409,8 +4434,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  smoke: {fileID: 0}
-  explosionParticles: {fileID: 0}
+  smoke: {fileID: 198248094714850776}
+  explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
+    type: 2}
 --- !u!114 &114689569259198756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4425,8 +4451,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  smoke: {fileID: 0}
-  explosionParticles: {fileID: 0}
+  smoke: {fileID: 198619731651291386}
+  explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
+    type: 2}
 --- !u!114 &114813902604883462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4441,8 +4468,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  smoke: {fileID: 0}
-  explosionParticles: {fileID: 0}
+  smoke: {fileID: 198141919798815118}
+  explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
+    type: 2}
 --- !u!114 &114869888370728094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4457,8 +4485,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  smoke: {fileID: 0}
-  explosionParticles: {fileID: 0}
+  smoke: {fileID: 198877563374665924}
+  explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
+    type: 2}
 --- !u!114 &114884564158435540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4473,8 +4502,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  smoke: {fileID: 0}
-  explosionParticles: {fileID: 0}
+  smoke: {fileID: 198047454030732998}
+  explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
+    type: 2}
 --- !u!114 &114897996881586634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4489,8 +4519,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  smoke: {fileID: 0}
-  explosionParticles: {fileID: 0}
+  smoke: {fileID: 198311102341498820}
+  explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
+    type: 2}
 --- !u!135 &135040091332877826
 SphereCollider:
   m_ObjectHideFlags: 1

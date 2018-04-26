@@ -7,7 +7,7 @@ public class Drone : MonoBehaviour {
 	bool inTheAir = true;
 
 	[SerializeField]
-	LayerMask groundLayer;
+	string groundLayer;
 
 	[SerializeField]
 	ParticleSystem smoke;
@@ -26,6 +26,10 @@ public class Drone : MonoBehaviour {
 	}
 
 	public void Kill() {
+		if(dying)
+			return;
+
+		dying = true;
 		rb.isKinematic = false;
 		transform.parent = null;
 		smoke.Play();
@@ -34,7 +38,7 @@ public class Drone : MonoBehaviour {
 	}
 
 	private void OnCollisionEnter(Collision coll) {
-		if(((1 << coll.gameObject.layer) & groundLayer) != 0) {
+		if(coll.gameObject.layer == LayerMask.NameToLayer(groundLayer)) {
 			inTheAir = false;
 		}
 	}

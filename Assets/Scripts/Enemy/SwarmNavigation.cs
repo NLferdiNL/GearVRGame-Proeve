@@ -11,58 +11,82 @@ public class SwarmNavigation : MonoBehaviour {
 		UnknownPath = 3
 	}
 
+	bool nearCurrentTarget = true;
+
 	[SerializeField]
 	Transform target;
 
 	[SerializeField]
-	Vector3 node;
+	Vector3 currentPathTarget;
 
 	[SerializeField]
 	float moveSpeed = 10f;
 
 	[SerializeField]
-	NavigationState navigationState = NavigationState.NoTarget;
+	float rotationSpeed = 20f;
+
+	[SerializeField]
+	NavigationState navigationState = NavigationState.ToNode;
+
+	public void SetPathTarget(Vector3 spawnPathTarget, bool setNavigationState = true) {
+		currentPathTarget = spawnPathTarget;
+		if(setNavigationState)
+			navigationState = NavigationState.ToNode;
+	}
+
+	public void SetTarget(Transform transform, bool setNavigationState = true) {
+		target = transform;
+		if(setNavigationState)
+			navigationState = NavigationState.UnknownPath;
+	}
 
 	private void FixedUpdate() {
-		if(navigationState == NavigationState.ToNode) {
-			if(Vector3.Distance(transform.position, node) <= 3) {
-				navigationState = NavigationState.UnknownPath;
-			}
-		} else if(navigationState == NavigationState.NoTarget) {
-			navigationState = target != null ? NavigationState.UnknownPath : NavigationState.NoTarget;
-		}
-
-		if(navigationState == NavigationState.UnknownPath) {
-			if(target != null) {
-				if(CheckDirectLine()) {
-					navigationState = NavigationState.ToTarget;
-				} else {
-					navigationState = NavigationState.ToNode;
-					node = NavMesh.GetNearestNodePos(target.position, transform.position);
+		if(nearCurrentTarget) {
+			if(navigationState == NavigationState.ToNode) {
+				if(Vector3.Distance(transform.position, currentPathTarget) <= 3) {
+					navigationState = NavigationState.UnknownPath;
 				}
-			} else {
-				navigationState = NavigationState.NoTarget;
+			} else if(navigationState == NavigationState.NoTarget) {
+				navigationState = target != null ? NavigationState.UnknownPath : NavigationState.NoTarget;
+			}
+
+			if(navigationState == NavigationState.UnknownPath) {
+				if(target != null) {
+					if(CheckDirectLine()) {
+						navigationState = NavigationState.ToTarget;
+					} else {
+						navigationState = NavigationState.ToNode;
+						currentPathTarget = NavMesh.GetNearestNodePos(target.position, transform.position);
+					}
+				} else {
+					navigationState = NavigationState.NoTarget;
+				}
 			}
 		}
 
 		switch(navigationState) {
 			case NavigationState.ToNode:
-				MoveTo(node);
+				MoveTo(currentPathTarget, 0);
 				break;
 			case NavigationState.ToTarget:
-				MoveTo(target.position);
+				MoveTo(target.position, 5);
 				break;
 		}
 	}
 
 	private bool CheckDirectLine() {
-
 		return !Physics.Linecast(transform.position, target.position);
 		//return !Physics.CapsuleCast(transform.position, target.position, transform.lossyScale.magnitude, (target.position - transform.position).normalized);
 	}
 
-	private void MoveTo(Vector3 target) {
-		transform.position += (target - transform.position).normalized * Time.deltaTime * moveSpeed;
-		transform.LookAt(target, Vector3.up);
+	private void MoveTo(Vector3 target, float minimumDistanceToTarget) {
+		if(Vector3.Distance(target, transform.position) < minimumDistanceToTarget) {
+			nearCurrentTarget = true;
+			return;
+		}
+		
+		transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation((target - transform.position)), Time.deltaTime * rotationSpeed);
+		transform.position += transform.forward * Time.deltaTime * moveSpeed; //(target - transform.position).normalized * Time.deltaTime * moveSpeed;
+		//transform.LookAt(target, Vector3.up);
 	}
 }

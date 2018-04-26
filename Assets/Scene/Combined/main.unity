@@ -922,7 +922,7 @@ Prefab:
     - target: {fileID: 114969181702630036, guid: 424899917f7c82c4888136aaf11a9943,
         type: 2}
       propertyPath: speed
-      value: 0.03
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 120163788446779286, guid: 424899917f7c82c4888136aaf11a9943,
         type: 2}
@@ -1001,6 +1001,11 @@ Prefab:
     - target: {fileID: 4942061408713262, guid: 424899917f7c82c4888136aaf11a9943, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114969181702630036, guid: 424899917f7c82c4888136aaf11a9943,
+        type: 2}
+      propertyPath: rotationLimit
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 424899917f7c82c4888136aaf11a9943, type: 2}
