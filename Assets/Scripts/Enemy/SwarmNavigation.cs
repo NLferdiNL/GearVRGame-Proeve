@@ -2,8 +2,6 @@
 using UnityEngine;
 
 public class SwarmNavigation : MonoBehaviour {
-	bool nearCurrentTarget = true;
-
 	[SerializeField]
 	Vector3 currentPathTarget;
 
@@ -38,13 +36,7 @@ public class SwarmNavigation : MonoBehaviour {
 	}
 
 	private void FixedUpdate() {
-		MoveTo(target, 5);
-
-		if(Vector3.Distance(target, transform.position) < 5) {
-			if(currentIndexInPath < path.Length - 1) {
-				currentIndexInPath++;
-			}
-		}
+		MoveTo(target, 2);
 	}
 
 	private bool CheckDirectLine() {
@@ -54,8 +46,7 @@ public class SwarmNavigation : MonoBehaviour {
 
 	private void MoveTo(Vector3 target, float minimumDistanceToTarget) {
 		if(Vector3.Distance(target, transform.position) < minimumDistanceToTarget) {
-			nearCurrentTarget = true;
-			return;
+			currentIndexInPath++;
 		}
 		
 		//transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation((target - transform.position)), Time.deltaTime * rotationSpeed);

@@ -42,6 +42,9 @@ public class RotateTurret : MonoBehaviour {
 		relativePosition = relativePosition.normalized;
 		Vector3 targetRotation = Quaternion.LookRotation(relativePosition).eulerAngles;
 
+		if(targetRotation.x > 44 && targetRotation.x < 180)
+			targetRotation.x = 44;
+
 		targetRotation.y = 0;
 		targetRotation.z = 0;
 
