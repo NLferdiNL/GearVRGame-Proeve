@@ -1,5 +1,6 @@
 ﻿using EnemyNav;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace EnemyNav {
@@ -62,11 +63,16 @@ public class SwarmSpawner : MonoBehaviour {
 	[SerializeField]
 	int maxEnemies = 40;
 
-	//DEFINITLY REPLACE THIS FOR A BETTER METHOD
-	static int currentEnemyCount = 0;
+	static List<Transform> enemies = new List<Transform>();
 
-	public static void EnemyDied() {
-		currentEnemyCount--;
+	static public Transform RandomEnemy {
+		get {
+			return enemies[Random.Range(0, enemies.Count)];
+		}
+	}
+
+	public static void EnemyDied(Transform transform) {
+		enemies.Remove(transform);
 	}
 
 	IEnumerator Start() {
@@ -84,11 +90,12 @@ public class SwarmSpawner : MonoBehaviour {
 	}
 
 	void SpawnEnemy() {
-		if(currentEnemyCount >= maxEnemies)
+		if(enemies.Count >= maxEnemies)
 			return;
 
-		currentEnemyCount++;
 		GameObject enemyInstance = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
 		enemyInstance.transform.LookAt(transform);
+
+		enemies.Add(enemyInstance.transform);
 	}
 }
