@@ -4,15 +4,15 @@ using UnityEngine;
 
 public interface IDamagable {
 
-	int MaxHealth {
+	float MaxHealth {
 		get;
 	}
 
-	int Health {
+	float Health {
 		get;
 	}
 
-	void Damage(int value);
+	void Damage(float value);
 
-	void Heal(int value);
+	void Heal(float value);
 }

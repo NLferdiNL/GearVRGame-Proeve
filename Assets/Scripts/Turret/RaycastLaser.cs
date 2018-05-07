@@ -2,27 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RaycastLaser : MonoBehaviour {
-
+public class RaycastLaser : MonoBehaviour
+{
     //This script creates the laser and the controls for space and touch.
 
     public float range; // Sets Range of Line.
 
-    [SerializeField]LayerMask hitMask;
+    [SerializeField]
+    LayerMask hitMask;
 
     LineRenderer laserLine; // Line for the laser.
 
-    bool isShooting = true;
+	[SerializeField]
+	float damagePerFrame = 1;
+
+	bool isShooting = true;
 
     void Awake() // Gets the laserLine component and enables it true at start of the scene.
     {
         laserLine = GetComponent<LineRenderer>();
         laserLine.enabled = true;
-        range = 18;
+        //range = 18; y u do dis?
         //laserLine.SetWidth(0.1f, 0.25f);
         //
     }
-    void Update()
+
+	void Update()
     {
         TempControls();
     }
@@ -80,9 +85,10 @@ public class RaycastLaser : MonoBehaviour {
         if (Physics.Raycast(ray, out hit, range, hitMask))
         {
             laserLine.SetPosition(1, hit.point);
-            hit.collider.gameObject.SendMessage("Heal", 0, SendMessageOptions.DontRequireReceiver);
+            hit.collider.gameObject.SendMessage("Heal", damagePerFrame, SendMessageOptions.DontRequireReceiver);
         }
-        else {
+        else
+        {
 
             //laserLine.enabled = true;
 

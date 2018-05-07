@@ -26,6 +26,10 @@ public class Drone : MonoBehaviour {
 	}
 
 	public void Kill() {
+		if(dying)
+			return;
+
+		dying = true;
 		rb.isKinematic = false;
 		transform.parent = null;
 		smoke.Play();
@@ -36,6 +40,7 @@ public class Drone : MonoBehaviour {
 	private void OnCollisionEnter(Collision coll) {
 		if(((1 << coll.gameObject.layer) & groundLayer) != 0) {
 			inTheAir = false;
+			rb.isKinematic = true;
 		}
 	}
 
@@ -50,7 +55,6 @@ public class Drone : MonoBehaviour {
 		}
 
 		Instantiate(explosionParticles, transform.position, Quaternion.identity);
-		rb.isKinematic = true;
 		yield return new WaitForSeconds(5);
 		smoke.Stop();
 		Destroy(gameObject, 5);
