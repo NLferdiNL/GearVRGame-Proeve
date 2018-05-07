@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using EnemyNav;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,6 +26,8 @@ public class SwarmAttack : MonoBehaviour {
 	[SerializeField]
 	float damagePerFrame = 1;
 
+	Transform targetToIgnore = null;
+
 	List<Collider> withinRange = new List<Collider>();
 
 	void Start () {
@@ -46,13 +49,13 @@ public class SwarmAttack : MonoBehaviour {
 	}
 
 	private void FixedUpdate() {
+		if(target == null)
+			return;
+
 		if(Vector3.Distance(target.position, transform.position) <= attackRange) {
 			target.SendMessage("Damage", damagePerFrame, SendMessageOptions.DontRequireReceiver);
-			if(swarmNavigation.NavigationState1 != SwarmNavigation.NavigationState.AttackingTarget)
-				swarmNavigation.NavigationState1 = SwarmNavigation.NavigationState.AttackingTarget;
-		} else {
-			if(swarmNavigation.NavigationState1 == SwarmNavigation.NavigationState.AttackingTarget)
-				swarmNavigation.NavigationState1 = SwarmNavigation.NavigationState.UnknownPath;
+			if(swarmNavigation.enabled)
+				swarmNavigation.enabled = false;
 		}
 	}
 }
