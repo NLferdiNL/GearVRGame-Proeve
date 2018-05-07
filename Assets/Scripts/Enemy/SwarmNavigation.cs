@@ -1,30 +1,65 @@
-﻿using System.Collections;
+﻿using EnemyNav;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwarmNavigation : MonoBehaviour {
+namespace EnemyNav {
+	using UnityEngine.SceneManagement;
 
-	public enum NavigationState {
-		NoTarget = 0,
+	public enum NavigationStateEnum {
+		AttackingTarget = 0,
 		ToNode = 1,
-		ToTarget = 2,
-		AttackingTarget = 3,
-		UnknownPath = 4
+		UnknownPath = 2,
+		NoTarget = 3,
+		ToTarget = 4
 	}
 
+	[CreateAssetMenu]
+	public class Path : ScriptableObject {
+		private static Path[] allPaths = null;
+
+		public static Path[] AllPaths {
+			get {
+				if(allPaths == null) {
+					allPaths = Resources.LoadAll<Path>("Resources/Paths/" + SceneManager.GetActiveScene().name + "/");
+				}
+
+				return allPaths;
+			}
+		}
+
+		public static Path random {
+			get {
+				return AllPaths[UnityEngine.Random.Range(0, AllPaths.Length - 1)];
+			}
+		}
+		public Transform[] pathNodes;
+
+		public Transform this[int index] {
+			get {
+				return pathNodes[index];
+			}
+		}
+	}
+}
+
+public class SwarmNavigation : MonoBehaviour {
 	bool nearCurrentTarget = true;
-	
-	Transform target {
-		get {
-			return swarm.Target;
-		}
 
-		set {
-			swarm.Target = value;
-		}
-	}
+	[SerializeField]
+	Vector3 currentPathTarget;
 
-	public NavigationState NavigationState1 {
+	[SerializeField]
+	float moveSpeed = 10f;
+
+	[SerializeField]
+	Swarm swarm;
+
+	[SerializeField]
+	NavigationStateEnum navigationState;
+
+	public NavigationStateEnum NavigationState {
 		get {
 			return navigationState;
 		}
@@ -34,71 +69,60 @@ public class SwarmNavigation : MonoBehaviour {
 		}
 	}
 
-	[SerializeField]
-	Vector3 currentPathTarget;
+	int currentIndexInPath = 0;
 
-	[SerializeField]
-	float moveSpeed = 10f;
+	Transform target {
+		get {
+			return path[currentIndexInPath];
+		}
+	}
 
-	[SerializeField]
-	float rotationSpeed = 20f;
-
-	[SerializeField]
-	NavigationState navigationState = NavigationState.ToNode;
-
-	[SerializeField]
-	Swarm swarm;
+	Path path;
 
 	private void Start() {
 		swarm = GetComponent<Swarm>();
+
+		if(path == null) {
+			SetPath(Path.random);
+		}
 	}
 
-	// TODO: Move these to Swarm and add UnityEvents
-	public void SetPathTarget(Vector3 spawnPathTarget, bool setNavigationState = true) {
-		currentPathTarget = spawnPathTarget;
-		if(setNavigationState)
-			NavigationState1 = NavigationState.ToNode;
+	public void SetPath(Path path) {
+		this.path = path;
 	}
-
-	public void SetTarget(Transform transform, bool setNavigationState = true) {
-		target = transform;
-		if(setNavigationState)
-			NavigationState1 = NavigationState.UnknownPath;
-	}
-	// END TODO
 
 	private void FixedUpdate() {
-		if(NavigationState1 == NavigationState.AttackingTarget)
+		if(NavigationState == NavigationStateEnum.AttackingTarget)
 			return;
 
 		if(nearCurrentTarget) {
-			if(NavigationState1 == NavigationState.ToNode) {
+			if(NavigationState == NavigationStateEnum.ToNode) {
 				if(Vector3.Distance(transform.position, currentPathTarget) <= 3) {
-					NavigationState1 = NavigationState.UnknownPath;
+					NavigationState = NavigationStateEnum.UnknownPath;
 				}
-			} else if(NavigationState1 == NavigationState.NoTarget) {
-				NavigationState1 = target != null ? NavigationState.UnknownPath : NavigationState.NoTarget;
+			} else if(NavigationState == NavigationStateEnum.NoTarget) {
+				NavigationState = target != null ? NavigationStateEnum.UnknownPath : NavigationStateEnum.NoTarget;
 			}
 
-			if(NavigationState1 == NavigationState.UnknownPath) {
+			if(NavigationState == NavigationStateEnum.UnknownPath) {
 				if(target != null) {
 					if(CheckDirectLine()) {
-						NavigationState1 = NavigationState.ToTarget;
+						NavigationState = NavigationStateEnum.ToTarget;
 					} else {
-						NavigationState1 = NavigationState.ToNode;
+						NavigationState = NavigationStateEnum.ToNode;
 						currentPathTarget = NavMesh.GetNearestNodePos(target.position, transform.position);
 					}
 				} else {
-					NavigationState1 = NavigationState.NoTarget;
+					NavigationState = NavigationStateEnum.NoTarget;
 				}
 			}
 		}
 
-		switch(NavigationState1) {
-			case NavigationState.ToNode:
+		switch(NavigationState) {
+			case NavigationStateEnum.ToNode:
 				MoveTo(currentPathTarget, 0);
 				break;
-			case NavigationState.ToTarget:
+			case NavigationStateEnum.ToTarget:
 				MoveTo(target.position, 5);
 				break;
 		}

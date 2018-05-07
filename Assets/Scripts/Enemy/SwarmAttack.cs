@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using EnemyNav;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -48,11 +49,11 @@ public class SwarmAttack : MonoBehaviour {
 	private void FixedUpdate() {
 		if(Vector3.Distance(target.position, transform.position) <= attackRange) {
 			target.SendMessage("Damage", damagePerFrame, SendMessageOptions.DontRequireReceiver);
-			if(swarmNavigation.NavigationState1 != SwarmNavigation.NavigationState.AttackingTarget)
-				swarmNavigation.NavigationState1 = SwarmNavigation.NavigationState.AttackingTarget;
+			if(swarmNavigation.NavigationState != NavigationStateEnum.AttackingTarget)
+				swarmNavigation.NavigationState = NavigationStateEnum.AttackingTarget;
 		} else {
-			if(swarmNavigation.NavigationState1 == SwarmNavigation.NavigationState.AttackingTarget)
-				swarmNavigation.NavigationState1 = SwarmNavigation.NavigationState.UnknownPath;
+			if(swarmNavigation.NavigationState == NavigationStateEnum.AttackingTarget)
+				swarmNavigation.NavigationState = NavigationStateEnum.UnknownPath;
 		}
 	}
 }

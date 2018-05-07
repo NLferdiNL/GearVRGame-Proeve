@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using EnemyNav;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -46,9 +47,5 @@ public class SwarmSpawner : MonoBehaviour {
 		currentEnemyCount++;
 		GameObject enemyInstance = Instantiate(enemyPrefab, transform.forward * radius, Quaternion.identity);
 		enemyInstance.transform.LookAt(transform);
-
-		SwarmNavigation enemyInstanceNav = enemyInstance.GetComponent<SwarmNavigation>();
-		enemyInstanceNav.SetPathTarget(enemyInstance.transform.position + enemyInstance.transform.up * distanceUpBeforeTarget);
-		enemyInstanceNav.SetTarget(defaultTarget, false);
 	}
 }
