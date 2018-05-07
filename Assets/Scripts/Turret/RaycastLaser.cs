@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RaycastLaser : MonoBehaviour
 {
-
     //This script creates the laser and the controls for space and touch.
 
     public float range; // Sets Range of Line.
@@ -14,7 +13,10 @@ public class RaycastLaser : MonoBehaviour
 
     LineRenderer laserLine; // Line for the laser.
 
-    bool isShooting = true;
+	[SerializeField]
+	float damagePerFrame = 1;
+
+	bool isShooting = true;
 
     void Awake() // Gets the laserLine component and enables it true at start of the scene.
     {
@@ -24,7 +26,8 @@ public class RaycastLaser : MonoBehaviour
         //laserLine.SetWidth(0.1f, 0.25f);
         //
     }
-    void Update()
+
+	void Update()
     {
         TempControls();
     }
@@ -82,7 +85,7 @@ public class RaycastLaser : MonoBehaviour
         if (Physics.Raycast(ray, out hit, range, hitMask))
         {
             laserLine.SetPosition(1, hit.point);
-            hit.collider.gameObject.SendMessage("Heal", 1, SendMessageOptions.DontRequireReceiver);
+            hit.collider.gameObject.SendMessage("Heal", damagePerFrame, SendMessageOptions.DontRequireReceiver);
         }
         else
         {
