@@ -26,6 +26,8 @@ public class SwarmAttack : MonoBehaviour {
 	[SerializeField]
 	float damagePerFrame = 1;
 
+	Transform targetToIgnore = null;
+
 	List<Collider> withinRange = new List<Collider>();
 
 	void Start () {
@@ -47,13 +49,13 @@ public class SwarmAttack : MonoBehaviour {
 	}
 
 	private void FixedUpdate() {
+		if(target == null)
+			return;
+
 		if(Vector3.Distance(target.position, transform.position) <= attackRange) {
 			target.SendMessage("Damage", damagePerFrame, SendMessageOptions.DontRequireReceiver);
-			if(swarmNavigation.NavigationState != NavigationStateEnum.AttackingTarget)
-				swarmNavigation.NavigationState = NavigationStateEnum.AttackingTarget;
-		} else {
-			if(swarmNavigation.NavigationState == NavigationStateEnum.AttackingTarget)
-				swarmNavigation.NavigationState = NavigationStateEnum.UnknownPath;
+			if(swarmNavigation.enabled)
+				swarmNavigation.enabled = false;
 		}
 	}
 }

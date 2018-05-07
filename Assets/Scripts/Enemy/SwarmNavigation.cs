@@ -1,48 +1,5 @@
 ﻿using EnemyNav;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-namespace EnemyNav {
-	using UnityEngine.SceneManagement;
-
-	public enum NavigationStateEnum {
-		AttackingTarget = 0,
-		ToNode = 1,
-		UnknownPath = 2,
-		NoTarget = 3,
-		ToTarget = 4
-	}
-
-	[CreateAssetMenu]
-	public class Path : ScriptableObject {
-		private static Path[] allPaths = null;
-
-		public static Path[] AllPaths {
-			get {
-				if(allPaths == null) {
-					allPaths = Resources.LoadAll<Path>("Resources/Paths/" + SceneManager.GetActiveScene().name + "/");
-				}
-
-				return allPaths;
-			}
-		}
-
-		public static Path random {
-			get {
-				return AllPaths[UnityEngine.Random.Range(0, AllPaths.Length - 1)];
-			}
-		}
-		public Transform[] pathNodes;
-
-		public Transform this[int index] {
-			get {
-				return pathNodes[index];
-			}
-		}
-	}
-}
 
 public class SwarmNavigation : MonoBehaviour {
 	bool nearCurrentTarget = true;
@@ -56,22 +13,9 @@ public class SwarmNavigation : MonoBehaviour {
 	[SerializeField]
 	Swarm swarm;
 
-	[SerializeField]
-	NavigationStateEnum navigationState;
+	int currentIndexInPath = 1;
 
-	public NavigationStateEnum NavigationState {
-		get {
-			return navigationState;
-		}
-
-		set {
-			navigationState = value;
-		}
-	}
-
-	int currentIndexInPath = 0;
-
-	Transform target {
+	Vector3 target {
 		get {
 			return path[currentIndexInPath];
 		}
@@ -85,6 +29,8 @@ public class SwarmNavigation : MonoBehaviour {
 		if(path == null) {
 			SetPath(Path.random);
 		}
+
+		transform.position = path[0];
 	}
 
 	public void SetPath(Path path) {
@@ -92,44 +38,17 @@ public class SwarmNavigation : MonoBehaviour {
 	}
 
 	private void FixedUpdate() {
-		if(NavigationState == NavigationStateEnum.AttackingTarget)
-			return;
+		MoveTo(target, 5);
 
-		if(nearCurrentTarget) {
-			if(NavigationState == NavigationStateEnum.ToNode) {
-				if(Vector3.Distance(transform.position, currentPathTarget) <= 3) {
-					NavigationState = NavigationStateEnum.UnknownPath;
-				}
-			} else if(NavigationState == NavigationStateEnum.NoTarget) {
-				NavigationState = target != null ? NavigationStateEnum.UnknownPath : NavigationStateEnum.NoTarget;
+		if(Vector3.Distance(target, transform.position) < 5) {
+			if(currentIndexInPath < path.Length - 1) {
+				currentIndexInPath++;
 			}
-
-			if(NavigationState == NavigationStateEnum.UnknownPath) {
-				if(target != null) {
-					if(CheckDirectLine()) {
-						NavigationState = NavigationStateEnum.ToTarget;
-					} else {
-						NavigationState = NavigationStateEnum.ToNode;
-						currentPathTarget = NavMesh.GetNearestNodePos(target.position, transform.position);
-					}
-				} else {
-					NavigationState = NavigationStateEnum.NoTarget;
-				}
-			}
-		}
-
-		switch(NavigationState) {
-			case NavigationStateEnum.ToNode:
-				MoveTo(currentPathTarget, 0);
-				break;
-			case NavigationStateEnum.ToTarget:
-				MoveTo(target.position, 5);
-				break;
 		}
 	}
 
 	private bool CheckDirectLine() {
-		return !Physics.Linecast(transform.position, target.position);
+		return !Physics.Linecast(transform.position, target);
 		//return !Physics.CapsuleCast(transform.position, target.position, transform.lossyScale.magnitude, (target.position - transform.position).normalized);
 	}
 

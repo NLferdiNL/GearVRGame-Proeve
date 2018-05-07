@@ -1,16 +1,47 @@
 ﻿using EnemyNav;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+namespace EnemyNav {
+	using System;
+
+	[Serializable]
+	public class Path {
+		public static Path random {
+			get {
+				return SwarmSpawner.Paths[UnityEngine.Random.Range(0, SwarmSpawner.Paths.Length - 1)];
+			}
+		}
+
+		public Vector3[] pathNodes;
+
+		public Vector3 this[int index] {
+			get {
+				return pathNodes[index];
+			}
+		}
+
+		public int Length {
+			get {
+				return pathNodes.Length;
+			}
+		}
+	}
+}
 
 public class SwarmSpawner : MonoBehaviour {
 
-	[SerializeField]
-	float radius = 10;
+	public static Path[] Paths {
+		get {
+			return instance.paths;
+		}
+	}
+
+	static SwarmSpawner instance;
 
 	[SerializeField]
-	float distanceUpBeforeTarget = 15;
-
+	Path[] paths = new Path[0];
+	
 	[SerializeField]
 	float timeBetweenSpawns = 5f;
 
@@ -24,15 +55,18 @@ public class SwarmSpawner : MonoBehaviour {
 	GameObject enemyPrefab;
 
 	[SerializeField]
-	Transform defaultTarget;
-
-	[SerializeField]
 	int maxEnemies = 10;
 
 	//DEFINITLY REPLACE THIS FOR A BETTER METHOD
-	public static int currentEnemyCount = 0;
+	static int currentEnemyCount = 0;
+
+	public static void EnemyDied() {
+		currentEnemyCount--;
+	}
 
 	IEnumerator Start() {
+		instance = this;
+
 		while(!endWhileLoop) {
 			yield return new WaitForSeconds(timeBetweenSpawns);
 			if(spawnEnemy)
@@ -45,7 +79,7 @@ public class SwarmSpawner : MonoBehaviour {
 			return;
 
 		currentEnemyCount++;
-		GameObject enemyInstance = Instantiate(enemyPrefab, transform.forward * radius, Quaternion.identity);
+		GameObject enemyInstance = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
 		enemyInstance.transform.LookAt(transform);
 	}
 }
