@@ -21,7 +21,7 @@ public class Node : MonoBehaviour, IDamagable
     [SerializeField]
     private float energyBoost = 1;
 
-    public int MaxHealth
+    public float MaxHealth
     {
         get
         {
@@ -29,7 +29,7 @@ public class Node : MonoBehaviour, IDamagable
         }
     }
 
-    public int Health
+    public float Health
     {
         get
         {
@@ -66,17 +66,17 @@ public class Node : MonoBehaviour, IDamagable
         }
     }
 
-    public void Damage(int value)
+    public void Damage(float value)
     {
         parentBuilding.Damage(value);
     }
 
-    public void Heal(int value = 0)
+    public void Heal(float value = 0)
     {
         if (value == 0)
-            value = (int)energyBoost;
+            value = energyBoost;
         else
-            value *= (int)energyBoost;
+            value *= energyBoost;
 
         parentBuilding.Heal(value);
     }

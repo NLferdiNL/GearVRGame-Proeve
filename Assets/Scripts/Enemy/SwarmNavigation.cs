@@ -8,13 +8,31 @@ public class SwarmNavigation : MonoBehaviour {
 		NoTarget = 0,
 		ToNode = 1,
 		ToTarget = 2,
-		UnknownPath = 3
+		AttackingTarget = 3,
+		UnknownPath = 4
 	}
 
 	bool nearCurrentTarget = true;
+	
+	Transform target {
+		get {
+			return swarm.Target;
+		}
 
-	[SerializeField]
-	Transform target;
+		set {
+			swarm.Target = value;
+		}
+	}
+
+	public NavigationState NavigationState1 {
+		get {
+			return navigationState;
+		}
+
+		set {
+			navigationState = value;
+		}
+	}
 
 	[SerializeField]
 	Vector3 currentPathTarget;
@@ -28,43 +46,55 @@ public class SwarmNavigation : MonoBehaviour {
 	[SerializeField]
 	NavigationState navigationState = NavigationState.ToNode;
 
+	[SerializeField]
+	Swarm swarm;
+
+	private void Start() {
+		swarm = GetComponent<Swarm>();
+	}
+
+	// TODO: Move these to Swarm and add UnityEvents
 	public void SetPathTarget(Vector3 spawnPathTarget, bool setNavigationState = true) {
 		currentPathTarget = spawnPathTarget;
 		if(setNavigationState)
-			navigationState = NavigationState.ToNode;
+			NavigationState1 = NavigationState.ToNode;
 	}
 
 	public void SetTarget(Transform transform, bool setNavigationState = true) {
 		target = transform;
 		if(setNavigationState)
-			navigationState = NavigationState.UnknownPath;
+			NavigationState1 = NavigationState.UnknownPath;
 	}
+	// END TODO
 
 	private void FixedUpdate() {
+		if(NavigationState1 == NavigationState.AttackingTarget)
+			return;
+
 		if(nearCurrentTarget) {
-			if(navigationState == NavigationState.ToNode) {
+			if(NavigationState1 == NavigationState.ToNode) {
 				if(Vector3.Distance(transform.position, currentPathTarget) <= 3) {
-					navigationState = NavigationState.UnknownPath;
+					NavigationState1 = NavigationState.UnknownPath;
 				}
-			} else if(navigationState == NavigationState.NoTarget) {
-				navigationState = target != null ? NavigationState.UnknownPath : NavigationState.NoTarget;
+			} else if(NavigationState1 == NavigationState.NoTarget) {
+				NavigationState1 = target != null ? NavigationState.UnknownPath : NavigationState.NoTarget;
 			}
 
-			if(navigationState == NavigationState.UnknownPath) {
+			if(NavigationState1 == NavigationState.UnknownPath) {
 				if(target != null) {
 					if(CheckDirectLine()) {
-						navigationState = NavigationState.ToTarget;
+						NavigationState1 = NavigationState.ToTarget;
 					} else {
-						navigationState = NavigationState.ToNode;
+						NavigationState1 = NavigationState.ToNode;
 						currentPathTarget = NavMesh.GetNearestNodePos(target.position, transform.position);
 					}
 				} else {
-					navigationState = NavigationState.NoTarget;
+					NavigationState1 = NavigationState.NoTarget;
 				}
 			}
 		}
 
-		switch(navigationState) {
+		switch(NavigationState1) {
 			case NavigationState.ToNode:
 				MoveTo(currentPathTarget, 0);
 				break;
@@ -85,8 +115,8 @@ public class SwarmNavigation : MonoBehaviour {
 			return;
 		}
 		
-		transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation((target - transform.position)), Time.deltaTime * rotationSpeed);
+		//transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation((target - transform.position)), Time.deltaTime * rotationSpeed);
 		transform.position += transform.forward * Time.deltaTime * moveSpeed; //(target - transform.position).normalized * Time.deltaTime * moveSpeed;
-		//transform.LookAt(target, Vector3.up);
+		transform.LookAt(target, Vector3.up);
 	}
 }

@@ -1633,6 +1633,7 @@ GameObject:
   - component: {fileID: 4651653533741642}
   - component: {fileID: 33633981643213610}
   - component: {fileID: 135671123820456872}
+  - component: {fileID: 135341648892642626}
   - component: {fileID: 23503503080628564}
   - component: {fileID: 114180730535966444}
   - component: {fileID: 114580111811411552}
@@ -3683,7 +3684,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1647615563743034}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.56, y: 10.61, z: -3.92}
+  m_LocalPosition: {x: -27.725239, y: 0.17558193, z: -53.65419}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4836459885457980}
@@ -8550,6 +8551,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bf44f335c140be41b25ac060cab6d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  swarm: {fileID: 114180730535966444}
+  attackRange: 25
+  damagePerFrame: 0.25
 --- !u!114 &114116055541777956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8579,6 +8583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
+  target: {fileID: 0}
   _enemyBodies: []
 --- !u!114 &114210288707797958
 MonoBehaviour:
@@ -8710,11 +8715,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e615622373e27f449e498a7bf3da5f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   currentPathTarget: {x: 0, y: 0, z: 0}
   moveSpeed: 15
   rotationSpeed: 100
   navigationState: 1
+  swarm: {fileID: 114180730535966444}
 --- !u!114 &114603888430116186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8946,6 +8951,18 @@ SphereCollider:
   m_GameObject: {fileID: 1152275601490582}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &135341648892642626
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1647615563743034}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5

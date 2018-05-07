@@ -60,7 +60,8 @@ GameObject:
   - component: {fileID: 23955368080746064}
   - component: {fileID: 95051105652814668}
   - component: {fileID: 114694966177969482}
-  m_Layer: 0
+  - component: {fileID: 65251266986778300}
+  m_Layer: 24
   m_Name: graybox-building-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,8 +131,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1853162724857802}
-  m_LocalRotation: {x: -0, y: -0.67802554, z: -0, w: 0.7350384}
-  m_LocalPosition: {x: -4.1, y: 5.48, z: 31.9}
+  m_LocalRotation: {x: 0, y: -0.03332963, z: 0, w: 0.9994445}
+  m_LocalPosition: {x: 29.3, y: 5.48, z: -4.4}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4401543326268766}
@@ -303,6 +304,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1503866773422558}
   m_Mesh: {fileID: 4300000, guid: 643fbc41ddd6c45408a32eec0afa9194, type: 3}
+--- !u!65 &65251266986778300
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1853162724857802}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.786473, y: 6.5573325, z: 3.7808304}
+  m_Center: {x: 0, y: 3.2786663, z: 0}
 --- !u!65 &65453499398134282
 BoxCollider:
   m_ObjectHideFlags: 1

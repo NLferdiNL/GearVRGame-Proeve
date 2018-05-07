@@ -33,7 +33,7 @@ public class Building : MonoBehaviour, IDamagable
         }
     }
     
-    public int MaxHealth
+    public float MaxHealth
     {
         get
         {
@@ -41,7 +41,7 @@ public class Building : MonoBehaviour, IDamagable
         }
     }
 
-    public int Health
+    public float Health
     {
         get
         {
@@ -65,13 +65,19 @@ public class Building : MonoBehaviour, IDamagable
         buildingAnimator.SetFloat("amountOfPower", lvlOfPower / 100);
     }
 
-    public void Damage(int value)
+    public void Damage(float value)
     {
         lvlOfPower -= value;
+
+		if(lvlOfPower < 0)
+			lvlOfPower = 0;
     }
 
-    public void Heal(int value)
+    public void Heal(float value)
     {
         lvlOfPower += value;
+
+		if(lvlOfPower > maxLvlOfPower)
+			lvlOfPower = maxLvlOfPower;
     }
 }
