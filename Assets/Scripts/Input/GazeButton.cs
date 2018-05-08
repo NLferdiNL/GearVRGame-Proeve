@@ -17,7 +17,6 @@ public class GazeButton : MonoBehaviour {
 	[SerializeField]
 	float maxTime = 3;
 
-	[SerializeField]
 	float currTime = 0;
 
 	float normalizedCurrTime {
