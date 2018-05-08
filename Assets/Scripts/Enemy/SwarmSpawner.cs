@@ -65,11 +65,22 @@ public class SwarmSpawner : MonoBehaviour {
 
 	static List<Transform> enemies = new List<Transform>();
 
-	static public Transform RandomEnemy {
+	public static Transform RandomEnemy {
 		get {
+            if (enemies.Count == 0)
+                return null;
+
 			return enemies[Random.Range(0, enemies.Count)];
 		}
 	}
+
+    public static bool EnemiesAvailable
+    {
+        get
+        {
+            return enemies.Count > 0;
+        }
+    }
 
 	public static void EnemyDied(Transform transform) {
 		enemies.Remove(transform);
