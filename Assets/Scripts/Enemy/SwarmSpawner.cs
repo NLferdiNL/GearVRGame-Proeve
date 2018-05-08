@@ -1,5 +1,6 @@
 ﻿using EnemyNav;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace EnemyNav {
@@ -9,7 +10,7 @@ namespace EnemyNav {
 	public class Path {
 		public static Path random {
 			get {
-				return SwarmSpawner.Paths[UnityEngine.Random.Range(0, SwarmSpawner.Paths.Length - 1)];
+				return SwarmSpawner.Paths[UnityEngine.Random.Range(0, SwarmSpawner.Paths.Length)];
 			}
 		}
 
@@ -40,8 +41,13 @@ public class SwarmSpawner : MonoBehaviour {
 	static SwarmSpawner instance;
 
 	[SerializeField]
+	int enemyPerWaveIncrease = 2;
+
+	int currentWave = 1;
+
+	[SerializeField]
 	Path[] paths = new Path[0];
-	
+
 	[SerializeField]
 	float timeBetweenSpawns = 5f;
 
@@ -55,13 +61,18 @@ public class SwarmSpawner : MonoBehaviour {
 	GameObject enemyPrefab;
 
 	[SerializeField]
-	int maxEnemies = 10;
+	int maxEnemies = 40;
 
-	//DEFINITLY REPLACE THIS FOR A BETTER METHOD
-	static int currentEnemyCount = 0;
+	static List<Transform> enemies = new List<Transform>();
 
-	public static void EnemyDied() {
-		currentEnemyCount--;
+	static public Transform RandomEnemy {
+		get {
+			return enemies[Random.Range(0, enemies.Count)];
+		}
+	}
+
+	public static void EnemyDied(Transform transform) {
+		enemies.Remove(transform);
 	}
 
 	IEnumerator Start() {
@@ -69,17 +80,22 @@ public class SwarmSpawner : MonoBehaviour {
 
 		while(!endWhileLoop) {
 			yield return new WaitForSeconds(timeBetweenSpawns);
-			if(spawnEnemy)
-				SpawnEnemy();
+			if(spawnEnemy) {
+				for(int i = 0; i < currentWave * enemyPerWaveIncrease; i++) {
+					SpawnEnemy();
+				}
+				currentWave++;
+			}
 		}
 	}
 
 	void SpawnEnemy() {
-		if(currentEnemyCount >= maxEnemies)
+		if(enemies.Count >= maxEnemies)
 			return;
 
-		currentEnemyCount++;
 		GameObject enemyInstance = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
 		enemyInstance.transform.LookAt(transform);
+
+		enemies.Add(enemyInstance.transform);
 	}
 }
