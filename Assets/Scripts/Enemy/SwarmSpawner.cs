@@ -63,29 +63,6 @@ public class SwarmSpawner : MonoBehaviour {
 	[SerializeField]
 	int maxEnemies = 40;
 
-	static List<Transform> enemies = new List<Transform>();
-
-	public static Transform RandomEnemy {
-		get {
-            if (enemies.Count == 0)
-                return null;
-
-			return enemies[Random.Range(0, enemies.Count)];
-		}
-	}
-
-    public static bool EnemiesAvailable
-    {
-        get
-        {
-            return enemies.Count > 0;
-        }
-    }
-
-	public static void EnemyDied(Transform transform) {
-		enemies.Remove(transform);
-	}
-
 	IEnumerator Start() {
 		instance = this;
 
@@ -101,12 +78,12 @@ public class SwarmSpawner : MonoBehaviour {
 	}
 
 	void SpawnEnemy() {
-		if(enemies.Count >= maxEnemies)
+		if(SwarmContainer.Count >= maxEnemies)
 			return;
 
 		GameObject enemyInstance = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
 		enemyInstance.transform.LookAt(transform);
 
-		enemies.Add(enemyInstance.transform);
+		SwarmContainer.Add(enemyInstance.transform);
 	}
 }

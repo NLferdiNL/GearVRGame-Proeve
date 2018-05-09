@@ -59,10 +59,10 @@ public class RotateTurret : MonoBehaviour {
         {
             yield return new WaitUntil(() => target == null);
 
-            target = SwarmSpawner.RandomEnemy;
+            target = SwarmContainer.RandomEnemy;
 
             if (target == null)
-                yield return new WaitUntil(() => SwarmSpawner.EnemiesAvailable);
+                yield return new WaitUntil(() => SwarmContainer.EnemiesAvailable);
         }
     }
 }
