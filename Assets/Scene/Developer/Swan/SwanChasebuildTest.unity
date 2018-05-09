@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1.0654094, g: 0.798262, b: 0.2308394, a: 1}
+  m_IndirectSpecularColor: {r: 0.68572956, g: 0.046819963, b: 0.3338455, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -201,14 +201,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd8463baea091a74595387dff47fa039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 60
-  distanceUpBeforeTarget: 35
+  enemyPerWaveIncrease: 2
+  paths: []
   timeBetweenSpawns: 7
   spawnEnemy: 1
   endWhileLoop: 0
   enemyPrefab: {fileID: 1647615563743034, guid: 67fa3c225b9244045ad2d472a9f861e1,
     type: 2}
-  defaultTarget: {fileID: 1951946184}
   maxEnemies: 5
 --- !u!1001 &241777230
 Prefab:
@@ -1137,6 +1136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationLimit: 0
   holdCurrentObject: {fileID: 0}
+  turnPiece: {fileID: 0}
   target: {fileID: 1811753219}
   speed: 55
 --- !u!1001 &685173475
@@ -1330,7 +1330,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e852a38c72f5a946a0054f6bc9b92fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: []
 --- !u!1001 &994401611
 Prefab:
   m_ObjectHideFlags: 0
@@ -1822,6 +1821,7 @@ MonoBehaviour:
   hitMask:
     serializedVersion: 2
     m_Bits: 4278190079
+  damagePerFrame: 1
 --- !u!1001 &1285601491
 Prefab:
   m_ObjectHideFlags: 0
