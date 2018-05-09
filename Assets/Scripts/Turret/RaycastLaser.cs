@@ -22,9 +22,6 @@ public class RaycastLaser : MonoBehaviour
     {
         laserLine = GetComponent<LineRenderer>();
         laserLine.enabled = true;
-        //range = 18; y u do dis?
-        //laserLine.SetWidth(0.1f, 0.25f);
-        //
     }
 
 	void Update()
@@ -89,9 +86,6 @@ public class RaycastLaser : MonoBehaviour
         }
         else
         {
-
-            //laserLine.enabled = true;
-
             laserLine.SetPosition(1, ray.origin + ray.direction * range);
         }
     }
