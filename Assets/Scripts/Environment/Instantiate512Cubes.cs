@@ -5,13 +5,13 @@ using UnityEngine;
 public class Instantiate512Cubes : MonoBehaviour {
     public GameObject SampleCubePrefab;
     [SerializeField] 
-    private GameObject[] sampleCube = new GameObject[512];
+    private GameObject[] sampleCube = new GameObject[512]; //Amount of cubes that scale with the audio for visual representation. Max amount of cubes you can put in is 512
     [SerializeField]
     private float maxScale;
     [SerializeField]
-    private float amountListeners = 512f;
+    private float amountListeners = 512f; //this is where you can put in how many audiocubes you want, the max you can put in is 512 and the minimum is 0.
     [SerializeField]
-    private float circleDegree = 360f;
+    private float circleDegree = 360f; //the degrees of how far you want it to span round in degrees. 360 for it to span a full circle, and 90 for example to span a quater of a circle
 
 	// Use this for initialization
 	void Start () {

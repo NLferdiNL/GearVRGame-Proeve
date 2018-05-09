@@ -802,8 +802,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   maxScale: 1000
-  amountListeners: 128
-  circleDegree: 90
+  amountListeners: 512
+  circleDegree: 360
 --- !u!4 &1401611666
 Transform:
   m_ObjectHideFlags: 0
