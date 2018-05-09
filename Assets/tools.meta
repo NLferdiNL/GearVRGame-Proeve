@@ -1,7 +1,11 @@
 fileFormatVersion: 2
 guid: ebf82f62b07be604ba26d3a619f2cce5
 folderAsset: yes
+<<<<<<< HEAD:Assets/tools.meta
 timeCreated: 1523456318
+=======
+timeCreated: 1525771554
+>>>>>>> 074d6b2e613eecc5a2913d530635fd9e8b76e75a:Assets/GoogleVR/Demos/Shaders.meta
 licenseType: Free
 DefaultImporter:
   externalObjects: {}

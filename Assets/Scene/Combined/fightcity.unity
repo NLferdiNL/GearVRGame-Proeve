@@ -1443,11 +1443,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 480a5cb9e9e25de42bcb942f3c82dbab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationLimit: 0
-  holdCurrentObject: {fileID: 0}
   turnPiece: {fileID: 712051709}
   target: {fileID: 1811753219}
   speed: 55
+  isIndependant: 0
 --- !u!1 &557198622
 GameObject:
   m_ObjectHideFlags: 0

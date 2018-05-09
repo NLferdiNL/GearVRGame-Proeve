@@ -1,7 +1,11 @@
 fileFormatVersion: 2
 guid: cf360cf5a20398143a29e833e87b0814
 folderAsset: yes
+<<<<<<< HEAD:Assets/tools/lib/monitor-x86.meta
 timeCreated: 1523456319
+=======
+timeCreated: 1525771554
+>>>>>>> 074d6b2e613eecc5a2913d530635fd9e8b76e75a:Assets/GoogleVR/Legacy/Editor.meta
 licenseType: Free
 DefaultImporter:
   externalObjects: {}

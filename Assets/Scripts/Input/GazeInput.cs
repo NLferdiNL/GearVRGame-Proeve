@@ -21,16 +21,18 @@ public class GazeInput : MonoBehaviour {
 			} else {
 				if(currentTarget != null) {
 					OnRaycastExit(currentTarget);
-				}
+                    currentTarget = null;
+                }
 
-				currentTarget = hit.collider;
+                currentTarget = hit.collider;
 				OnRaycastEnter(currentTarget);
 			}
 		} else {
 			if(currentTarget != null) {
 				OnRaycastExit(currentTarget);
-			}
-		}
+                currentTarget = null;
+            }
+        }
 	}
 
 	private void OnRaycastEnter(Collider other) {

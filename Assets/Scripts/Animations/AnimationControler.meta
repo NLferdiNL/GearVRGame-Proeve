@@ -1,7 +1,11 @@
 fileFormatVersion: 2
 guid: 53117353cea9ae148a150fd816e18f56
 folderAsset: yes
+<<<<<<< HEAD:Assets/Scripts/Animations/AnimationControler.meta
 timeCreated: 1525848749
+=======
+timeCreated: 1525771555
+>>>>>>> 074d6b2e613eecc5a2913d530635fd9e8b76e75a:Assets/GoogleVR/Demos/Scripts.meta
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
