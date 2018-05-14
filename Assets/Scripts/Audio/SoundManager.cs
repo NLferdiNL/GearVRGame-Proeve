@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
 
-    public List<AudioSource> Sfx;
-    public List<AudioSource> Music;
+    private List<AudioSource> sfx;
 
-    void Awake()
+    public List<AudioSource> Sfx
     {
+        get { return sfx; }
     }
+    private List<AudioSource> music;
 
-    void Tutorial()
+    public List<AudioSource> Music
     {
-
+        get { return music; }
     }
 }
