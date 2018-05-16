@@ -1,18 +1,16 @@
 fileFormatVersion: 2
-guid: ae7f3511f3d5deb428746b27d9d53b0e
-timeCreated: 1525691362
+guid: 3df94bc29a6b4734793322d2854321ef
+timeCreated: 1526462716
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: secondary material
-    2100002: base material
-    2100004: licht
+    2100000: base material
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Object002
+    4300000: Drone-heavy
   externalObjects: {}
   materials:
     importMaterials: 1
