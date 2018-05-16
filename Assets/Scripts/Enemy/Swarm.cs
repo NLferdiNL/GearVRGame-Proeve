@@ -4,22 +4,35 @@ using UnityEngine;
 
 public class Swarm : MonoBehaviour, IDamagable {
 
-	int _health = 100;
+	float _health = 100;
 
 	[SerializeField]
-	int _maxHealth = 100;
+	float _maxHealth = 100;
 
 	float _dronesPerHitPoint = 0;
 
 	int _totalDrones = 0;
 
-	public int health {
+	[SerializeField]
+	Transform target;
+	
+	// TODO: Add proper methods for changing this.
+	public Transform Target {
+		get {
+			return target;
+		}
+		set {
+			target = value;
+		}
+	}
+
+	public float Health {
 		get {
 			return _health;
 		}
 	}
 
-	public int maxHealth {
+	public float MaxHealth {
 		get {
 			return _maxHealth;
 		}
@@ -42,7 +55,7 @@ public class Swarm : MonoBehaviour, IDamagable {
 		_dronesPerHitPoint = _health / _totalDrones;
 	}
 
-	public void Damage(int value) {
+	public void Damage(float value) {
 		// 66 health
 		// 10 damage
 		// 6 drones over
@@ -58,16 +71,20 @@ public class Swarm : MonoBehaviour, IDamagable {
 				_enemyBodies.RemoveAt(i);
 			}
 
-			if(_enemyBodies.Count == 0)
+			if(_enemyBodies.Count == 0) {
+				SwarmContainer.Remove(transform);
 				Destroy(gameObject);
+			}
 		}
 	}
 
-	public void Heal(int value) {
-		// Do nothing.
+	public void Heal(float value) {
+		// So that the laser doesn't have to check and just heals enemies.
+		// Which harms them.
+		Damage(value);
 	}
 
 	private void OnMouseDown() {
-		Damage(maxHealth);
+		Damage(MaxHealth);
 	}
 }
