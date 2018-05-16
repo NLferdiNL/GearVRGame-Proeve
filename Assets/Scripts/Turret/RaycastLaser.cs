@@ -1,15 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.Analytics;
 
 public class RaycastLaser : MonoBehaviour
 {
     //This script creates the laser and the controls for space and touch.
-
+    
     public float range; // Sets Range of Line.
 
     [SerializeField] LayerMask hitMask;
+    
 
     LineRenderer laserLine; // Line for the laser.
 
@@ -76,7 +78,13 @@ public class RaycastLaser : MonoBehaviour
     {
         if (isShooting)
         {
-            //SoundManager   
+            //SoundManager.Sfx[0].Play();
+            
+                        
+        }
+        else if(isShooting == false)
+        {
+            //SoundManager.Sfx[1].Play();
         }
     }
 
