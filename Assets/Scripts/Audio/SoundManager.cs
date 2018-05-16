@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour {
+public class SoundManager : MonoBehaviour
+{
 
-    private List<AudioSource> sfx;
+    [SerializeField] private static List<AudioSource> sfx;
 
-    public List<AudioSource> Sfx
+    [SerializeField] public static List<AudioSource> Sfx
     {
         get { return sfx; }
     }
-    private List<AudioSource> music;
 
-    public List<AudioSource> Music
+    [SerializeField] private static List<AudioSource> music;
+
+    [SerializeField] public static List<AudioSource> Music
     {
         get { return music; }
     }
