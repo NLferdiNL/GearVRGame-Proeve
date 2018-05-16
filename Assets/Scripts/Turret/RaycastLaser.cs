@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class RaycastLaser : MonoBehaviour
 {
@@ -8,13 +9,11 @@ public class RaycastLaser : MonoBehaviour
 
     public float range; // Sets Range of Line.
 
-    [SerializeField]
-    LayerMask hitMask;
+    [SerializeField] LayerMask hitMask;
 
     LineRenderer laserLine; // Line for the laser.
 
-	[SerializeField]
-	float damagePerFrame = 1;
+	[SerializeField] float damagePerFrame = 1;
 
 	bool isShooting = true;
 
@@ -55,6 +54,8 @@ public class RaycastLaser : MonoBehaviour
         }
     }
 
+
+
     void FixedUpdate() // Checks if person hit space or touched on phone and runs Shoot();
     {
         Shoot();
@@ -69,6 +70,14 @@ public class RaycastLaser : MonoBehaviour
     {
         laserLine.enabled = true;
         isShooting = true;
+    }
+
+    void LaserSfx()
+    {
+        if (isShooting)
+        {
+            //SoundManager   
+        }
     }
 
     void Shoot() // Creates the line visable in game if laserLine.enabled = true.
