@@ -21,6 +21,8 @@ public class Building : MonoBehaviour, IDamagable
     public Color startColour;
     public Color andColour;
 
+    // This needs a Unity Event handeler
+
     public float LvlOfPower
     {
         get

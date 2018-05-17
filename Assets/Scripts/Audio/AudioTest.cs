@@ -10,6 +10,8 @@ public class AudioTest : MonoBehaviour {
 
 	public float amplify = 2;
 
+	public float barSpeed = 4;
+
 	public Color color = Color.red;
 
 	[SerializeField]
@@ -24,7 +26,7 @@ public class AudioTest : MonoBehaviour {
 	}
 
 	private void FixedUpdate() {
-		animator.SetFloat("time", AudioData.GetFloat(range) * amplify);
+		animator.SetFloat("time", Mathf.MoveTowards(animator.GetFloat("time"), AudioData.GetFloat(range) * amplify, Time.deltaTime * barSpeed));
 		mat.color = color;
 	}
 }

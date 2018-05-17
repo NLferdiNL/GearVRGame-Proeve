@@ -240,6 +240,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 0
+  amplify: 2
+  barSpeed: 4
   color: {r: 1, g: 0, b: 0, a: 1}
   meshRenderer1: {fileID: 23210493202700090}
   meshRenderer2: {fileID: 23270770362391128}

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class AudioVolumeHolder : MonoBehaviour
 {
-    private static int musicVolume;
-    private static int sfxVolume;
+    private float musicVolume;
+    private float sfxVolume;
 
-    public int MusicVolume
+    
+    public float MusicVolume
     {
         get
         {
@@ -15,11 +16,11 @@ public class AudioVolumeHolder : MonoBehaviour
         }
         set
         {
-            value = musicVolume;
+            musicVolume = value;
         }
     }
 
-    public int SfxVolume
+    public float SfxVolume
     {
         get
         {
@@ -27,7 +28,7 @@ public class AudioVolumeHolder : MonoBehaviour
         }
         set
         {
-            value = sfxVolume;
+            sfxVolume = value;
         }
     }
 }
