@@ -8,154 +8,157 @@ public class Tutorial : MonoBehaviour
     [SerializeField] private AudioMixer MixerManager;
     [SerializeField] private SoundManager SM;
 
-    private bool nextBuilding;
-
+    public bool Building1;
+    public bool Building2;
+    public bool Building3;
+    public bool BuildingMid1;
+    public bool BuildingMid2;
+    public bool BuildingMid3;
+    public bool BuildingStartEnd;
+    public bool BuildingEndless;
     //[0] = start song || [5] = start mid section || [13] = start drop || [15] = start end loop.
 
     void Start()
     {
-        SM.MusicSender[0].Play(); // Fade1
-        //Waitforseconds or till this one is done
-        Debug.Log(SM.MusicSender[0].clip.name);
-        Debug.Log(SM.MusicSender[1].clip.name);
-        Debug.Log(SM.MusicSender[2].clip.name);
-        Debug.Log(SM.MusicSender[3].clip.name);
-        Debug.Log(SM.MusicSender[4].clip.name);
-        Debug.Log(SM.MusicSender[5].clip.name);
-        Debug.Log(SM.MusicSender[6].clip.name);
-        Debug.Log(SM.MusicSender[7].clip.name);
-        Debug.Log(SM.MusicSender[8].clip.name);
-        Debug.Log(SM.MusicSender[9].clip.name);
-        Debug.Log(SM.MusicSender[10].clip.name);
-        Debug.Log(SM.MusicSender[11].clip.name);
-        Debug.Log(SM.MusicSender[12].clip.name);
-        Debug.Log(SM.MusicSender[13].clip.name);
-        Debug.Log(SM.MusicSender[14].clip.name);
-        Debug.Log(SM.MusicSender[15].clip.name);
-        Debug.Log(SM.MusicSender[16].clip.name);
-        Debug.Log(SM.MusicSender[17].clip.name);
+        //SM.MusicSender[0].Play(); // Fade1
+        FirstBuilding();
     }
-
     void FirstBuilding()
     {
-        SM.MusicSender[1].Play(); // Fade2
         StartCoroutine(BuildingOne());
-        if (!nextBuilding)// Check unity event
-        {
-            BroadcastMessage("EndGame");
-        }
     }
     void SecondBuilding()
     {
-        SM.MusicSender[2].Play(); // FadeVocals
         StartCoroutine(BuildingTwo());
-        if (!nextBuilding)// Check unity event
-        {
-            BroadcastMessage("EndGame");
-        }
     }
     void ThirdBuilding()
     {
-        SM.MusicSender[4].Play(); // Buildup into
-        SM.MusicSender[5].Play(); // Drop
         StartCoroutine(BuildingThree());
-        if (!nextBuilding)// Check unity event
-        {
-            BroadcastMessage("EndGame");
-        }
+    }
+
+    void BetweenThirdAndMid()
+    {
+        StartCoroutine(InBetween());
     }
 
     IEnumerator BuildingOne()
     {
+        SM.MusicSender[1].Play(); // Fade2
+        yield return new WaitForSeconds(SM.MusicSender[1].clip.length);
+        if (Building1)
+        {
+            SecondBuilding();
+            yield break;
+        } // Fade2
+        else
+        {
+            Debug.Log("YaFuckedIt");
+            yield return null;
+            
+        }
         // Delegate
-        yield return null;
     }
     IEnumerator BuildingTwo()
     {
+        SM.MusicSender[2].Play(); // FadeVocals
+        yield return new WaitForSeconds(SM.MusicSender[2].clip.length);
+        if (Building2)
+        {
+            ThirdBuilding();
+            yield break;
+        }
+        else
+        {
+            Debug.Log("YaFuckedIt");
+            yield return null;
+        }
         // Delegate
-        yield return null;
     }
     IEnumerator BuildingThree()
     {
+        SM.MusicSender[3].Play(); // Buildup into
+        yield return new WaitForSeconds(SM.MusicSender[4].clip.length);
+        if (Building3)
+        {
+            BetweenThirdAndMid();
+            yield break;
+        }
+        else
+        {
+            Debug.Log("YaFuckedIt");
+            yield return null;
+        }
         // Delegate
-        yield return null;
+    }
+
+    IEnumerator InBetween()
+    {
+        SM.MusicSender[4].Play();
+        yield return new WaitForSeconds(SM.MusicSender[4].clip.length);
+        SM.MusicSender[5].Play();
+        yield return new WaitForSeconds(SM.MusicSender[5].clip.length);
+        MidSectionOne();
     }
 
     void MidSectionOne()
     {
-        SM.MusicSender[6].Play(); // Mid1
         StartCoroutine(Mid1());
     }
     void MidSectionTwo()
     {
-        SM.MusicSender[7].Play(); // Mid2
         StartCoroutine(Mid2());
     }
     void MidSectionThree()
     {
-        SM.MusicSender[8].Play(); // Mid3
         StartCoroutine(Mid3());
     }
 
     void StartSurvivalMode()
     {
-        SM.MusicSender[9].Play(); // MidBuild
-        SM.MusicSender[10].Play(); // MidBuildVocals
-        SM.MusicSender[11].Play(); // MidBuild2
-        SM.MusicSender[12].Play(); // MidbuildPlus
-        SM.MusicSender[13].Play(); // MidBuildPlus2
-        SM.MusicSender[14].Play(); // Drop
+        StartCoroutine(SurvivalStart());
     }
 
     IEnumerator SurvivalStart()
     {
-        SM.MusicSender[9].Play(); // MidBuild
-        if (!SM.MusicSender[9].isPlaying)
-        {
-            SM.MusicSender[10].Play(); // MidBuildVocals
-            if (!SM.MusicSender[10].isPlaying)
-            {
-                SM.MusicSender[11].Play(); // MidBuild2
-                if (!SM.MusicSender[11].isPlaying)
-                {
-                    SM.MusicSender[12].Play(); // MidbuildPlus
-                    if (!SM.MusicSender[12].isPlaying)
-                    {
-                        SM.MusicSender[13].Play(); // MidBuildPlus2
-                        if (!SM.MusicSender[13].isPlaying)
-                        {
-                            SM.MusicSender[14].Play(); // Drop
-                            if (!SM.MusicSender[14].isPlaying)
-                            {
-                                StartEndlessSurvival();
-                                yield return null;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        StartCoroutine(SurvivalStart());
+        SM.MusicSender[9].Play(); // 
+        yield return new WaitForSeconds(SM.MusicSender[9].clip.length);
+        SM.MusicSender[10].Play(); // 
+        yield return new WaitForSeconds(SM.MusicSender[10].clip.length);
+        SM.MusicSender[11].Play(); // 
+        yield return new WaitForSeconds(SM.MusicSender[11].clip.length);
+        SM.MusicSender[12].Play(); // 
+        yield return new WaitForSeconds(SM.MusicSender[12].clip.length);
+        SM.MusicSender[13].Play(); // 
+        yield return new WaitForSeconds(SM.MusicSender[13].clip.length);
+        SM.MusicSender[14].Play(); // 
+        yield return new WaitForSeconds(SM.MusicSender[14].clip.length);
+        StartEndlessSurvival();
+    }
+
+    IEnumerator SurvivalEndless()
+    {
+        SM.MusicSender[15].Play(); // 
+        yield return new WaitForSeconds(SM.MusicSender[15].clip.length);
+        SM.MusicSender[16].Play(); // 
+        yield return new WaitForSeconds(SM.MusicSender[16].clip.length);
+        SM.MusicSender[17].Play(); // 
+        yield return new WaitForSeconds(SM.MusicSender[17].clip.length);
+        StartCoroutine(SurvivalEndless());
     }
 
     void StartEndlessSurvival()
     {
-        SM.MusicSender[15].Play(); // EndLoop
-        SM.MusicSender[16].Play(); // EndLoop2
-        SM.MusicSender[17].Play(); // EndLoopRust
+        StartCoroutine(SurvivalEndless());
     }
 
     IEnumerator Mid1()
     {
-        if (!SM.MusicSender[6].isPlaying == false)
+        SM.MusicSender[6].Play(); // Mid1
+        yield return new WaitForSeconds(SM.MusicSender[6].clip.length);
+        if (BuildingMid1)
         {
-            SM.MusicSender[6].Play();
-            StartCoroutine(Mid1());
-        }
-        if (nextBuilding)
-        {
-            MidSectionTwo();
-            yield return null;
+                MidSectionTwo();
+                yield return null;
         }
         else
         {
@@ -164,12 +167,9 @@ public class Tutorial : MonoBehaviour
     }
     IEnumerator Mid2()
     {
-        if (!SM.MusicSender[7].isPlaying == false)
-        {
-            SM.MusicSender[7].Play();
-            StartCoroutine(Mid2());
-        }
-        if (nextBuilding)
+        SM.MusicSender[7].Play(); // Mid2
+        yield return new WaitForSeconds(SM.MusicSender[7].clip.length);
+        if (BuildingMid2)
         {
             MidSectionThree();
             yield return null;
@@ -181,12 +181,9 @@ public class Tutorial : MonoBehaviour
     }
     IEnumerator Mid3()
     {
-        if (!SM.MusicSender[8].isPlaying == false)
-        {
-            SM.MusicSender[8].Play();
-            StartCoroutine(Mid3());
-        }
-        if (nextBuilding)
+        SM.MusicSender[8].Play(); // Mid3
+        yield return new WaitForSeconds(SM.MusicSender[8].clip.length);
+        if (BuildingMid3)
         {
             StartSurvivalMode();
             yield return null;
