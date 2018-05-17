@@ -158,6 +158,26 @@ Prefab:
       value: 
       objectReference: {fileID: 1249278764823766, guid: 50da81008c47a3643ad72c3126e0f632,
         type: 2}
+    - target: {fileID: 82694663385794720, guid: bdf2c04c8175d1a4da502994deed7db7,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f91eef076c7aff468ba054b65cb636f, type: 3}
+    - target: {fileID: 114022545607165186, guid: bdf2c04c8175d1a4da502994deed7db7,
+        type: 2}
+      propertyPath: audioRange
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477441438779606, guid: bdf2c04c8175d1a4da502994deed7db7,
+        type: 2}
+      propertyPath: width
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477441438779606, guid: bdf2c04c8175d1a4da502994deed7db7,
+        type: 2}
+      propertyPath: moduloDivider
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bdf2c04c8175d1a4da502994deed7db7, type: 2}
   m_IsPrefabParent: 0
@@ -201,8 +221,8 @@ Camera:
   m_GameObject: {fileID: 666553649}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -235,13 +255,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 666553649}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.12278779, y: -0.6963643, z: 0.12278779, w: 0.6963643}
+  m_LocalPosition: {x: 16.84, y: 5, z: 12.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 20, y: -90, z: 0}
 --- !u!1 &932284108
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,6 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a50f2c8aa4456948bbedaece2ffa4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioRange: 1024
 --- !u!82 &932284110
 AudioSource:
   m_ObjectHideFlags: 0
@@ -283,7 +304,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 31df1cb86e7db184a91bf2c5baf47f39, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6f91eef076c7aff468ba054b65cb636f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -380,6 +401,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa1fc5fcc76b076488b1f567827a4166, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  width: 50
+  moduloDivider: 1
   audioTestPrefab: {fileID: 1249278764823766, guid: 50da81008c47a3643ad72c3126e0f632,
     type: 2}
 --- !u!1 &940201123
