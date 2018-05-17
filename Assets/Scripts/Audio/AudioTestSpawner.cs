@@ -5,17 +5,22 @@ using UnityEngine;
 public class AudioTestSpawner : MonoBehaviour {
 
 	[SerializeField]
-	int width = 100;
+	int width = 500;
+
+	[SerializeField]
+	int moduloDivider = 2;
 
 	[SerializeField]
 	GameObject audioTestPrefab;
 
 	void Start () {
 		for(int i = 0; i < width; i++) {
-			int range = i;
+			int range = i - i % moduloDivider;
 
-			if(i > width / 2)
+			if(i > width / 2) {
 				range = width - i;
+				range = range - range % moduloDivider;
+			}
 
 			GameObject cube = Instantiate(audioTestPrefab, transform);
 			cube.transform.position = cube.transform.forward * .25f * i;
