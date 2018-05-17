@@ -21,16 +21,9 @@ public class SoundManager : MonoBehaviour
         
     }
 
-    void SetFloat()
-    {
-        
-        MixerManager.SetFloat("Music", 10);
-    }
-
     void Start()
     {
         music[0].Play();
         music[0].loop = true;
-        SetFloat();
     }
 }
