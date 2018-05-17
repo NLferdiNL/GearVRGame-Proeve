@@ -6,11 +6,14 @@ using UnityEngine;
 
 public class AudioVisualization : MonoBehaviour {
     AudioSource audioSource;
-    public static float[] Samples = new float[512]; //The amount of audio frequency the script will read.
+	[SerializeField]
+	int range = 512;
+    public static float[] Samples; //The amount of audio frequency the script will read.
 
     // Use this for initialization
     void Start() {
-        audioSource = GetComponent<AudioSource>();
+		Samples = new float[range];
+		audioSource = GetComponent<AudioSource>();
 
     }
 	
