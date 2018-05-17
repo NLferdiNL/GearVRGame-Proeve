@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Drone-normal-mat
+  m_Name: DroneFastMat
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP
   m_LightmapFlags: 1
@@ -35,15 +35,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 8a098fcf31681504f85fc57d5d740068, type: 3}
+        m_Texture: {fileID: 2800000, guid: dc7de45726ea8bd42b18f1832c10787a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: bf4a0e7e7186051488d35ea6a1d77096, type: 3}
+        m_Texture: {fileID: 2800000, guid: 01605d15856589c4892f77bbc217a368, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: e2eb1bf18fe53a5448597608cbd329d1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3705a69bce2d41b4fb824653ad4a61ea, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
