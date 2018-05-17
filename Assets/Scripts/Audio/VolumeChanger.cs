@@ -7,8 +7,11 @@ public class VolumeChanger : MonoBehaviour
 {
     public AudioMixer masterMixer;
 
-    private int currentMusicVol = 0;
-    private int currentSfxVol = 0;
+    [SerializeField]
+    private AudioVolumeHolder audioVolumeHolder;
+
+    public float currentMusicVol = 0;
+    public float currentSfxVol = 0;
 
     [SerializeField]
     private string mixerMusicVolName;
@@ -18,27 +21,53 @@ public class VolumeChanger : MonoBehaviour
 
     private void Awake()
     {
-        //currentMusicVol = masterMixer.GetFloat(mixerMusicVolName, out int currentMusicVol);
-        //currentSfxVol = masterMixer.GetFloat(mixerMusicVolName, currentSfxVol);
+        audioVolumeHolder = GetComponent<AudioVolumeHolder>();
+        currentMusicVol = audioVolumeHolder.MusicVolume;
+        currentSfxVol = audioVolumeHolder.SfxVolume;
+    }
+
+    private void UpdateVolume()
+    {
+        masterMixer.GetFloat(mixerMusicVolName, out currentMusicVol);
+        masterMixer.GetFloat(mixerSfxVolName, out currentSfxVol);
+
+        audioVolumeHolder.MusicVolume = currentMusicVol;
+        audioVolumeHolder.SfxVolume = currentSfxVol;
     }
 
     // Music
     public void AddMusicVol(int musicVolToAdd)
     {
-        masterMixer.SetFloat(mixerMusicVolName, currentMusicVol += musicVolToAdd);
+        if (currentMusicVol < 20)
+        {
+            masterMixer.SetFloat(mixerMusicVolName, currentMusicVol += musicVolToAdd);
+            UpdateVolume();
+        }
     }
     public void RemoveMusicVol(int musicVolToRemove)
     {
-        masterMixer.SetFloat(mixerMusicVolName, currentMusicVol -= musicVolToRemove);
+        if (currentMusicVol > -80)
+        {
+            masterMixer.SetFloat(mixerMusicVolName, currentMusicVol -= musicVolToRemove);
+            UpdateVolume();
+        }
     }
-    
+
     // Sfx
     public void AddSfxVol(int sfxVolToAdd)
     {
-        masterMixer.SetFloat(mixerSfxVolName, currentSfxVol += sfxVolToAdd);
+        if (currentMusicVol < 20)
+        {
+            masterMixer.SetFloat(mixerSfxVolName, currentSfxVol += sfxVolToAdd);
+            UpdateVolume();
+        }
     }
     public void RemoveSfxVol(int sfxVolToRemove)
     {
-        masterMixer.SetFloat(mixerSfxVolName, currentSfxVol -= sfxVolToRemove);
+        if (currentMusicVol > -80)
+        {
+            masterMixer.SetFloat(mixerSfxVolName, currentSfxVol -= sfxVolToRemove);
+            UpdateVolume();
+        }
     }
 }
