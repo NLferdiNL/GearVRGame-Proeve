@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Building : MonoBehaviour, IDamagable
 {
@@ -21,7 +22,11 @@ public class Building : MonoBehaviour, IDamagable
     public Color startColour;
     public Color andColour;
 
-    // This needs a Unity Event handeler
+    // This is a Unity Event handeler
+    [Serializable]
+    public class BuildingFullyGharged : UnityEvent { }
+
+    public BuildingFullyGharged OnFullCharge = new BuildingFullyGharged();
 
     public float LvlOfPower
     {
@@ -65,6 +70,10 @@ public class Building : MonoBehaviour, IDamagable
     {
         GetComponent<Renderer>().material.color = Color.Lerp(startColour, andColour, 100 / maxLvlOfPower * lvlOfPower / 100);
         buildingAnimator.SetFloat("amountOfPower", lvlOfPower / 100);
+        if (lvlOfPower >= maxLvlOfPower)
+        {
+            //OnFinishedCharge.Invoke();
+        }
     }
 
     public void Damage(float value)
