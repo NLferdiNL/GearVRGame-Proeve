@@ -162,21 +162,37 @@ Prefab:
         type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 6f91eef076c7aff468ba054b65cb636f, type: 3}
+      objectReference: {fileID: 8300000, guid: 31df1cb86e7db184a91bf2c5baf47f39, type: 3}
     - target: {fileID: 114022545607165186, guid: bdf2c04c8175d1a4da502994deed7db7,
         type: 2}
       propertyPath: audioRange
-      value: 1024
+      value: 2048
       objectReference: {fileID: 0}
     - target: {fileID: 114477441438779606, guid: bdf2c04c8175d1a4da502994deed7db7,
         type: 2}
       propertyPath: width
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114477441438779606, guid: bdf2c04c8175d1a4da502994deed7db7,
         type: 2}
       propertyPath: moduloDivider
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 82694663385794720, guid: bdf2c04c8175d1a4da502994deed7db7,
+        type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 4cbaa086aa3218c45bc272d86ad8205d,
+        type: 2}
+    - target: {fileID: 114477441438779606, guid: bdf2c04c8175d1a4da502994deed7db7,
+        type: 2}
+      propertyPath: visualizerType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82694663385794720, guid: bdf2c04c8175d1a4da502994deed7db7,
+        type: 2}
+      propertyPath: Loop
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bdf2c04c8175d1a4da502994deed7db7, type: 2}
@@ -293,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a50f2c8aa4456948bbedaece2ffa4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioRange: 1024
+  audioRange: 2048
 --- !u!82 &932284110
 AudioSource:
   m_ObjectHideFlags: 0
@@ -303,12 +319,13 @@ AudioSource:
   m_GameObject: {fileID: 932284108}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6f91eef076c7aff468ba054b65cb636f, type: 3}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 4cbaa086aa3218c45bc272d86ad8205d,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 31df1cb86e7db184a91bf2c5baf47f39, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -401,10 +418,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa1fc5fcc76b076488b1f567827a4166, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 50
-  moduloDivider: 1
+  width: 100
+  moduloDivider: 3
   audioTestPrefab: {fileID: 1249278764823766, guid: 50da81008c47a3643ad72c3126e0f632,
     type: 2}
+  visualizerType: 1
 --- !u!1 &940201123
 GameObject:
   m_ObjectHideFlags: 0

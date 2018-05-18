@@ -22,7 +22,11 @@ public class AudioData : MonoBehaviour {
 	}
 
 	private void FixedUpdate() {
-		instance.audioSource.GetSpectrumData( instance.audioSpectrumData, 0, FFTWindow.Blackman);
+		audioSource.GetSpectrumData(instance.audioSpectrumData, 0, FFTWindow.Blackman);
+		if(!audioSource.isPlaying) {
+			audioSource.Play();
+			print("finished");
+		}
 	}
 
 	public static float GetFloat(int range) {
