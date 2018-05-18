@@ -12,18 +12,16 @@ public class SoundManager : MonoBehaviour
     {
         get { return sfx; }
     }
+    [SerializeField] private AudioSource music;
 
-    [SerializeField] private List<AudioSource> music;
-
-    public List<AudioSource> MusicSender
+    public AudioSource MusicSender
     {
         get { return music; }
-        
+        set { music = value; }
     }
 
     void Start()
     {
-        music[0].Play();
-        music[0].loop = true;
+        sfx[0].outputAudioMixerGroup = MixerManager.outputAudioMixerGroup;
     }
 }
