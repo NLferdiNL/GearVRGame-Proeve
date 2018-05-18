@@ -1,16 +1,30 @@
 fileFormatVersion: 2
-guid: 6cdeaf5b2475c994ca2da55bbc0a1292
-timeCreated: 1526482394
+guid: 29e560c3b012e764988ed462abcf83ed
+timeCreated: 1523616256
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: pCube1
+    100004: pCylinder1
+    100006: pCylinder2
     400000: //RootNode
-    2100000: base material
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Drone-normal
+    400002: pCube1
+    400004: pCylinder1
+    400006: pCylinder2
+    2100000: lambert1
+    2300000: pCube1
+    2300002: pCylinder1
+    2300004: pCylinder2
+    3300000: pCube1
+    3300002: pCylinder1
+    3300004: pCylinder2
+    4300000: pCylinder1
+    4300002: pCylinder2
+    4300004: pCube1
+    7400000: Take 001
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -85,7 +99,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

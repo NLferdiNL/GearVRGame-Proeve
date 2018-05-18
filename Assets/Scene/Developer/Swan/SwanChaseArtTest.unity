@@ -238,6 +238,22 @@ MonoBehaviour:
   maxLvlOfPower: 100
   startColour: {r: 1, g: 0, b: 0, a: 0}
   andColour: {r: 0, g: 1, b: 0.29655194, a: 0}
+  OnFinishedCharge:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Building+BuildingFullyGharged, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &412497006 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100006, guid: 8514afc6ab3489c4597b964ba60ef11f, type: 3}
@@ -265,31 +281,31 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 643fbc41ddd6c45408a32eec0afa9194, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 643fbc41ddd6c45408a32eec0afa9194, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5569998
+      value: 0.69
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 643fbc41ddd6c45408a32eec0afa9194, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.4700003
+      value: -4.56
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 643fbc41ddd6c45408a32eec0afa9194, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.00000002112082
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 643fbc41ddd6c45408a32eec0afa9194, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000056198153
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 643fbc41ddd6c45408a32eec0afa9194, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.25713277
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 643fbc41ddd6c45408a32eec0afa9194, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9663761
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 643fbc41ddd6c45408a32eec0afa9194, type: 3}
       propertyPath: m_RootOrder
@@ -305,7 +321,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 643fbc41ddd6c45408a32eec0afa9194, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 29.8
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 643fbc41ddd6c45408a32eec0afa9194, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 643fbc41ddd6c45408a32eec0afa9194, type: 3}
@@ -712,6 +732,11 @@ MonoBehaviour:
   maxLvlOfPower: 100
   startColour: {r: 1, g: 0, b: 0, a: 0}
   andColour: {r: 0, g: 1, b: 0.29655194, a: 0}
+  OnFinishedCharge:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Building+BuildingFullyGharged, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &2141808629
 GameObject:
   m_ObjectHideFlags: 0

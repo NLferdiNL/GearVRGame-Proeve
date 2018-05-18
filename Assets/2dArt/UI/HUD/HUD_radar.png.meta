@@ -1,12 +1,40 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 2ef54a9f76134e04fa8c7da351e6868c
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+guid: 2ef54a9f76134e04fa8c7da351e6868c
+timeCreated: 1526629935
+=======
+guid: 034810961be00784c8abeb9aae803bc4
+timeCreated: 1526554356
+>>>>>>> 412ee391cd2028f337c2c06c15ddbc62b1251c0d
+=======
+guid: e43d2962971c1474b9572895a92b1a45
+timeCreated: 1526642524
+>>>>>>> artists
+licenseType: Free
+>>>>>>> c4e8fb6c24a3fd33203354fd366a4b8a6b570717
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
+<<<<<<< HEAD
     enableMipMap: 0
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    enableMipMap: 1
+=======
+    enableMipMap: 0
+>>>>>>> 412ee391cd2028f337c2c06c15ddbc62b1251c0d
+=======
+    enableMipMap: 1
+>>>>>>> artists
+>>>>>>> c4e8fb6c24a3fd33203354fd366a4b8a6b570717
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -32,6 +60,22 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -1
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> artists
+    wrapU: -1
+    wrapV: -1
+    wrapW: -1
+  nPOTScale: 1
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 0
+<<<<<<< HEAD
+=======
+>>>>>>> c4e8fb6c24a3fd33203354fd366a4b8a6b570717
     wrapU: 1
     wrapV: 1
     wrapW: -1
@@ -39,6 +83,12 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 1
+<<<<<<< HEAD
+=======
+>>>>>>> 412ee391cd2028f337c2c06c15ddbc62b1251c0d
+=======
+>>>>>>> artists
+>>>>>>> c4e8fb6c24a3fd33203354fd366a4b8a6b570717
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -47,9 +97,27 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
+<<<<<<< HEAD
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 0
+=======
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+>>>>>>> 412ee391cd2028f337c2c06c15ddbc62b1251c0d
+=======
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 0
+>>>>>>> artists
+>>>>>>> c4e8fb6c24a3fd33203354fd366a4b8a6b570717
   textureShape: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
@@ -65,6 +133,12 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c4e8fb6c24a3fd33203354fd366a4b8a6b570717
   - buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -105,6 +179,12 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< HEAD
+=======
+>>>>>>> 412ee391cd2028f337c2c06c15ddbc62b1251c0d
+=======
+>>>>>>> artists
+>>>>>>> c4e8fb6c24a3fd33203354fd366a4b8a6b570717
   spriteSheet:
     serializedVersion: 2
     sprites: []
