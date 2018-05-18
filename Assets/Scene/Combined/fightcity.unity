@@ -353,6 +353,7 @@ GameObject:
   - component: {fileID: 137187467}
   - component: {fileID: 137187466}
   - component: {fileID: 137187465}
+  - component: {fileID: 137187468}
   m_Layer: 0
   m_Name: RadarCamera
   m_TagString: Untagged
@@ -423,6 +424,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &137187468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 137187463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fffd06ecefba8cb43b868786e2444052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 695382717}
 --- !u!1 &167479077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,14 +1271,6 @@ Prefab:
     - target: {fileID: 4532011959906688, guid: 27fea829279aff4419566ea5c757385c, type: 2}
       propertyPath: m_RootOrder
       value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 4532011959906688, guid: 27fea829279aff4419566ea5c757385c, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4532011959906688, guid: 27fea829279aff4419566ea5c757385c, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27fea829279aff4419566ea5c757385c, type: 2}
@@ -4336,6 +4341,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MixerManager: {fileID: 24100000, guid: 62289519b848a7b4cb1e8077a7bd450b, type: 2}
   SM: {fileID: 1772816499}
+  Building1: 0
+  Building2: 0
+  Building3: 0
+  BuildingMid1: 0
+  BuildingMid2: 0
+  BuildingMid3: 0
+  BuildingStartEnd: 0
+  BuildingEndless: 0
 --- !u!4 &1722938090
 Transform:
   m_ObjectHideFlags: 0
@@ -6365,7 +6378,7 @@ MonoBehaviour:
   maxScale: 1000
   amountListeners: 256
   circleDegree: 360
-  cubeSize: 1
+  cubeSize: 10
 --- !u!4 &1874426713
 Transform:
   m_ObjectHideFlags: 0

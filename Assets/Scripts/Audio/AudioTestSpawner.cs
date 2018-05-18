@@ -13,19 +13,46 @@ public class AudioTestSpawner : MonoBehaviour {
 	[SerializeField]
 	GameObject audioTestPrefab;
 
-	void Start () {
-		for(int i = 0; i < width; i++) {
-			int range = i - i % moduloDivider;
+	[SerializeField]
+	VisualizerType visualizerType = VisualizerType.StraightOuterToMiddle;
 
-			if(i > width / 2) {
-				range = width - i;
-				range = range - range % moduloDivider;
-			}
+	public enum VisualizerType {
+		StraightOuterToMiddle = 0,
+		StraightMiddleToOuter = 1
+	}
 
-			GameObject cube = Instantiate(audioTestPrefab, transform);
-			cube.transform.position = cube.transform.forward * .25f * i;
-			cube.GetComponent<AudioTest>().range = range;
-			//cube.transform.localScale = new Vector3(.25f, 1, .25f);
+	void Start() {
+		switch(visualizerType) {
+			case VisualizerType.StraightOuterToMiddle:
+				for(int i = 0; i < width; i++) {
+					int range = i - i % moduloDivider;
+
+					if(i > width / 2) {
+						range = width - i;
+						range = range - range % moduloDivider;
+					}
+
+					GameObject cube = Instantiate(audioTestPrefab, transform);
+					cube.transform.position = cube.transform.forward * .25f * i;
+					cube.GetComponent<AudioTest>().range = range;
+					//cube.transform.localScale = new Vector3(.25f, 1, .25f);
+				}
+				break;
+			case VisualizerType.StraightMiddleToOuter:
+				float middle = width / 2;
+				for(int i = 0; i < width; i++) {
+					int range = width / 2 - i;
+
+					if(i > width / 2) {
+						range = i - width / 2;
+					}
+
+					GameObject cube = Instantiate(audioTestPrefab, transform);
+					cube.transform.position = cube.transform.forward * .25f * i;
+					cube.GetComponent<AudioTest>().range = range;
+					//cube.transform.localScale = new Vector3(.25f, 1, .25f);
+				}
+				break;
 		}
 	}
 }
