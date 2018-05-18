@@ -1,5 +1,8 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+guid: 80ecd58483741f14ca57533a9b11e70e
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 guid: 80ecd58483741f14ca57533a9b11e70e
 timeCreated: 1526629944
@@ -12,6 +15,7 @@ guid: 68a4f519ccbb52e40a8bf6bafac27b20
 timeCreated: 1526642477
 >>>>>>> artists
 licenseType: Free
+>>>>>>> c4e8fb6c24a3fd33203354fd366a4b8a6b570717
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}

@@ -12,7 +12,7 @@ public class SoundManager : MonoBehaviour
     {
         get { return sfx; }
     }
-    [SerializeField] private AudioSource music;
+    [SerializeField]private AudioSource music;
 
     public AudioSource MusicSender
     {
@@ -20,8 +20,4 @@ public class SoundManager : MonoBehaviour
         set { music = value; }
     }
 
-    void Start()
-    {
-        sfx[0].outputAudioMixerGroup = MixerManager.outputAudioMixerGroup;
-    }
 }

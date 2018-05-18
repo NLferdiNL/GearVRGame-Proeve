@@ -1,5 +1,8 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+guid: 9d70c7040b9db454d8ac712e02ba64c4
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 guid: 9d70c7040b9db454d8ac712e02ba64c4
 timeCreated: 1526629946
@@ -12,6 +15,7 @@ guid: dd748972eca8b2b489f6594f58dc7e43
 timeCreated: 1526642555
 >>>>>>> artists
 licenseType: Free
+>>>>>>> c4e8fb6c24a3fd33203354fd366a4b8a6b570717
 TextScriptImporter:
   externalObjects: {}
   userData: 
