@@ -1,0 +1,4 @@
+* HUD elements plaatsen zoals in de mockup
+* Score font = Earth Orbiter - Wit met blauwe gloed
+* In de radar beweegt de player icon+view niet, maar draaien 
+de gebouwen rond op de radar gebaseerd op waar de player kijkt.
