@@ -11,38 +11,32 @@ public class Node : MonoBehaviour, IDamagable
 
     // _nodeMaxEnergy is called this way because: it tracks the amount of "Power" it passes to the "building".
     [SerializeField]
-    private float _nodeMaxEnergy = 25;
+    private float nodeMaxEnergy = 25;
 
 
     [SerializeField]
-    private float _currentNodeEnergy = 0;
+    private float currentNodeEnergy = 0;
 
 
     [SerializeField]
-    private float _energyBoost = 1;
+    private float energyBoost = 1;
 
-    public int maxHealth
+    public float MaxHealth
     {
         get
         {
-            return (int)_nodeMaxEnergy;
+            return (int)nodeMaxEnergy;
         }
     }
 
-    public int health
+    public float Health
     {
         get
         {
-            return parentBuilding.health;
+            return parentBuilding.Health;
         }
     }
     
-    void Start()
-    {
-        parentBuilding = GetComponentInParent<Building>();
-    }
-    
-    // Use this for initialization
     void Start()
     {
         parentBuilding = GetComponentInParent<Building>();
@@ -50,7 +44,7 @@ public class Node : MonoBehaviour, IDamagable
 
     public void OnHitStay()
     {
-        parentBuilding.LvlOfPower = _energyBoost;
+        parentBuilding.LvlOfPower = energyBoost;
     }
 
     // Update is called once per frame
@@ -59,30 +53,30 @@ public class Node : MonoBehaviour, IDamagable
 
         if (Input.GetKey(KeyCode.T))
         {
-            Heal((int)_energyBoost);
+            Heal((int)energyBoost);
         }
 
-        if (_currentNodeEnergy >= _nodeMaxEnergy)
+        if (currentNodeEnergy >= nodeMaxEnergy)
         {
             Destroy(gameObject);
         }
-        else if (_currentNodeEnergy <= _nodeMaxEnergy)
+        else if (currentNodeEnergy <= nodeMaxEnergy)
         {
 
         }
     }
 
-    public void Damage(int value)
+    public void Damage(float value)
     {
         parentBuilding.Damage(value);
     }
 
-    public void Heal(int value = 0)
+    public void Heal(float value = 0)
     {
         if (value == 0)
-            value = (int)_energyBoost;
+            value = energyBoost;
         else
-            value *= (int)_energyBoost;
+            value *= energyBoost;
 
         parentBuilding.Heal(value);
     }

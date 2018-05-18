@@ -10,11 +10,13 @@ public class Building : MonoBehaviour, IDamagable
     [SerializeField]
     public Animator buildingAnimator;
 
-    // _lvlOfPower is called this way because: it tracks the amount of "Power" the "building" has.
-    private float _lvlOfPower = 100;
-
+    // lvlOfPower is called this way because: it tracks the amount of "Power" the "building" has.
     [SerializeField]
-    private float _maxLvlOfPower = 100;
+    private float lvlOfPower = 0;
+
+    // maxLvlOfPower is called this way because: we need to make sure it doesent go over a limit.
+    [SerializeField]
+    private float maxLvlOfPower = 100;
 
     public Color startColour;
     public Color andColour;
@@ -23,34 +25,33 @@ public class Building : MonoBehaviour, IDamagable
     {
         get
         {
-            return _lvlOfPower;
+            return lvlOfPower;
         }
         set
         {
-            _lvlOfPower += value;
+            lvlOfPower += value;
         }
     }
     
-    public int maxHealth
+    public float MaxHealth
     {
         get
         {
-            return (int)_maxLvlOfPower;
+            return (int)maxLvlOfPower;
         }
     }
 
-    public int health
+    public float Health
     {
         get
         {
-            return (int)_lvlOfPower;
+            return (int)lvlOfPower;
         }
     }
 
     // Use this for initialization
     void Start()
     {
-        _lvlOfPower = _maxLvlOfPower;
         if (buildingAnimator == null)
         {
             buildingAnimator = GetComponentInParent<Animator>();
@@ -60,17 +61,23 @@ public class Building : MonoBehaviour, IDamagable
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Renderer>().material.color = Color.Lerp(startColour, andColour, 100 / _maxLvlOfPower * _lvlOfPower / 100);
-        buildingAnimator.SetFloat("amountOfPower", _lvlOfPower);
+        GetComponent<Renderer>().material.color = Color.Lerp(startColour, andColour, 100 / maxLvlOfPower * lvlOfPower / 100);
+        buildingAnimator.SetFloat("amountOfPower", lvlOfPower / 100);
     }
 
-    public void Damage(int value)
+    public void Damage(float value)
     {
-        _lvlOfPower -= value;
+        lvlOfPower -= value;
+
+		if(lvlOfPower < 0)
+			lvlOfPower = 0;
     }
 
-    public void Heal(int value)
+    public void Heal(float value)
     {
-        _lvlOfPower += value;
+        lvlOfPower += value;
+
+		if(lvlOfPower > maxLvlOfPower)
+			lvlOfPower = maxLvlOfPower;
     }
 }
