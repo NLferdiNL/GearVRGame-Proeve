@@ -1,11 +1,16 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: c50a41153606c9f488bb599d0c84ce4a
 timeCreated: 1526629945
 =======
 guid: bdd4fbb236f736341acc62cb2af0301b
 timeCreated: 1526554360
 >>>>>>> 412ee391cd2028f337c2c06c15ddbc62b1251c0d
+=======
+guid: f185e5666f494864bb1844dcc15cbdab
+timeCreated: 1526642539
+>>>>>>> artists
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -43,16 +48,22 @@ TextureImporter:
     wrapV: -1
     wrapW: -1
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> artists
   nPOTScale: 1
   lightmap: 0
   compressionQuality: 50
   spriteMode: 0
+<<<<<<< HEAD
 =======
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
   spriteMode: 1
 >>>>>>> 412ee391cd2028f337c2c06c15ddbc62b1251c0d
+=======
+>>>>>>> artists
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -62,10 +73,14 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   alphaIsTransparency: 0
 =======
   alphaIsTransparency: 1
 >>>>>>> 412ee391cd2028f337c2c06c15ddbc62b1251c0d
+=======
+  alphaIsTransparency: 0
+>>>>>>> artists
   spriteTessellationDetail: -1
   textureType: 0
   textureShape: 1
@@ -83,6 +98,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   - buildTarget: Standalone
@@ -126,6 +142,8 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
 >>>>>>> 412ee391cd2028f337c2c06c15ddbc62b1251c0d
+=======
+>>>>>>> artists
   spriteSheet:
     serializedVersion: 2
     sprites: []

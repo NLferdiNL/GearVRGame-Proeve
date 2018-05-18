@@ -1,11 +1,16 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: 31e739a466347634e86b08478755d2db
 timeCreated: 1526629935
 =======
 guid: 903c512dea8c59d4ba5afa713a178421
 timeCreated: 1526554360
 >>>>>>> 412ee391cd2028f337c2c06c15ddbc62b1251c0d
+=======
+guid: c5c55ece94d845e49a35be2c4091e7a9
+timeCreated: 1526642521
+>>>>>>> artists
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -14,10 +19,14 @@ TextureImporter:
   mipmaps:
     mipMapMode: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     enableMipMap: 1
 =======
     enableMipMap: 0
 >>>>>>> 412ee391cd2028f337c2c06c15ddbc62b1251c0d
+=======
+    enableMipMap: 1
+>>>>>>> artists
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -44,6 +53,9 @@ TextureImporter:
     aniso: -1
     mipBias: -1
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> artists
     wrapU: -1
     wrapV: -1
     wrapW: -1
@@ -51,6 +63,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 0
+<<<<<<< HEAD
 =======
     wrapU: 1
     wrapV: 1
@@ -60,6 +73,8 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
 >>>>>>> 412ee391cd2028f337c2c06c15ddbc62b1251c0d
+=======
+>>>>>>> artists
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,6 +84,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: 0
@@ -77,6 +93,11 @@ TextureImporter:
   spriteTessellationDetail: -1
   textureType: 8
 >>>>>>> 412ee391cd2028f337c2c06c15ddbc62b1251c0d
+=======
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 0
+>>>>>>> artists
   textureShape: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
@@ -92,6 +113,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   - buildTarget: Standalone
@@ -135,6 +157,8 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
 >>>>>>> 412ee391cd2028f337c2c06c15ddbc62b1251c0d
+=======
+>>>>>>> artists
   spriteSheet:
     serializedVersion: 2
     sprites: []

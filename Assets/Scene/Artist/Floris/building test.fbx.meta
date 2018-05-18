@@ -1,16 +1,38 @@
 fileFormatVersion: 2
-guid: 45ec555f82123084a956056c5868020e
-timeCreated: 1526541144
+guid: 3dff95876e2c6024e8208fdec718d5ea
+timeCreated: 1526649782
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: pCylinder126
+    100004: pCylinder127
+    100006: pCylinder128
+    100008: pCylinder129
     400000: //RootNode
-    2100000: No Name
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Drone-fast
+    400002: pCylinder126
+    400004: pCylinder127
+    400006: pCylinder128
+    400008: pCylinder129
+    2100000: lambert1
+    2100002: lambert8
+    2100004: Donker_grijs
+    2100006: Zwart
+    2300000: pCylinder126
+    2300002: pCylinder127
+    2300004: pCylinder128
+    2300006: pCylinder129
+    3300000: pCylinder126
+    3300002: pCylinder127
+    3300004: pCylinder128
+    3300006: pCylinder129
+    4300000: pCylinder128
+    4300002: pCylinder127
+    4300004: pCylinder126
+    4300006: pCylinder129
+    7400000: Take 001
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -85,7 +107,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

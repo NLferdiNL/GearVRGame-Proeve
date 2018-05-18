@@ -1,11 +1,16 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: 5740c25195a715644ba32a104eefa8b0
 timeCreated: 1526629962
 =======
 guid: 70684c6b785805d4da1a4ba6e8fde013
 timeCreated: 1526554362
 >>>>>>> 412ee391cd2028f337c2c06c15ddbc62b1251c0d
+=======
+guid: 3cd731e9b7e51544a92a6b766d89d0d8
+timeCreated: 1526642556
+>>>>>>> artists
 licenseType: Free
 TrueTypeFontImporter:
   externalObjects: {}
