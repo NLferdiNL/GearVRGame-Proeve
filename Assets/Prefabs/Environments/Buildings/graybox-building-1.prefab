@@ -524,6 +524,11 @@ MonoBehaviour:
   maxLvlOfPower: 100
   startColour: {r: 1, g: 0, b: 0, a: 0}
   andColour: {r: 0, g: 1, b: 0.29655194, a: 0}
+  OnFullCharge:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Building+BuildingFullyGharged, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!212 &212468515928564760
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -563,7 +568,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.73, y: 2.87}
+  m_Size: {x: 0.14, y: 0.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
