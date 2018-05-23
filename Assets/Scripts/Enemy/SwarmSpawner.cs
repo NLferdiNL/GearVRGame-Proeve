@@ -2,6 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace EnemyNav {
 	using System;
@@ -18,7 +21,10 @@ namespace EnemyNav {
 
 		public Vector3 this[int index] {
 			get {
-				return pathNodes[index];
+				if(index < pathNodes.Length)
+					return pathNodes[index];
+
+				return Vector3.zero;
 			}
 		}
 
@@ -29,7 +35,9 @@ namespace EnemyNav {
 		}
 	}
 }
-
+#if UNITY_EDITOR
+[ExecuteInEditMode]
+#endif
 public class SwarmSpawner : MonoBehaviour {
 
 	public static Path[] Paths {
@@ -86,4 +94,18 @@ public class SwarmSpawner : MonoBehaviour {
 
 		SwarmContainer.Add(enemyInstance.transform);
 	}
+#if UNITY_EDITOR
+	private void OnDrawGizmosSelected() {
+		for(int i = 0; i < paths.Length; i++) {
+			Path path = paths[i];
+			Gizmos.DrawSphere(path[0], 2);
+			Gizmos.DrawSphere(path[path.Length - 1], 2);
+			for(int j = 0; j < path.Length; j++) {
+				if(j < path.Length - 1) {
+					Debug.DrawLine(path[j], path[j + 1], Color.red);
+				}
+			}
+		}
+	}
+#endif
 }
