@@ -11,6 +11,9 @@ public class SwarmNavigation : MonoBehaviour {
 	[SerializeField]
 	Swarm swarm;
 
+	[SerializeField]
+	Transform radarDot;
+
 	int currentIndexInPath = 1;
 
 	Vector3 target {
@@ -37,6 +40,7 @@ public class SwarmNavigation : MonoBehaviour {
 
 	private void FixedUpdate() {
 		MoveTo(target, 2);
+		radarDot.LookAt(radarDot.position + Vector3.up);
 	}
 
 	private bool CheckDirectLine() {

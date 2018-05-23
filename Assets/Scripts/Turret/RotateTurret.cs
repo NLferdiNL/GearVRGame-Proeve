@@ -28,7 +28,7 @@ public class RotateTurret : MonoBehaviour {
 		TurnPieceRotation(); // Rotate Turret piece at fixedupdate.
 	}
 
-    private void TurretRotation() // Lerps this object to look at target.
+    void TurretRotation() // Lerps this object to look at target.
     {
 		Vector3 relativePosition = target.position - transform.position; // Set relativePosition.
         relativePosition = relativePosition.normalized; // 
@@ -39,7 +39,7 @@ public class RotateTurret : MonoBehaviour {
         transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(targetRotation), speed * Time.deltaTime); // Rotate Turret
     }
 
-	private void TurnPieceRotation() {
+	void TurnPieceRotation() {
 		Vector3 relativePosition = target.position - turnPiece.position;
 		relativePosition = relativePosition.normalized;
 		Vector3 targetRotation = Quaternion.LookRotation(relativePosition).eulerAngles;
@@ -53,7 +53,7 @@ public class RotateTurret : MonoBehaviour {
 		turnPiece.localRotation = Quaternion.RotateTowards(turnPiece.localRotation, Quaternion.Euler(targetRotation), speed * Time.deltaTime);
 	}
 
-    private IEnumerator IndependantTurret()
+    IEnumerator IndependantTurret()
     {
         while(isIndependant)
         {
