@@ -411,8 +411,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MixerManager: {fileID: 24100000, guid: 62289519b848a7b4cb1e8077a7bd450b, type: 2}
   SM: {fileID: 834009488}
-  Test: {fileID: 0}
-  testclip: {fileID: 0}
+  TutorialBuilding1: 0
+  TutorialBuilding2: 0
+  TutorialBuilding3: 0
 --- !u!4 &834009487
 Transform:
   m_ObjectHideFlags: 0
