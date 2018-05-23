@@ -15,11 +15,7 @@ public class Tutorial : MonoBehaviour
 
     void Start()
     {
-        //SM.MusicSender[0].Play(); // Fade1
         IntroSection();
-        //Test.clip = Resources.Load<AudioSource>("FadeInto").clip;
-        //SM.MusicSender.clip = Resources.Load<AudioSource>("FadeInto").clip;
-        //SM.MusicSender.PlayOneShot(SM.MusicClip, 1f);
     }
 
     public void CheckBuildingCharge(int BuildingNumber)
@@ -28,21 +24,24 @@ public class Tutorial : MonoBehaviour
         {
             case 1:
                 TutorialBuilding1 = true;
+                Debug.Log("TB1");
                 break;
             case 2:
                 TutorialBuilding2 = true;
+                Debug.Log("TB2");
                 break;
             case 3:
                 TutorialBuilding3 = true;
+                Debug.Log("TB3");
                 break;
         }
     }
 
     void IntroSection()
     {
-        StartCoroutine(IntroStart(""));
+        StartCoroutine(IntroStart());
     }
-    IEnumerator IntroStart(string buildingOne)
+    IEnumerator IntroStart()
     {
         SM.MusicSender.clip = Resources.Load<AudioSource>("FadeInto").clip;
         SM.MusicSender.PlayOneShot(SM.MusicSender.clip, 1f); // FadeInto
@@ -71,7 +70,7 @@ public class Tutorial : MonoBehaviour
 
     void BuildingNotCharged()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("MainMenu");
     }
 
     void InBetweenSection()
@@ -95,11 +94,11 @@ public class Tutorial : MonoBehaviour
         {
             StartCoroutine(MidPartOne());
         }
-        else if (TutorialBuilding1 && TutorialBuilding2 == false)
+        else if (TutorialBuilding1 && !TutorialBuilding2)
         {
             StartCoroutine(MidPartTwo());
         }
-        else if (TutorialBuilding1 && TutorialBuilding2 && TutorialBuilding3 == false)
+        else if (TutorialBuilding1 && TutorialBuilding2 && !TutorialBuilding3)
         {
             StartCoroutine(MidPartThree());
         }
