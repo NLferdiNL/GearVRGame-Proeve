@@ -28,6 +28,9 @@ public class Building : MonoBehaviour, IDamagable
 
     public BuildingFullyGharged OnFullCharge = new BuildingFullyGharged();
 
+    [SerializeField]
+    private bool multipleAnimations;
+
     public float LvlOfPower
     {
         get
@@ -68,11 +71,34 @@ public class Building : MonoBehaviour, IDamagable
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Renderer>().material.color = Color.Lerp(startColour, andColour, 100 / maxLvlOfPower * lvlOfPower / 100);
-        buildingAnimator.SetFloat("amountOfPower", lvlOfPower / 100);
+        PowerEqualsColour();
+
+        if (maxLvlOfPower <= 100 && multipleAnimations)
+        {
+            buildingAnimator.SetFloat("amountOfPower", lvlOfPower / maxLvlOfPower);
+        }
+        else if (multipleAnimations)
+        {
+            buildingAnimator.SetFloat("secondStagePowerLvl", lvlOfPower / maxLvlOfPower);
+        }
+
         if (lvlOfPower >= maxLvlOfPower)
         {
-            //OnFinishedCharge.Invoke();
+            OnFullCharge.Invoke();
+            SwitchFase();
+        }
+    }
+
+    private void PowerEqualsColour()
+    {
+        GetComponent<Renderer>().material.color = Color.Lerp(startColour, andColour, 100 / maxLvlOfPower * lvlOfPower / 100);
+    }
+
+    void SwitchFase()
+    {
+        if (maxLvlOfPower == 100)
+        {
+            maxLvlOfPower += 100;
         }
     }
 
