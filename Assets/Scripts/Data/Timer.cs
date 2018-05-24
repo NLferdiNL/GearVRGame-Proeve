@@ -8,6 +8,21 @@ public class Timer : IDisposable  {
 	private int minutes;
 	private int seconds;
 
+	public int this[int index] {
+		get {
+			switch(index) {
+				case 0:
+					return seconds;
+				case 1:
+					return minutes;
+				case 2:
+					return hours;
+				default:
+					throw new IndexOutOfRangeException(	);
+			}
+		}
+	}
+
 	public int Hours {
 		get {
 			return hours;

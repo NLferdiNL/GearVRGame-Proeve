@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -536,7 +536,8 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: GazeButton+GazeTimeEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  maxTime: 0.5
+  maxTime: 0.25
+  looping: 1
 --- !u!1 &133177644
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,6 +717,7 @@ MonoBehaviour:
     m_TypeName: GazeButton+GazeTimeEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   maxTime: 3
+  looping: 0
 --- !u!114 &155404107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1969,6 +1971,7 @@ MonoBehaviour:
     m_TypeName: GazeButton+GazeTimeEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   maxTime: 3
+  looping: 0
 --- !u!1 &952727681
 GameObject:
   m_ObjectHideFlags: 0
@@ -2063,7 +2066,8 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: GazeButton+GazeTimeEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  maxTime: 0.5
+  maxTime: 0.25
+  looping: 1
 --- !u!114 &952727685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2468,6 +2472,7 @@ MonoBehaviour:
     m_TypeName: GazeButton+GazeTimeEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   maxTime: 3
+  looping: 0
 --- !u!65 &1149778297
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2800,6 +2805,7 @@ MonoBehaviour:
     m_TypeName: GazeButton+GazeTimeEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   maxTime: 3
+  looping: 0
 --- !u!114 &1243341525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3170,6 +3176,7 @@ MonoBehaviour:
     m_TypeName: GazeButton+GazeTimeEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   maxTime: 3
+  looping: 0
 --- !u!114 &1353968826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3943,7 +3950,8 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: GazeButton+GazeTimeEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  maxTime: 0.5
+  maxTime: 0.25
+  looping: 1
 --- !u!1 &1760867412
 GameObject:
   m_ObjectHideFlags: 0
@@ -4318,7 +4326,8 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: GazeButton+GazeTimeEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  maxTime: 0.5
+  maxTime: 0.25
+  looping: 1
 --- !u!114 &1880792545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4623,6 +4632,7 @@ MonoBehaviour:
     m_TypeName: GazeButton+GazeTimeEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   maxTime: 3
+  looping: 0
 --- !u!114 &1930716430
 MonoBehaviour:
   m_ObjectHideFlags: 0

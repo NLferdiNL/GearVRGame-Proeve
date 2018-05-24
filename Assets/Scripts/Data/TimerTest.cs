@@ -12,7 +12,7 @@ public class TimerTest : MonoBehaviour {
 		timer = new Timer();
 
 		timer.Start();
-		timer.Start();
+
 		text = GetComponent<Text>();
 	}
 

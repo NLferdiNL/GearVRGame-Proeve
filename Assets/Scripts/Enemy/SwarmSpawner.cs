@@ -35,9 +35,7 @@ namespace EnemyNav {
 		}
 	}
 }
-#if UNITY_EDITOR
-[ExecuteInEditMode]
-#endif
+
 public class SwarmSpawner : MonoBehaviour {
 
 	public static Path[] Paths {
@@ -72,10 +70,10 @@ public class SwarmSpawner : MonoBehaviour {
 	int maxEnemies = 40;
 
 	IEnumerator Start() {
-		instance = this;
+			instance = this;
 
-		while(!endWhileLoop) {
-			yield return new WaitForSeconds(timeBetweenSpawns);
+			while(!endWhileLoop) {
+				yield return new WaitForSeconds(timeBetweenSpawns);
 			if(spawnEnemy) {
 				for(int i = 0; i < currentWave * enemyPerWaveIncrease; i++) {
 					SpawnEnemy();
@@ -98,11 +96,11 @@ public class SwarmSpawner : MonoBehaviour {
 	private void OnDrawGizmosSelected() {
 		for(int i = 0; i < paths.Length; i++) {
 			Path path = paths[i];
-			Gizmos.DrawSphere(path[0], 2);
+			Gizmos.DrawCube(path[0], new Vector3(2,2,2));
 			Gizmos.DrawSphere(path[path.Length - 1], 2);
 			for(int j = 0; j < path.Length; j++) {
 				if(j < path.Length - 1) {
-					Debug.DrawLine(path[j], path[j + 1], Color.red);
+					Debug.DrawLine(path[j], path[j + 1], Color.red, 0.1f, true);
 				}
 			}
 		}
