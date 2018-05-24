@@ -9,7 +9,7 @@ public class Building : MonoBehaviour, IDamagable
     // This script is used too keep track of the buildings level of power and animate accordingly.
 
     [SerializeField]
-    public Animator buildingAnimator;
+    public Animator buildingAnimator, radarDotAnimator;
 
     // lvlOfPower is called this way because: it tracks the amount of "Power" the "building" has.
     [SerializeField]
@@ -19,6 +19,10 @@ public class Building : MonoBehaviour, IDamagable
     [SerializeField]
     private float maxLvlOfPower = 100;
 
+	[SerializeField]
+	float underAttackCooldown = 2f;
+
+	float timeSinceLastAttack = 0;
 
     public Color startColour;
     public Color andColour;
@@ -61,6 +65,12 @@ public class Building : MonoBehaviour, IDamagable
         }
     }
 
+	public bool UnderAttack {
+		get {
+			return timeSinceLastAttack >= underAttackCooldown;
+		}
+	}
+
     // Use this for initialization
     void Start()
     {
@@ -70,18 +80,21 @@ public class Building : MonoBehaviour, IDamagable
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        PowerEqualsColour();
+		if(timeSinceLastAttack < underAttackCooldown) {
+			timeSinceLastAttack += Time.deltaTime;
+			if(timeSinceLastAttack >= underAttackCooldown) {
+				radarDotAnimator.SetBool("underAttack", false);
+			}
+		}
+			
+		//no
+        //PowerEqualsColour();
 
         if (maxLvlOfPower <= 100 && !multipleAnimations)
         {
             buildingAnimator.SetFloat("amountOfPower", lvlOfPower / maxLvlOfPower);
-        }
-        else if (multipleAnimations)
-        {
-            buildingAnimator.SetFloat("secondStagePowerLvl", lvlOfPower / maxLvlOfPower);
         }
 
         if (lvlOfPower >= maxLvlOfPower )
@@ -95,7 +108,6 @@ public class Building : MonoBehaviour, IDamagable
     {
         Debug.Log("Yay " + buildingName + " is fully charged");
     }
-    //
 
     private void PowerEqualsColour()
     {
@@ -113,6 +125,11 @@ public class Building : MonoBehaviour, IDamagable
 
     public void Damage(float value)
     {
+		if(timeSinceLastAttack != 0)
+			radarDotAnimator.SetBool("underAttack", true);
+
+		timeSinceLastAttack = 0;
+
         lvlOfPower -= value;
 
 		if(lvlOfPower < 0)

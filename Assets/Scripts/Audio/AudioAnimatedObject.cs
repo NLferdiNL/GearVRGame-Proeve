@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioTest : MonoBehaviour {
+public class AudioAnimatedObject : MonoBehaviour {
 
 	Animator animator;
 

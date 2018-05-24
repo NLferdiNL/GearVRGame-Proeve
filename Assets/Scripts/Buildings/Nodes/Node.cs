@@ -39,7 +39,8 @@ public class Node : MonoBehaviour, IDamagable
     
     void Start()
     {
-        parentBuilding = GetComponentInParent<Building>();
+		if(parentBuilding == null)
+	        parentBuilding = GetComponentInParent<Building>();
     }
 
     public void OnHitStay()

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioTestSpawner : MonoBehaviour {
+public class AudioVisualizerSpawner : MonoBehaviour {
 
 	[SerializeField]
 	int width = 500;
@@ -32,10 +32,7 @@ public class AudioTestSpawner : MonoBehaviour {
 						range = range - range % moduloDivider;
 					}
 
-					GameObject cube = Instantiate(audioTestPrefab, transform);
-					cube.transform.position = cube.transform.forward * .25f * i;
-					cube.GetComponent<AudioTest>().range = range;
-					//cube.transform.localScale = new Vector3(.25f, 1, .25f);
+					CreateObject(transform.forward * .25f * i, Quaternion.identity, range);
 				}
 				break;
 			case VisualizerType.StraightMiddleToOuter:
@@ -47,12 +44,24 @@ public class AudioTestSpawner : MonoBehaviour {
 						range = i - width / 2;
 					}
 
-					GameObject cube = Instantiate(audioTestPrefab, transform);
-					cube.transform.position = cube.transform.forward * .25f * i;
-					cube.GetComponent<AudioTest>().range = range;
-					//cube.transform.localScale = new Vector3(.25f, 1, .25f);
+					CreateObject(transform.forward * .25f * i, Quaternion.identity, range);
 				}
 				break;
 		}
+	}
+
+	GameObject CreateObject(Vector3 localPosition, Quaternion localRotation, int range) {
+		GameObject obj = Instantiate(audioTestPrefab, transform);
+		obj.transform.localPosition = localPosition;
+		obj.transform.localRotation = localRotation;
+
+		AudioAnimatedObject audioAnimated = obj.GetComponent<AudioAnimatedObject>();
+
+		if(audioAnimated != null)
+			audioAnimated.range = range;
+		else
+			Debug.LogError("No AudioAnimatedObject found!");
+
+		return obj;
 	}
 }
