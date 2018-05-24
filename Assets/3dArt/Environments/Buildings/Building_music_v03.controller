@@ -46,9 +46,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: secondStage
-    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: amountOfPower
+    m_EventTreshold: 25
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102471602888331254}
   m_Solo: 0
@@ -70,9 +70,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: secondStage
-    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: amountOfPower
+    m_EventTreshold: 50
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102500988708656482}
   m_Solo: 0
@@ -94,9 +94,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: secondStage
-    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: amountOfPower
+    m_EventTreshold: 75
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102556374932979608}
   m_Solo: 0
