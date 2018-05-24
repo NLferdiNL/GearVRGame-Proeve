@@ -46,6 +46,10 @@ public class SwarmSpawner : MonoBehaviour {
 
 	static SwarmSpawner instance;
 
+#if UNITY_EDITOR
+	public int activePath = 0;
+#endif
+
 	[SerializeField]
 	int enemyPerWaveIncrease = 2;
 
@@ -100,7 +104,7 @@ public class SwarmSpawner : MonoBehaviour {
 			Gizmos.DrawSphere(path[path.Length - 1], 2);
 			for(int j = 0; j < path.Length; j++) {
 				if(j < path.Length - 1) {
-					Debug.DrawLine(path[j], path[j + 1], Color.red, 0.1f, true);
+					Debug.DrawLine(path[j], path[j + 1], i == activePath ? Color.green : Color.red, 0.01f);
 				}
 			}
 		}
