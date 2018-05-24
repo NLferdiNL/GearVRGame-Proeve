@@ -19,6 +19,7 @@ public class Building : MonoBehaviour, IDamagable
     [SerializeField]
     private float maxLvlOfPower = 100;
 
+
     public Color startColour;
     public Color andColour;
 
@@ -29,7 +30,8 @@ public class Building : MonoBehaviour, IDamagable
     public BuildingFullyGharged OnFullCharge = new BuildingFullyGharged();
 
     [SerializeField]
-    private bool multipleAnimations;
+    private bool multipleAnimations, StagedAnimations;
+
 
     public float LvlOfPower
     {
@@ -73,7 +75,7 @@ public class Building : MonoBehaviour, IDamagable
     {
         PowerEqualsColour();
 
-        if (maxLvlOfPower <= 100 && multipleAnimations)
+        if (maxLvlOfPower <= 100 && !multipleAnimations)
         {
             buildingAnimator.SetFloat("amountOfPower", lvlOfPower / maxLvlOfPower);
         }
@@ -82,12 +84,18 @@ public class Building : MonoBehaviour, IDamagable
             buildingAnimator.SetFloat("secondStagePowerLvl", lvlOfPower / maxLvlOfPower);
         }
 
-        if (lvlOfPower >= maxLvlOfPower)
+        if (lvlOfPower >= maxLvlOfPower )
         {
-            OnFullCharge.Invoke();
             SwitchFase();
         }
     }
+
+    // Temp
+    public void DebugUpdate(string buildingName)
+    {
+        Debug.Log("Yay " + buildingName + " is fully charged");
+    }
+    //
 
     private void PowerEqualsColour()
     {
@@ -100,6 +108,7 @@ public class Building : MonoBehaviour, IDamagable
         {
             maxLvlOfPower += 100;
         }
+        OnFullCharge.Invoke();
     }
 
     public void Damage(float value)
