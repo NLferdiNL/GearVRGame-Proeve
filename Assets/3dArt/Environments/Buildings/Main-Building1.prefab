@@ -2329,7 +2329,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1862277820233742}
-  m_Mesh: {fileID: 4300002, guid: e8b26307f83b040478b3d0331e62a837, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!33 &33640670271408040
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -2500,6 +2500,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Building+BuildingFullyGharged, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  multipleAnimations: 0
+  StagedAnimations: 0
 --- !u!114 &114374343857133302
 MonoBehaviour:
   m_ObjectHideFlags: 1

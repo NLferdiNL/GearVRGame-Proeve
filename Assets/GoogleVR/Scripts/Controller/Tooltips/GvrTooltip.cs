@@ -14,7 +14,6 @@
 
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 /// A tooltip for displaying control schemes overlaying the controller visual using a Unity Canvas.
 /// Automatically changes what side of the controller the tooltip is shown on depending

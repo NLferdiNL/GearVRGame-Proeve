@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using UnityEngine;
-using System.Collections;
 
 
 [System.Obsolete("Replaced by GvrPointerInputModule.")]

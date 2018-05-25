@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour
@@ -46,26 +43,25 @@ public class Tutorial : MonoBehaviour
         SM.musicPlayer.clip = SM.MusicHolder[0];
         SM.musicPlayer.PlayOneShot(SM.musicPlayer.clip, 1f); // FadeInto
         yield return new WaitForSeconds(SM.musicPlayer.clip.length);
-        if (TutorialBuilding1 == false)
+        /*if (TutorialBuilding1 == false)
         {
             BuildingNotCharged();
-        }
+        }*/
         SM.musicPlayer.clip = SM.MusicHolder[1];
         SM.musicPlayer.PlayOneShot(SM.musicPlayer.clip, 1f); // FadeInto2
         yield return new WaitForSeconds(SM.musicPlayer.clip.length);
-        if (TutorialBuilding2 == false)
+        /*if (TutorialBuilding2 == false)
         {
             BuildingNotCharged();
-        }
+        }*/
         SM.musicPlayer.clip = SM.MusicHolder[2];
         SM.musicPlayer.PlayOneShot(SM.musicPlayer.clip, 1f); // FadeIntoVocals
         yield return new WaitForSeconds(SM.musicPlayer.clip.length);
-        if (TutorialBuilding3 == false)
+        /*if (TutorialBuilding3 == false)
         {
             BuildingNotCharged();
-        }
+        }*/
         InBetweenSection();
-        TutorialBuilding1 = TutorialBuilding2 = TutorialBuilding3 = false;
     }
 
     void BuildingNotCharged()

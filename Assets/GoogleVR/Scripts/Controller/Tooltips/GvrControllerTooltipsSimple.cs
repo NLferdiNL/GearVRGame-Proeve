@@ -16,7 +16,6 @@
 // GVR native integration.
 
 using UnityEngine;
-using System.Collections;
 
 /// A lightweight tooltip designed to minimize draw calls.
 [ExecuteInEditMode]

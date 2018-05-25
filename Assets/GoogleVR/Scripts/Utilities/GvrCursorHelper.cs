@@ -12,12 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
 using UnityEngine;
 
 namespace Gvr.Internal {
-  /// Manages cursor lock state while developer is using editor head and controller emulation.
-  public class GvrCursorHelper {
+	/// Manages cursor lock state while developer is using editor head and controller emulation.
+	public class GvrCursorHelper {
 
     // Whether MouseControllerProvider is currently tracking mouse movement.
     private static bool cachedHeadEmulationActive;

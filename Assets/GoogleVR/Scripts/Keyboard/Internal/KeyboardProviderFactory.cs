@@ -12,12 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using UnityEngine;
 
 namespace Gvr.Internal {
-  /// Factory that provides a concrete implementation of IKeyboardProvider for the
-  /// current platform.
-  static class KeyboardProviderFactory {
+	/// Factory that provides a concrete implementation of IKeyboardProvider for the
+	/// current platform.
+	static class KeyboardProviderFactory {
     static internal IKeyboardProvider CreateKeyboardProvider(GvrKeyboard owner)
     {
 // Use emulator in editor.

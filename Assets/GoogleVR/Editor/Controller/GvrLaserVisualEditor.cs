@@ -14,7 +14,6 @@
 
 using UnityEngine;
 using UnityEditor;
-using System.Collections;
 
 /// Custom editor for GvrLaserVisual.
 /// Shows the relationship between the shrinkLaser property and other related properties.

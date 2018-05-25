@@ -14,9 +14,7 @@
 
 using UnityEngine;
 using UnityEngine.EventSystems;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 
 /// This class is used by _GvrPointerInputModule_ to route scroll events through Unity's Event System.
 /// It maintains indepedent velocities for each instance of _IScrollHandler_ that is currently being scrolled.

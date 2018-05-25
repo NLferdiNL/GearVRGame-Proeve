@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using UnityEngine;
-using System.Collections;
 
 /// Used to override the global scroll settings in _GvrPointerScrollInput_
 /// for the GameObject that this script is attached to.

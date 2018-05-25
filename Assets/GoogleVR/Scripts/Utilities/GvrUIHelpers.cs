@@ -13,8 +13,6 @@
 // limitations under the License.
 
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
 
 public static class GvrUIHelpers {
   /// Finds the meters scale for the local coordinate system

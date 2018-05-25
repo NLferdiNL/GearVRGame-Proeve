@@ -14,9 +14,7 @@
 
 using UnityEngine;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Runtime.InteropServices;
 
 /// This is the main GVR audio class that communicates with the native code implementation of

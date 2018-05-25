@@ -15,16 +15,14 @@
 using UnityEngine;
 using System;
 
-using Gvr;
-
 /// @cond
 namespace Gvr.Internal {
-  /// Internal representation of the controller's current state.
-  /// This representation is used by controller providers to represent the controller's state.
-  ///
-  /// The fields in this class have identical meanings to their correspondents in the GVR C API,
-  /// so they are not redundantly documented here.
-  class ControllerState {
+	/// Internal representation of the controller's current state.
+	/// This representation is used by controller providers to represent the controller's state.
+	///
+	/// The fields in this class have identical meanings to their correspondents in the GVR C API,
+	/// so they are not redundantly documented here.
+	class ControllerState {
     internal GvrConnectionState connectionState = GvrConnectionState.Disconnected;
     internal GvrControllerApiStatus apiStatus = GvrControllerApiStatus.Unavailable;
     internal Quaternion orientation = Quaternion.identity;

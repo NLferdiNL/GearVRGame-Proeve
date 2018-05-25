@@ -12,13 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Gvr;
 
 /// @cond
 namespace Gvr.Internal {
-  /// Dummy controller provider.
-  /// Used in platforms that do not support controllers.
-  class DummyControllerProvider : IControllerProvider {
+	/// Dummy controller provider.
+	/// Used in platforms that do not support controllers.
+	class DummyControllerProvider : IControllerProvider {
     private ControllerState dummyState = new ControllerState();
     public bool SupportsBatteryStatus {
       get { return false; }

@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class AudioTest : MonoBehaviour {
+public class AudioAnimatedObject : MonoBehaviour {
 
 	Animator animator;
 
@@ -15,18 +13,24 @@ public class AudioTest : MonoBehaviour {
 	public Color color = Color.red;
 
 	[SerializeField]
-	MeshRenderer meshRenderer1, meshRenderer2;
+	MeshRenderer meshRenderer;
 
 	Material mat;
 
+	bool meshRendererAvailable = false;
+
 	private void Start() {
 		animator = GetComponent<Animator>();
-		mat = new Material(meshRenderer1.material);
-		meshRenderer1.material = meshRenderer2.material = mat;
+		if(meshRenderer != null) {
+			mat = new Material(meshRenderer.material);
+			meshRenderer.material = mat;
+			meshRendererAvailable = true;
+		}
 	}
 
 	private void FixedUpdate() {
 		animator.SetFloat("time", Mathf.MoveTowards(animator.GetFloat("time"), AudioData.GetFloat(range) * amplify, Time.deltaTime * barSpeed));
-		mat.color = color;
+		if(meshRendererAvailable)
+			mat.color = color;
 	}
 }

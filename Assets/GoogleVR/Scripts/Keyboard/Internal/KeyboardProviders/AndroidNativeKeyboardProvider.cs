@@ -20,14 +20,13 @@ using System;
 using System.Runtime.InteropServices;
 
 #if UNITY_2017_2_OR_NEWER
-using UnityEngine.XR;
 #else
 using UnityEngine.VR;
 #endif  // UNITY_2017_2_OR_NEWER
 
 /// @cond
 namespace Gvr.Internal {
-  public class AndroidNativeKeyboardProvider : IKeyboardProvider {
+	public class AndroidNativeKeyboardProvider : IKeyboardProvider {
     private IntPtr renderEventFunction;
 
 #if UNITY_ANDROID && !UNITY_EDITOR

@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using UnityEngine;
-using System.Collections;
 
 /// Represents an object tracked by controller input.
 ///
