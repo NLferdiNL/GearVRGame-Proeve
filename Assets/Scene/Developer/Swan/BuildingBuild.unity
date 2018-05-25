@@ -586,6 +586,11 @@ Prefab:
       propertyPath: OnFullCharge.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Building3
       objectReference: {fileID: 0}
+    - target: {fileID: 95497093429513046, guid: b6c62ed45b8089742a00ec10ee2cc206,
+        type: 2}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 3dff95876e2c6024e8208fdec718d5ea, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6c62ed45b8089742a00ec10ee2cc206, type: 2}
   m_IsPrefabParent: 0
