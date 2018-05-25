@@ -12,13 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using UnityEngine;
-using System;
 
 /// @cond
 namespace Gvr.Internal {
-  /// Maps to  gvr_feature in the C API.
-  internal enum gvr_feature {
+	/// Maps to  gvr_feature in the C API.
+	internal enum gvr_feature {
     HeadPose6dof = 3,
   };
 

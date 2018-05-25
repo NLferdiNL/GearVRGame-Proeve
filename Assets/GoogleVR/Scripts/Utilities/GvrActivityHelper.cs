@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using UnityEngine;
 
 // Simple static class to abstract out several jni calls that need to be shared
 // between different classes.

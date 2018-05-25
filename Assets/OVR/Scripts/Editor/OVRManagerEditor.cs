@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 using UnityEditor;
-using System.Collections;
-using System.Reflection;
 
 [CustomEditor(typeof(OVRManager))]
 public class OVRManagerEditor : Editor

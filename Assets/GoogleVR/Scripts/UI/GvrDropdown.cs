@@ -15,7 +15,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using System.Collections;
 
 /// Dropdown UI component that works with the GvrRaycasters.
 /// This is a workaround for the fact that the Dropdown component doesn't work with custom raycasters

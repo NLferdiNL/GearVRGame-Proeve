@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using UnityEngine;
-using System.Collections;
 
 /// Interface to implement to override the global scroll settings
 /// in _GvrPointerScrollInput_ for an object.

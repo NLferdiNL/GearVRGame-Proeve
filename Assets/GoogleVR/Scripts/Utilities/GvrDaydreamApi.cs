@@ -14,7 +14,6 @@
 
 using UnityEngine;
 using System;
-using System.Runtime.InteropServices;
 
 /// Main entry point Daydream specific APIs.
 ///

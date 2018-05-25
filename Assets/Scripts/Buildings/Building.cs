@@ -1,12 +1,9 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Building : MonoBehaviour, IDamagable
-{
-    // This script is used too keep track of the buildings level of power and animate accordingly.
+public class Building : MonoBehaviour, IDamagable {
+    // This script is used to keep track of the buildings level of power and animate accordingly.
 
     [SerializeField]
     public Animator buildingAnimator, radarDotAnimator;
@@ -27,11 +24,10 @@ public class Building : MonoBehaviour, IDamagable
     public Color startColour;
     public Color andColour;
 
-    // This is a Unity Event handeler
     [Serializable]
-    public class BuildingFullyGharged : UnityEvent { }
+    public class BuildingFullyChargedEvent : UnityEvent { }
 
-    public BuildingFullyGharged OnFullCharge = new BuildingFullyGharged();
+    public BuildingFullyChargedEvent OnFullCharge = new BuildingFullyChargedEvent();
 
     [SerializeField]
     private bool multipleAnimations, StagedAnimations;
@@ -71,7 +67,6 @@ public class Building : MonoBehaviour, IDamagable
 		}
 	}
 
-    // Use this for initialization
     void Start()
     {
         if (buildingAnimator == null)
@@ -88,59 +83,37 @@ public class Building : MonoBehaviour, IDamagable
 				radarDotAnimator.SetBool("underAttack", false);
 			}
 		}
-			
-		//no
-        //PowerEqualsColour();
 
-        if (maxLvlOfPower <= 100 && !multipleAnimations)
-        {
-            buildingAnimator.SetFloat("amountOfPower", lvlOfPower / maxLvlOfPower);
-        }
+        buildingAnimator.SetFloat("amountOfPower", lvlOfPower / maxLvlOfPower);
 
-        if (lvlOfPower >= maxLvlOfPower )
-        {
-            SwitchFase();
-        }
+		if(lvlOfPower >= maxLvlOfPower) {
+			SwitchFase();
+		}
     }
 
-    // Temp
-    public void DebugUpdate(string buildingName)
-    {
-        Debug.Log("Yay " + buildingName + " is fully charged");
-    }
+	void SwitchFase() {
+		if(maxLvlOfPower == 100) {
+			maxLvlOfPower += 100;
+		}
+		OnFullCharge.Invoke();
+	}
 
-    private void PowerEqualsColour()
-    {
-        GetComponent<Renderer>().material.color = Color.Lerp(startColour, andColour, 100 / maxLvlOfPower * lvlOfPower / 100);
-    }
-
-    void SwitchFase()
-    {
-        if (maxLvlOfPower == 100)
-        {
-            maxLvlOfPower += 100;
-        }
-        OnFullCharge.Invoke();
-    }
-
-    public void Damage(float value)
-    {
+	public void Damage(float value) {
 		if(timeSinceLastAttack != 0)
 			radarDotAnimator.SetBool("underAttack", true);
 
 		timeSinceLastAttack = 0;
 
-        lvlOfPower -= value;
+		lvlOfPower -= value;
 
 		if(lvlOfPower < 0)
 			lvlOfPower = 0;
-    }
+	}
 
-    public void Heal(float value)
-    {
-        lvlOfPower += value;
+	public void Heal(float value) {
+		lvlOfPower += value;
 
 		if(lvlOfPower > maxLvlOfPower)
 			lvlOfPower = maxLvlOfPower;
-    }
+	}
 }

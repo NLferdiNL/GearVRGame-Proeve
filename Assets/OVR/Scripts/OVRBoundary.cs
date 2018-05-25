@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
-using VR = UnityEngine.VR;
 using System.Runtime.InteropServices;
 
 /// <summary>

@@ -14,7 +14,6 @@
 
 using UnityEngine;
 using UnityEngine.Audio;
-using System.Collections;
 
 #pragma warning disable 0618 // Ignore GvrAudio* deprecation
 
