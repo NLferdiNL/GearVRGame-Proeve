@@ -12,13 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Gvr;
 using UnityEngine;
 
 /// Used for platforms that do not support the GoogleVR standalone headset (6DOF).
 /// @cond
 namespace Gvr.Internal {
-  class DummyHeadsetProvider : IHeadsetProvider {
+	class DummyHeadsetProvider : IHeadsetProvider {
     private HeadsetState dummyState;
 
     public bool SupportsPositionalTracking { get { return false; } }

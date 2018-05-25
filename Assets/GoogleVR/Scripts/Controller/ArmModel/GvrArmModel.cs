@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using UnityEngine;
-using System.Collections;
 
 /// Standard implementation for a mathematical model to make the virtual controller approximate the
 /// physical location of the Daydream controller.

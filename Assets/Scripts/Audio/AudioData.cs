@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AudioData : MonoBehaviour {
 
@@ -23,10 +21,6 @@ public class AudioData : MonoBehaviour {
 
 	private void FixedUpdate() {
 		audioSource.GetSpectrumData(instance.audioSpectrumData, 0, FFTWindow.Blackman);
-		if(!audioSource.isPlaying) {
-			audioSource.Play();
-			print("finished");
-		}
 	}
 
 	public static float GetFloat(int range) {

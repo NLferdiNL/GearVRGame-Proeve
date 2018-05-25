@@ -1,13 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Audio;
 
 public class VolumeChanger : MonoBehaviour
 {
     public AudioMixer masterMixer;
 
-    [SerializeField]
     private AudioVolumeHolder audioVolumeHolder;
 
     public float currentMusicVol = 0;

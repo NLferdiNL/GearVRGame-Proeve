@@ -19,18 +19,15 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ************************************************************************************/
-using System;
 using System.Text;
-using UnityEngine;
 using UnityEngine.Assertions;
 
 
-namespace UnityEngine.EventSystems
-{
-    /// <summary>
-    /// Extension of Unity's PointerEventData to support ray based pointing and also touchpad swiping
-    /// </summary>
-    public class OVRPointerEventData : PointerEventData
+namespace UnityEngine.EventSystems {
+	/// <summary>
+	/// Extension of Unity's PointerEventData to support ray based pointing and also touchpad swiping
+	/// </summary>
+	public class OVRPointerEventData : PointerEventData
     {
         public OVRPointerEventData(EventSystem eventSystem)
             : base(eventSystem)

@@ -1,23 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Audio;
+﻿using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    [SerializeField] private AudioMixer MixerManager;
 
-    [SerializeField] private  List<AudioSource> sfx;
-    public List<AudioSource> SfxSender
+    [SerializeField] private  AudioClip[] sfx;
+    public AudioClip[] SfxSender
     {
         get { return sfx; }
     }
-    [SerializeField]private AudioSource music;
+    [SerializeField] private AudioClip[] music;
 
-    public AudioSource MusicSender
+    public AudioClip[] MusicHolder
     {
         get { return music; }
         set { music = value; }
     }
+
+    public AudioSource musicPlayer;
 
 }

@@ -15,7 +15,6 @@
 using UnityEngine;
 
 using System;
-using System.Runtime.InteropServices;
 
 // General Cardboard helper methods.
 public class GvrCardboardHelpers {

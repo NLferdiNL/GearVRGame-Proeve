@@ -1,9 +1,7 @@
 ﻿using EnemyNav;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 #if UNITY_EDITOR
-using UnityEditor;
 #endif
 
 namespace EnemyNav {
@@ -35,9 +33,7 @@ namespace EnemyNav {
 		}
 	}
 }
-#if UNITY_EDITOR
-[ExecuteInEditMode]
-#endif
+
 public class SwarmSpawner : MonoBehaviour {
 
 	public static Path[] Paths {
@@ -47,6 +43,10 @@ public class SwarmSpawner : MonoBehaviour {
 	}
 
 	static SwarmSpawner instance;
+
+#if UNITY_EDITOR
+	public int activePath = 0;
+#endif
 
 	[SerializeField]
 	int enemyPerWaveIncrease = 2;
@@ -77,10 +77,18 @@ public class SwarmSpawner : MonoBehaviour {
 		while(!endWhileLoop) {
 			yield return new WaitForSeconds(timeBetweenSpawns);
 			if(spawnEnemy) {
-				for(int i = 0; i < currentWave * enemyPerWaveIncrease; i++) {
-					SpawnEnemy();
+				bool skipIf = false;
+				Backwards:
+				if(SwarmContainer.Count < (currentWave - 1) * enemyPerWaveIncrease / 2 || skipIf) {
+					for(int i = 0; i < currentWave * enemyPerWaveIncrease; i++) {
+						SpawnEnemy();
+					}
+					currentWave++;
+				} else {
+					yield return new WaitForSeconds(timeBetweenSpawns / 2);
+					skipIf = true;
+					goto Backwards;
 				}
-				currentWave++;
 			}
 		}
 	}
@@ -98,11 +106,11 @@ public class SwarmSpawner : MonoBehaviour {
 	private void OnDrawGizmosSelected() {
 		for(int i = 0; i < paths.Length; i++) {
 			Path path = paths[i];
-			Gizmos.DrawSphere(path[0], 2);
+			Gizmos.DrawCube(path[0], new Vector3(2,2,2));
 			Gizmos.DrawSphere(path[path.Length - 1], 2);
 			for(int j = 0; j < path.Length; j++) {
 				if(j < path.Length - 1) {
-					Debug.DrawLine(path[j], path[j + 1], Color.red);
+					Debug.DrawLine(path[j], path[j + 1], i == activePath ? Color.green : Color.red, 0.01f);
 				}
 			}
 		}

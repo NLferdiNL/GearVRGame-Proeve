@@ -13,14 +13,11 @@
 // limitations under the License.
 
 using UnityEngine;
-using System;
-
-using Gvr;
 
 /// @cond
 namespace Gvr.Internal {
-  // Internal representation of state for the headset.
-  struct HeadsetState {
+	// Internal representation of state for the headset.
+	struct HeadsetState {
     internal GvrEventType eventType;
     internal int eventFlags;
     internal long eventTimestampNs;  // Maps to gvr_clock_time_point monotonic_systemtime_nanos.

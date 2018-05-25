@@ -1,12 +1,9 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour
 {
-    [SerializeField] private AudioMixer MixerManager;
     [SerializeField] private SoundManager SM;
 
     public bool TutorialBuilding1, TutorialBuilding2, TutorialBuilding3;
@@ -36,36 +33,35 @@ public class Tutorial : MonoBehaviour
                 break;
         }
     }
-
+    
     void IntroSection()
     {
         StartCoroutine(IntroStart());
     }
     IEnumerator IntroStart()
     {
-        SM.MusicSender.clip = Resources.Load<AudioSource>("FadeInto").clip;
-        SM.MusicSender.PlayOneShot(SM.MusicSender.clip, 1f); // FadeInto
-        yield return new WaitForSeconds(SM.MusicSender.clip.length);
-        if (TutorialBuilding1 == false)
+        SM.musicPlayer.clip = SM.MusicHolder[0];
+        SM.musicPlayer.PlayOneShot(SM.musicPlayer.clip, 1f); // FadeInto
+        yield return new WaitForSeconds(SM.musicPlayer.clip.length);
+        /*if (TutorialBuilding1 == false)
         {
             BuildingNotCharged();
-        }
-        SM.MusicSender = Resources.Load<AudioSource>("Music/FadeInto2");
-        SM.MusicSender.PlayOneShot(SM.MusicSender.clip, 1f); // FadeInto2
-        yield return new WaitForSeconds(SM.MusicSender.clip.length);
-        if (TutorialBuilding2 == false)
+        }*/
+        SM.musicPlayer.clip = SM.MusicHolder[1];
+        SM.musicPlayer.PlayOneShot(SM.musicPlayer.clip, 1f); // FadeInto2
+        yield return new WaitForSeconds(SM.musicPlayer.clip.length);
+        /*if (TutorialBuilding2 == false)
         {
             BuildingNotCharged();
-        }
-        SM.MusicSender = Resources.Load<AudioSource>("Music/FadeIntoVocals");
-        SM.MusicSender.PlayOneShot(SM.MusicSender.clip, 1f); // FadeIntoVocals
-        yield return new WaitForSeconds(SM.MusicSender.clip.length);
-        if (TutorialBuilding3 == false)
+        }*/
+        SM.musicPlayer.clip = SM.MusicHolder[2];
+        SM.musicPlayer.PlayOneShot(SM.musicPlayer.clip, 1f); // FadeIntoVocals
+        yield return new WaitForSeconds(SM.musicPlayer.clip.length);
+        /*if (TutorialBuilding3 == false)
         {
             BuildingNotCharged();
-        }
+        }*/
         InBetweenSection();
-        TutorialBuilding1 = TutorialBuilding2 = TutorialBuilding3 = false;
     }
 
     void BuildingNotCharged()
@@ -79,12 +75,12 @@ public class Tutorial : MonoBehaviour
     }
     IEnumerator InBetween()
     {
-        SM.MusicSender = Resources.Load<AudioSource>("Music/BuildupInto");
-        SM.MusicSender.Play(); // BuildupInto
-        yield return new WaitForSeconds(SM.MusicSender.clip.length);
-        SM.MusicSender = Resources.Load<AudioSource>("Music/Drop");
-        SM.MusicSender.Play(); // Drop
-        yield return new WaitForSeconds(SM.MusicSender.clip.length);
+        SM.musicPlayer.clip = SM.MusicHolder[3];
+        SM.musicPlayer.Play(); // BuildupInto
+        yield return new WaitForSeconds(SM.musicPlayer.clip.length);
+        SM.musicPlayer.clip = SM.MusicHolder[4];
+        SM.musicPlayer.Play(); // Drop
+        yield return new WaitForSeconds(SM.musicPlayer.clip.length);
         MidSection();
     }
 
@@ -109,23 +105,23 @@ public class Tutorial : MonoBehaviour
     }
     IEnumerator MidPartOne()
     {
-        SM.MusicSender = Resources.Load<AudioSource>("Music/Mid1");
-        SM.MusicSender.Play(); // Mid1
-        yield return new WaitForSeconds(SM.MusicSender.clip.length);
+        SM.musicPlayer.clip = SM.MusicHolder[5];
+        SM.musicPlayer.Play(); // Mid1
+        yield return new WaitForSeconds(SM.musicPlayer.clip.length);
         MidSection();
     }
     IEnumerator MidPartTwo()
     {
-        SM.MusicSender = Resources.Load<AudioSource>("Music/Mid2");
-        SM.MusicSender.Play(); // Mid2
-        yield return new WaitForSeconds(SM.MusicSender.clip.length);
+        SM.musicPlayer.clip = SM.MusicHolder[6];
+        SM.musicPlayer.Play(); // Mid2
+        yield return new WaitForSeconds(SM.musicPlayer.clip.length);
         MidSection();
     }
     IEnumerator MidPartThree()
     {
-        SM.MusicSender = Resources.Load<AudioSource>("Music/Mid3");
-        SM.MusicSender.Play(); // Mid3
-        yield return new WaitForSeconds(SM.MusicSender.clip.length);
+        SM.musicPlayer.clip = SM.MusicHolder[7];
+        SM.musicPlayer.Play(); // Mid3
+        yield return new WaitForSeconds(SM.musicPlayer.clip.length);
         MidSection();
     }
 
@@ -135,24 +131,24 @@ public class Tutorial : MonoBehaviour
     }
     IEnumerator SurvivalStart()
     {
-        SM.MusicSender = Resources.Load<AudioSource>("Music/MidBuild");
-        SM.MusicSender.Play(); // MidBuild
-        yield return new WaitForSeconds(SM.MusicSender.clip.length);
-        SM.MusicSender = Resources.Load<AudioSource>("Music/MidVocalsBuild");
-        SM.MusicSender.Play(); // MidVocalsBuild
-        yield return new WaitForSeconds(SM.MusicSender.clip.length);
-        SM.MusicSender = Resources.Load<AudioSource>("Music/MidBuild2");
-        SM.MusicSender.Play(); // Midbuild2
-        yield return new WaitForSeconds(SM.MusicSender.clip.length);
-        SM.MusicSender = Resources.Load<AudioSource>("Music/MidBuildPlus");
-        SM.MusicSender.Play(); // MidBuildPlus
-        yield return new WaitForSeconds(SM.MusicSender.clip.length);
-        SM.MusicSender = Resources.Load<AudioSource>("Music/MidBuildPlus2");
-        SM.MusicSender.Play(); // MidBuildPlus2
-        yield return new WaitForSeconds(SM.MusicSender.clip.length);
-        SM.MusicSender = Resources.Load<AudioSource>("Music/Drop2");
-        SM.MusicSender.Play(); // Drop2
-        yield return new WaitForSeconds(SM.MusicSender.clip.length);
+        SM.musicPlayer.clip = SM.MusicHolder[8];
+        SM.musicPlayer.Play(); // MidBuild
+        yield return new WaitForSeconds(SM.musicPlayer.clip.length);
+        SM.musicPlayer.clip = SM.MusicHolder[9];
+        SM.musicPlayer.Play(); // MidVocalsBuild
+        yield return new WaitForSeconds(SM.musicPlayer.clip.length);
+        SM.musicPlayer.clip = SM.MusicHolder[10];
+        SM.musicPlayer.Play(); // Midbuild2
+        yield return new WaitForSeconds(SM.musicPlayer.clip.length);
+        SM.musicPlayer.clip = SM.MusicHolder[11];
+        SM.musicPlayer.Play(); // MidBuildPlus
+        yield return new WaitForSeconds(SM.musicPlayer.clip.length);
+        SM.musicPlayer.clip = SM.MusicHolder[12];
+        SM.musicPlayer.Play(); // MidBuildPlus2
+        yield return new WaitForSeconds(SM.musicPlayer.clip.length);
+        SM.musicPlayer.clip = SM.MusicHolder[13];
+        SM.musicPlayer.Play(); // Drop2
+        yield return new WaitForSeconds(SM.musicPlayer.clip.length);
         StartEndlessSurvival();
     }
 
@@ -162,18 +158,18 @@ public class Tutorial : MonoBehaviour
     }
     IEnumerator SurvivalEndless()
     {
-        SM.MusicSender = Resources.Load<AudioSource>("Music/EndLoop");
-        SM.MusicSender.Play(); // EndLoop
-        yield return new WaitForSeconds(SM.MusicSender.clip.length);
-        SM.MusicSender = Resources.Load<AudioSource>("Music/EndLoop2");
-        SM.MusicSender.Play(); // EndLoop2
-        yield return new WaitForSeconds(SM.MusicSender.clip.length);
-        SM.MusicSender = Resources.Load<AudioSource>("Music/EndLoopRust");
-        SM.MusicSender.Play(); // EndLoopRust
-        yield return new WaitForSeconds(SM.MusicSender.clip.length);
-        SM.MusicSender = Resources.Load<AudioSource>("Music/EndLoopOutro");
-        SM.MusicSender.Play(); // EndLoopOutro
-        yield return new WaitForSeconds(SM.MusicSender.clip.length);
-        StartCoroutine(SurvivalEndless());
+        SM.musicPlayer.clip = SM.MusicHolder[14];
+        SM.musicPlayer.Play(); // EndLoop
+        yield return new WaitForSeconds(SM.musicPlayer.clip.length);
+        SM.musicPlayer.clip = SM.MusicHolder[15];
+        SM.musicPlayer.Play(); // EndLoop2
+        yield return new WaitForSeconds(SM.musicPlayer.clip.length);
+        SM.musicPlayer.clip = SM.MusicHolder[16];
+        SM.musicPlayer.Play(); // EndLoopRust
+        yield return new WaitForSeconds(SM.musicPlayer.clip.length);
+        SM.musicPlayer.clip = SM.MusicHolder[17];
+        SM.musicPlayer.Play(); // EndLoopOutro
+        yield return new WaitForSeconds(SM.musicPlayer.clip.length);
+        StartEndlessSurvival();
     }
 }

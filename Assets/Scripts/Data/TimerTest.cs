@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class TimerTest : MonoBehaviour {
@@ -12,7 +10,7 @@ public class TimerTest : MonoBehaviour {
 		timer = new Timer();
 
 		timer.Start();
-		timer.Start();
+
 		text = GetComponent<Text>();
 	}
 

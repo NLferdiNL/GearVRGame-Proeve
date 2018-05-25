@@ -12,9 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using UnityEngine;
 using UnityEngine.EventSystems;
-using System.Collections;
 
 /// This script extends the standard Unity EventSystem events with Gvr specific events.
 public static class GvrExecuteEventsExtension {

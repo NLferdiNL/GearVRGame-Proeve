@@ -12,9 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 /// Visualizes a laser and a reticle using a LineRenderer and a Quad.
 /// Provides functions for settings the end point of the laser,

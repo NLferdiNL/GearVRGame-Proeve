@@ -14,7 +14,6 @@
 
 using UnityEngine;
 using UnityEditor;
-using System.Collections;
 
 /// Custom editor for GvrControllerVisual.
 /// Enhances the visualization of the displayState and ensures that it can only be edited

@@ -14,7 +14,6 @@
 
 using UnityEngine;
 using System;
-using System.Collections;
 
 using Gvr.Internal;
 
