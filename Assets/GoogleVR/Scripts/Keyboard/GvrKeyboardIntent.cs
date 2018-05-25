@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using UnityEngine;
 
 public class GvrKeyboardIntent {
@@ -65,9 +66,9 @@ public class GvrKeyboardIntent {
     return keyboardFragment != null &&
         keyboardFragment.GetRawObject() != IntPtr.Zero;
 #endif  // !UNITY_ANDROID || UNITY_EDITOR
-  }
+	}
 
-  public void LaunchPlayStore() {
+	public void LaunchPlayStore() {
 #if !UNITY_ANDROID || UNITY_EDITOR
     Debug.LogError("GvrKeyboardIntent requires the Android runtime environment");
 #else
