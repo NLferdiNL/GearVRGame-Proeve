@@ -75,7 +75,6 @@ public class Building : MonoBehaviour, IDamagable {
         {
             buildingAnimator = GetComponentInParent<Animator>();
         }
-        onTutorialSceneEnd.AddListener(SwitchFase);
     }
 
     void FixedUpdate()
