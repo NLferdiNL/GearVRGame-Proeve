@@ -87,16 +87,9 @@ public class Building : MonoBehaviour, IDamagable {
         buildingAnimator.SetFloat("amountOfPower", lvlOfPower / maxLvlOfPower);
 
 		if(lvlOfPower >= maxLvlOfPower) {
-			SwitchFase();
+			OnFullCharge.Invoke();
 		}
     }
-
-	void SwitchFase() {
-		if(maxLvlOfPower == 100) {
-			maxLvlOfPower += 100;
-		}
-		OnFullCharge.Invoke();
-	}
 
 	public void Damage(float value) {
 		if(timeSinceLastAttack != 0)
@@ -111,6 +104,9 @@ public class Building : MonoBehaviour, IDamagable {
 	}
 
 	public void Heal(float value) {
+		if(UnderAttack)
+			value /= 10;
+
 		lvlOfPower += value;
 
 		if(lvlOfPower > maxLvlOfPower)
