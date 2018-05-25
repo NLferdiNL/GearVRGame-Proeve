@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour
 {
     [SerializeField] private SoundManager SM;
 
-    public bool TutorialBuilding1, TutorialBuilding2, TutorialBuilding3;
+    public UnityEvent OnReset = new UnityEvent();
 
-    //[0] = start song || [5] = start mid section || [13] = start drop || [15] = start end loop.
+    public bool TutorialBuilding1, TutorialBuilding2, TutorialBuilding3; // Check of 
+
+    // [0] = start song || [5] = start mid section || [13] = start drop || [15] = start end loop.
 
     void Start()
     {
@@ -21,15 +24,12 @@ public class Tutorial : MonoBehaviour
         {
             case 1:
                 TutorialBuilding1 = true;
-                Debug.Log("TB1");
                 break;
             case 2:
                 TutorialBuilding2 = true;
-                Debug.Log("TB2");
                 break;
             case 3:
                 TutorialBuilding3 = true;
-                Debug.Log("TB3");
                 break;
         }
     }
@@ -61,6 +61,9 @@ public class Tutorial : MonoBehaviour
         {
             BuildingNotCharged();
         }*/
+        TutorialBuilding1 = TutorialBuilding2 = TutorialBuilding3 = false;
+        OnReset.Invoke();
+
         InBetweenSection();
     }
 
