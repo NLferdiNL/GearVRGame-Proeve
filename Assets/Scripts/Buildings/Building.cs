@@ -29,6 +29,8 @@ public class Building : MonoBehaviour, IDamagable {
 
     public BuildingFullyChargedEvent OnFullCharge = new BuildingFullyChargedEvent();
 
+    private UnityEvent onTutorialSceneEnd = new UnityEvent();
+
     [SerializeField]
     private bool multipleAnimations, StagedAnimations;
 
@@ -73,6 +75,7 @@ public class Building : MonoBehaviour, IDamagable {
         {
             buildingAnimator = GetComponentInParent<Animator>();
         }
+        onTutorialSceneEnd.AddListener(SwitchFase);
     }
 
     void FixedUpdate()
