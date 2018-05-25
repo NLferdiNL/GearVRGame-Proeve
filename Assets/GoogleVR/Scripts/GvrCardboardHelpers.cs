@@ -15,6 +15,7 @@
 using UnityEngine;
 
 using System;
+using System.Runtime.InteropServices;
 
 // General Cardboard helper methods.
 public class GvrCardboardHelpers {
@@ -51,7 +52,7 @@ public class GvrCardboardHelpers {
     Debug.Log("Unavailable for non-Android and non-iOS builds");
   }
 
-#if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
+#if(UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
   [DllImport(GvrActivityHelper.GVR_DLL_NAME)]
   private static extern void gvr_reset_tracking(IntPtr gvr_context);
 

@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using UnityEngine;
+using UnityEngine.XR;
 
 #if UNITY_2017_2_OR_NEWER
 #else
@@ -35,14 +36,14 @@ public class GvrRecenterOnlyController : MonoBehaviour {
       return;
     }
 
-    // Daydream is loaded only on deivce, not in editor.
+		// Daydream is loaded only on deivce, not in editor.
 #if UNITY_ANDROID && !UNITY_EDITOR
     if (XRSettings.loadedDeviceName != GvrSettings.VR_SDK_DAYDREAM) {
       return;
     }
 #endif
 
-    if (GvrControllerInput.Recentered) {
+		if(GvrControllerInput.Recentered) {
       ApplyYawCorrection();
       return;
     }
