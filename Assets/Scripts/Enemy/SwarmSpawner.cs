@@ -72,15 +72,23 @@ public class SwarmSpawner : MonoBehaviour {
 	int maxEnemies = 40;
 
 	IEnumerator Start() {
-			instance = this;
+		instance = this;
 
-			while(!endWhileLoop) {
-				yield return new WaitForSeconds(timeBetweenSpawns);
+		while(!endWhileLoop) {
+			yield return new WaitForSeconds(timeBetweenSpawns);
 			if(spawnEnemy) {
-				for(int i = 0; i < currentWave * enemyPerWaveIncrease; i++) {
-					SpawnEnemy();
+				bool skipIf = false;
+				Backwards:
+				if(SwarmContainer.Count < (currentWave - 1) * enemyPerWaveIncrease / 2 || skipIf) {
+					for(int i = 0; i < currentWave * enemyPerWaveIncrease; i++) {
+						SpawnEnemy();
+					}
+					currentWave++;
+				} else {
+					yield return new WaitForSeconds(timeBetweenSpawns / 2);
+					skipIf = true;
+					goto Backwards;
 				}
-				currentWave++;
 			}
 		}
 	}
