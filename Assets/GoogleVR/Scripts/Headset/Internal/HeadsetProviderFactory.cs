@@ -12,13 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using UnityEngine;
 
 /// @cond
 namespace Gvr.Internal {
-  /// Factory that provides a concrete implementation of IHeadsetProvider for the
-  /// current platform.
-  static class HeadsetProviderFactory {
+	/// Factory that provides a concrete implementation of IHeadsetProvider for the
+	/// current platform.
+	static class HeadsetProviderFactory {
     /// Provides a concrete implementation of IHeadsetProvider appropriate for the current
     /// platform. This method never returns null. In the worst case, it might return a dummy
     /// provider if the platform is not supported. For demo purposes the emulator controller

@@ -16,7 +16,6 @@
 // GVR native integration.
 
 using UnityEngine;
-using System.Collections;
 
 /// Provides visual feedback for the daydream controller.
 [RequireComponent(typeof(Renderer))]

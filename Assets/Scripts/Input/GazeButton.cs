@@ -19,6 +19,9 @@ public class GazeButton : MonoBehaviour {
 
 	float currTime = 0;
 
+	[SerializeField]
+	bool looping = false;
+
 	float normalizedCurrTime {
 		get {
 			return 100 / maxTime * currTime / 100;
@@ -41,7 +44,10 @@ public class GazeButton : MonoBehaviour {
 			OnGazeTimeChanged.Invoke(normalizedCurrTime);
 
 			if(currTime >= maxTime) {
-				active = false;
+				if(!looping)
+					active = false;
+				else
+					currTime = 0;
 				OnGazeFinished.Invoke();
 			}
 			

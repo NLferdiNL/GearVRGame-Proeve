@@ -15,12 +15,11 @@
 // This provider is only available in the editor.
 #if UNITY_EDITOR
 
-using Gvr;
 
 namespace Gvr.Internal {
-  /// Controller provider used when playing in the Unity Editor.
-  /// Supports the Controller Emulator and Mouse input to mock the controller.
-  class EditorControllerProvider : IControllerProvider {
+	/// Controller provider used when playing in the Unity Editor.
+	/// Supports the Controller Emulator and Mouse input to mock the controller.
+	class EditorControllerProvider : IControllerProvider {
     private EmulatorControllerProvider emulatorControllerProvider;
     private MouseControllerProvider mouseControllerProvider;
 #if UNITY_HAS_GOOGLEVR

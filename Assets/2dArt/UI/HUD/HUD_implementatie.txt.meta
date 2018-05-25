@@ -1,7 +1,26 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 3f2284a238717354ea3dab8d0b858b80
 timeCreated: 1526557744
+=======
+<<<<<<< HEAD
+guid: 9d70c7040b9db454d8ac712e02ba64c4
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+guid: 9d70c7040b9db454d8ac712e02ba64c4
+timeCreated: 1526629946
+=======
+guid: a72e12b13217d8c448af2dede2f7efea
+timeCreated: 1526554362
+>>>>>>> 412ee391cd2028f337c2c06c15ddbc62b1251c0d
+=======
+guid: dd748972eca8b2b489f6594f58dc7e43
+timeCreated: 1526642555
+>>>>>>> artists
+>>>>>>> development
 licenseType: Free
+>>>>>>> c4e8fb6c24a3fd33203354fd366a4b8a6b570717
 TextScriptImporter:
   externalObjects: {}
   userData: 

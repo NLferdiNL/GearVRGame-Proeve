@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using UnityEngine;
-using System.Collections;
 
 #pragma warning disable 0618 // Ignore GvrAudio* deprecation
 

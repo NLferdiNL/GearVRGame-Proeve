@@ -1,0 +1,356 @@
+fileFormatVersion: 2
+guid: 9b39c9a2af8567e4f8f53f5fc4196cfc
+timeCreated: 1526983737
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BackBuild
+    100002: BackBuild007
+    100004: BackBuild008
+    100006: BackBuild009
+    100008: BackBuild2
+    100010: BackBuild3
+    100012: BackBuild4
+    100014: BackBuild5
+    100016: BackBuild5 1
+    100018: BackBuild6
+    100020: //RootNode
+    100022: CentralML_Ring002
+    100024: CentralML_Ring003
+    100026: CentralML_Ring004
+    100028: CentralML_Ring005
+    100030: CentralML_Ring006
+    100032: CentralML_Ring1
+    100034: CentralML_transform
+    100036: ChargeIndi_transform
+    100038: Chargepoint
+    100040: Chargepoint001
+    100042: Chargepoint002
+    100044: FrontBuilding
+    100046: Main_Building
+    100048: Mid_pannels
+    100050: Speaker_Front1
+    100052: Speaker_Front2
+    100054: Speaker_Front3
+    100056: Speaker_Mid1
+    100058: Speaker_Mid2
+    400000: BackBuild
+    400002: BackBuild007
+    400004: BackBuild008
+    400006: BackBuild009
+    400008: BackBuild2
+    400010: BackBuild3
+    400012: BackBuild4
+    400014: BackBuild5
+    400016: BackBuild5 1
+    400018: BackBuild6
+    400020: //RootNode
+    400022: CentralML_Ring002
+    400024: CentralML_Ring003
+    400026: CentralML_Ring004
+    400028: CentralML_Ring005
+    400030: CentralML_Ring006
+    400032: CentralML_Ring1
+    400034: CentralML_transform
+    400036: ChargeIndi_transform
+    400038: Chargepoint
+    400040: Chargepoint001
+    400042: Chargepoint002
+    400044: FrontBuilding
+    400046: Main_Building
+    400048: Mid_pannels
+    400050: Speaker_Front1
+    400052: Speaker_Front2
+    400054: Speaker_Front3
+    400056: Speaker_Mid1
+    400058: Speaker_Mid2
+    2100000: No Name
+    2100002: Building
+    2300000: BackBuild
+    2300002: BackBuild007
+    2300004: BackBuild008
+    2300006: BackBuild009
+    2300008: BackBuild2
+    2300010: BackBuild3
+    2300012: BackBuild4
+    2300014: BackBuild5
+    2300016: BackBuild5 1
+    2300018: BackBuild6
+    2300020: //RootNode
+    2300022: CentralML_Ring002
+    2300024: CentralML_Ring003
+    2300026: CentralML_Ring004
+    2300028: CentralML_Ring005
+    2300030: CentralML_Ring006
+    2300032: CentralML_Ring1
+    2300034: CentralML_transform
+    2300036: ChargeIndi_transform
+    2300038: Chargepoint
+    2300040: Chargepoint001
+    2300042: Chargepoint002
+    2300044: FrontBuilding
+    2300046: Main_Building
+    2300048: Mid_pannels
+    2300050: Speaker_Front1
+    2300052: Speaker_Front2
+    2300054: Speaker_Front3
+    2300056: Speaker_Mid1
+    2300058: Speaker_Mid2
+    3300000: BackBuild
+    3300002: BackBuild007
+    3300004: BackBuild008
+    3300006: BackBuild009
+    3300008: BackBuild2
+    3300010: BackBuild3
+    3300012: BackBuild4
+    3300014: BackBuild5
+    3300016: BackBuild5 1
+    3300018: BackBuild6
+    3300020: //RootNode
+    3300022: CentralML_Ring002
+    3300024: CentralML_Ring003
+    3300026: CentralML_Ring004
+    3300028: CentralML_Ring005
+    3300030: CentralML_Ring006
+    3300032: CentralML_Ring1
+    3300034: CentralML_transform
+    3300036: ChargeIndi_transform
+    3300038: Chargepoint
+    3300040: Chargepoint001
+    3300042: Chargepoint002
+    3300044: FrontBuilding
+    3300046: Main_Building
+    3300048: Mid_pannels
+    3300050: Speaker_Front1
+    3300052: Speaker_Front2
+    3300054: Speaker_Front3
+    3300056: Speaker_Mid1
+    3300058: Speaker_Mid2
+    4300000: Base
+    4300002: CentralML_Ring1
+    4300004: CentralML_Ring002
+    4300006: CentralML_Ring003
+    4300008: CentralML_Ring004
+    4300010: CentralML_Ring005
+    4300012: CentralML_Ring006
+    4300014: CentralML_transform
+    4300016: ChargeIndi_transform
+    4300018: FrontBuilding
+    4300020: Speaker_Front3
+    4300022: Speaker_Front2
+    4300024: Speaker_Front1
+    4300026: Chargepoint001
+    4300028: Main_Building
+    4300030: BackBuild009
+    4300032: BackBuild008
+    4300034: BackBuild007
+    4300036: BackBuild6
+    4300038: BackBuild5
+    4300040: BackBuild4
+    4300042: BackBuild3
+    4300044: BackBuild2
+    4300046: BackBuild
+    4300048: Chargepoint002
+    4300050: BackBuild5
+    4300052: Mid_pannels
+    4300054: Chargepoint
+    4300056: Speaker_Mid1
+    4300058: Speaker_Mid2
+    7400000: Take 001
+    7400002: Take 001 (1)
+    7400004: Take 001 (2)
+    7400006: Take 001 (3)
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Take 001 (1)
+      takeName: Take 001
+      firstFrame: 35
+      lastFrame: 55
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Take 001 (2)
+      takeName: Take 001
+      firstFrame: 55
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Take 001 (3)
+      takeName: Take 001
+      firstFrame: 70
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 15
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

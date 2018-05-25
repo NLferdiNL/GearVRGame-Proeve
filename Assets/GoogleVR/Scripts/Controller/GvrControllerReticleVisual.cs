@@ -14,7 +14,6 @@
 
 using System;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 /// Visualizes a reticle using a Quad.
 /// Provides tuning options to control how the reticle scales and rotates based
