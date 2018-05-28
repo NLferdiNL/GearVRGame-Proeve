@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.7848863, g: 0.060061514, b: 0.37695584, a: 1}
+  m_IndirectSpecularColor: {r: 0.6531115, g: 0.052837748, b: 0.3367316, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2566,7 +2566,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 187862597}
   m_LocalRotation: {x: 0.38264555, y: -0.005393731, z: -0.0130214365, w: 0.9237877}
-  m_LocalPosition: {x: -1.34, y: 8.99, z: 0.84}
+  m_LocalPosition: {x: -0.03, y: 8.95, z: 0.84}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1298626501}
@@ -11034,7 +11034,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -11953,7 +11953,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 85cc152bda26b704e904d4c719dacaef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.1
+      value: -6.6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 85cc152bda26b704e904d4c719dacaef, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11961,7 +11961,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 85cc152bda26b704e904d4c719dacaef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 37.7
+      value: 37.4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 85cc152bda26b704e904d4c719dacaef, type: 3}
       propertyPath: m_LocalRotation.x
@@ -11997,7 +11997,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 85cc152bda26b704e904d4c719dacaef, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.6757898
+      value: 2.67579
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 85cc152bda26b704e904d4c719dacaef, type: 3}
       propertyPath: m_LocalScale.x
@@ -12005,12 +12005,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 85cc152bda26b704e904d4c719dacaef, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.6757903
+      value: 2.67579
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 85cc152bda26b704e904d4c719dacaef, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 96e7192d1b75339469ff7584015ebcec, type: 2}
+    - target: {fileID: 9500000, guid: 85cc152bda26b704e904d4c719dacaef, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a6d87d78589a55f429202f38b2e0acab, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85cc152bda26b704e904d4c719dacaef, type: 3}
   m_IsPrefabParent: 0
@@ -19483,6 +19487,27 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1103924120}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1106250106 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100010, guid: 9b39c9a2af8567e4f8f53f5fc4196cfc, type: 3}
+  m_PrefabInternal: {fileID: 1973561940}
+--- !u!95 &1106250110
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1106250106}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6fc8c389388d70c42b42cd1391d8a827, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1108769637
 GameObject:
   m_ObjectHideFlags: 0
@@ -30612,6 +30637,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SM: {fileID: 1772816499}
+  OnReset:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   TutorialBuilding1: 0
   TutorialBuilding2: 0
   TutorialBuilding3: 0
@@ -31670,7 +31700,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1771162997}
   m_LocalRotation: {x: -0.1129501, y: 0.6980274, z: -0.6980276, w: -0.11294945}
-  m_LocalPosition: {x: 83.49, y: 44.55, z: 10.19}
+  m_LocalPosition: {x: 101.6, y: 46, z: 17.5}
   m_LocalScale: {x: 0.7203546, y: 0.16617213, z: 4.311381}
   m_Children: []
   m_Father: {fileID: 123447241}
@@ -31864,6 +31894,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SM: {fileID: 1772816499}
+  OnReset:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   TutorialBuilding1: 0
   TutorialBuilding2: 0
   TutorialBuilding3: 0
@@ -34188,7 +34223,7 @@ Prefab:
     - target: {fileID: 9500000, guid: 9b39c9a2af8567e4f8f53f5fc4196cfc, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 64fcbb1b54e431d4e9c1d9e94e3914f3, type: 2}
+      objectReference: {fileID: 9100000, guid: 5b13851569dda4c458d5e2591fbdeb46, type: 2}
     - target: {fileID: 100052, guid: 9b39c9a2af8567e4f8f53f5fc4196cfc, type: 3}
       propertyPath: m_Layer
       value: 24
