@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Node : MonoBehaviour, IDamagable
@@ -39,7 +36,8 @@ public class Node : MonoBehaviour, IDamagable
     
     void Start()
     {
-        parentBuilding = GetComponentInParent<Building>();
+		if(parentBuilding == null)
+	        parentBuilding = GetComponentInParent<Building>();
     }
 
     public void OnHitStay()

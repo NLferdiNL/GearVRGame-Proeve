@@ -12,9 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using UnityEngine;
 using UnityEditor;
-using System.Collections;
 
 /// A custom editor window used to set editor preferences for GoogleVR.
 /// Editor preferences are editor specific options that help build and test

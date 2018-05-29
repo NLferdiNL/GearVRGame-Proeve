@@ -1,14 +1,12 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class Building : MonoBehaviour, IDamagable
-{
-    // This script is used too keep track of the buildings level of power and animate accordingly.
+public class Building : MonoBehaviour, IDamagable {
+    // This script is used to keep track of the buildings level of power and animate accordingly.
 
     [SerializeField]
-    public Animator buildingAnimator;
+    public Animator buildingAnimator, radarDotAnimator;
 
     // lvlOfPower is called this way because: it tracks the amount of "Power" the "building" has.
     [SerializeField]
@@ -18,8 +16,24 @@ public class Building : MonoBehaviour, IDamagable
     [SerializeField]
     private float maxLvlOfPower = 100;
 
+	[SerializeField]
+	float underAttackCooldown = 2f;
+
+	float timeSinceLastAttack = 0;
+
     public Color startColour;
     public Color andColour;
+
+    [Serializable]
+    public class BuildingFullyChargedEvent : UnityEvent { }
+
+    public BuildingFullyChargedEvent OnFullCharge = new BuildingFullyChargedEvent();
+
+    private UnityEvent onTutorialSceneEnd = new UnityEvent();
+
+    [SerializeField]
+    private bool multipleAnimations, StagedAnimations;
+
 
     public float LvlOfPower
     {
@@ -49,7 +63,12 @@ public class Building : MonoBehaviour, IDamagable
         }
     }
 
-    // Use this for initialization
+	public bool UnderAttack {
+		get {
+			return timeSinceLastAttack >= underAttackCooldown;
+		}
+	}
+
     void Start()
     {
         if (buildingAnimator == null)
@@ -58,26 +77,41 @@ public class Building : MonoBehaviour, IDamagable
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        GetComponent<Renderer>().material.color = Color.Lerp(startColour, andColour, 100 / maxLvlOfPower * lvlOfPower / 100);
-        buildingAnimator.SetFloat("amountOfPower", lvlOfPower / 100);
+		if(timeSinceLastAttack < underAttackCooldown) {
+			timeSinceLastAttack += Time.deltaTime;
+			if(timeSinceLastAttack >= underAttackCooldown) {
+				radarDotAnimator.SetBool("underAttack", false);
+			}
+		}
+
+        buildingAnimator.SetFloat("amountOfPower", lvlOfPower / maxLvlOfPower);
+
+		if(lvlOfPower >= maxLvlOfPower) {
+			OnFullCharge.Invoke();
+		}
     }
 
-    public void Damage(float value)
-    {
-        lvlOfPower -= value;
+	public void Damage(float value) {
+		if(timeSinceLastAttack != 0)
+			radarDotAnimator.SetBool("underAttack", true);
+
+		timeSinceLastAttack = 0;
+
+		lvlOfPower -= value;
 
 		if(lvlOfPower < 0)
 			lvlOfPower = 0;
-    }
+	}
 
-    public void Heal(float value)
-    {
-        lvlOfPower += value;
+	public void Heal(float value) {
+		if(UnderAttack)
+			value /= 10;
+
+		lvlOfPower += value;
 
 		if(lvlOfPower > maxLvlOfPower)
 			lvlOfPower = maxLvlOfPower;
-    }
+	}
 }

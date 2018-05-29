@@ -12,12 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Gvr;
 using UnityEngine;
 
 /// @cond
 namespace Gvr.Internal {
-  class EditorHeadsetProvider : IHeadsetProvider {
+	class EditorHeadsetProvider : IHeadsetProvider {
     private HeadsetState dummyState;
 
     public bool SupportsPositionalTracking { get { return true; } }

@@ -12,17 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Gvr;
 using UnityEngine;
 
 namespace Gvr.Internal {
-  /// Mocks controller input by using the mouse.
-  /// The controller is connected when holding left shift.
-  /// Move the mouse to control gyroscope and orientation.
-  /// The left mouse button is used for the clickButton.
-  /// The right mouse button is used for the appButton.
-  /// The middle mouse button is used for the homeButton.
-  class MouseControllerProvider : IControllerProvider {
+	/// Mocks controller input by using the mouse.
+	/// The controller is connected when holding left shift.
+	/// Move the mouse to control gyroscope and orientation.
+	/// The left mouse button is used for the clickButton.
+	/// The right mouse button is used for the appButton.
+	/// The middle mouse button is used for the homeButton.
+	class MouseControllerProvider : IControllerProvider {
     private const string AXIS_MOUSE_X = "Mouse X";
     private const string AXIS_MOUSE_Y = "Mouse Y";
 

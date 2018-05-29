@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class Swarm : MonoBehaviour, IDamagable {
@@ -73,6 +72,7 @@ public class Swarm : MonoBehaviour, IDamagable {
 
 			if(_enemyBodies.Count == 0) {
 				SwarmContainer.Remove(transform);
+				ScoreManager.EditScore(50);
 				Destroy(gameObject);
 			}
 		}

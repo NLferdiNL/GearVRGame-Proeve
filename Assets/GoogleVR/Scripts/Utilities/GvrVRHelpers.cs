@@ -13,8 +13,6 @@
 // limitations under the License.
 
 using UnityEngine;
-using UnityEngine.EventSystems;
-using System.Collections;
 
 #if UNITY_2017_2_OR_NEWER
 using UnityEngine.XR;

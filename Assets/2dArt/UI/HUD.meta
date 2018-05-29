@@ -1,7 +1,30 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+guid: d0ed05a5102756540bb393b1c269fcfb
+folderAsset: yes
+timeCreated: 1526557708
+=======
+guid: 241764e18c33ff948886676a4aeea2e0
+folderAsset: yes
+timeCreated: 1527081475
+>>>>>>> 5abb4ef1d0b52183b05929f35de740a7d7f62550
+=======
+<<<<<<< HEAD
+guid: 117b5b2c03ea26f4f9f4077135f28953
+folderAsset: yes
+timeCreated: 1526629918
+=======
+guid: 125cd72229a732a49b383d672a0f8ebc
+folderAsset: yes
+timeCreated: 1526554349
+>>>>>>> 412ee391cd2028f337c2c06c15ddbc62b1251c0d
+=======
 guid: c24bf342f67f51748b90909bd14e48cc
 folderAsset: yes
 timeCreated: 1526642424
+>>>>>>> artists
+>>>>>>> development
 licenseType: Free
 DefaultImporter:
   externalObjects: {}

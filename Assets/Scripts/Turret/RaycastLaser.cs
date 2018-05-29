@@ -1,20 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RaycastLaser : MonoBehaviour
 {
     //This script creates the laser and the controls for space and touch.
-
+    
     public float range; // Sets Range of Line.
 
-    [SerializeField]
-    LayerMask hitMask;
+    [SerializeField] LayerMask hitMask;
+    
 
     LineRenderer laserLine; // Line for the laser.
 
-	[SerializeField]
-	float damagePerFrame = 1;
+	[SerializeField] float damagePerFrame = 1;
 
 	bool isShooting = true;
 
@@ -55,6 +52,8 @@ public class RaycastLaser : MonoBehaviour
         }
     }
 
+
+
     void FixedUpdate() // Checks if person hit space or touched on phone and runs Shoot();
     {
         Shoot();
@@ -69,6 +68,20 @@ public class RaycastLaser : MonoBehaviour
     {
         laserLine.enabled = true;
         isShooting = true;
+    }
+
+    void LaserSfx()
+    {
+        if (isShooting)
+        {
+            //SoundManager.Sfx[0].Play();
+            
+                        
+        }
+        else if(isShooting == false)
+        {
+            //SoundManager.Sfx[1].Play();
+        }
     }
 
     void Shoot() // Creates the line visable in game if laserLine.enabled = true.

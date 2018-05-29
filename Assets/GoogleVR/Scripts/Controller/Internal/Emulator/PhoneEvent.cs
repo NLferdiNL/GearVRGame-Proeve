@@ -18,15 +18,14 @@
 
 using pb = global::Google.ProtocolBuffers;
 using pbc = global::Google.ProtocolBuffers.Collections;
-using pbd = global::Google.ProtocolBuffers.Descriptors;
 using scg = global::System.Collections.Generic;
 
 /// @cond
 namespace proto {
 
-  namespace Proto {
+	namespace Proto {
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+		[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ProtoGen", "2.4.1.473")]
     public static partial class PhoneEvent {
