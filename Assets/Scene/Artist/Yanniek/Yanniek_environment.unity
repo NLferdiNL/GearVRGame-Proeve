@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.90407366, g: 0.055765577, b: 0.37824276, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -487,6 +487,10 @@ Prefab:
     - target: {fileID: 4317784597055870, guid: 4f518eaf570637145bfd2f619d145403, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f518eaf570637145bfd2f619d145403, type: 2}
@@ -1766,10 +1770,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingAnimator: {fileID: 0}
+  radarDotAnimator: {fileID: 0}
   lvlOfPower: 0
   maxLvlOfPower: 100
+  underAttackCooldown: 2
   startColour: {r: 1, g: 0, b: 0, a: 0}
   andColour: {r: 0, g: 1, b: 0.29655194, a: 0}
+  OnFullCharge:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Building+BuildingFullyChargedEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  multipleAnimations: 0
+  StagedAnimations: 0
 --- !u!1 &236116937
 GameObject:
   m_ObjectHideFlags: 0
@@ -2897,7 +2910,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &353693679
 Transform:
   m_ObjectHideFlags: 0
@@ -2917,7 +2930,7 @@ Transform:
   - {fileID: 1403089504}
   - {fileID: 34932999}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &355595213
 GameObject:
@@ -3146,10 +3159,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingAnimator: {fileID: 269025909}
+  radarDotAnimator: {fileID: 0}
   lvlOfPower: 0
   maxLvlOfPower: 100
+  underAttackCooldown: 2
   startColour: {r: 1, g: 0, b: 0, a: 0}
   andColour: {r: 0, g: 1, b: 0.29655194, a: 0}
+  OnFullCharge:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Building+BuildingFullyChargedEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  multipleAnimations: 0
+  StagedAnimations: 0
 --- !u!23 &370317016
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5224,7 +5246,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2a78ffd3cf8545e46bb04f8af78af740, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2a78ffd3cf8545e46bb04f8af78af740, type: 3}
       propertyPath: m_LocalScale.x
@@ -7128,6 +7150,92 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 742896901}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &779701282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 779701286}
+  - component: {fileID: 779701285}
+  - component: {fileID: 779701284}
+  - component: {fileID: 779701283}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &779701283
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 779701282}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: c123bf0265c28294db6c5678a79182d7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &779701284
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 779701282}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &779701285
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 779701282}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &779701286
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 779701282}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 13.902, y: 3.61, z: 33.78}
+  m_LocalScale: {x: 2.7256362, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
 --- !u!1 &783851285
 GameObject:
   m_ObjectHideFlags: 0
@@ -9001,7 +9109,7 @@ Transform:
   - {fileID: 322265495}
   - {fileID: 242586531}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1093779587
 GameObject:
@@ -9544,6 +9652,110 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1111375312}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1113262270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1113262275}
+  - component: {fileID: 1113262274}
+  - component: {fileID: 1113262273}
+  - component: {fileID: 1113262272}
+  - component: {fileID: 1113262271}
+  m_Layer: 0
+  m_Name: Plane (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1113262271
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1113262270}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bffa5075382550648a1f69c99914676e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!23 &1113262272
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1113262270}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 0bdef62d6fc0182439ea50b92b10faed, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &1113262273
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1113262270}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &1113262274
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1113262270}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1113262275
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1113262270}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 13.902, y: 3.61, z: 33.75}
+  m_LocalScale: {x: 2.7256362, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
 --- !u!1 &1120800539
 GameObject:
   m_ObjectHideFlags: 0
@@ -10559,6 +10771,10 @@ Prefab:
     - target: {fileID: 4656522085182150, guid: 5838cd4bc9d34e244892eb92a6e7e947, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283958140222444, guid: 5838cd4bc9d34e244892eb92a6e7e947, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5838cd4bc9d34e244892eb92a6e7e947, type: 2}
@@ -12034,7 +12250,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1406855969
 Light:
   m_ObjectHideFlags: 0
@@ -12082,7 +12298,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1407306335
 GameObject:
@@ -12195,10 +12411,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingAnimator: {fileID: 0}
+  radarDotAnimator: {fileID: 0}
   lvlOfPower: 0
   maxLvlOfPower: 100
+  underAttackCooldown: 2
   startColour: {r: 1, g: 0, b: 0, a: 0}
   andColour: {r: 0, g: 1, b: 0.29655194, a: 0}
+  OnFullCharge:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Building+BuildingFullyChargedEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  multipleAnimations: 0
+  StagedAnimations: 0
 --- !u!1 &1411895357
 GameObject:
   m_ObjectHideFlags: 0
@@ -12568,7 +12793,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1476639112
 Transform:
   m_ObjectHideFlags: 0
@@ -13288,7 +13513,7 @@ Transform:
   - {fileID: 1179659623}
   - {fileID: 1380536940}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1551292292
 GameObject:
@@ -14401,7 +14626,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4942061408713262, guid: 424899917f7c82c4888136aaf11a9943, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114969181702630036, guid: 424899917f7c82c4888136aaf11a9943,
         type: 2}
@@ -14493,7 +14718,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1503093029310692, guid: 424899917f7c82c4888136aaf11a9943, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 424899917f7c82c4888136aaf11a9943, type: 2}
@@ -14700,10 +14925,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingAnimator: {fileID: 0}
+  radarDotAnimator: {fileID: 0}
   lvlOfPower: 0
   maxLvlOfPower: 100
+  underAttackCooldown: 2
   startColour: {r: 1, g: 0, b: 0, a: 0}
   andColour: {r: 0, g: 1, b: 0.29655194, a: 0}
+  OnFullCharge:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Building+BuildingFullyChargedEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  multipleAnimations: 0
+  StagedAnimations: 0
 --- !u!1 &1644448464
 GameObject:
   m_ObjectHideFlags: 0
@@ -15542,10 +15776,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingAnimator: {fileID: 0}
+  radarDotAnimator: {fileID: 0}
   lvlOfPower: 0
   maxLvlOfPower: 100
+  underAttackCooldown: 2
   startColour: {r: 1, g: 0, b: 0, a: 0}
   andColour: {r: 0, g: 1, b: 0.29655194, a: 0}
+  OnFullCharge:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Building+BuildingFullyChargedEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  multipleAnimations: 0
+  StagedAnimations: 0
 --- !u!23 &1729729279
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15902,10 +16145,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingAnimator: {fileID: 1403089505}
+  radarDotAnimator: {fileID: 0}
   lvlOfPower: 0
   maxLvlOfPower: 100
+  underAttackCooldown: 2
   startColour: {r: 1, g: 0, b: 0, a: 0}
   andColour: {r: 0, g: 1, b: 0.29655194, a: 0}
+  OnFullCharge:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Building+BuildingFullyChargedEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  multipleAnimations: 0
+  StagedAnimations: 0
 --- !u!23 &1768680399
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16710,7 +16962,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4047939540753324, guid: 8883a2ad085351d47aae28fbdcad3bac, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543374130615634, guid: 8883a2ad085351d47aae28fbdcad3bac, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8883a2ad085351d47aae28fbdcad3bac, type: 2}
@@ -17810,10 +18066,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingAnimator: {fileID: 1278352898}
+  radarDotAnimator: {fileID: 0}
   lvlOfPower: 0
   maxLvlOfPower: 100
+  underAttackCooldown: 2
   startColour: {r: 1, g: 0, b: 0, a: 0}
   andColour: {r: 0, g: 1, b: 0.29655194, a: 0}
+  OnFullCharge:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Building+BuildingFullyChargedEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  multipleAnimations: 0
+  StagedAnimations: 0
 --- !u!23 &1971955670
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19378,7 +19643,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2a78ffd3cf8545e46bb04f8af78af740, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2a78ffd3cf8545e46bb04f8af78af740, type: 3}
       propertyPath: m_LocalScale.x

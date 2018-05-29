@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scene/Artist/Floris/Main scene floris.unity.meta
+guid: a79c0efed7b4f5e4d85929c7365557ca
+timeCreated: 1527517133
+=======
 guid: c695874abd5b0e541a643bf74ac2dcd2
 timeCreated: 1527090852
+>>>>>>> 53e8b889ff20f65046f495abbd9c47d4634a61fc:Assets/2dArt/Spritesheets/Fireworks/1.meta~HEAD.meta~HEAD
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
