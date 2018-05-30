@@ -10068,6 +10068,27 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 627891764}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &630004314 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100054, guid: ca4b4a844312387459df7e84c527632b, type: 3}
+  m_PrefabInternal: {fileID: 288036973}
+--- !u!95 &630004315
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 630004314}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a6d87d78589a55f429202f38b2e0acab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &635253179
 GameObject:
   m_ObjectHideFlags: 0
@@ -11216,7 +11237,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -26262,7 +26283,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 492562338}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1400803806
 GameObject:
@@ -30889,6 +30910,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SM: {fileID: 1772816499}
+  OnReset:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   TutorialBuilding1: 0
   TutorialBuilding2: 0
   TutorialBuilding3: 0
@@ -32141,6 +32167,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SM: {fileID: 1772816499}
+  OnReset:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   TutorialBuilding1: 0
   TutorialBuilding2: 0
   TutorialBuilding3: 0
