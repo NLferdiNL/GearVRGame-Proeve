@@ -14,6 +14,10 @@ public class FollowObject : MonoBehaviour {
 	[SerializeField]
 	bool stickToY = false;
 
+	public void SetStickToY(bool newValue) {
+		stickToY = newValue;
+	}
+
 	private void FixedUpdate() {
 		Vector3 newPos = target.position + target.forward * distanceForward;
 

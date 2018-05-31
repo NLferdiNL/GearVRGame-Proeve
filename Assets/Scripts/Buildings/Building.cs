@@ -20,11 +20,9 @@ public class Building : MonoBehaviour, IDamagable
     [SerializeField]
     float underAttackCooldown = 2f;
 
+	[SerializeField]
     float timeSinceLastAttack = 0;
-
-    public Color startColour;
-    public Color andColour;
-
+	
     [Serializable]
     public class BuildingFullyChargedEvent : UnityEvent { }
 
@@ -68,7 +66,7 @@ public class Building : MonoBehaviour, IDamagable
     {
         get
         {
-            return timeSinceLastAttack >= underAttackCooldown;
+            return timeSinceLastAttack < underAttackCooldown;
         }
     }
 
@@ -109,6 +107,8 @@ public class Building : MonoBehaviour, IDamagable
 
     public void Damage(float value)
     {
+		print("dmg");
+
         if (timeSinceLastAttack != 0)
             radarDotAnimator.SetBool("underAttack", true);
 
@@ -122,8 +122,9 @@ public class Building : MonoBehaviour, IDamagable
 
     public void Heal(float value)
     {
+		print(UnderAttack);
         if (UnderAttack)
-            value /= 10;
+            value *= 0.1f;
 
         lvlOfPower += value;
 

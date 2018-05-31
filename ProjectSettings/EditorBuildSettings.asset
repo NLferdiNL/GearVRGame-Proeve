@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/Scene/Combined/MainMenu.unity
     guid: f141a0300740d124b8b695641b10fb17
   - enabled: 1
-    path: Assets/Scene/Combined/fightcity 1.unity
+    path: Assets/Scene/Combined/fightcity.unity
     guid: 1ec52ace81beb8246aea1b029d609532

@@ -6,12 +6,19 @@ public class GazeInput : MonoBehaviour {
 	LayerMask gazeLayerMask;
 
 	[SerializeField]
+	Transform gazeSource;
+
+	[SerializeField]
+	Transform gazeReticle;
+
+	[SerializeField]
 	float gazeRange = 100;
 
 	Collider currentTarget = null;
 
 	private void FixedUpdate() {
-		Ray ray = new Ray(transform.position, transform.forward);
+		Ray ray = new Ray(gazeSource.position, (gazeReticle.position - gazeSource.position).normalized);
+
 		RaycastHit hit;
 
 		if(Physics.Raycast(ray, out hit, gazeRange, gazeLayerMask)) {
