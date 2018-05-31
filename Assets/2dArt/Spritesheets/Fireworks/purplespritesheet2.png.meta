@@ -1,22 +1,23 @@
 fileFormatVersion: 2
-guid: 83e4086dfb27a754c9cd50e980e0eeaf
+guid: 4a17d02ff58607f489b0ae7895587365
+timeCreated: 1527751688
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: bluespritesheet1_0
-    21300002: bluespritesheet1_1
-    21300004: bluespritesheet1_2
-    21300006: bluespritesheet1_3
-    21300008: bluespritesheet1_4
-    21300010: bluespritesheet1_5
-    21300012: bluespritesheet1_6
-    21300014: bluespritesheet1_7
-    21300016: bluespritesheet1_8
-    21300018: bluespritesheet1_9
-    21300020: bluespritesheet1_10
-    21300022: bluespritesheet1_11
-    21300024: bluespritesheet1_12
-    21300026: bluespritesheet1_13
-    21300028: bluespritesheet1_14
+    21300000: purplespritesheet2_0
+    21300002: purplespritesheet2_1
+    21300004: purplespritesheet2_2
+    21300006: purplespritesheet2_3
+    21300008: purplespritesheet2_4
+    21300010: purplespritesheet2_5
+    21300012: purplespritesheet2_6
+    21300014: purplespritesheet2_7
+    21300016: purplespritesheet2_8
+    21300018: purplespritesheet2_9
+    21300020: purplespritesheet2_10
+    21300022: purplespritesheet2_11
+    21300024: purplespritesheet2_12
+    21300026: purplespritesheet2_13
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -94,13 +95,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bluespritesheet1_0
+      name: purplespritesheet2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 942
-        width: 263
-        height: 471
+        y: 655.5
+        width: 320.7143
+        height: 655.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -108,13 +109,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_1
+      name: purplespritesheet2_1
       rect:
         serializedVersion: 2
-        x: 263
-        y: 942
-        width: 263
-        height: 471
+        x: 320
+        y: 655.5
+        width: 320.7143
+        height: 655.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,13 +123,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_2
+      name: purplespritesheet2_2
       rect:
         serializedVersion: 2
-        x: 526
-        y: 942
-        width: 263
-        height: 471
+        x: 640
+        y: 655.5
+        width: 320.7143
+        height: 655.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,13 +137,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_3
+      name: purplespritesheet2_3
       rect:
         serializedVersion: 2
-        x: 789
-        y: 942
-        width: 263
-        height: 471
+        x: 960
+        y: 655.5
+        width: 320.7143
+        height: 655.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,13 +151,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_4
+      name: purplespritesheet2_4
       rect:
         serializedVersion: 2
-        x: 1052
-        y: 942
-        width: 263
-        height: 471
+        x: 1280
+        y: 655.5
+        width: 320.7143
+        height: 655.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,13 +165,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_5
+      name: purplespritesheet2_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 471
-        width: 263
-        height: 471
+        x: 1600
+        y: 655.5
+        width: 320.7143
+        height: 655.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,13 +179,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_6
+      name: purplespritesheet2_6
       rect:
         serializedVersion: 2
-        x: 263
-        y: 471
-        width: 263
-        height: 471
+        x: 1920
+        y: 655.5
+        width: 320.7143
+        height: 655.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,55 +193,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_7
-      rect:
-        serializedVersion: 2
-        x: 526
-        y: 471
-        width: 263
-        height: 471
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: bluespritesheet1_8
-      rect:
-        serializedVersion: 2
-        x: 789
-        y: 471
-        width: 263
-        height: 471
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: bluespritesheet1_9
-      rect:
-        serializedVersion: 2
-        x: 1052
-        y: 471
-        width: 263
-        height: 471
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: bluespritesheet1_10
+      name: purplespritesheet2_7
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 263
-        height: 471
+        y: 0.5
+        width: 320.7143
+        height: 655.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,13 +207,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_11
+      name: purplespritesheet2_8
       rect:
         serializedVersion: 2
-        x: 263
-        y: 0
-        width: 263
-        height: 471
+        x: 320
+        y: 0.5
+        width: 320.7143
+        height: 655.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,13 +221,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_12
+      name: purplespritesheet2_9
       rect:
         serializedVersion: 2
-        x: 526
-        y: 0
-        width: 263
-        height: 471
+        x: 640
+        y: 0.5
+        width: 320.7143
+        height: 655.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,13 +235,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_13
+      name: purplespritesheet2_10
       rect:
         serializedVersion: 2
-        x: 789
-        y: 0
-        width: 263
-        height: 471
+        x: 960
+        y: 0.5
+        width: 320.7143
+        height: 655.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -290,13 +249,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_14
+      name: purplespritesheet2_11
       rect:
         serializedVersion: 2
-        x: 1052
-        y: 0
-        width: 263
-        height: 471
+        x: 1280
+        y: 0.5
+        width: 320.7143
+        height: 655.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet2_12
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0.5
+        width: 320.7143
+        height: 655.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet2_13
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0.5
+        width: 320.7143
+        height: 655.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

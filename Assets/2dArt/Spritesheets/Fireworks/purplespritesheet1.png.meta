@@ -1,22 +1,24 @@
 fileFormatVersion: 2
-guid: 83e4086dfb27a754c9cd50e980e0eeaf
+guid: e6b5078e674022140b806facdeb15a94
+timeCreated: 1527751701
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: bluespritesheet1_0
-    21300002: bluespritesheet1_1
-    21300004: bluespritesheet1_2
-    21300006: bluespritesheet1_3
-    21300008: bluespritesheet1_4
-    21300010: bluespritesheet1_5
-    21300012: bluespritesheet1_6
-    21300014: bluespritesheet1_7
-    21300016: bluespritesheet1_8
-    21300018: bluespritesheet1_9
-    21300020: bluespritesheet1_10
-    21300022: bluespritesheet1_11
-    21300024: bluespritesheet1_12
-    21300026: bluespritesheet1_13
-    21300028: bluespritesheet1_14
+    21300000: purplespritesheet1_0
+    21300002: purplespritesheet1_1
+    21300004: purplespritesheet1_2
+    21300006: purplespritesheet1_3
+    21300008: purplespritesheet1_4
+    21300010: purplespritesheet1_5
+    21300012: purplespritesheet1_6
+    21300014: purplespritesheet1_7
+    21300016: purplespritesheet1_8
+    21300018: purplespritesheet1_9
+    21300020: purplespritesheet1_10
+    21300022: purplespritesheet1_11
+    21300024: purplespritesheet1_12
+    21300026: purplespritesheet1_13
+    21300028: purplespritesheet1_14
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -94,7 +96,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bluespritesheet1_0
+      name: purplespritesheet1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -108,7 +110,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_1
+      name: purplespritesheet1_1
       rect:
         serializedVersion: 2
         x: 263
@@ -122,7 +124,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_2
+      name: purplespritesheet1_2
       rect:
         serializedVersion: 2
         x: 526
@@ -136,7 +138,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_3
+      name: purplespritesheet1_3
       rect:
         serializedVersion: 2
         x: 789
@@ -150,7 +152,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_4
+      name: purplespritesheet1_4
       rect:
         serializedVersion: 2
         x: 1052
@@ -164,7 +166,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_5
+      name: purplespritesheet1_5
       rect:
         serializedVersion: 2
         x: 0
@@ -178,7 +180,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_6
+      name: purplespritesheet1_6
       rect:
         serializedVersion: 2
         x: 263
@@ -192,7 +194,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_7
+      name: purplespritesheet1_7
       rect:
         serializedVersion: 2
         x: 526
@@ -206,7 +208,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_8
+      name: purplespritesheet1_8
       rect:
         serializedVersion: 2
         x: 789
@@ -220,7 +222,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_9
+      name: purplespritesheet1_9
       rect:
         serializedVersion: 2
         x: 1052
@@ -234,7 +236,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_10
+      name: purplespritesheet1_10
       rect:
         serializedVersion: 2
         x: 0
@@ -248,7 +250,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_11
+      name: purplespritesheet1_11
       rect:
         serializedVersion: 2
         x: 263
@@ -262,7 +264,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_12
+      name: purplespritesheet1_12
       rect:
         serializedVersion: 2
         x: 526
@@ -276,7 +278,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_13
+      name: purplespritesheet1_13
       rect:
         serializedVersion: 2
         x: 789
@@ -290,7 +292,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bluespritesheet1_14
+      name: purplespritesheet1_14
       rect:
         serializedVersion: 2
         x: 1052
