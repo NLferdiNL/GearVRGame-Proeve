@@ -2,7 +2,8 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Building : MonoBehaviour, IDamagable {
+public class Building : MonoBehaviour, IDamagable
+{
     // This script is used to keep track of the buildings level of power and animate accordingly.
 
     [SerializeField]
@@ -16,10 +17,10 @@ public class Building : MonoBehaviour, IDamagable {
     [SerializeField]
     private float maxLvlOfPower = 100;
 
-	[SerializeField]
-	float underAttackCooldown = 2f;
+    [SerializeField]
+    float underAttackCooldown = 2f;
 
-	float timeSinceLastAttack = 0;
+    float timeSinceLastAttack = 0;
 
     public Color startColour;
     public Color andColour;
@@ -29,7 +30,7 @@ public class Building : MonoBehaviour, IDamagable {
 
     public BuildingFullyChargedEvent OnFullCharge = new BuildingFullyChargedEvent();
 
-    private UnityEvent onTutorialSceneEnd = new UnityEvent();
+    private UnityEvent onTutorialSegmentEnd = new UnityEvent();
 
     [SerializeField]
     private bool multipleAnimations, StagedAnimations;
@@ -46,7 +47,7 @@ public class Building : MonoBehaviour, IDamagable {
             lvlOfPower += value;
         }
     }
-    
+
     public float MaxHealth
     {
         get
@@ -63,11 +64,13 @@ public class Building : MonoBehaviour, IDamagable {
         }
     }
 
-	public bool UnderAttack {
-		get {
-			return timeSinceLastAttack >= underAttackCooldown;
-		}
-	}
+    public bool UnderAttack
+    {
+        get
+        {
+            return timeSinceLastAttack >= underAttackCooldown;
+        }
+    }
 
     void Start()
     {
@@ -75,43 +78,56 @@ public class Building : MonoBehaviour, IDamagable {
         {
             buildingAnimator = GetComponentInParent<Animator>();
         }
+        onTutorialSegmentEnd.AddListener(SwitchFase);
     }
 
     void FixedUpdate()
     {
-		if(timeSinceLastAttack < underAttackCooldown) {
-			timeSinceLastAttack += Time.deltaTime;
-			if(timeSinceLastAttack >= underAttackCooldown) {
-				radarDotAnimator.SetBool("underAttack", false);
-			}
-		}
+        if (timeSinceLastAttack < underAttackCooldown)
+        {
+            timeSinceLastAttack += Time.deltaTime;
+            if (timeSinceLastAttack >= underAttackCooldown)
+            {
+                radarDotAnimator.SetBool("underAttack", false);
+            }
+        }
 
         buildingAnimator.SetFloat("amountOfPower", lvlOfPower / maxLvlOfPower);
 
-		if(lvlOfPower >= maxLvlOfPower) {
-			OnFullCharge.Invoke();
-		}
+        if (lvlOfPower >= maxLvlOfPower)
+        {
+            OnFullCharge.Invoke();
+        }
     }
 
-	public void Damage(float value) {
-		if(timeSinceLastAttack != 0)
-			radarDotAnimator.SetBool("underAttack", true);
+    void SwitchFase()
+    {
+        maxLvlOfPower = 200;
+        buildingAnimator.SetTrigger("NextStagetrigger");
+        Debug.Log("Du Yu Wuk");
+    }
 
-		timeSinceLastAttack = 0;
+    public void Damage(float value)
+    {
+        if (timeSinceLastAttack != 0)
+            radarDotAnimator.SetBool("underAttack", true);
 
-		lvlOfPower -= value;
+        timeSinceLastAttack = 0;
 
-		if(lvlOfPower < 0)
-			lvlOfPower = 0;
-	}
+        lvlOfPower -= value;
 
-	public void Heal(float value) {
-		if(UnderAttack)
-			value /= 10;
+        if (lvlOfPower < 0)
+            lvlOfPower = 0;
+    }
 
-		lvlOfPower += value;
+    public void Heal(float value)
+    {
+        if (UnderAttack)
+            value /= 10;
 
-		if(lvlOfPower > maxLvlOfPower)
-			lvlOfPower = maxLvlOfPower;
-	}
+        lvlOfPower += value;
+
+        if (lvlOfPower > maxLvlOfPower)
+            lvlOfPower = maxLvlOfPower;
+    }
 }
