@@ -42,11 +42,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: amountOfPower
-<<<<<<< HEAD
-    m_EventTreshold: 50
-=======
     m_EventTreshold: 25
->>>>>>> 178d722d35aa4d36620d3fd3a48655319c7e23da
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102471602888331254}
   m_Solo: 0
@@ -70,11 +66,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: amountOfPower
-<<<<<<< HEAD
-    m_EventTreshold: 75
-=======
     m_EventTreshold: 50
->>>>>>> 178d722d35aa4d36620d3fd3a48655319c7e23da
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102500988708656482}
   m_Solo: 0
