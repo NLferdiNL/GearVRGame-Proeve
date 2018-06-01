@@ -30,8 +30,8 @@ public class Building : MonoBehaviour, IDamagable
 
     private UnityEvent onTutorialSegmentEnd = new UnityEvent();
 
-    [SerializeField]
-    private bool multipleAnimations, StagedAnimations;
+    //[SerializeField]
+    //private bool multipleAnimations, StagedAnimations;
 
 
     public float LvlOfPower
