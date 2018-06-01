@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3965474, g: 0.0033757275, b: 0.08029326, a: 1}
+  m_IndirectSpecularColor: {r: 1.4313184, g: 0.010579582, b: 0.28910995, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -248,10 +248,7 @@ MonoBehaviour:
     - {x: 2.5, y: 31.74, z: -8.2}
     - {x: 12.2, y: 17.15, z: 20.5}
   timeBetweenSpawns: 15
-  spawnEnemy: 1
-  endWhileLoop: 0
-  enemyPrefab: {fileID: 1647615563743034, guid: 67fa3c225b9244045ad2d472a9f861e1,
-    type: 2}
+  enemyPrefabs: []
   maxEnemies: 20
 --- !u!1 &68231712
 GameObject:
@@ -1643,11 +1640,32 @@ MonoBehaviour:
   lvlOfPower: 0
   maxLvlOfPower: 100
   underAttackCooldown: 2
-  startColour: {r: 0, g: 0, b: 0, a: 0}
-  andColour: {r: 0, g: 0, b: 0, a: 0}
+  timeSinceLastAttack: 0
   OnFullCharge:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1722938089}
+        m_MethodName: CheckBuildingCharge
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1722938089}
+        m_MethodName: CheckBuildingCharge
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: Building+BuildingFullyChargedEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   multipleAnimations: 0
@@ -1806,11 +1824,21 @@ MonoBehaviour:
   lvlOfPower: 0
   maxLvlOfPower: 100
   underAttackCooldown: 2
-  startColour: {r: 0, g: 0, b: 0, a: 0}
-  andColour: {r: 0, g: 0, b: 0, a: 0}
+  timeSinceLastAttack: 0
   OnFullCharge:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1722938089}
+        m_MethodName: CheckBuildingCharge
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: Building+BuildingFullyChargedEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   multipleAnimations: 0
@@ -3773,7 +3801,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1939617929}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1620398330
 GameObject:
@@ -3840,34 +3868,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &1655697319
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1655697320}
-  m_Layer: 0
-  m_Name: Tutorial
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1655697320
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1655697319}
-  m_LocalRotation: {x: -0, y: -0.35702884, z: -0, w: 0.9340934}
-  m_LocalPosition: {x: 3.1675043, y: 5.601651, z: -9.186338}
-  m_LocalScale: {x: 0.44812924, y: 0.30135724, z: 0.44812953}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1656043069
 GameObject:
   m_ObjectHideFlags: 0
@@ -4011,7 +4011,7 @@ GameObject:
   - component: {fileID: 1722938090}
   - component: {fileID: 1722938089}
   m_Layer: 0
-  m_Name: Tutorial
+  m_Name: SoundController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4025,11 +4025,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 1722938088}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c0e008eb071cd845955325d317fb716, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d92e4318892d2c4ea91de6d8a84800b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SM: {fileID: 1772816499}
+  SM: {fileID: 0}
   OnReset:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 492562339}
+        m_MethodName: Damage
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 100
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575034985}
+        m_MethodName: Damage
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 100
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  NumberChange:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -4043,8 +4070,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1722938088}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.518014, y: 1.0728064, z: 2.7931523}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5554,6 +5581,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100100, guid: cc3bea792ea04ac4b97cdab477a52369, type: 3}
+      propertyPath: m_Name
+      value: Musicbuilding_3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc3bea792ea04ac4b97cdab477a52369, type: 3}
   m_IsPrefabParent: 0
@@ -5922,8 +5953,7 @@ MonoBehaviour:
   lvlOfPower: 0
   maxLvlOfPower: 100
   underAttackCooldown: 2
-  startColour: {r: 0, g: 0, b: 0, a: 0}
-  andColour: {r: 0, g: 0, b: 0, a: 0}
+  timeSinceLastAttack: 0
   OnFullCharge:
     m_PersistentCalls:
       m_Calls: []
