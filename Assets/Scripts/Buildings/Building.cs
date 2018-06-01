@@ -107,7 +107,6 @@ public class Building : MonoBehaviour, IDamagable
 
     public void Damage(float value)
     {
-		print("dmg");
 
         if (timeSinceLastAttack != 0)
             radarDotAnimator.SetBool("underAttack", true);
@@ -122,7 +121,6 @@ public class Building : MonoBehaviour, IDamagable
 
     public void Heal(float value)
     {
-		print(UnderAttack);
         if (UnderAttack)
             value *= 0.1f;
 

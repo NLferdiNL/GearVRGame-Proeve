@@ -2054,8 +2054,7 @@ MonoBehaviour:
   lvlOfPower: 0
   maxLvlOfPower: 200
   underAttackCooldown: 2
-  startColour: {r: 0, g: 0, b: 0, a: 0}
-  andColour: {r: 0, g: 0, b: 0, a: 0}
+  timeSinceLastAttack: 0
   OnFullCharge:
     m_PersistentCalls:
       m_Calls: []
@@ -10047,8 +10046,7 @@ MonoBehaviour:
   lvlOfPower: 0
   maxLvlOfPower: 100
   underAttackCooldown: 2
-  startColour: {r: 1, g: 0, b: 0, a: 0}
-  andColour: {r: 0, g: 1, b: 0.29655194, a: 0}
+  timeSinceLastAttack: 0
   OnFullCharge:
     m_PersistentCalls:
       m_Calls: []
@@ -34559,8 +34557,7 @@ MonoBehaviour:
   lvlOfPower: 0
   maxLvlOfPower: 100
   underAttackCooldown: 2
-  startColour: {r: 0, g: 0, b: 0, a: 0}
-  andColour: {r: 0, g: 0, b: 0, a: 0}
+  timeSinceLastAttack: 0
   OnFullCharge:
     m_PersistentCalls:
       m_Calls: []
@@ -35580,6 +35577,8 @@ GameObject:
   - component: {fileID: 2055773427}
   - component: {fileID: 2055773426}
   - component: {fileID: 2055773430}
+  - component: {fileID: 2055773432}
+  - component: {fileID: 2055773431}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -35675,6 +35674,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: d543494b671fe214d8189b6945d708f8, type: 2}
+--- !u!114 &2055773431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2055773424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00104735f7823e344a3ef85ceee0bd55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toInfluence: 00000000
+--- !u!114 &2055773432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2055773424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8777d859ef98f45902d82f7618b08b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: BloomOn
+  OnTrue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2055773431}
+        m_MethodName: Toggle
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnFalse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2055773431}
+        m_MethodName: Toggle
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &2073519730
 Prefab:
   m_ObjectHideFlags: 0
