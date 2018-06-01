@@ -30,9 +30,6 @@ public class Building : MonoBehaviour, IDamagable
 
     private UnityEvent onTutorialSegmentEnd = new UnityEvent();
 
-    //[SerializeField]
-    //private bool multipleAnimations, StagedAnimations;
-
 
     public float LvlOfPower
     {
@@ -101,7 +98,7 @@ public class Building : MonoBehaviour, IDamagable
     void SwitchFase()
     {
         maxLvlOfPower = 200;
-        buildingAnimator.SetTrigger("NextStagetrigger");
+        buildingAnimator.SetTrigger("nextStageTrigger");
         Debug.Log("Du Yu Wuk");
     }
 
