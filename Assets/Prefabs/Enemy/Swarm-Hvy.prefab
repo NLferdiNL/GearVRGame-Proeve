@@ -1115,7 +1115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56cec9a380793cc44b257734a6aa58ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
+  _maxHealth: 250
   target: {fileID: 0}
   _enemyBodies: []
 --- !u!135 &135263252904302670
