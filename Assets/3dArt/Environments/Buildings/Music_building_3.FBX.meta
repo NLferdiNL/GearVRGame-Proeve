@@ -397,9 +397,9 @@ ModelImporter:
     4300150: feet-panel_front_L
     4300152: feet-panel_left_R
     4300154: feet-panel_left_L
-    7400000: First Segment
+    7400000: First Segment MusicBuilding_3
     7400002: TargetSwitch
-    7400004: Second Segment
+    7400004: Second Segment MusicBuilding_3
     9500000: //RootNode
   externalObjects:
   - first:
@@ -434,7 +434,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: First Segment
+      name: First Segment MusicBuilding_3
       takeName: Take 001
       firstFrame: 0
       lastFrame: 92
@@ -490,7 +490,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Second Segment
+      name: Second Segment MusicBuilding_3
       takeName: Take 001
       firstFrame: 0
       lastFrame: 92
