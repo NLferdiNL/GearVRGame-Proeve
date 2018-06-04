@@ -30,6 +30,8 @@ public class Building : MonoBehaviour, IDamagable
 
     private UnityEvent onTutorialSegmentEnd = new UnityEvent();
 
+    bool fullyHealed = false;
+
 
     public float LvlOfPower
     {
@@ -91,7 +93,6 @@ public class Building : MonoBehaviour, IDamagable
 
         if (lvlOfPower >= maxLvlOfPower)
         {
-            OnFullCharge.Invoke();
         }
     }
 
@@ -112,6 +113,9 @@ public class Building : MonoBehaviour, IDamagable
 
         lvlOfPower -= value;
 
+        if (fullyHealed)
+            fullyHealed = false;
+
         if (lvlOfPower < 0)
             lvlOfPower = 0;
     }
@@ -123,7 +127,11 @@ public class Building : MonoBehaviour, IDamagable
 
         lvlOfPower += value;
 
-        if (lvlOfPower > maxLvlOfPower)
+        if (lvlOfPower > maxLvlOfPower && !fullyHealed)
+        {
+            fullyHealed = true;
+            OnFullCharge.Invoke();
             lvlOfPower = maxLvlOfPower;
+        }
     }
 }
