@@ -21,6 +21,7 @@ public class SoundController : MonoBehaviour {
     void Start()
     {
         IntroSection(); // Start the first section of the game.
+		Instance = this;
     }
 
     public void CheckBuildingCharge(int BuildingNumber) // Set buildings to true if charged.

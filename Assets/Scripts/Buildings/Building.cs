@@ -74,7 +74,7 @@ public class Building : MonoBehaviour, IDamagable
         {
             buildingAnimator = GetComponentInParent<Animator>();
         }
-        SoundController.OnReset.AddListener(SwitchFase);
+        SoundController.Instance.OnReset.AddListener(SwitchFase);
     }
 
     void FixedUpdate()
@@ -89,10 +89,6 @@ public class Building : MonoBehaviour, IDamagable
         }
 
         buildingAnimator.SetFloat("amountOfPower", lvlOfPower / maxLvlOfPower);
-
-        if (lvlOfPower >= maxLvlOfPower)
-        {
-        }
     }
 
     void SwitchFase()
