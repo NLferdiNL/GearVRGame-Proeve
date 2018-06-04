@@ -27,15 +27,12 @@ public class SoundController : MonoBehaviour {
         {
             case 1:
                 TutorialBuilding1 = true;
-                Debug.Log(TutorialBuilding1);
                 break;
             case 2:
                 TutorialBuilding2 = true;
-                Debug.Log(TutorialBuilding2);
                 break;
             case 3:
                 TutorialBuilding3 = true;
-                Debug.Log(TutorialBuilding3);
                 break;
         }
     }
@@ -70,9 +67,7 @@ public class SoundController : MonoBehaviour {
         {
             BuildingNotCharged();
         }*/
-        OnReset.Invoke();
         TutorialBuilding1 = TutorialBuilding2 = TutorialBuilding3 = false;
-        Debug.Log("" + TutorialBuilding2 + TutorialBuilding3);
         OnReset.Invoke();
 
         InBetweenSection();

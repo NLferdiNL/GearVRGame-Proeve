@@ -28,7 +28,6 @@ public class Building : MonoBehaviour, IDamagable
 
     public BuildingFullyChargedEvent OnFullCharge = new BuildingFullyChargedEvent();
 
-    private UnityEvent onTutorialSegmentEnd = new UnityEvent();
 
     bool fullyHealed = false;
 
@@ -75,7 +74,7 @@ public class Building : MonoBehaviour, IDamagable
         {
             buildingAnimator = GetComponentInParent<Animator>();
         }
-        onTutorialSegmentEnd.AddListener(SwitchFase);
+        SoundController.OnReset.AddListener(SwitchFase);
     }
 
     void FixedUpdate()
