@@ -2060,8 +2060,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Building+BuildingFullyChargedEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  multipleAnimations: 0
-  StagedAnimations: 0
 --- !u!65 &159221752
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10052,8 +10050,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Building+BuildingFullyChargedEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  multipleAnimations: 0
-  StagedAnimations: 0
 --- !u!65 &639461090
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29245,34 +29241,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1651255953}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1655697319
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1655697320}
-  m_Layer: 0
-  m_Name: Tutorial
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1655697320
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1655697319}
-  m_LocalRotation: {x: -0, y: -0.35702884, z: -0, w: 0.9340934}
-  m_LocalPosition: {x: 3.1675043, y: 5.601651, z: -9.186338}
-  m_LocalScale: {x: 0.44812924, y: 0.30135724, z: 0.44812953}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1656043069
 GameObject:
   m_ObjectHideFlags: 0
@@ -34593,8 +34561,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Building+BuildingFullyChargedEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  multipleAnimations: 0
-  StagedAnimations: 0
 --- !u!114 &1973561947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35640,6 +35606,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ef2a6f84a356d489e2ea851766dba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedH: 2
+  speedV: 2
 --- !u!81 &2055773427
 AudioListener:
   m_ObjectHideFlags: 0
