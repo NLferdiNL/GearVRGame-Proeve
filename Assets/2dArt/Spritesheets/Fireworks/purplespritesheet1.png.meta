@@ -1,14 +1,51 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+guid: e6b5078e674022140b806facdeb15a94
+timeCreated: 1527751701
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: purplespritesheet1_0
+    21300002: purplespritesheet1_1
+    21300004: purplespritesheet1_2
+    21300006: purplespritesheet1_3
+    21300008: purplespritesheet1_4
+    21300010: purplespritesheet1_5
+    21300012: purplespritesheet1_6
+    21300014: purplespritesheet1_7
+    21300016: purplespritesheet1_8
+    21300018: purplespritesheet1_9
+    21300020: purplespritesheet1_10
+    21300022: purplespritesheet1_11
+    21300024: purplespritesheet1_12
+    21300026: purplespritesheet1_13
+    21300028: purplespritesheet1_14
+=======
+>>>>>>> c359e3e520c28cb291b2f3f5a4658e076fc36b9d
 guid: ee0b72718df608044b48a8ed1e55cd3b
 timeCreated: 1527603180
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
+<<<<<<< HEAD
+=======
+>>>>>>> 26dc17caa409f12cb9933f124bdb6a83dc042bc7
+>>>>>>> c359e3e520c28cb291b2f3f5a4658e076fc36b9d
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
+<<<<<<< HEAD
     enableMipMap: 1
+=======
+<<<<<<< HEAD
+    enableMipMap: 0
+=======
+    enableMipMap: 1
+>>>>>>> 26dc17caa409f12cb9933f124bdb6a83dc042bc7
+>>>>>>> c359e3e520c28cb291b2f3f5a4658e076fc36b9d
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,6 +71,18 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -1
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+=======
+>>>>>>> c359e3e520c28cb291b2f3f5a4658e076fc36b9d
     wrapU: -1
     wrapV: -1
     wrapW: -1
@@ -41,6 +90,10 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 0
+<<<<<<< HEAD
+=======
+>>>>>>> 26dc17caa409f12cb9933f124bdb6a83dc042bc7
+>>>>>>> c359e3e520c28cb291b2f3f5a4658e076fc36b9d
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,9 +102,21 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
+<<<<<<< HEAD
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: 0
+=======
+<<<<<<< HEAD
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+=======
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 0
+>>>>>>> 26dc17caa409f12cb9933f124bdb6a83dc042bc7
+>>>>>>> c359e3e520c28cb291b2f3f5a4658e076fc36b9d
   textureShape: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
@@ -67,9 +132,241 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< HEAD
   spriteSheet:
     serializedVersion: 2
     sprites: []
+=======
+<<<<<<< HEAD
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: purplespritesheet1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 942
+        width: 263
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet1_1
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 942
+        width: 263
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet1_2
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 942
+        width: 263
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet1_3
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 942
+        width: 263
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet1_4
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 942
+        width: 263
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet1_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 471
+        width: 263
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet1_6
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 471
+        width: 263
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet1_7
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 471
+        width: 263
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet1_8
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 471
+        width: 263
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet1_9
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 471
+        width: 263
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 263
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet1_11
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 0
+        width: 263
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet1_12
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 0
+        width: 263
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet1_13
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 0
+        width: 263
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet1_14
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 0
+        width: 263
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+=======
+  spriteSheet:
+    serializedVersion: 2
+    sprites: []
+>>>>>>> 26dc17caa409f12cb9933f124bdb6a83dc042bc7
+>>>>>>> c359e3e520c28cb291b2f3f5a4658e076fc36b9d
     outline: []
     physicsShape: []
   spritePackingTag: 
