@@ -20,8 +20,8 @@ public class RaycastLaser : MonoBehaviour
     {
         laserLine = GetComponent<LineRenderer>();
         laserLine.enabled = true;
-        SM.SfxHolder[0] = laserOn.clip;
-        laserOn.Play();
+        //SM.SfxHolder[0] = laserOn.clip;
+        //laserOn.Play();
     }
 
 	void Update()

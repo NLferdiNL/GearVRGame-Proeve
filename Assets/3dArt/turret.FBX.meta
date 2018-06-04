@@ -27,7 +27,12 @@ ModelImporter:
     4300004: Turnpiece
     4300006: Cannon
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 4c01b742fabc527448aa2f298a6b81ea, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
