@@ -1,0 +1,332 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 4a17d02ff58607f489b0ae7895587365
+timeCreated: 1527751688
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: purplespritesheet2_0
+    21300002: purplespritesheet2_1
+    21300004: purplespritesheet2_2
+    21300006: purplespritesheet2_3
+    21300008: purplespritesheet2_4
+    21300010: purplespritesheet2_5
+    21300012: purplespritesheet2_6
+    21300014: purplespritesheet2_7
+    21300016: purplespritesheet2_8
+    21300018: purplespritesheet2_9
+    21300020: purplespritesheet2_10
+    21300022: purplespritesheet2_11
+    21300024: purplespritesheet2_12
+    21300026: purplespritesheet2_13
+=======
+guid: ddbd1ccca80dc8c4abb323e3409b7a4d
+timeCreated: 1527603176
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName: {}
+>>>>>>> 26dc17caa409f12cb9933f124bdb6a83dc042bc7
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+<<<<<<< HEAD
+    enableMipMap: 0
+=======
+    enableMipMap: 1
+>>>>>>> 26dc17caa409f12cb9933f124bdb6a83dc042bc7
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+<<<<<<< HEAD
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+=======
+    wrapU: -1
+    wrapV: -1
+    wrapW: -1
+  nPOTScale: 1
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 0
+>>>>>>> 26dc17caa409f12cb9933f124bdb6a83dc042bc7
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+<<<<<<< HEAD
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+=======
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 0
+>>>>>>> 26dc17caa409f12cb9933f124bdb6a83dc042bc7
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+<<<<<<< HEAD
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: purplespritesheet2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 655.5
+        width: 320.7143
+        height: 655.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet2_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 655.5
+        width: 320.7143
+        height: 655.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet2_2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 655.5
+        width: 320.7143
+        height: 655.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet2_3
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 655.5
+        width: 320.7143
+        height: 655.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet2_4
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 655.5
+        width: 320.7143
+        height: 655.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet2_5
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 655.5
+        width: 320.7143
+        height: 655.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet2_6
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 655.5
+        width: 320.7143
+        height: 655.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet2_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.5
+        width: 320.7143
+        height: 655.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet2_8
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0.5
+        width: 320.7143
+        height: 655.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet2_9
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0.5
+        width: 320.7143
+        height: 655.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet2_10
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0.5
+        width: 320.7143
+        height: 655.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet2_11
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0.5
+        width: 320.7143
+        height: 655.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet2_12
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0.5
+        width: 320.7143
+        height: 655.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purplespritesheet2_13
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0.5
+        width: 320.7143
+        height: 655.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+=======
+  spriteSheet:
+    serializedVersion: 2
+    sprites: []
+>>>>>>> 26dc17caa409f12cb9933f124bdb6a83dc042bc7
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
