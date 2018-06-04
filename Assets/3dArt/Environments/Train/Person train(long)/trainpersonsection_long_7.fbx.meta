@@ -1,29 +1,18 @@
 fileFormatVersion: 2
-guid: d3f477947e1eaaf4bb4c123cc15bd1a2
-timeCreated: 1527585172
+guid: f57c8c4ea8250db4f968e46933b467c9
+timeCreated: 1528100612
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Charge Meter
-    100002: Front Face
-    100004: //RootNode
-    400000: Charge Meter
-    400002: Front Face
-    400004: //RootNode
-    2100000: TargetMat
-    2100002: TargetFaceMat
-    2100004: ChargeMat
-    2300000: Charge Meter
-    2300002: Front Face
-    2300004: //RootNode
-    3300000: Charge Meter
-    3300002: Front Face
-    3300004: //RootNode
-    4300000: TargetBase
-    4300002: Front Face
-    4300004: Charge Meter
-    9500000: //RootNode
+    100000: Person_train_long_7
+    100002: //RootNode
+    400000: Person_train_long_7
+    400002: //RootNode
+    2100000: lambert1
+    2300000: Person_train_long_7
+    3300000: Person_train_long_7
+    4300000: Person_train_long_7
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -54,7 +43,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1.4
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -98,7 +87,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
