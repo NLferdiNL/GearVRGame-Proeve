@@ -74,6 +74,7 @@ public class Building : MonoBehaviour, IDamagable
         {
             buildingAnimator = GetComponentInParent<Animator>();
         }
+
         SoundController.Instance.OnReset.AddListener(SwitchFase);
     }
 
