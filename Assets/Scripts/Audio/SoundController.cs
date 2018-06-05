@@ -18,10 +18,14 @@ public class SoundController : MonoBehaviour {
 
     // [0] = start song || [5] = start mid section || [13] = start drop || [15] = start end loop.
 
-    void Start()
+    void Awake()
+    {
+		Instance = this;
+    }
+
+    private void Start()
     {
         IntroSection(); // Start the first section of the game.
-		Instance = this;
     }
 
     public void CheckBuildingCharge(int BuildingNumber) // Set buildings to true if charged.

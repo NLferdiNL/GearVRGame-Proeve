@@ -93,7 +93,7 @@ public class Building : MonoBehaviour, IDamagable
 
     void SwitchFase()
     {
-        maxLvlOfPower = 200;
+        Damage(maxLvlOfPower);
         buildingAnimator.SetTrigger("nextStageTrigger");
         Debug.Log("Du Yu Wuk");
     }
