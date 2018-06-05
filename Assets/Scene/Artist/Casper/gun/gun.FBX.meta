@@ -24,7 +24,12 @@ ModelImporter:
     4300002: Hinge
     4300004: Turnpiece
     4300006: Cannon
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 4c01b742fabc527448aa2f298a6b81ea, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -43,7 +48,6 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5

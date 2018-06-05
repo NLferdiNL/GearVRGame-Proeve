@@ -12,6 +12,8 @@ public class RotateTurret : MonoBehaviour {
 
     [SerializeField] private bool isIndependant = false; // Sets whether or not Turret works independant.
 
+    [SerializeField] private AudioSource turretMove;
+
     void Start()
     {
         if (isIndependant)

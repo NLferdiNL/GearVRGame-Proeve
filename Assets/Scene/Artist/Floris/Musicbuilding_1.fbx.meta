@@ -315,9 +315,9 @@ ModelImporter:
     4300104: boa4
     4300106: bo5
     4300108: boa6
-    7400000: First Segment
-    7400002: ChangeTarget
-    7400004: SecondSegment
+    7400000: First Segment MusicBuilding_1
+    7400002: ChangeTarget MusicBuilding_1
+    7400004: SecondSegment MusicBuilding_1
     9500000: //RootNode
   externalObjects:
   - first:
@@ -352,7 +352,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: First Segment
+      name: First Segment MusicBuilding_1
       takeName: Take 001
       firstFrame: 1
       lastFrame: 40
@@ -380,7 +380,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: ChangeTarget
+      name: ChangeTarget MusicBuilding_1
       takeName: Take 001
       firstFrame: 40
       lastFrame: 50
@@ -408,7 +408,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: SecondSegment
+      name: SecondSegment MusicBuilding_1
       takeName: Take 001
       firstFrame: 50
       lastFrame: 82.5

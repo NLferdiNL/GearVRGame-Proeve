@@ -22,6 +22,7 @@ using System;
 
 #if UNITY_2017_2_OR_NEWER
 using UnityEngine.XR;
+using System.Runtime.InteropServices;
 #else
 using XRDevice = UnityEngine.VR.VRDevice;
 using XRSettings = UnityEngine.VR.VRSettings;

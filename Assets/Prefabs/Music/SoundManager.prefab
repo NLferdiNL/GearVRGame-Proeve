@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4116528331530298}
   - component: {fileID: 114972209746972438}
-  - component: {fileID: 114443469648477496}
+  - component: {fileID: 114610525621290052}
   - component: {fileID: 82843080683350302}
   m_Layer: 0
   m_Name: SoundManager
@@ -52,7 +52,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243246679828924682, guid: 62289519b848a7b4cb1e8077a7bd450b,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: eb14eeee9537c61498035ff34d27ec54, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -123,7 +123,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114443469648477496
+--- !u!114 &114610525621290052
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -131,10 +131,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1688493901736480}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c0e008eb071cd845955325d317fb716, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d92e4318892d2c4ea91de6d8a84800b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SM: {fileID: 114972209746972438}
+  OnReset:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  NumberChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   TutorialBuilding1: 0
   TutorialBuilding2: 0
   TutorialBuilding3: 0
@@ -169,4 +179,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c3fba0318f75d8e41aaced7d98ddba7e, type: 3}
   - {fileID: 8300000, guid: e60113c8621665c4c9167b9df15cff41, type: 3}
   - {fileID: 8300000, guid: a852fd9289f4790469bc5ae47121c1ec, type: 3}
-  musicPlayer: {fileID: 82843080683350302}
+  MusicPlayer: {fileID: 82843080683350302}
