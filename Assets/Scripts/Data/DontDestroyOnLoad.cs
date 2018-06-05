@@ -8,9 +8,8 @@ public class DontDestroyOnLoad : MonoBehaviour
     {
         if (!created)
         {
-            DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(gameObject);
             created = true;
-            Debug.Log("Awake: " + this.gameObject);
         }
     }
 }

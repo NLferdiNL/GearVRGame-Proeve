@@ -60,8 +60,9 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 1
     - _GlossyReflections: 1
+    - _MaxTriSize: 25
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -70,7 +71,11 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _WireSmoothness: 0
+    - _WireThickness: 653
     - _ZWrite: 1
     m_Colors:
+    - _BaseColor: {r: 0.11372549, g: 0.11764706, b: 0.3372549, a: 1}
     - _Color: {r: 0.11440313, g: 0.11594679, b: 0.33823532, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _WireColor: {r: 0.6784314, g: 0.21176472, b: 0.6117647, a: 1}

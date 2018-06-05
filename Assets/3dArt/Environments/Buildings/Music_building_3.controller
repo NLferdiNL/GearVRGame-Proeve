@@ -11,7 +11,7 @@ AnimatorController:
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
-    m_StateMachine: {fileID: 1107619378721924338}
+    m_StateMachine: {fileID: 1107013890941061410}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -21,7 +21,7 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1102 &1102070174288182398
+--- !u!1102 &1102428910909227816
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -40,13 +40,13 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: cc3bea792ea04ac4b97cdab477a52369, type: 3}
+  m_Motion: {fileID: 7400000, guid: 88572504fe5f85940918ff509b905eba, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1107 &1107619378721924338
+--- !u!1107 &1107013890941061410
 AnimatorStateMachine:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -55,8 +55,13 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
+<<<<<<< HEAD:Assets/Scene/Artist/Timothy/Music_building_3.controller
+    m_State: {fileID: 1102428910909227816}
+    m_Position: {x: 200, y: 0, z: 0}
+=======
     m_State: {fileID: 1102070174288182398}
     m_Position: {x: 240, y: 108, z: 0}
+>>>>>>> c359e3e520c28cb291b2f3f5a4658e076fc36b9d:Assets/3dArt/Environments/Buildings/Music_building_3.controller
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -66,4 +71,4 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 1102070174288182398}
+  m_DefaultState: {fileID: 1102428910909227816}
