@@ -95,7 +95,7 @@ public class Building : MonoBehaviour, IDamagable
     {
         //UpdateLvlOfPower();
         buildingAnimator.SetTrigger("nextStageTrigger");
-        Damage(maxLvlOfPower);
+		lvlOfPower = 0;
     }
 
     void UpdateLvlOfPower()
