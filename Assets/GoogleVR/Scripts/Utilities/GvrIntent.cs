@@ -16,6 +16,8 @@
 /// <summary>
 /// Provides information about the Android Intent that started the current Activity.
 /// </summary>
+
+using UnityEngine;
 public static class GvrIntent {
 
   private const string METHOD_GET_INTENT = "getIntent";

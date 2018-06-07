@@ -55,11 +55,6 @@ public class Swarm : MonoBehaviour, IDamagable {
 	}
 
 	public void Damage(float value) {
-		// 66 health
-		// 10 damage
-		// 6 drones over
-		// 1 drone to destroy
-
 		_health -= value;
 
 		int dronesToKeepAlive = Mathf.FloorToInt(_health / _dronesPerHitPoint);
@@ -82,9 +77,5 @@ public class Swarm : MonoBehaviour, IDamagable {
 		// So that the laser doesn't have to check and just heals enemies.
 		// Which harms them.
 		Damage(value);
-	}
-
-	private void OnMouseDown() {
-		Damage(MaxHealth);
 	}
 }

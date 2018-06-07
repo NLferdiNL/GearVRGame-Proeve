@@ -41,16 +41,17 @@ public class GazeButton : MonoBehaviour {
 	private void FixedUpdate() {
 		if(active) {
 			currTime += Time.deltaTime;
-			OnGazeTimeChanged.Invoke(normalizedCurrTime);
 
 			if(currTime >= maxTime) {
 				if(!looping)
 					active = false;
-				else
-					currTime = 0;
+
+				currTime = 0;
 				OnGazeFinished.Invoke();
 			}
-			
+
+			OnGazeTimeChanged.Invoke(normalizedCurrTime);
+
 		} else if(currTime > 0) {
 			currTime -= Time.deltaTime;
 			OnGazeTimeChanged.Invoke(normalizedCurrTime);

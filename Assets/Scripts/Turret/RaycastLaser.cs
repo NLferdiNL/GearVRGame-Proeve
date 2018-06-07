@@ -3,30 +3,33 @@
 public class RaycastLaser : MonoBehaviour
 {
     //This script creates the laser and the controls for space and touch.
-    
-    public float range; // Sets Range of Line.
+    private SoundManager SM;
 
-    [SerializeField] LayerMask hitMask;
-    
+    [SerializeField] private LayerMask hitMask;
 
+    [SerializeField] private AudioSource laserOn;
+    
     LineRenderer laserLine; // Line for the laser.
 
-	[SerializeField] float damagePerFrame = 1;
+	[SerializeField] private float damagePerFrame = 1;
+    public float range; // Sets Range of Line.
 
-	bool isShooting = true;
+    private bool isShooting = true;
 
-    void Awake() // Gets the laserLine component and enables it true at start of the scene.
+    void Start() // Gets the laserLine component and enables it true at start of the scene.
     {
         laserLine = GetComponent<LineRenderer>();
         laserLine.enabled = true;
+        SM.SfxHolder[6] = laserOn.clip;
+        laserOn.Play();
     }
 
 	void Update()
     {
-        TempControls();
+        TestControls();
     }
 
-    void TempControls()
+    void TestControls()
     {
         if (Input.GetKeyDown("space"))
         {
@@ -68,20 +71,6 @@ public class RaycastLaser : MonoBehaviour
     {
         laserLine.enabled = true;
         isShooting = true;
-    }
-
-    void LaserSfx()
-    {
-        if (isShooting)
-        {
-            //SoundManager.Sfx[0].Play();
-            
-                        
-        }
-        else if(isShooting == false)
-        {
-            //SoundManager.Sfx[1].Play();
-        }
     }
 
     void Shoot() // Creates the line visable in game if laserLine.enabled = true.

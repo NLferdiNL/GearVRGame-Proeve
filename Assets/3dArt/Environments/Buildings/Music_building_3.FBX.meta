@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 03b17470f11642e4c851af43af581629
-timeCreated: 1528105069
+guid: cc3bea792ea04ac4b97cdab477a52369
+timeCreated: 1527516689
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -18,78 +18,78 @@ ModelImporter:
     100020: building_bottom
     100022: building_middle
     100024: building_topside
-    100026: Charge Meter
-    100028: Charge Meter001
-    100030: Charge Meter002
-    100032: feet-panel_back_L
-    100034: feet-panel_back_R
-    100036: feet-panel_front_L
-    100038: feet-panel_front_R
-    100040: feet-panel_left_L
-    100042: feet-panel_left_R
-    100044: feet-panel_right_L
-    100046: feet-panel_right_R
-    100048: feet_L_back
-    100050: feet_L_front
-    100052: feet_R_back
-    100054: feet_R_front
-    100056: Front Face
-    100058: Front Face001
-    100060: Front Face002
-    100062: generator-holo-link_L_back
-    100064: generator-holo-link_L_front
-    100066: generator-holo-link_R_back
-    100068: generator-holo-link_R_front
-    100070: holo-connector_1
-    100072: holo-connector_2
-    100074: holo-connector_L_back
-    100076: holo-connector_L_front
-    100078: holo-connector_R_back
-    100080: holo-connector_R_front
-    100082: hologram-billboard_L_back
-    100084: hologram-billboard_L_front
-    100086: hologram-billboard_R_back
-    100088: hologram-billboard_R_front
-    100090: hologram-bottem_L_back
-    100092: hologram-bottem_L_front
-    100094: hologram-bottem_R_back
-    100096: lazer_L_back
-    100098: lazer_L_front
-    100100: lazer_R_back
-    100102: lazer_R_front
-    100104: lazergenerator_L_back
-    100106: lazergenerator_L_front
-    100108: lazergenerator_R_back
-    100110: lazergenerator_R_front
-    100112: //RootNode
-    100114: panel-pillar_back_L
-    100116: panel-pillar_back_R
-    100118: panel-pillar_front_L
-    100120: panel-pillar_front_R
-    100122: panel-pillar_left_L
-    100124: panel-pillar_left_R
-    100126: panel-pillar_right_L
-    100128: panel-pillar_right_R
-    100130: panel_back_L
-    100132: panel_back_R
-    100134: panel_front_L
-    100136: panel_front_R
-    100138: panel_left_L
-    100140: panel_left_R
-    100142: panel_right_L
-    100144: panel_right_R
-    100146: rings_L_back_bottom
-    100148: rings_L_back_top
-    100150: rings_L_front_bottom
-    100152: rings_L_front_top
-    100154: rings_R_back_bottom
-    100156: rings_R_back_top
-    100158: rings_R_front_bottom
-    100160: rings_R_front_top
-    100162: roof_L_back
-    100164: roof_L_front
-    100166: roof_R_back
-    100168: roof_R_front
+    100026: feet-panel_back_L
+    100028: feet-panel_back_R
+    100030: feet-panel_front_L
+    100032: feet-panel_front_R
+    100034: feet-panel_left_L
+    100036: feet-panel_left_R
+    100038: feet-panel_right_L
+    100040: feet-panel_right_R
+    100042: feet_L_back
+    100044: feet_L_front
+    100046: feet_R_back
+    100048: feet_R_front
+    100050: generator-holo-link_L_back
+    100052: generator-holo-link_L_front
+    100054: generator-holo-link_R_back
+    100056: generator-holo-link_R_front
+    100058: holo-connector_1
+    100060: holo-connector_2
+    100062: holo-connector_L_back
+    100064: holo-connector_L_front
+    100066: holo-connector_R_back
+    100068: holo-connector_R_front
+    100070: hologram-billboard_L_back
+    100072: hologram-billboard_L_front
+    100074: hologram-billboard_R_back
+    100076: hologram-billboard_R_front
+    100078: hologram-bottem_L_back
+    100080: hologram-bottem_L_front
+    100082: hologram-bottem_R_back
+    100084: lazer_L_back
+    100086: lazer_L_front
+    100088: lazer_R_back
+    100090: lazer_R_front
+    100092: lazergenerator_L_back
+    100094: lazergenerator_L_front
+    100096: lazergenerator_R_back
+    100098: lazergenerator_R_front
+    100100: //RootNode
+    100102: panel-pillar_back_L
+    100104: panel-pillar_back_R
+    100106: panel-pillar_front_L
+    100108: panel-pillar_front_R
+    100110: panel-pillar_left_L
+    100112: panel-pillar_left_R
+    100114: panel-pillar_right_L
+    100116: panel-pillar_right_R
+    100118: panel_back_L
+    100120: panel_back_R
+    100122: panel_front_L
+    100124: panel_front_R
+    100126: panel_left_L
+    100128: panel_left_R
+    100130: panel_right_L
+    100132: panel_right_R
+    100134: rings_L_back_bottom
+    100136: rings_L_back_top
+    100138: rings_L_front_bottom
+    100140: rings_L_front_top
+    100142: rings_R_back_bottom
+    100144: rings_R_back_top
+    100146: rings_R_front_bottom
+    100148: rings_R_front_top
+    100150: roof_L_back
+    100152: roof_L_front
+    100154: roof_R_back
+    100156: roof_R_front
+    100158: Charge Meter
+    100160: Charge Meter001
+    100162: Charge Meter002
+    100164: Front Face
+    100166: Front Face001
+    100168: Front Face002
     100170: TargetBase
     100172: TargetBase001
     100174: TargetBase002
@@ -106,78 +106,78 @@ ModelImporter:
     400020: building_bottom
     400022: building_middle
     400024: building_topside
-    400026: Charge Meter
-    400028: Charge Meter001
-    400030: Charge Meter002
-    400032: feet-panel_back_L
-    400034: feet-panel_back_R
-    400036: feet-panel_front_L
-    400038: feet-panel_front_R
-    400040: feet-panel_left_L
-    400042: feet-panel_left_R
-    400044: feet-panel_right_L
-    400046: feet-panel_right_R
-    400048: feet_L_back
-    400050: feet_L_front
-    400052: feet_R_back
-    400054: feet_R_front
-    400056: Front Face
-    400058: Front Face001
-    400060: Front Face002
-    400062: generator-holo-link_L_back
-    400064: generator-holo-link_L_front
-    400066: generator-holo-link_R_back
-    400068: generator-holo-link_R_front
-    400070: holo-connector_1
-    400072: holo-connector_2
-    400074: holo-connector_L_back
-    400076: holo-connector_L_front
-    400078: holo-connector_R_back
-    400080: holo-connector_R_front
-    400082: hologram-billboard_L_back
-    400084: hologram-billboard_L_front
-    400086: hologram-billboard_R_back
-    400088: hologram-billboard_R_front
-    400090: hologram-bottem_L_back
-    400092: hologram-bottem_L_front
-    400094: hologram-bottem_R_back
-    400096: lazer_L_back
-    400098: lazer_L_front
-    400100: lazer_R_back
-    400102: lazer_R_front
-    400104: lazergenerator_L_back
-    400106: lazergenerator_L_front
-    400108: lazergenerator_R_back
-    400110: lazergenerator_R_front
-    400112: //RootNode
-    400114: panel-pillar_back_L
-    400116: panel-pillar_back_R
-    400118: panel-pillar_front_L
-    400120: panel-pillar_front_R
-    400122: panel-pillar_left_L
-    400124: panel-pillar_left_R
-    400126: panel-pillar_right_L
-    400128: panel-pillar_right_R
-    400130: panel_back_L
-    400132: panel_back_R
-    400134: panel_front_L
-    400136: panel_front_R
-    400138: panel_left_L
-    400140: panel_left_R
-    400142: panel_right_L
-    400144: panel_right_R
-    400146: rings_L_back_bottom
-    400148: rings_L_back_top
-    400150: rings_L_front_bottom
-    400152: rings_L_front_top
-    400154: rings_R_back_bottom
-    400156: rings_R_back_top
-    400158: rings_R_front_bottom
-    400160: rings_R_front_top
-    400162: roof_L_back
-    400164: roof_L_front
-    400166: roof_R_back
-    400168: roof_R_front
+    400026: feet-panel_back_L
+    400028: feet-panel_back_R
+    400030: feet-panel_front_L
+    400032: feet-panel_front_R
+    400034: feet-panel_left_L
+    400036: feet-panel_left_R
+    400038: feet-panel_right_L
+    400040: feet-panel_right_R
+    400042: feet_L_back
+    400044: feet_L_front
+    400046: feet_R_back
+    400048: feet_R_front
+    400050: generator-holo-link_L_back
+    400052: generator-holo-link_L_front
+    400054: generator-holo-link_R_back
+    400056: generator-holo-link_R_front
+    400058: holo-connector_1
+    400060: holo-connector_2
+    400062: holo-connector_L_back
+    400064: holo-connector_L_front
+    400066: holo-connector_R_back
+    400068: holo-connector_R_front
+    400070: hologram-billboard_L_back
+    400072: hologram-billboard_L_front
+    400074: hologram-billboard_R_back
+    400076: hologram-billboard_R_front
+    400078: hologram-bottem_L_back
+    400080: hologram-bottem_L_front
+    400082: hologram-bottem_R_back
+    400084: lazer_L_back
+    400086: lazer_L_front
+    400088: lazer_R_back
+    400090: lazer_R_front
+    400092: lazergenerator_L_back
+    400094: lazergenerator_L_front
+    400096: lazergenerator_R_back
+    400098: lazergenerator_R_front
+    400100: //RootNode
+    400102: panel-pillar_back_L
+    400104: panel-pillar_back_R
+    400106: panel-pillar_front_L
+    400108: panel-pillar_front_R
+    400110: panel-pillar_left_L
+    400112: panel-pillar_left_R
+    400114: panel-pillar_right_L
+    400116: panel-pillar_right_R
+    400118: panel_back_L
+    400120: panel_back_R
+    400122: panel_front_L
+    400124: panel_front_R
+    400126: panel_left_L
+    400128: panel_left_R
+    400130: panel_right_L
+    400132: panel_right_R
+    400134: rings_L_back_bottom
+    400136: rings_L_back_top
+    400138: rings_L_front_bottom
+    400140: rings_L_front_top
+    400142: rings_R_back_bottom
+    400144: rings_R_back_top
+    400146: rings_R_front_bottom
+    400148: rings_R_front_top
+    400150: roof_L_back
+    400152: roof_L_front
+    400154: roof_R_back
+    400156: roof_R_front
+    400158: Charge Meter
+    400160: Charge Meter001
+    400162: Charge Meter002
+    400164: Front Face
+    400166: Front Face001
+    400168: Front Face002
     400170: TargetBase
     400172: TargetBase001
     400174: TargetBase002
@@ -198,77 +198,77 @@ ModelImporter:
     2300020: building_bottom
     2300022: building_middle
     2300024: building_topside
-    2300026: Charge Meter
-    2300028: Charge Meter001
-    2300030: Charge Meter002
-    2300032: feet-panel_back_L
-    2300034: feet-panel_back_R
-    2300036: feet-panel_front_L
-    2300038: feet-panel_front_R
-    2300040: feet-panel_left_L
-    2300042: feet-panel_left_R
-    2300044: feet-panel_right_L
-    2300046: feet-panel_right_R
-    2300048: feet_L_back
-    2300050: feet_L_front
-    2300052: feet_R_back
-    2300054: feet_R_front
-    2300056: Front Face
-    2300058: Front Face001
-    2300060: Front Face002
-    2300062: generator-holo-link_L_back
-    2300064: generator-holo-link_L_front
-    2300066: generator-holo-link_R_back
-    2300068: generator-holo-link_R_front
-    2300070: holo-connector_1
-    2300072: holo-connector_2
-    2300074: holo-connector_L_back
-    2300076: holo-connector_L_front
-    2300078: holo-connector_R_back
-    2300080: holo-connector_R_front
-    2300082: hologram-billboard_L_back
-    2300084: hologram-billboard_L_front
-    2300086: hologram-billboard_R_back
-    2300088: hologram-billboard_R_front
-    2300090: hologram-bottem_L_back
-    2300092: hologram-bottem_L_front
-    2300094: hologram-bottem_R_back
-    2300096: lazer_L_back
-    2300098: lazer_L_front
-    2300100: lazer_R_back
-    2300102: lazer_R_front
-    2300104: lazergenerator_L_back
-    2300106: lazergenerator_L_front
-    2300108: lazergenerator_R_back
-    2300110: lazergenerator_R_front
-    2300112: panel-pillar_back_L
-    2300114: panel-pillar_back_R
-    2300116: panel-pillar_front_L
-    2300118: panel-pillar_front_R
-    2300120: panel-pillar_left_L
-    2300122: panel-pillar_left_R
-    2300124: panel-pillar_right_L
-    2300126: panel-pillar_right_R
-    2300128: panel_back_L
-    2300130: panel_back_R
-    2300132: panel_front_L
-    2300134: panel_front_R
-    2300136: panel_left_L
-    2300138: panel_left_R
-    2300140: panel_right_L
-    2300142: panel_right_R
-    2300144: rings_L_back_bottom
-    2300146: rings_L_back_top
-    2300148: rings_L_front_bottom
-    2300150: rings_L_front_top
-    2300152: rings_R_back_bottom
-    2300154: rings_R_back_top
-    2300156: rings_R_front_bottom
-    2300158: rings_R_front_top
-    2300160: roof_L_back
-    2300162: roof_L_front
-    2300164: roof_R_back
-    2300166: roof_R_front
+    2300026: feet-panel_back_L
+    2300028: feet-panel_back_R
+    2300030: feet-panel_front_L
+    2300032: feet-panel_front_R
+    2300034: feet-panel_left_L
+    2300036: feet-panel_left_R
+    2300038: feet-panel_right_L
+    2300040: feet-panel_right_R
+    2300042: feet_L_back
+    2300044: feet_L_front
+    2300046: feet_R_back
+    2300048: feet_R_front
+    2300050: generator-holo-link_L_back
+    2300052: generator-holo-link_L_front
+    2300054: generator-holo-link_R_back
+    2300056: generator-holo-link_R_front
+    2300058: holo-connector_1
+    2300060: holo-connector_2
+    2300062: holo-connector_L_back
+    2300064: holo-connector_L_front
+    2300066: holo-connector_R_back
+    2300068: holo-connector_R_front
+    2300070: hologram-billboard_L_back
+    2300072: hologram-billboard_L_front
+    2300074: hologram-billboard_R_back
+    2300076: hologram-billboard_R_front
+    2300078: hologram-bottem_L_back
+    2300080: hologram-bottem_L_front
+    2300082: hologram-bottem_R_back
+    2300084: lazer_L_back
+    2300086: lazer_L_front
+    2300088: lazer_R_back
+    2300090: lazer_R_front
+    2300092: lazergenerator_L_back
+    2300094: lazergenerator_L_front
+    2300096: lazergenerator_R_back
+    2300098: lazergenerator_R_front
+    2300100: panel-pillar_back_L
+    2300102: panel-pillar_back_R
+    2300104: panel-pillar_front_L
+    2300106: panel-pillar_front_R
+    2300108: panel-pillar_left_L
+    2300110: panel-pillar_left_R
+    2300112: panel-pillar_right_L
+    2300114: panel-pillar_right_R
+    2300116: panel_back_L
+    2300118: panel_back_R
+    2300120: panel_front_L
+    2300122: panel_front_R
+    2300124: panel_left_L
+    2300126: panel_left_R
+    2300128: panel_right_L
+    2300130: panel_right_R
+    2300132: rings_L_back_bottom
+    2300134: rings_L_back_top
+    2300136: rings_L_front_bottom
+    2300138: rings_L_front_top
+    2300140: rings_R_back_bottom
+    2300142: rings_R_back_top
+    2300144: rings_R_front_bottom
+    2300146: rings_R_front_top
+    2300148: roof_L_back
+    2300150: roof_L_front
+    2300152: roof_R_back
+    2300154: roof_R_front
+    2300156: Charge Meter
+    2300158: Charge Meter001
+    2300160: Charge Meter002
+    2300162: Front Face
+    2300164: Front Face001
+    2300166: Front Face002
     2300168: TargetBase
     2300170: TargetBase001
     2300172: TargetBase002
@@ -285,77 +285,77 @@ ModelImporter:
     3300020: building_bottom
     3300022: building_middle
     3300024: building_topside
-    3300026: Charge Meter
-    3300028: Charge Meter001
-    3300030: Charge Meter002
-    3300032: feet-panel_back_L
-    3300034: feet-panel_back_R
-    3300036: feet-panel_front_L
-    3300038: feet-panel_front_R
-    3300040: feet-panel_left_L
-    3300042: feet-panel_left_R
-    3300044: feet-panel_right_L
-    3300046: feet-panel_right_R
-    3300048: feet_L_back
-    3300050: feet_L_front
-    3300052: feet_R_back
-    3300054: feet_R_front
-    3300056: Front Face
-    3300058: Front Face001
-    3300060: Front Face002
-    3300062: generator-holo-link_L_back
-    3300064: generator-holo-link_L_front
-    3300066: generator-holo-link_R_back
-    3300068: generator-holo-link_R_front
-    3300070: holo-connector_1
-    3300072: holo-connector_2
-    3300074: holo-connector_L_back
-    3300076: holo-connector_L_front
-    3300078: holo-connector_R_back
-    3300080: holo-connector_R_front
-    3300082: hologram-billboard_L_back
-    3300084: hologram-billboard_L_front
-    3300086: hologram-billboard_R_back
-    3300088: hologram-billboard_R_front
-    3300090: hologram-bottem_L_back
-    3300092: hologram-bottem_L_front
-    3300094: hologram-bottem_R_back
-    3300096: lazer_L_back
-    3300098: lazer_L_front
-    3300100: lazer_R_back
-    3300102: lazer_R_front
-    3300104: lazergenerator_L_back
-    3300106: lazergenerator_L_front
-    3300108: lazergenerator_R_back
-    3300110: lazergenerator_R_front
-    3300112: panel-pillar_back_L
-    3300114: panel-pillar_back_R
-    3300116: panel-pillar_front_L
-    3300118: panel-pillar_front_R
-    3300120: panel-pillar_left_L
-    3300122: panel-pillar_left_R
-    3300124: panel-pillar_right_L
-    3300126: panel-pillar_right_R
-    3300128: panel_back_L
-    3300130: panel_back_R
-    3300132: panel_front_L
-    3300134: panel_front_R
-    3300136: panel_left_L
-    3300138: panel_left_R
-    3300140: panel_right_L
-    3300142: panel_right_R
-    3300144: rings_L_back_bottom
-    3300146: rings_L_back_top
-    3300148: rings_L_front_bottom
-    3300150: rings_L_front_top
-    3300152: rings_R_back_bottom
-    3300154: rings_R_back_top
-    3300156: rings_R_front_bottom
-    3300158: rings_R_front_top
-    3300160: roof_L_back
-    3300162: roof_L_front
-    3300164: roof_R_back
-    3300166: roof_R_front
+    3300026: feet-panel_back_L
+    3300028: feet-panel_back_R
+    3300030: feet-panel_front_L
+    3300032: feet-panel_front_R
+    3300034: feet-panel_left_L
+    3300036: feet-panel_left_R
+    3300038: feet-panel_right_L
+    3300040: feet-panel_right_R
+    3300042: feet_L_back
+    3300044: feet_L_front
+    3300046: feet_R_back
+    3300048: feet_R_front
+    3300050: generator-holo-link_L_back
+    3300052: generator-holo-link_L_front
+    3300054: generator-holo-link_R_back
+    3300056: generator-holo-link_R_front
+    3300058: holo-connector_1
+    3300060: holo-connector_2
+    3300062: holo-connector_L_back
+    3300064: holo-connector_L_front
+    3300066: holo-connector_R_back
+    3300068: holo-connector_R_front
+    3300070: hologram-billboard_L_back
+    3300072: hologram-billboard_L_front
+    3300074: hologram-billboard_R_back
+    3300076: hologram-billboard_R_front
+    3300078: hologram-bottem_L_back
+    3300080: hologram-bottem_L_front
+    3300082: hologram-bottem_R_back
+    3300084: lazer_L_back
+    3300086: lazer_L_front
+    3300088: lazer_R_back
+    3300090: lazer_R_front
+    3300092: lazergenerator_L_back
+    3300094: lazergenerator_L_front
+    3300096: lazergenerator_R_back
+    3300098: lazergenerator_R_front
+    3300100: panel-pillar_back_L
+    3300102: panel-pillar_back_R
+    3300104: panel-pillar_front_L
+    3300106: panel-pillar_front_R
+    3300108: panel-pillar_left_L
+    3300110: panel-pillar_left_R
+    3300112: panel-pillar_right_L
+    3300114: panel-pillar_right_R
+    3300116: panel_back_L
+    3300118: panel_back_R
+    3300120: panel_front_L
+    3300122: panel_front_R
+    3300124: panel_left_L
+    3300126: panel_left_R
+    3300128: panel_right_L
+    3300130: panel_right_R
+    3300132: rings_L_back_bottom
+    3300134: rings_L_back_top
+    3300136: rings_L_front_bottom
+    3300138: rings_L_front_top
+    3300140: rings_R_back_bottom
+    3300142: rings_R_back_top
+    3300144: rings_R_front_bottom
+    3300146: rings_R_front_top
+    3300148: roof_L_back
+    3300150: roof_L_front
+    3300152: roof_R_back
+    3300154: roof_R_front
+    3300156: Charge Meter
+    3300158: Charge Meter001
+    3300160: Charge Meter002
+    3300162: Front Face
+    3300164: Front Face001
+    3300166: Front Face002
     3300168: TargetBase
     3300170: TargetBase001
     3300172: TargetBase002
@@ -365,89 +365,96 @@ ModelImporter:
     4300006: roof_L_front
     4300008: panel_front_L
     4300010: panel-pillar_front_L
-    4300012: TargetBase002
-    4300014: Charge Meter002
-    4300016: Front Face002
-    4300018: building-panel-connector_left
-    4300020: building_topside
-    4300022: lazergenerator_L_front
-    4300024: rings_L_front_top
-    4300026: lazer_L_front
-    4300028: holo-connector_L_front
-    4300030: generator-holo-link_L_front
-    4300032: hologram-bottem_L_front
-    4300034: hologram-billboard_L_front
-    4300036: building_middle
-    4300038: building-inside_R_voor
-    4300040: holo-connector_2
-    4300042: holo-connector_1
-    4300044: feet_L_front
-    4300046: rings_R_back_bottom
-    4300048: feet_R_front
-    4300050: rings_R_front_bottom
-    4300052: feet_L_back
-    4300054: rings_L_back_bottom
-    4300056: roof_R_front
-    4300058: roof_R_back
-    4300060: roof_L_back
-    4300062: panel_front_R
-    4300064: panel-pillar_front_R
-    4300066: lazergenerator_L_back
-    4300068: lazer_L_back
-    4300070: rings_L_back_top
-    4300072: holo-connector_R_front
-    4300076: generator-holo-link_R_front
-    4300078: hologram-billboard_R_front
-    4300080: holo-connector_R_back
-    4300082: hologram-bottem_R_back
-    4300084: hologram-billboard_R_back
-    4300086: generator-holo-link_R_back
-    4300088: holo-connector_L_back
-    4300090: hologram-billboard_L_back
-    4300092: hologram-bottem_L_back
-    4300094: generator-holo-link_L_back
-    4300096: lazergenerator_R_front
-    4300098: rings_R_front_top
-    4300100: lazer_R_front
-    4300102: lazergenerator_R_back
-    4300104: rings_R_back_top
-    4300106: lazer_R_back
-    4300108: building-panel-connector_right
-    4300110: panel_back_L
-    4300112: panel-pillar_back_L
-    4300114: panel_back_R
-    4300116: panel-pillar_back_R
-    4300118: building-inside_R_front
-    4300120: building-inside_L_front
-    4300122: building-inside_L_back
-    4300124: building-inside_R_back
-    4300126: building-panel-connector_front
-    4300128: panel_right_L
-    4300130: panel-pillar_right_L
-    4300132: panel_right_R
-    4300134: panel-pillar_right_R
-    4300136: TargetBase001
-    4300138: Front Face001
-    4300140: Charge Meter001
-    4300142: building-panel-connector_back
-    4300144: panel_left_L
-    4300146: panel-pillar_left_L
-    4300148: panel_left_R
-    4300150: panel-pillar_left_R
-    4300152: feet-panel_back_R
-    4300154: feet-panel_back_L
-    4300156: feet-panel_right_R
-    4300158: feet-panel_right_L
-    4300160: feet-panel_front_R
-    4300162: feet-panel_front_L
-    4300164: feet-panel_left_R
-    4300166: feet-panel_left_L
+    4300012: building-panel-connector_left
+    4300014: building_topside
+    4300016: lazergenerator_L_front
+    4300018: rings_L_front_top
+    4300020: lazer_L_front
+    4300022: holo-connector_L_front
+    4300024: generator-holo-link_L_front
+    4300026: hologram-bottem_L_front
+    4300028: hologram-billboard_L_front
+    4300030: building_middle
+    4300032: building-inside_R_voor
+    4300034: holo-connector_2
+    4300036: holo-connector_1
+    4300038: feet_L_front
+    4300040: rings_R_back_bottom
+    4300042: feet_R_front
+    4300044: rings_R_front_bottom
+    4300046: feet_L_back
+    4300048: rings_L_back_bottom
+    4300050: roof_R_front
+    4300052: roof_R_back
+    4300054: roof_L_back
+    4300056: panel_front_R
+    4300058: panel-pillar_front_R
+    4300060: lazergenerator_L_back
+    4300062: lazer_L_back
+    4300064: rings_L_back_top
+    4300066: holo-connector_R_front
+    4300068: TargetBase002
+    4300070: generator-holo-link_R_front
+    4300072: hologram-billboard_R_front
+    4300074: holo-connector_R_back
+    4300076: hologram-bottem_R_back
+    4300078: hologram-billboard_R_back
+    4300080: generator-holo-link_R_back
+    4300082: holo-connector_L_back
+    4300084: hologram-billboard_L_back
+    4300086: hologram-bottem_L_back
+    4300088: generator-holo-link_L_back
+    4300090: lazergenerator_R_front
+    4300092: rings_R_front_top
+    4300094: lazer_R_front
+    4300096: lazergenerator_R_back
+    4300098: rings_R_back_top
+    4300100: lazer_R_back
+    4300102: building-panel-connector_right
+    4300104: panel_back_L
+    4300106: panel-pillar_back_L
+    4300108: panel_back_R
+    4300110: panel-pillar_back_R
+    4300112: building-inside_R_front
+    4300114: building-inside_L_front
+    4300116: building-inside_L_back
+    4300118: building-inside_R_back
+    4300120: building-panel-connector_front
+    4300122: panel_right_L
+    4300124: panel-pillar_right_L
+    4300126: panel_right_R
+    4300128: panel-pillar_right_R
+    4300130: building-panel-connector_back
+    4300132: panel_left_L
+    4300134: panel-pillar_left_L
+    4300136: panel_left_R
+    4300138: panel-pillar_left_R
+    4300140: feet-panel_back_R
+    4300142: feet-panel_back_L
+    4300144: feet-panel_right_R
+    4300146: feet-panel_right_L
+    4300148: feet-panel_front_R
+    4300150: feet-panel_front_L
+    4300152: feet-panel_left_R
+    4300154: feet-panel_left_L
+    4300156: Charge Meter002
+    4300158: Front Face002
+    4300162: TargetBase001
+    4300164: Front Face001
+    4300166: Charge Meter001
     4300168: TargetBase
     4300170: Front Face
     4300172: Charge Meter
-    7400000: Take 001
+    7400000: First Segment MusicBuilding_3
+    7400002: TargetSwitch
+    7400004: Second Segment MusicBuilding_3
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #2'
+    second: {fileID: 2100000, guid: 6cdaa15ac3042bd43beeaab49a54d5c6, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -473,11 +480,95 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: First Segment MusicBuilding_3
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: TargetSwitch
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 55
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Second Segment MusicBuilding_3
+      takeName: Take 001
+      firstFrame: 55
+      lastFrame: 92
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.4
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -496,7 +587,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

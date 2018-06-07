@@ -33,3 +33,6 @@ sysinfo.txt
 *.apk
 *.unitypackage
 */Build/
+
+*/[Tt]humbs.db
+*.meta~HEAD
