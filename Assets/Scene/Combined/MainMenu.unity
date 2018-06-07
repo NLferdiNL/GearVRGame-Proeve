@@ -1551,6 +1551,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e5317132be11814b9e3c1432806fd9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnSFXChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: AudioVolumeHolder+VolumeChangeEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnMusicChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: AudioVolumeHolder+VolumeChangeEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &551777580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2361,8 +2371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioVolumeHolder: {fileID: 551777578}
-  tempVolumeHolder: 0
-  SliderNumber: 1
+  influences: 1
 --- !u!114 &829243558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3377,7 +3386,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Bloom
+  m_Text: 'Bloom
+
+    (CAn be intensive)'
 --- !u!222 &1163409585
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3608,8 +3619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioVolumeHolder: {fileID: 551777578}
-  tempVolumeHolder: 0
-  SliderNumber: 2
+  influences: 0
 --- !u!114 &1220603241
 MonoBehaviour:
   m_ObjectHideFlags: 0
