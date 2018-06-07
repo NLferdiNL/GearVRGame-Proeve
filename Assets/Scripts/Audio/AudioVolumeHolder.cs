@@ -1,12 +1,18 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class AudioVolumeHolder : MonoBehaviour
 {
     private float musicVolume;
     private float sfxVolume;
 
-    
-    public float MusicVolume
+	[System.Serializable]
+	public class VolumeChangeEvent : UnityEvent<float> { }
+
+	public VolumeChangeEvent OnSFXChange = new VolumeChangeEvent();
+	public VolumeChangeEvent OnMusicChange = new VolumeChangeEvent();
+
+	public float MusicVolume
     {
         get
         {
@@ -15,6 +21,7 @@ public class AudioVolumeHolder : MonoBehaviour
         set
         {
             musicVolume = value;
+			OnMusicChange.Invoke(musicVolume);
         }
     }
 
@@ -27,6 +34,7 @@ public class AudioVolumeHolder : MonoBehaviour
         set
         {
             sfxVolume = value;
-        }
-    }
+			OnSFXChange.Invoke(sfxVolume);
+		}
+	}
 }
