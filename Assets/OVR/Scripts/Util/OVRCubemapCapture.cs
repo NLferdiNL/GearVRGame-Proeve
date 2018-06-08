@@ -178,8 +178,8 @@ public class OVRCubemapCapture : MonoBehaviour
 		}
 		else
 		{
-			dirName = Path.GetDirectoryName(pathName);
-			fileName = Path.GetFileName(pathName);
+			dirName = System.IO.Path.GetDirectoryName(pathName);
+			fileName = System.IO.Path.GetFileName(pathName);
 
 			if (dirName[dirName.Length - 1] != '/' || dirName[dirName.Length - 1] != '\\')
 				dirName += "/";
@@ -188,7 +188,7 @@ public class OVRCubemapCapture : MonoBehaviour
 		if (string.IsNullOrEmpty(fileName))
 			fileName = "OVR_" + System.DateTime.Now.ToString("hh_mm_ss") + ".png";
 
-		string extName = Path.GetExtension(fileName);
+		string extName = System.IO.Path.GetExtension(fileName);
 		if (extName == ".png")
 		{
 			saveToPNG = true;

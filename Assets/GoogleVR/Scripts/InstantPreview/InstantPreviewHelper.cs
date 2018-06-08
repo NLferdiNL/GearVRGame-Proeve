@@ -37,9 +37,9 @@ public class InstantPreviewHelper : MonoBehaviour {
     }
 
     // Gets adb path from known directory.
-    AdbPath = Path.Combine(Path.GetFullPath(sdkRoot), "platform-tools" + Path.DirectorySeparatorChar + "adb");
+    AdbPath = System.IO.Path.Combine(System.IO.Path.GetFullPath(sdkRoot), "platform-tools" + System.IO.Path.DirectorySeparatorChar + "adb");
 #if UNITY_EDITOR_WIN
-    AdbPath = Path.ChangeExtension(AdbPath, "exe");
+    AdbPath = System.IO.Path.ChangeExtension(AdbPath, "exe");
 #endif // UNITY_EDITOR_WIN
 
     if (!File.Exists(AdbPath)) {

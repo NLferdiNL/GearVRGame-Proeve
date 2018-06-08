@@ -22,19 +22,19 @@ public class SwarmNavigation : MonoBehaviour {
 		}
 	}
 
-	Path path;
+    EnemyNav.Path path;
 
 	private void Start() {
 		swarm = GetComponent<Swarm>();
 
 		if(path == null) {
-			SetPath(Path.random);
+			SetPath(EnemyNav.Path.random);
 		}
 
 		transform.position = path[0];
 	}
 
-	public void SetPath(Path path) {
+	public void SetPath(EnemyNav.Path path) {
 		this.path = path;
 	}
 
