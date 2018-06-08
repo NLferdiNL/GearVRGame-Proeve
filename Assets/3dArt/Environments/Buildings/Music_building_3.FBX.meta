@@ -84,6 +84,15 @@ ModelImporter:
     100152: roof_L_front
     100154: roof_R_back
     100156: roof_R_front
+    100158: Charge Meter
+    100160: Charge Meter001
+    100162: Charge Meter002
+    100164: Front Face
+    100166: Front Face001
+    100168: Front Face002
+    100170: TargetBase
+    100172: TargetBase001
+    100174: TargetBase002
     400000: ' 1'
     400002: building-inside_L_back
     400004: building-inside_L_front
@@ -163,7 +172,19 @@ ModelImporter:
     400152: roof_L_front
     400154: roof_R_back
     400156: roof_R_front
+    400158: Charge Meter
+    400160: Charge Meter001
+    400162: Charge Meter002
+    400164: Front Face
+    400166: Front Face001
+    400168: Front Face002
+    400170: TargetBase
+    400172: TargetBase001
+    400174: TargetBase002
     2100000: 'Material #2'
+    2100002: TargetMat
+    2100004: ChargeMat
+    2100006: TargetFaceMat
     2300000: ' 1'
     2300002: building-inside_L_back
     2300004: building-inside_L_front
@@ -242,6 +263,15 @@ ModelImporter:
     2300150: roof_L_front
     2300152: roof_R_back
     2300154: roof_R_front
+    2300156: Charge Meter
+    2300158: Charge Meter001
+    2300160: Charge Meter002
+    2300162: Front Face
+    2300164: Front Face001
+    2300166: Front Face002
+    2300168: TargetBase
+    2300170: TargetBase001
+    2300172: TargetBase002
     3300000: ' 1'
     3300002: building-inside_L_back
     3300004: building-inside_L_front
@@ -320,6 +350,15 @@ ModelImporter:
     3300150: roof_L_front
     3300152: roof_R_back
     3300154: roof_R_front
+    3300156: Charge Meter
+    3300158: Charge Meter001
+    3300160: Charge Meter002
+    3300162: Front Face
+    3300164: Front Face001
+    3300166: Front Face002
+    3300168: TargetBase
+    3300170: TargetBase001
+    3300172: TargetBase002
     4300000: building_bottom
     4300002: feet_R_back
     4300004: rings_L_front_bottom
@@ -354,6 +393,7 @@ ModelImporter:
     4300062: lazer_L_back
     4300064: rings_L_back_top
     4300066: holo-connector_R_front
+    4300068: TargetBase002
     4300070: generator-holo-link_R_front
     4300072: hologram-billboard_R_front
     4300074: holo-connector_R_back
@@ -397,16 +437,24 @@ ModelImporter:
     4300150: feet-panel_front_L
     4300152: feet-panel_left_R
     4300154: feet-panel_left_L
-    7400000: First Segment
-    7400002: TargetSwitch
-    7400004: Second Segment
+    4300156: Charge Meter002
+    4300158: Front Face002
+    4300162: TargetBase001
+    4300164: Front Face001
+    4300166: Charge Meter001
+    4300168: TargetBase
+    4300170: Front Face
+    4300172: Charge Meter
+    7400000: First Segment Music Building_3
+    7400002: Target Switch Music Building_3
+    7400004: Second Segment Music Building_3
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: 'Material #2'
-    second: {fileID: 2100000, guid: 6cdaa15ac3042bd43beeaab49a54d5c6, type: 2}
+    second: {fileID: 2100000, guid: 38c7a8bcad16e354493c35ecef337f59, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -434,10 +482,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: First Segment
+      name: First Segment Music Building_3
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 92
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -462,10 +510,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: TargetSwitch
+      name: Target Switch Music Building_3
       takeName: Take 001
       firstFrame: 30
-      lastFrame: 55
+      lastFrame: 35
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -490,10 +538,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Second Segment
+      name: Second Segment Music Building_3
       takeName: Take 001
-      firstFrame: 0
-      lastFrame: 92
+      firstFrame: 55
+      lastFrame: 97
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

@@ -9,6 +9,8 @@ public class Drone : MonoBehaviour {
 	LayerMask groundLayer;
 
 	[SerializeField]
+	GameObject smokeParticles;
+
 	ParticleSystem smoke;
 
 	[SerializeField]
@@ -31,7 +33,7 @@ public class Drone : MonoBehaviour {
 		dying = true;
 		rb.isKinematic = false;
 		transform.parent = null;
-		smoke.Play();
+		smoke = Instantiate(smokeParticles, transform.position, Quaternion.identity).GetComponent<ParticleSystem>();
 		transform.Rotate(new Vector3(0, 1, 0), Random.Range(20, 360));
 		StartCoroutine(Flight());
 	}

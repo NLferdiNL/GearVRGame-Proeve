@@ -20,20 +20,16 @@ public class Building : MonoBehaviour, IDamagable
     [SerializeField]
     float underAttackCooldown = 2f;
 
+	[SerializeField]
     float timeSinceLastAttack = 0;
-
-    public Color startColour;
-    public Color andColour;
-
+	
     [Serializable]
     public class BuildingFullyChargedEvent : UnityEvent { }
 
     public BuildingFullyChargedEvent OnFullCharge = new BuildingFullyChargedEvent();
 
-    private UnityEvent onTutorialSegmentEnd = new UnityEvent();
 
-    [SerializeField]
-    private bool multipleAnimations, StagedAnimations;
+    bool fullyHealed = false;
 
 
     public float LvlOfPower
@@ -68,7 +64,7 @@ public class Building : MonoBehaviour, IDamagable
     {
         get
         {
-            return timeSinceLastAttack >= underAttackCooldown;
+            return timeSinceLastAttack < underAttackCooldown;
         }
     }
 
@@ -78,7 +74,8 @@ public class Building : MonoBehaviour, IDamagable
         {
             buildingAnimator = GetComponentInParent<Animator>();
         }
-        onTutorialSegmentEnd.AddListener(SwitchFase);
+
+        SoundController.Instance.OnReset.AddListener(SwitchFase);
     }
 
     void FixedUpdate()
@@ -91,30 +88,33 @@ public class Building : MonoBehaviour, IDamagable
                 radarDotAnimator.SetBool("underAttack", false);
             }
         }
-
-        buildingAnimator.SetFloat("amountOfPower", lvlOfPower / maxLvlOfPower);
-
-        if (lvlOfPower >= maxLvlOfPower)
-        {
-            OnFullCharge.Invoke();
-        }
+        UpdateLvlOfPower();
     }
 
     void SwitchFase()
     {
-        maxLvlOfPower = 200;
-        buildingAnimator.SetTrigger("NextStagetrigger");
-        Debug.Log("Du Yu Wuk");
+        //UpdateLvlOfPower();
+        buildingAnimator.SetTrigger("nextStageTrigger");
+		lvlOfPower = 0;
+    }
+
+    void UpdateLvlOfPower()
+    {
+        buildingAnimator.SetFloat("amountOfPower", lvlOfPower / maxLvlOfPower);
     }
 
     public void Damage(float value)
     {
+
         if (timeSinceLastAttack != 0)
             radarDotAnimator.SetBool("underAttack", true);
 
         timeSinceLastAttack = 0;
 
         lvlOfPower -= value;
+
+        if (fullyHealed)
+            fullyHealed = false;
 
         if (lvlOfPower < 0)
             lvlOfPower = 0;
@@ -123,11 +123,17 @@ public class Building : MonoBehaviour, IDamagable
     public void Heal(float value)
     {
         if (UnderAttack)
-            value /= 10;
+            value *= 0.1f;
+        if (lvlOfPower < maxLvlOfPower)
+        {
+            lvlOfPower += value;
+        }
 
-        lvlOfPower += value;
-
-        if (lvlOfPower > maxLvlOfPower)
+        if (lvlOfPower > maxLvlOfPower && !fullyHealed)
+        {
+            fullyHealed = true;
+            OnFullCharge.Invoke();
             lvlOfPower = maxLvlOfPower;
+        }
     }
 }

@@ -60,13 +60,16 @@ public class SwarmSpawner : MonoBehaviour {
 	float timeBetweenSpawns = 5f;
 
 	[SerializeField]
-	bool spawnEnemy = true;
+	GameObject[] enemyPrefabs;
 
-	[SerializeField]
-	bool endWhileLoop = false;
+	GameObject randomEnemyPrefab {
+		get {
+            if (enemyPrefabs == null || enemyPrefabs.Length == 0)
+                return null;
 
-	[SerializeField]
-	GameObject enemyPrefab;
+			return enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
+		}
+	}
 
 	[SerializeField]
 	int maxEnemies = 40;
@@ -74,22 +77,15 @@ public class SwarmSpawner : MonoBehaviour {
 	IEnumerator Start() {
 		instance = this;
 
-		while(!endWhileLoop) {
-			yield return new WaitForSeconds(timeBetweenSpawns);
-			if(spawnEnemy) {
-				bool skipIf = false;
-				Backwards:
-				if(SwarmContainer.Count < (currentWave - 1) * enemyPerWaveIncrease / 2 || skipIf) {
-					for(int i = 0; i < currentWave * enemyPerWaveIncrease; i++) {
-						SpawnEnemy();
-					}
-					currentWave++;
-				} else {
-					yield return new WaitForSeconds(timeBetweenSpawns / 2);
-					skipIf = true;
-					goto Backwards;
-				}
-			}
+		while(true) {
+			yield return new WaitForSeconds(10);
+			SpawnSwarms(3);
+		}
+	}
+
+	public static void SpawnSwarms(int amount) {
+		for(int i = 0; i < amount; i++) {
+			instance.SpawnEnemy();
 		}
 	}
 
@@ -97,7 +93,12 @@ public class SwarmSpawner : MonoBehaviour {
 		if(SwarmContainer.Count >= maxEnemies)
 			return;
 
-		GameObject enemyInstance = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+        GameObject randomEnemyPrefab = this.randomEnemyPrefab;
+
+        if (randomEnemyPrefab == null)
+            return;
+
+        GameObject enemyInstance = Instantiate(randomEnemyPrefab, transform.position, Quaternion.identity);
 		enemyInstance.transform.LookAt(transform);
 
 		SwarmContainer.Add(enemyInstance.transform);
