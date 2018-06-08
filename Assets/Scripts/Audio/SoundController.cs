@@ -1,207 +1,125 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class SoundController : MonoBehaviour {
 
-    [SerializeField] private SoundManager SM; // Hold the SoundManager.
+	[SerializeField] private SoundManager SM; // Hold the SoundManager.
 
-    public UnityEvent OnReset = new UnityEvent(); // Reset the buildings from true to false and start second section.
-    public UnityEvent NumberChange = new UnityEvent(); // Change in number notification.
-    public UnityEvent StartEndless = new UnityEvent();
-    public static SoundController Instance;
+	public UnityEvent OnReset = new UnityEvent(); // Reset the buildings from true to false and start second section.
+	public UnityEvent NumberChange = new UnityEvent(); // Change in number notification.
+	public UnityEvent StartEndless = new UnityEvent();
+	public static SoundController Instance;
 
-    public bool TutorialBuilding1, TutorialBuilding2, TutorialBuilding3; // Buildings checks.
+	public bool[] buildingsCharged = new bool[3] { false, false, false };
 
-    // [0] = start song || [5] = start mid section || [13] = start drop || [15] = start end loop.
+	bool survivalRunning = false;
 
-    void Awake()
-    {
+	// [0] = start song || [5] = start mid section || [13] = start drop || [15] = start end loop.
+
+	void Awake() {
 		Instance = this;
-    }
+	}
 
-    private void Start()
-    {
-        IntroSection(); // Start the first section of the game.
-    }
+	private void Start() {
+		StartCoroutine(IntroStart()); // Start Ienumerator intro.
+	}
 
-    public void CheckBuildingCharge(int BuildingNumber) // Set buildings to true if charged.
-    {
-        switch (BuildingNumber)
-        {
-            case 1:
-                TutorialBuilding1 = true; // Sets the First building to true.
-                break;
-            case 2:
-                TutorialBuilding2 = true; // Sets the Second building to  true.
-                break;
-            case 3:
-                TutorialBuilding3 = true; // Sets the Third building to true.
-                break;
-        }
-    }
+	public void CheckBuildingCharge(int buildingNumber) // Set buildings to true if charged.
+	{
+		buildingsCharged[buildingNumber - 1] = true;
+	}
 
-    void IntroSection()
-    {
-        StartCoroutine(IntroStart()); // Start Ienumerator intro.
-    }
-    IEnumerator IntroStart() // 
-    {
-        SM.MusicPlayer.clip = SM.MusicHolder[0]; // Set audiosource clip from music holder.
-        SM.MusicPlayer.PlayOneShot(SM.MusicPlayer.clip, 1f); // FadeInto clip.
-        yield return new WaitForSeconds(SM.MusicPlayer.clip.length); // Wait until clip is done then continue.
-        NumberChange.Invoke(); // Invoke Number change for (Blank)
-        /*if (TutorialBuilding1 == false)
-        {
-            BuildingNotCharged();
-        }*/ // If the building is not charged game over screen.
-        SM.MusicPlayer.clip = SM.MusicHolder[1];
-        SM.MusicPlayer.PlayOneShot(SM.MusicPlayer.clip, 1f); // FadeInto2 clip.
-        yield return new WaitForSeconds(SM.MusicPlayer.clip.length);
-        NumberChange.Invoke();
-        /*if (TutorialBuilding2 == false)
-        {
-            BuildingNotCharged();
-        }*/
-        SM.MusicPlayer.clip = SM.MusicHolder[2];
-        SM.MusicPlayer.PlayOneShot(SM.MusicPlayer.clip, 1f); // FadeIntoVocals clip.
-        yield return new WaitForSeconds(SM.MusicPlayer.clip.length);
-        NumberChange.Invoke();
-        /*if (TutorialBuilding3 == false)
-        {
-            BuildingNotCharged();
-        }*/
-        TutorialBuilding1 = TutorialBuilding2 = TutorialBuilding3 = false; // Set buildings to false for the second phase.
-        OnReset.Invoke(); // Invoke event for buildings.
+	IEnumerator IntroStart() {
+		for(int i = 0; i < buildingsCharged.Length; i++) {
+			buildingsCharged[i] = false;
+		}
 
-        InBetweenSection(); // Start the inbetween section of the game.
-    }
+		yield return PlayRange(0, 3);
+		
+		OnReset.Invoke(); // Invoke event for buildings.
 
-    void BuildingNotCharged()
-    {
-        SceneManager.LoadScene("MainMenu"); // Sends player to game over screen.
-    }
+		InBetweenSection(); // Start the inbetween section of the game.
+	}
 
-    void InBetweenSection()
-    {
-        StartCoroutine(InBetween()); // Start Ienumerator of in between section.
-    }
-    IEnumerator InBetween()
-    {
-        SM.MusicPlayer.clip = SM.MusicHolder[3];
-        SM.MusicPlayer.Play(); // BuildupInto clip.
-        yield return new WaitForSeconds(SM.MusicPlayer.clip.length);
-        NumberChange.Invoke();
-        SM.MusicPlayer.clip = SM.MusicHolder[4];
-        SM.MusicPlayer.Play(); // Drop clip.
-        yield return new WaitForSeconds(SM.MusicPlayer.clip.length);
-        NumberChange.Invoke();
-        MidSection(); // Start the mid section of the game.
-    }
+	IEnumerator BuildingNotCharged() {
+		//Game over.
+		yield return new WaitForSeconds(2);
+		SceneManager.LoadScene("MainMenu"); // Sends player to game over screen.
+	}
 
-    void MidSection()
-    {
-        if (TutorialBuilding1 == false)
-        {
-            StartCoroutine(MidPartOne());
-        }
-        else if (TutorialBuilding1 && !TutorialBuilding2)
-        {
-            StartCoroutine(MidPartTwo());
-        }
-        else if (TutorialBuilding1 && TutorialBuilding2 && !TutorialBuilding3)
-        {
-            StartCoroutine(MidPartThree());
-        }
-        else if (TutorialBuilding1 && TutorialBuilding2 && TutorialBuilding3)
-        {
-            StartSurvivalMode();
-        }
-    }
-    IEnumerator MidPartOne()
-    {
-        SM.MusicPlayer.clip = SM.MusicHolder[5];
-        SM.MusicPlayer.Play(); // Mid1
-        yield return new WaitForSeconds(SM.MusicPlayer.clip.length);
-        NumberChange.Invoke();
-        MidSection();
-    }
-    IEnumerator MidPartTwo()
-    {
-        SM.MusicPlayer.clip = SM.MusicHolder[6];
-        SM.MusicPlayer.Play(); // Mid2
-        yield return new WaitForSeconds(SM.MusicPlayer.clip.length);
-        NumberChange.Invoke();
-        MidSection();
-    }
-    IEnumerator MidPartThree()
-    {
-        SM.MusicPlayer.clip = SM.MusicHolder[7];
-        SM.MusicPlayer.Play(); // Mid3
-        yield return new WaitForSeconds(SM.MusicPlayer.clip.length);
-        NumberChange.Invoke();
-        MidSection();
-    }
+	void InBetweenSection() {
+		StartCoroutine(InBetween()); // Start Ienumerator of in between section.
+	}
+	IEnumerator InBetween() {
+		yield return PlayRange(3, 5);
+		MidSection(); // Start the mid section of the game.
+	}
 
-    void StartSurvivalMode()
-    {
-        StartCoroutine(SurvivalStart());
-    }
-    IEnumerator SurvivalStart()
-    {
-        StartEndless.Invoke();
-        SM.MusicPlayer.clip = SM.MusicHolder[8];
-        SM.MusicPlayer.Play(); // MidBuild
-        yield return new WaitForSeconds(SM.MusicPlayer.clip.length);
-        NumberChange.Invoke();
-        SM.MusicPlayer.clip = SM.MusicHolder[9];
-        SM.MusicPlayer.Play(); // MidVocalsBuild
-        yield return new WaitForSeconds(SM.MusicPlayer.clip.length);
-        NumberChange.Invoke();
-        SM.MusicPlayer.clip = SM.MusicHolder[10];
-        SM.MusicPlayer.Play(); // Midbuild2
-        yield return new WaitForSeconds(SM.MusicPlayer.clip.length);
-        NumberChange.Invoke();
-        SM.MusicPlayer.clip = SM.MusicHolder[11];
-        SM.MusicPlayer.Play(); // MidBuildPlus
-        yield return new WaitForSeconds(SM.MusicPlayer.clip.length);
-        NumberChange.Invoke();
-        SM.MusicPlayer.clip = SM.MusicHolder[12];
-        SM.MusicPlayer.Play(); // MidBuildPlus2
-        yield return new WaitForSeconds(SM.MusicPlayer.clip.length);
-        NumberChange.Invoke();
-        SM.MusicPlayer.clip = SM.MusicHolder[13];
-        SM.MusicPlayer.Play(); // Drop2
-        yield return new WaitForSeconds(SM.MusicPlayer.clip.length);
-        NumberChange.Invoke();
-        StartEndlessSurvival();
-    }
+	IEnumerator AwaitMusic() {
+		yield return new WaitForSeconds(.2f);
+		yield return new WaitUntil(() => !SM.MusicPlayer.isPlaying);
+	}
 
-    void StartEndlessSurvival()
-    {
-        StartCoroutine(SurvivalEndless());
-    }
-    IEnumerator SurvivalEndless()
-    {
-        SM.MusicPlayer.clip = SM.MusicHolder[14];
-        SM.MusicPlayer.Play(); // EndLoop
-        yield return new WaitForSeconds(SM.MusicPlayer.clip.length);
-        NumberChange.Invoke();
-        SM.MusicPlayer.clip = SM.MusicHolder[15];
-        SM.MusicPlayer.Play(); // EndLoop2
-        yield return new WaitForSeconds(SM.MusicPlayer.clip.length);
-        NumberChange.Invoke();
-        SM.MusicPlayer.clip = SM.MusicHolder[16];
-        SM.MusicPlayer.Play(); // EndLoopRust
-        yield return new WaitForSeconds(SM.MusicPlayer.clip.length);
-        NumberChange.Invoke();
-        SM.MusicPlayer.clip = SM.MusicHolder[17];
-        SM.MusicPlayer.Play(); // EndLoopOutro
-        yield return new WaitForSeconds(SM.MusicPlayer.clip.length);
-        NumberChange.Invoke();
-        StartEndlessSurvival();
-    }
+	void MidSection() {
+		if(!buildingsCharged[0] && !buildingsCharged[1] && !buildingsCharged[2]) {
+			StartCoroutine(MidPartOne());
+		} else if(buildingsCharged[0] && !buildingsCharged[1] && !buildingsCharged[2]) {
+			StartCoroutine(MidPartTwo());
+		} else if(buildingsCharged[0] && buildingsCharged[1] && !buildingsCharged[2]) {
+			StartCoroutine(MidPartThree());
+		} else if(buildingsCharged[0] && buildingsCharged[1] && buildingsCharged[2]) {
+			StartCoroutine(SurvivalStart());
+		}
+	}
+	IEnumerator MidPartOne() {
+		yield return PlayAndAwait(5);
+		NumberChange.Invoke();
+		MidSection();
+	}
+	IEnumerator MidPartTwo() {
+		yield return PlayAndAwait(6);
+		NumberChange.Invoke();
+		MidSection();
+	}
+	IEnumerator MidPartThree() {
+		yield return PlayAndAwait(7);
+		NumberChange.Invoke();
+		MidSection();
+	}
+		
+	IEnumerator SurvivalStart() {
+		StartEndless.Invoke();
+		yield return PlayRange(8, 14);
+		StartCoroutine(SurvivalEndless());
+	}
+
+	IEnumerator PlayAndAwait(int index) {
+		SM.MusicPlayer.clip = SM.MusicHolder[index];
+		SM.MusicPlayer.Play();
+		yield return AwaitMusic();
+	}
+
+	/// <summary>
+	/// Play songs from (inclusive)min index to (exclusive)max index.
+	/// </summary>
+	/// <param name="min">Inclusive</param>
+	/// <param name="max">Exclusive</param>
+	/// <returns></returns>
+	IEnumerator PlayRange(int min, int max) {
+		for(int i = min; i < max; i++) {
+			yield return PlayAndAwait(i);
+			NumberChange.Invoke();
+		}
+	}
+	
+	IEnumerator SurvivalEndless() {
+		survivalRunning = true;
+		
+		while(survivalRunning) {
+			yield return PlayRange(14, 18);
+		}
+	}
 }
