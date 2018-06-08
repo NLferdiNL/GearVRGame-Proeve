@@ -540,7 +540,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Second Segment Music Building_3
       takeName: Take 001
-      firstFrame: 55
+      firstFrame: 35
       lastFrame: 97
       wrapMode: 0
       orientationOffsetY: 0
