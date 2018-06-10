@@ -981,9 +981,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8388608
-  smokeParticles: {fileID: 1509630290835484, guid: 7822cada6b1412942b2f7dd46db116dc,
+  smokeParticles: {fileID: 1143872263302056, guid: 6408aef7c52624042888431435ff2926,
     type: 2}
-  explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
+  explosionParticles: {fileID: 1405285336560676, guid: e2dcfc20f2d65eb4faedbc15ee132c5c,
     type: 2}
 --- !u!114 &114273533669597398
 MonoBehaviour:
@@ -999,9 +999,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8388608
-  smokeParticles: {fileID: 1509630290835484, guid: 7822cada6b1412942b2f7dd46db116dc,
+  smokeParticles: {fileID: 1143872263302056, guid: 6408aef7c52624042888431435ff2926,
     type: 2}
-  explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
+  explosionParticles: {fileID: 1405285336560676, guid: e2dcfc20f2d65eb4faedbc15ee132c5c,
     type: 2}
 --- !u!114 &114391164082119342
 MonoBehaviour:
@@ -1032,9 +1032,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8388608
-  smokeParticles: {fileID: 1509630290835484, guid: 7822cada6b1412942b2f7dd46db116dc,
+  smokeParticles: {fileID: 1143872263302056, guid: 6408aef7c52624042888431435ff2926,
     type: 2}
-  explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
+  explosionParticles: {fileID: 1405285336560676, guid: e2dcfc20f2d65eb4faedbc15ee132c5c,
     type: 2}
 --- !u!114 &114642925973222468
 MonoBehaviour:
@@ -1064,9 +1064,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8388608
-  smokeParticles: {fileID: 1509630290835484, guid: 7822cada6b1412942b2f7dd46db116dc,
+  smokeParticles: {fileID: 1143872263302056, guid: 6408aef7c52624042888431435ff2926,
     type: 2}
-  explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
+  explosionParticles: {fileID: 1405285336560676, guid: e2dcfc20f2d65eb4faedbc15ee132c5c,
     type: 2}
 --- !u!114 &114773895364948060
 MonoBehaviour:
@@ -1082,9 +1082,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8388608
-  smokeParticles: {fileID: 1509630290835484, guid: 7822cada6b1412942b2f7dd46db116dc,
+  smokeParticles: {fileID: 1143872263302056, guid: 6408aef7c52624042888431435ff2926,
     type: 2}
-  explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
+  explosionParticles: {fileID: 1405285336560676, guid: e2dcfc20f2d65eb4faedbc15ee132c5c,
     type: 2}
 --- !u!114 &114802124958834328
 MonoBehaviour:
@@ -1100,9 +1100,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8388608
-  smokeParticles: {fileID: 1509630290835484, guid: 7822cada6b1412942b2f7dd46db116dc,
+  smokeParticles: {fileID: 1143872263302056, guid: 6408aef7c52624042888431435ff2926,
     type: 2}
-  explosionParticles: {fileID: 1329711788378188, guid: 05bdd6989da85ea42b8803335a6de981,
+  explosionParticles: {fileID: 1405285336560676, guid: e2dcfc20f2d65eb4faedbc15ee132c5c,
     type: 2}
 --- !u!114 &114927716181330352
 MonoBehaviour:

@@ -85,7 +85,7 @@ public class OVRMixedRealityCaptureSettings : ScriptableObject
 		string text = JsonUtility.ToJson(this, true);
 		try
 		{
-			string configPath = Path.Combine(Application.dataPath, configFileName);
+			string configPath = System.IO.Path.Combine(Application.dataPath, configFileName);
 			Debug.Log("Write OVRMixedRealityCaptureSettings to " + configPath);
 			File.WriteAllText(configPath, text);
 		}
@@ -99,7 +99,7 @@ public class OVRMixedRealityCaptureSettings : ScriptableObject
 	{
 		try
 		{
-			string configPath = Path.Combine(Application.dataPath, configFileName);
+			string configPath = System.IO.Path.Combine(Application.dataPath, configFileName);
 			if (File.Exists(configPath))
 			{
 				Debug.Log("MixedRealityCapture configuration file found at " + configPath);

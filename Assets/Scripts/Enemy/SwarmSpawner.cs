@@ -58,7 +58,7 @@ namespace EnemyNav {
 /// </summary>
 public class SwarmSpawner : MonoBehaviour {
 
-	public static Path[] Paths {
+	public static EnemyNav.Path[] Paths {
 		get {
 			return instance.paths;
 		}
@@ -82,7 +82,7 @@ public class SwarmSpawner : MonoBehaviour {
 	int currentWave = 1;
 
 	[SerializeField]
-	Path[] paths = new Path[0];
+    EnemyNav.Path[] paths = new EnemyNav.Path[0];
 
 	[SerializeField]
 	float timeBetweenSpawns = 5f;
@@ -137,7 +137,7 @@ public class SwarmSpawner : MonoBehaviour {
 	// To draw the paths on screen when the object is selected.
 	private void OnDrawGizmosSelected() {
 		for(int i = 0; i < paths.Length; i++) {
-			Path path = paths[i];
+            EnemyNav.Path path = paths[i];
 			Gizmos.DrawCube(path[0], new Vector3(2,2,2));
 			Gizmos.DrawSphere(path[path.Length - 1], 2);
 			for(int j = 0; j < path.Length; j++) {

@@ -174,7 +174,7 @@ class OVRPluginUpdater
 
 		try
 		{
-			pluginVersion = new System.Version(Path.GetFileName(path));
+			pluginVersion = new System.Version(System.IO.Path.GetFileName(path));
 		}
 		catch
 		{

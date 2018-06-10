@@ -169,7 +169,7 @@ namespace Gvr.Internal {
         }
 
         // Gets the apk path and installs it on a separate thread.
-        var apkPath = Path.GetFullPath(UnityEditor.AssetDatabase.GetAssetPath(InstantPreviewApk));
+        var apkPath = System.IO.Path.GetFullPath(UnityEditor.AssetDatabase.GetAssetPath(InstantPreviewApk));
         if (File.Exists(apkPath)) {
           new Thread(() => {
             string output;

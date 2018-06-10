@@ -29,7 +29,7 @@ public class SwarmNavigation : MonoBehaviour {
 	}
 
 	// Holds my path.
-	Path path;
+    Path path;
 
 	private void Start() {
 		swarm = GetComponent<Swarm>();
