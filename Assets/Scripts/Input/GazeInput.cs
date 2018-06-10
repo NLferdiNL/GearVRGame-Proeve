@@ -1,19 +1,28 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Sends all the gaze related messages.
+/// </summary>
 public class GazeInput : MonoBehaviour {
-
+	
+	// What can I gaze at?
 	[SerializeField]
 	LayerMask gazeLayerMask;
 
+	// The source of the gaze ray, usually the camera.
 	[SerializeField]
 	Transform gazeSource;
 
+	// The direction of the gaze ray, usually a reticle
+	// with smooth follow.
 	[SerializeField]
 	Transform gazeReticle;
 
+	// How far can I gaze?
 	[SerializeField]
 	float gazeRange = 100;
 
+	// Currently gazing at?
 	Collider currentTarget = null;
 
 	private void FixedUpdate() {
@@ -23,7 +32,7 @@ public class GazeInput : MonoBehaviour {
 
 		if(Physics.Raycast(ray, out hit, gazeRange, gazeLayerMask)) {
 			if(hit.collider == currentTarget) {
-				OnRaycastStay(currentTarget);
+				//OnRaycastStay(currentTarget);
 			} else {
 				if(currentTarget != null) {
 					OnRaycastExit(currentTarget);
@@ -47,6 +56,7 @@ public class GazeInput : MonoBehaviour {
 
 	private void OnRaycastStay(Collider other) {
 		// Do nothing.
+		// Only here if I need it to do something.
 	}
 
 	private void OnRaycastExit(Collider other) {

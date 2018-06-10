@@ -1,6 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
+// Holds all the game setting flags.
+// And allows access to check for them.
 public class GameSettings {
 
 	static List<string> settings = new List<string>();

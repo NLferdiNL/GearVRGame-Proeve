@@ -1,27 +1,34 @@
 ﻿using EnemyNav;
 using UnityEngine;
 
+/// <summary>
+/// Used to make the swarms float around on a set Path.
+/// </summary>
 public class SwarmNavigation : MonoBehaviour {
-	[SerializeField]
-	Vector3 currentPathTarget;
 
+	// How fast am I going?
 	[SerializeField]
 	float moveSpeed = 10f;
 
+	// My parent component.
 	[SerializeField]
 	Swarm swarm;
 
+	// The dot above me. To make sure it is always facing up.
 	[SerializeField]
 	Transform radarDot;
 
+	// Current place in the Path.
 	int currentIndexInPath = 1;
 
+	// Where am I going according to my Path object?
 	Vector3 target {
 		get {
 			return path[currentIndexInPath];
 		}
 	}
 
+	// Holds my path.
 	Path path;
 
 	private void Start() {
@@ -42,12 +49,8 @@ public class SwarmNavigation : MonoBehaviour {
 		MoveTo(target, 2);
 		radarDot.LookAt(radarDot.position + Vector3.up);
 	}
-
-	private bool CheckDirectLine() {
-		return !Physics.Linecast(transform.position, target);
-		//return !Physics.CapsuleCast(transform.position, target.position, transform.lossyScale.magnitude, (target.position - transform.position).normalized);
-	}
-
+	
+	// Happens every fixed update. To keep me moving to my target/current path node.
 	private void MoveTo(Vector3 target, float minimumDistanceToTarget) {
 		if(Vector3.Distance(target, transform.position) < minimumDistanceToTarget) {
 			currentIndexInPath++;

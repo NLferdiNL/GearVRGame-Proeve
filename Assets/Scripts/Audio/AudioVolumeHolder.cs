@@ -25,7 +25,7 @@ public class AudioVolumeHolder : MonoBehaviour
         }
     }
 
-    public float SfxVolume
+    public float SFXVolume
     {
         get
         {

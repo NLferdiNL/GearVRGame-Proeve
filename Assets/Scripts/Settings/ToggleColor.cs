@@ -1,8 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// UI Image toggle.
+/// Since UnityEvents can't touch them.
+/// </summary>
 public class ToggleColor : MonoBehaviour {
 
 	[SerializeField]

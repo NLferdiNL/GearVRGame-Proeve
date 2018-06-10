@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Follow the targets rotation without following position.
+/// </summary>
 public class RotateWithTarget : MonoBehaviour {
 
 	[SerializeField]

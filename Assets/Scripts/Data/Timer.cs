@@ -1,6 +1,19 @@
 ﻿using System;
 using System.Timers;
 
+/// <summary>
+/// This class is a wrapper for the System.Timer class.
+/// To make using it a lot easier as opposed to writing special
+/// uses for it.
+/// 
+/// Exposes a Tick event that happens every second and individual
+/// integers for the time.
+/// 
+/// Can be turned into a string with ToString().
+/// 
+/// This component must be Disposed properly to prevent
+/// memory leaks!
+/// </summary>
 public class Timer : IDisposable  {
 
 	private int hours;
@@ -17,7 +30,7 @@ public class Timer : IDisposable  {
 				case 2:
 					return hours;
 				default:
-					throw new IndexOutOfRangeException(	);
+					throw new IndexOutOfRangeException();
 			}
 		}
 	}
@@ -42,6 +55,10 @@ public class Timer : IDisposable  {
 
 	System.Timers.Timer timerObject = new System.Timers.Timer();
 
+	/// <summary>
+	/// Listen to an event for every second.
+	/// </summary>
+	/// <param name="sender">This class will be sent.</param>
 	public delegate void OnTickHandler(Timer sender);
 
 	public event OnTickHandler OnTick;
@@ -79,6 +96,7 @@ public class Timer : IDisposable  {
 		CheckLowerNumber(ref minutes, ref hours, 60);
 	}
 
+	// Used to count upwards.
 	private void CheckPassedNumber(int passedValue, ref int smallValue, ref int bigValue) {
 		if(smallValue >= passedValue) {
 			smallValue = 0;
@@ -86,6 +104,7 @@ public class Timer : IDisposable  {
 		}
 	}
 
+	// Used to count downwards.
 	private void CheckLowerNumber(ref int smallValue, ref int bigValue, int maxValue) {
 		if(smallValue < 0) {
 			bigValue--;
@@ -93,18 +112,31 @@ public class Timer : IDisposable  {
 		}
 	}
 
+	/// <summary>
+	/// Starts counting.
+	/// </summary>
 	public void Start() {
 		timerObject.Start();
 	}
 
+	/// <summary>
+	/// Stops counting.
+	/// </summary>
 	public void Stop() {
 		timerObject.Stop();
 	}
 
+	/// <summary>
+	/// Clean up.
+	/// </summary>
 	public void Dispose() {
 		timerObject.Dispose();
 	}
 
+	/// <summary>
+	/// Get the time as a string formatted like HH:MM:SS
+	/// </summary>
+	/// <returns></returns>
 	public override string ToString() {
 		return hours.ToString("D2") + ":" + minutes.ToString("D2") + ":" + seconds.ToString("D2");
 	}

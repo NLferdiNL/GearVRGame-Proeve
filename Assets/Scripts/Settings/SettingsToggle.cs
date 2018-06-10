@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+// Toggle a game settings flag.
 public class SettingsToggle : MonoBehaviour {
 
 	[SerializeField]

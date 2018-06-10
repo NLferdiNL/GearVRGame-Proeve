@@ -1,22 +1,39 @@
 ﻿using EnemyNav;
 using System.Collections;
 using UnityEngine;
-#if UNITY_EDITOR
-#endif
 
+/// <summary>
+/// This namespace holds the Path class used by the swarmnavigation to follow along a set path.
+/// </summary>
 namespace EnemyNav {
 	using System;
 
 	[Serializable]
 	public class Path {
+		/// <summary>
+		/// If some object wants a random path, he can just call this.
+		/// Returns null if no paths exist or the SwarmSpawner doesn't.
+		/// Uses the swarmspawner as a container.
+		/// </summary>
 		public static Path random {
 			get {
+				if(!SwarmSpawner.Exists)
+					return null;
+				else if(SwarmSpawner.Paths.Length == 0)
+					return null;
+
 				return SwarmSpawner.Paths[UnityEngine.Random.Range(0, SwarmSpawner.Paths.Length)];
 			}
 		}
 
+		// My nodes.
 		public Vector3[] pathNodes;
 
+		/// <summary>
+		/// Get a node by index.
+		/// </summary>
+		/// <param name="index"></param>
+		/// <returns></returns>
 		public Vector3 this[int index] {
 			get {
 				if(index < pathNodes.Length)
@@ -26,6 +43,7 @@ namespace EnemyNav {
 			}
 		}
 
+		// How long is my path, in nodes.
 		public int Length {
 			get {
 				return pathNodes.Length;
@@ -34,11 +52,21 @@ namespace EnemyNav {
 	}
 }
 
+/// <summary>
+/// Used to summon swarm.
+/// Does nothing on its own.
+/// </summary>
 public class SwarmSpawner : MonoBehaviour {
 
 	public static Path[] Paths {
 		get {
 			return instance.paths;
+		}
+	}
+
+	public static bool Exists {
+		get {
+			return instance != null;
 		}
 	}
 
@@ -74,6 +102,8 @@ public class SwarmSpawner : MonoBehaviour {
 	[SerializeField]
 	int maxEnemies = 40;
 
+	// Start() is used for debug purposes only.
+	// The class shouldn't spawn itself.
 	IEnumerator Start() {
 		instance = this;
 
@@ -104,6 +134,7 @@ public class SwarmSpawner : MonoBehaviour {
 		SwarmContainer.Add(enemyInstance.transform);
 	}
 #if UNITY_EDITOR
+	// To draw the paths on screen when the object is selected.
 	private void OnDrawGizmosSelected() {
 		for(int i = 0; i < paths.Length; i++) {
 			Path path = paths[i];

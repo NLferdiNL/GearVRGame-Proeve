@@ -1,8 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.PostProcessing;
 
+/// <summary>
+/// Changes a PostProcessing setting based on the influence list.
+/// Allows extension for more post settings when neccesary.
+/// </summary>
 public class GraphicsToggle : MonoBehaviour {
 	
 	public enum GraphicsSettings {

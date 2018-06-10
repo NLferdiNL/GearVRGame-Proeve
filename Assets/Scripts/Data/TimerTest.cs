@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// A example showing how to properly use the Timer class.
+/// </summary>
 public class TimerTest : MonoBehaviour {
 
 	Timer timer;
@@ -11,14 +14,25 @@ public class TimerTest : MonoBehaviour {
 
 		timer.Start();
 
+		timer.OnTick += OnTick;
+
 		text = GetComponent<Text>();
 	}
 
-	private void FixedUpdate() {
-		text.text = timer.ToString();
+	private void OnTick(Timer sender) {
+		text.text = sender.ToString();
 	}
 
+	// Make sure its cleaned up.
 	private void OnApplicationQuit() {
+		Dispose();	
+	}
+
+	private void OnDestroy() {
+		Dispose();
+	}
+
+	private void Dispose() {
 		timer.Dispose();
 	}
 }
