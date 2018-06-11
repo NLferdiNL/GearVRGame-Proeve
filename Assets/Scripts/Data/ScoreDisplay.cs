@@ -8,16 +8,23 @@ using UnityEngine.UI;
 /// </summary>
 public class ScoreDisplay : MonoBehaviour {
 
-	// Where am I sending the text changes to?
+	/// <summary>
+	/// 
+	/// Where am I sending the text changes to?
+	/// </summary>
 	[SerializeField]
 	Text textUI;
 
-	// In case the score changes again, don't
-	// instantly shoot there, store the last
-	// score here to continue lerping.
+	/// <summary>
+	/// In case the score changes again, don't
+	/// instantly shoot there, store the last
+	/// score here to continue lerping.
+	/// </summary>
 	int lastScore = 0;
 
-	// What will be hooked to the ScoreManager.OnScoreChanged event.
+	/// <summary>
+	/// What will be hooked to the ScoreManager.OnScoreChanged event.
+	/// </summary>
 	public void OnScoreChange(int value) {
 		// In case I was still counting stop it.
 		StopAllCoroutines();
@@ -26,7 +33,10 @@ public class ScoreDisplay : MonoBehaviour {
 		StartCoroutine(SlowlyGoUp(value));
 	}
 
-	// The Coroutine that will animate the text.
+	/// <summary>
+	/// The Coroutine that will animate the text.
+	/// </summary>
+	/// <param name="value">Go to this value.</param>
 	IEnumerator SlowlyGoUp(int value) {
 		// Lerp time.
 		float t = 0;

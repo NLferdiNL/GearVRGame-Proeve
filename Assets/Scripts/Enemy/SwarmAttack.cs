@@ -8,14 +8,21 @@ using UnityEngine;
 /// </summary>
 public class SwarmAttack : MonoBehaviour {
 
-	// My owner.
+	/// <summary>
+	/// My parent component.
+	/// </summary>
 	[SerializeField]
 	Swarm swarm;
 
-	// To take over when near.
+	/// <summary>
+	/// The component to take over when near a target.
+	/// </summary>
 	SwarmNavigation swarmNavigation;
 
-	// To shorten the use of target.
+	/// <summary>
+	/// To shorten the use of target.
+	/// Allows getting and setting.
+	/// </summary>
 	Transform target {
 		get {
 			return swarm.Target;
@@ -26,18 +33,30 @@ public class SwarmAttack : MonoBehaviour {
 		}
 	}
 
-	// How close until I can attack.
+	/// <summary>
+	/// How close until I can attack.
+	/// </summary>
 	[SerializeField]
 	float attackRange = 5;
 
+	/// <summary>
+	/// How much damage I do each frame?
+	/// </summary>
 	[SerializeField]
 	float damagePerFrame = 1;
 	
+	/// <summary>
+	/// Set up the component for use.
+	/// </summary>
 	void Start () {
 		swarm = GetComponent<Swarm>();
 		swarmNavigation = GetComponent<SwarmNavigation>();
 	}
 
+	/// <summary>
+	/// Something is near me. Check if it is a building so I can attack it.
+	/// </summary>
+	/// <param name="other">The other collider</param>
 	private void OnTriggerEnter(Collider other) {
 		// Can I attack this collider?
 		if(other.gameObject.GetComponentInChildren<Building>() != null && other.gameObject.layer != LayerMask.NameToLayer("Ground")) {
@@ -46,6 +65,10 @@ public class SwarmAttack : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Checks the distance between the target and attack range.
+	/// If it is within range, take control from the navigation and start attacking.
+	/// </summary>
 	private void FixedUpdate() {
 		if(target == null)
 			return;

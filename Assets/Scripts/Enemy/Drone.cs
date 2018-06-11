@@ -1,32 +1,52 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-// The drone body component.
+/// <summary>
+/// The drone body component.
+/// </summary>
 public class Drone : MonoBehaviour {
 
+	/// <summary>
+	/// Am I currently in the air?
+	/// </summary>
 	bool inTheAir = true;
 
-	// Used to see when I've hit the ground.
+	/// <summary>
+	/// Used to see when I've hit the ground.
+	/// </summary>
 	[SerializeField]
 	LayerMask groundLayer;
 
-	// To spawn my descending smoke.
+	/// <summary>
+	/// To spawn my descending smoke.
+	/// </summary>
 	[SerializeField]
 	GameObject smokeParticlePrefab;
 
-	// To store a reference to the smoke so I can stop it.
+	/// <summary>
+	/// To store a reference to the smoke so I can stop it.
+	/// </summary>
 	ParticleSystem smoke;
 
-	// When I've hit the ground spawn this.
+	/// <summary>
+	/// When I've hit the ground spawn this.
+	/// </summary>
 	[SerializeField]
 	GameObject explosionParticles;
 
+	/// <summary>
+	/// A variable to store a reference to my Rigidbody.
+	/// </summary>
 	Rigidbody rb;
 
-	// Has Kill been called on me?
+	/// <summary>
+	/// Has Kill been called on me?
+	/// </summary>
 	bool dying = false;
 
-	// How fast I will spin when I go down.
+	/// <summary>
+	/// How fast I will spin when I go down.
+	/// </summary>
 	[SerializeField]
 	float rotationSpeed = 200;
 
@@ -34,7 +54,9 @@ public class Drone : MonoBehaviour {
 		rb = gameObject.GetComponent<Rigidbody>();
 	}
 
-	// Start my death animation.
+	/// <summary>
+	/// Start my death animation.
+	/// </summary>
 	public void Kill() {
 		if(dying)
 			return;
@@ -42,12 +64,15 @@ public class Drone : MonoBehaviour {
 		dying = true;
 		rb.isKinematic = false;
 		transform.parent = null;
-		smoke = Instantiate(smokeParticlePrefab, transform.position, Quaternion.identity).GetComponent<ParticleSystem>();
+		smoke = Instantiate(smokeParticlePrefab, transform.position, Quaternion.identity, transform).GetComponent<ParticleSystem>();
 		transform.Rotate(new Vector3(0, 1, 0), Random.Range(20, 360));
 		StartCoroutine(Flight());
 	}
 
-	// When I hit something check if it's the ground to finish my death anim off.
+	/// <summary>
+	/// When I hit something check if it's the ground to finish my death anim off.
+	/// </summary>
+	/// <param name="coll">The collision I had with another object.</param>
 	private void OnCollisionEnter(Collision coll) {
 		if(((1 << coll.gameObject.layer) & groundLayer) != 0) {
 			inTheAir = false;
@@ -55,7 +80,9 @@ public class Drone : MonoBehaviour {
 		}
 	}
 
-	// Used to control my downwards spiral and after that death explosion.
+	/// <summary>
+	/// Used to control my downwards spiral and after that death explosion.
+	/// </summary>
 	IEnumerator Flight() {
 		float crashAnimSpeed = 0;
 
