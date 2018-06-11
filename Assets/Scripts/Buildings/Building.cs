@@ -2,27 +2,35 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+/// This Script basicly holds the current lvl of Power for 
+/// Influences the animatior normalizedTime based on the AudioData.GetFloat(range) height * amplify.
+/// To create a smoother animation it uses MoveTowards with barSpeed so the speed can be edited in
+/// the inspector.
+/// </summary>
 public class Building : MonoBehaviour, IDamagable
 {
-    // This script is used to keep track of the buildings level of power and animate accordingly.
-
+    // 
     [SerializeField]
     public Animator buildingAnimator, radarDotAnimator;
 
-    // lvlOfPower is called this way because: it tracks the amount of "Power" the "building" has.
+    // 
     [SerializeField]
     private float lvlOfPower = 0;
 
-    // maxLvlOfPower is called this way because: we need to make sure it doesent go over a limit.
+    // 
     [SerializeField]
     private float maxLvlOfPower = 100;
-
+    
+    //
     [SerializeField]
     float underAttackCooldown = 2f;
-
+    
+    //
 	[SerializeField]
     float timeSinceLastAttack = 0;
 	
+    //
     [Serializable]
     public class BuildingFullyChargedEvent : UnityEvent { }
 
@@ -74,7 +82,6 @@ public class Building : MonoBehaviour, IDamagable
         {
             buildingAnimator = GetComponentInParent<Animator>();
         }
-
         SoundController.Instance.OnReset.AddListener(SwitchFase);
     }
 

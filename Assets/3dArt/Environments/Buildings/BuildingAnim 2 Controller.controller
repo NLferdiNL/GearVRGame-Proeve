@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: BuildingAnim 3 Controller
+  m_Name: BuildingAnim 2 Controller
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: amountOfPower
