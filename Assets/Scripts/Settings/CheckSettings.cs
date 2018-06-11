@@ -1,8 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+/// Checks  if a settings flag exists and reacts accordingly.
+/// </summary>
 public class CheckSettings : MonoBehaviour {
 
 	[SerializeField]
@@ -10,7 +11,7 @@ public class CheckSettings : MonoBehaviour {
 
 	public UnityEvent OnTrue = new UnityEvent();
 	public UnityEvent OnFalse = new UnityEvent();
-
+	
 	private void Start() {
 		if(!string.IsNullOrEmpty(value)) {
 			if(GameSettings.Has(value)) {
