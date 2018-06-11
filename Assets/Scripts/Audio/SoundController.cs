@@ -42,6 +42,12 @@ public class SoundController : MonoBehaviour
 			buildingsCharged[i] = false; // Set charged buildings to false.
 		}
 
+		/*for(int i = 0; i < 3; i++) {
+			yield return PlayAndAwait(i);
+			if(!buildingsCharged[0])
+				Debug.Log("Game over");
+		}*/
+
 		yield return PlayRange(0, 3); // Play clips from MusicHolder 0 to 3.
 		
 		OnReset.Invoke(); // Invoke event for buildings.
