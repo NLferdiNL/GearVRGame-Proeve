@@ -132,59 +132,60 @@ public class SwarmSpawner : MonoBehaviour {
 	/// </summary>
 	[SerializeField]
 	int maxEnemies = 40;
-
-	// Start() is used for debug purposes only.
-	// The class shouldn't spawn itself.
-	IEnumerator Start() {
+    
+    /// <summary>
+    /// Sets up a public instance for spawning
+    /// enemies without reference to this component.
+    /// </summary>
+	void Start() {
 		instance = this;
-
-		// This loop should not exist in production.
-		// This is ONLY for testing.
-		while(true) {
-			yield return new WaitForSeconds(timeBetweenSpawns);
-			SpawnEnemies(3);
-		}
 	}
 
 	/// <summary>
 	/// Spawn a certain amount of enemies.
+	/// Returns false if it failed somewhere.
 	/// </summary>
 	/// <param name="amount">this many enemies</param>
-	public static void SpawnEnemies(int amount) {
+	/// <returns>Boolean that is false if the spawning was halted.</returns>
+	public static bool SpawnEnemies(int amount) {
 		for(int i = 0; i < amount; i++) {
-			if(!instance.SpawnEnemy()) {
-				break;
+			if(!SpawnEnemy()) {
+				return false;
 			}
 		}
+
+	    return true;
 	}
+
 	/// <summary>
 	/// Spawn an enemy.
 	/// Use SpawnEnemies to spawn mulitple.
 	/// </summary>
 	/// <returns>Returns false if something is wrong.</returns>
-	public bool SpawnEnemy() {
+	public static bool SpawnEnemy() {
 		// Prevent going past the max.
-		if(SwarmContainer.Count >= maxEnemies)
+		if(SwarmContainer.Count >= instance.maxEnemies)
 			return false;
 
 		// Get a random enemy prefab reference.
-        GameObject randomEnemyPrefab = this.randomEnemyPrefab;
+        GameObject randomEnemyPrefab = instance.randomEnemyPrefab;
 
 		// If something went wrong getting the prefab.
         if (randomEnemyPrefab == null)
             return false;
 
 		// Instantiate the prefab, place him on the right position in 0 rotation.
-        GameObject enemyInstance = Instantiate(randomEnemyPrefab, transform.position, Quaternion.identity);
+        GameObject enemyInstance = Instantiate(randomEnemyPrefab, instance.transform.position, Quaternion.identity);
 
 		// Look at my transform.
-		enemyInstance.transform.LookAt(transform);
+		enemyInstance.transform.LookAt(instance.transform);
 
 		// Add it to the container.
 		SwarmContainer.Add(enemyInstance.transform);
 
 		return true;
 	}
+
 #if UNITY_EDITOR
 	/// <summary>
 	/// To draw the paths on screen when the object is selected.

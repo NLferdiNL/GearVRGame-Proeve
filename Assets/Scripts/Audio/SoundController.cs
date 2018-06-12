@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
-
+/// <summary>
+/// Controls the Music and Voice of the game.
+/// </summary>
 public class SoundController : MonoBehaviour
 {
 
@@ -31,14 +33,12 @@ public class SoundController : MonoBehaviour
     IEnumerator FreezeGame(int freeze, int voiceNumber)
     {
         yield return new WaitForSeconds(.01f);
-        //SM.MusicPlayer.Pause();
         SM.MusicPlayer.PlayDelayed(freeze);
         EGF.timeToFreeze = freeze;
         EGF.PauseGame();
         SM.VoicePlayer.clip = SM.VoiceHolder[voiceNumber];
         SM.VoicePlayer.Play();
         yield return SM.VoicePlayer;
-        //SM.MusicPlayer.UnPause();
     }
 
     private void Start()
