@@ -136,8 +136,11 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 3
+  - m_ConditionMode: 4
     m_ConditionEvent: amountOfPower
+    m_EventTreshold: 1
+  - m_ConditionMode: 1
+    m_ConditionEvent: endlessMode
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102568710789836568}
@@ -148,7 +151,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 1
-  m_HasExitTime: 0
+  m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -273,7 +276,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 1
+  m_TimeParameterActive: 0
   m_Motion: {fileID: 7400002, guid: cc3bea792ea04ac4b97cdab477a52369, type: 3}
   m_Tag: 
   m_SpeedParameter: 

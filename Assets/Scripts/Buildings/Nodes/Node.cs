@@ -1,31 +1,29 @@
 using UnityEngine;
 
+/// <summary>
+/// This script will act as a "Node" or "Target" and when it is hit it will "charge" the "Tower" or "Building" its connected to.
+/// </summary>
 public class Node : MonoBehaviour, IDamagable
 {
-    // This script will act as a "Node" or "Target" and when it is hit it will "charge" the "Tower" or "Building" its connected to.
-
     public Building parentBuilding;
-
-    // _nodeMaxEnergy is called this way because: it tracks the amount of "Power" it passes to the "building".
-    //[SerializeField]
-    private float nodeMaxEnergy = 25;
-
-
-    [SerializeField]
-    private float currentNodeEnergy = 0;
-
 
     [SerializeField]
     private float energyBoost = 1;
 
+    /// <summary>
+    /// MaxHealth is nodig voor de IDamagable class
+    /// </summary>
     public float MaxHealth
     {
         get
         {
-            return (int)nodeMaxEnergy;
+            return parentBuilding.MaxHealth;
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public float Health
     {
         get
@@ -34,41 +32,36 @@ public class Node : MonoBehaviour, IDamagable
         }
     }
     
+    /// <summary>
+    /// 
+    /// </summary>
     void Start()
     {
 		if(parentBuilding == null)
 	        parentBuilding = GetComponentInParent<Building>();
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public void OnHitStay()
     {
         parentBuilding.LvlOfPower = energyBoost;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-        if (Input.GetKey(KeyCode.T))
-        {
-            Heal((int)energyBoost);
-        }
-
-        if (currentNodeEnergy >= nodeMaxEnergy)
-        {
-            Destroy(gameObject);
-        }
-        else if (currentNodeEnergy <= nodeMaxEnergy)
-        {
-
-        }
-    }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="value"></param>
     public void Damage(float value)
     {
         parentBuilding.Damage(value);
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="value"></param>
     public void Heal(float value = 0)
     {
         if (value == 0)

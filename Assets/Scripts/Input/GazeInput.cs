@@ -34,10 +34,14 @@ public class GazeInput : MonoBehaviour {
 	/// </summary>
 	Collider currentTarget = null;
 
+<<<<<<< HEAD
 	/// <summary>
 	/// Handles the gaze per frame. Checks if it is on the same object, a new one, or none at all.
 	/// And react accordingly using OnEnter, OnStay and OnExit.
 	/// </summary>
+=======
+
+>>>>>>> 38f08fe1076ca9e87f80cb6e0671245aeb3540e3
 	private void FixedUpdate() {
 		// Create the ray to cast.
 		Ray ray = new Ray(gazeSource.position, (gazeReticle.position - gazeSource.position).normalized);
