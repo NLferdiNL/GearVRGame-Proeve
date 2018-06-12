@@ -47,11 +47,10 @@ public class SwarmNavigation : MonoBehaviour {
 	public bool isAttacking {
 		set {
 			GetComponent<Rigidbody>().useGravity = value;
-			enabled = !value;
 		}
 
 		get {
-			return !enabled;
+			return GetComponent<Rigidbody>().useGravity;
 		}
 	}
 
@@ -99,11 +98,15 @@ public class SwarmNavigation : MonoBehaviour {
 	/// Handles all the movement and the radardots rotation.
 	/// </summary>
 	private void FixedUpdate() {
+		if(isAttacking) {
+			MoveTo(swarm.Target.position);
+		} else {
 			// Move to next node.
 			MoveTo(target);
 
 			// Make sure it is still facing up.
 			radarDot.LookAt(radarDot.position + Vector3.up);
+		}
 	}
 
 	/// <summary>

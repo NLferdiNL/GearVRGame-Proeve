@@ -863,10 +863,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4295692310360704}
-  - component: {fileID: 33468201980180012}
   - component: {fileID: 135147269562133808}
   - component: {fileID: 135349371534663446}
-  - component: {fileID: 23873567448501510}
   - component: {fileID: 114927716181330352}
   - component: {fileID: 114391164082119342}
   - component: {fileID: 114642925973222468}
@@ -3289,40 +3287,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23873567448501510
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1896411084987560}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 2f1bb1254cf22fe4d90c0d60f47f7bdb, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!23 &23883585515166238
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -3606,13 +3570,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1625688636859854}
   m_Mesh: {fileID: 4300054, guid: 247105968fcd05849a733b862f87eb86, type: 3}
---- !u!33 &33468201980180012
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1896411084987560}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33481488373198838
 MeshFilter:
   m_ObjectHideFlags: 1
