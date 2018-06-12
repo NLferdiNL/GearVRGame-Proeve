@@ -32,7 +32,6 @@ public class SoundController : MonoBehaviour
 	void Awake()
     {
 		Instance = this; // Instance this script.
-        StartCoroutine(FreezeGame(12, 0));
     }
     /// <summary>
     /// 
@@ -70,8 +69,10 @@ public class SoundController : MonoBehaviour
         aICompanion.SetActive(false);
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
+		yield return FreezeGame(12, 0);
+
 		StartCoroutine(IntroStart()); // Start Ienumerator intro.
 	}
 
