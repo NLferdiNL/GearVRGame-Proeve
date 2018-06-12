@@ -25,6 +25,7 @@ public class GazeInput : MonoBehaviour {
 	// Currently gazing at?
 	Collider currentTarget = null;
 
+
 	private void FixedUpdate() {
 		Ray ray = new Ray(gazeSource.position, (gazeReticle.position - gazeSource.position).normalized);
 

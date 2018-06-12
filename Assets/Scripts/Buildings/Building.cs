@@ -2,27 +2,33 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+/// This Script basicly holds the current lvl of Power for the animator to work with.
+/// Using that lvlOfPower in order to influence the animator of both the building itself and the radarDot
+/// </summary>
 public class Building : MonoBehaviour, IDamagable
 {
-    // This script is used to keep track of the buildings level of power and animate accordingly.
-
+    // 
     [SerializeField]
     public Animator buildingAnimator, radarDotAnimator;
 
-    // lvlOfPower is called this way because: it tracks the amount of "Power" the "building" has.
+    // 
     [SerializeField]
     private float lvlOfPower = 0;
 
-    // maxLvlOfPower is called this way because: we need to make sure it doesent go over a limit.
+    // 
     [SerializeField]
     private float maxLvlOfPower = 100;
-
+    
+    //
     [SerializeField]
     float underAttackCooldown = 2f;
-
+    
+    //
 	[SerializeField]
     float timeSinceLastAttack = 0;
 	
+    //
     [Serializable]
     public class BuildingFullyChargedEvent : UnityEvent { }
 
@@ -31,7 +37,9 @@ public class Building : MonoBehaviour, IDamagable
 
     bool fullyHealed = false;
 
-
+    /// <summary>
+    /// 
+    /// </summary>
     public float LvlOfPower
     {
         get
@@ -43,7 +51,9 @@ public class Building : MonoBehaviour, IDamagable
             lvlOfPower += value;
         }
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     public float MaxHealth
     {
         get
@@ -51,7 +61,9 @@ public class Building : MonoBehaviour, IDamagable
             return (int)maxLvlOfPower;
         }
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     public float Health
     {
         get
@@ -59,7 +71,9 @@ public class Building : MonoBehaviour, IDamagable
             return (int)lvlOfPower;
         }
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     public bool UnderAttack
     {
         get
@@ -67,17 +81,20 @@ public class Building : MonoBehaviour, IDamagable
             return timeSinceLastAttack < underAttackCooldown;
         }
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     void Start()
     {
         if (buildingAnimator == null)
         {
             buildingAnimator = GetComponentInParent<Animator>();
         }
-
         SoundController.Instance.OnReset.AddListener(SwitchFase);
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     void FixedUpdate()
     {
         if (timeSinceLastAttack < underAttackCooldown)
@@ -90,19 +107,26 @@ public class Building : MonoBehaviour, IDamagable
         }
         UpdateLvlOfPower();
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     void SwitchFase()
     {
         //UpdateLvlOfPower();
         buildingAnimator.SetTrigger("nextStageTrigger");
 		lvlOfPower = 0;
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     void UpdateLvlOfPower()
     {
         buildingAnimator.SetFloat("amountOfPower", lvlOfPower / maxLvlOfPower);
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="value"></param>
     public void Damage(float value)
     {
 
@@ -119,7 +143,10 @@ public class Building : MonoBehaviour, IDamagable
         if (lvlOfPower < 0)
             lvlOfPower = 0;
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="value"></param>
     public void Heal(float value)
     {
         if (UnderAttack)
