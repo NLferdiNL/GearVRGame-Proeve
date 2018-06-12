@@ -1,28 +1,43 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+/// This Script basicly holds the current lvl of Power for the animator to work with.
+/// Using that lvlOfPower in order to influence the animator of both the building itself and the radarDot
+/// </summary>
 public class Building : MonoBehaviour, IDamagable
 {
-    // This script is used to keep track of the buildings level of power and animate accordingly.
-
+    // These hold the two animators i use one for the animator on the building
     [SerializeField]
     public Animator buildingAnimator, radarDotAnimator;
 
-    // lvlOfPower is called this way because: it tracks the amount of "Power" the "building" has.
+    // This is the amount of power the building currently has and is being changed by the enemy's and turrets 
     [SerializeField]
     private float lvlOfPower = 0;
 
-    // maxLvlOfPower is called this way because: we need to make sure it doesent go over a limit.
+    // This is used as a limiter for the amount of power. 
+    // This is needed for the animator
     [SerializeField]
     private float maxLvlOfPower = 100;
-
+    
+    // 
     [SerializeField]
     float underAttackCooldown = 2f;
-
+    
+    //
 	[SerializeField]
     float timeSinceLastAttack = 0;
 	
+    //
+    [SerializeField]
+    private SoundManager sM;
+
+    //
+    private AudioSource buildingSfx;
+
+    //
     [Serializable]
     public class BuildingFullyChargedEvent : UnityEvent { }
 
@@ -31,7 +46,9 @@ public class Building : MonoBehaviour, IDamagable
 
     bool fullyHealed = false;
 
-
+    /// <summary>
+    /// 
+    /// </summary>
     public float LvlOfPower
     {
         get
@@ -43,7 +60,9 @@ public class Building : MonoBehaviour, IDamagable
             lvlOfPower += value;
         }
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     public float MaxHealth
     {
         get
@@ -51,7 +70,9 @@ public class Building : MonoBehaviour, IDamagable
             return (int)maxLvlOfPower;
         }
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     public float Health
     {
         get
@@ -59,7 +80,9 @@ public class Building : MonoBehaviour, IDamagable
             return (int)lvlOfPower;
         }
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     public bool UnderAttack
     {
         get
@@ -67,17 +90,22 @@ public class Building : MonoBehaviour, IDamagable
             return timeSinceLastAttack < underAttackCooldown;
         }
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     void Start()
     {
+        buildingSfx = GetComponent<AudioSource>();
+
         if (buildingAnimator == null)
         {
             buildingAnimator = GetComponentInParent<Animator>();
         }
-
         SoundController.Instance.OnReset.AddListener(SwitchFase);
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     void FixedUpdate()
     {
         if (timeSinceLastAttack < underAttackCooldown)
@@ -90,22 +118,29 @@ public class Building : MonoBehaviour, IDamagable
         }
         UpdateLvlOfPower();
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     void SwitchFase()
     {
         //UpdateLvlOfPower();
         buildingAnimator.SetTrigger("nextStageTrigger");
 		lvlOfPower = 0;
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     void UpdateLvlOfPower()
     {
         buildingAnimator.SetFloat("amountOfPower", lvlOfPower / maxLvlOfPower);
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="value"></param>
     public void Damage(float value)
     {
-
+        StartCoroutine(sfxPlayer(0));
         if (timeSinceLastAttack != 0)
             radarDotAnimator.SetBool("underAttack", true);
 
@@ -119,7 +154,10 @@ public class Building : MonoBehaviour, IDamagable
         if (lvlOfPower < 0)
             lvlOfPower = 0;
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="value"></param>
     public void Heal(float value)
     {
         if (UnderAttack)
@@ -132,8 +170,16 @@ public class Building : MonoBehaviour, IDamagable
         if (lvlOfPower > maxLvlOfPower && !fullyHealed)
         {
             fullyHealed = true;
+            StartCoroutine(sfxPlayer(8));
             OnFullCharge.Invoke();
             lvlOfPower = maxLvlOfPower;
         }
+    }
+
+    IEnumerator sfxPlayer(int whatSong)
+    {
+        buildingSfx.clip = sM.SfxHolder[whatSong];
+        buildingSfx.Play();
+        yield return buildingSfx;
     }
 }

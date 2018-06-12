@@ -20,7 +20,7 @@ public class VolumeChanger : MonoBehaviour
     {
         audioVolumeHolder = GetComponent<AudioVolumeHolder>();
         currentMusicVol = audioVolumeHolder.MusicVolume;
-        currentSfxVol = audioVolumeHolder.SfxVolume;
+        currentSfxVol = audioVolumeHolder.SFXVolume;
     }
 
     private void UpdateVolume()
@@ -29,7 +29,7 @@ public class VolumeChanger : MonoBehaviour
         masterMixer.GetFloat(mixerSfxVolName, out currentSfxVol);
 
         audioVolumeHolder.MusicVolume = currentMusicVol;
-        audioVolumeHolder.SfxVolume = currentSfxVol;
+        audioVolumeHolder.SFXVolume = currentSfxVol;
     }
 
 	#region Music

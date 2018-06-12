@@ -453,8 +453,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: ChargeMat
+    second: {fileID: 2100000, guid: 78af7784fcc01b64690cce7b4dfa87b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: 'Material #2'
     second: {fileID: 2100000, guid: 38c7a8bcad16e354493c35ecef337f59, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TargetFaceMat
+    second: {fileID: 2100000, guid: 3374794381853aa48ad0a7e20c148b1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TargetMat
+    second: {fileID: 2100000, guid: 95290bb6e4d6b8c48959affba2a157d5, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -540,7 +555,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Second Segment Music Building_3
       takeName: Take 001
-      firstFrame: 55
+      firstFrame: 37
       lastFrame: 97
       wrapMode: 0
       orientationOffsetY: 0
