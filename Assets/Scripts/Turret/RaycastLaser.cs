@@ -16,42 +16,59 @@ public class RaycastLaser : MonoBehaviour
     public float range; // Sets Range of Line.
 
     private bool isShooting = true;
-
+    /// <summary>
+    /// 
+    /// </summary>
     void Awake()
     {
         laserLine = GetComponent<LineRenderer>();
         laserLine.enabled = false;
     }
-
-    void Start() // Gets the laserLine component and enables it true at start of the scene.
+    /// <summary>
+    ///  Gets the laserLine component and enables it true at start of the scene.
+    /// </summary>
+    void Start()
     {
         StartCoroutine(LaserOn());
     }
-
+    /// <summary>
+    /// Wait until tutorial part is done and turn on the laser and play laserOn sfx.
+    /// </summary>
+    /// <returns> Wait until tutorial part is done.</returns>
     IEnumerator LaserOn()
     {
         yield return new WaitForSecondsRealtime(12);
         laserLine.enabled = true;
-        laserOn.clip = SM.SfxHolder[0];
+        laserOn.clip = SM.SfxHolder[6];
     }
-
-    void FixedUpdate() // Checks if person hit space or touched on phone and runs Shoot();
+    /// <summary>
+    ///  runs Shoot();
+    /// </summary>
+    void FixedUpdate()
     {
         Shoot();
 
     }
-    void DisableEffects() // Disables the laserLine.
+    /// <summary>
+    /// Disable the laser.
+    /// </summary>
+    void DisableEffects()
     {
         laserLine.enabled = false;
         isShooting = false;
     }
-    void EnableEffects() // Enables the laserLine.
+    /// <summary>
+    /// Enable the laser.
+    /// </summary>
+    void EnableEffects()
     {
         laserLine.enabled = true;
         isShooting = true;
     }
-
-    void Shoot() // Creates the line visable in game if laserLine.enabled = true.
+    /// <summary>
+    /// Creates the line visable in game if laserLine.enabled = true.
+    /// </summary>
+    void Shoot()
     {
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
