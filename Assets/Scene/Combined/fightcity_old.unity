@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.39701313, g: 0.0033023884, b: 0.08012043, a: 1}
+  m_IndirectSpecularColor: {r: 0.5959794, g: 0.04330921, b: 0.2854575, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -804,10 +804,7 @@ MonoBehaviour:
     - {x: 2.5, y: 31.74, z: -8.2}
     - {x: 12.2, y: 17.15, z: 20.5}
   timeBetweenSpawns: 15
-  spawnEnemy: 1
-  endWhileLoop: 0
-  enemyPrefab: {fileID: 1647615563743034, guid: 67fa3c225b9244045ad2d472a9f861e1,
-    type: 2}
+  enemyPrefabs: []
   maxEnemies: 20
 --- !u!1 &68231712
 GameObject:
@@ -2054,15 +2051,12 @@ MonoBehaviour:
   lvlOfPower: 0
   maxLvlOfPower: 200
   underAttackCooldown: 2
-  startColour: {r: 0, g: 0, b: 0, a: 0}
-  andColour: {r: 0, g: 0, b: 0, a: 0}
+  timeSinceLastAttack: 0
   OnFullCharge:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: Building+BuildingFullyChargedEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  multipleAnimations: 0
-  StagedAnimations: 0
 --- !u!65 &159221752
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2586,7 +2580,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentBuilding: {fileID: 159221751}
-  nodeMaxEnergy: 25
   currentNodeEnergy: 0
   energyBoost: 1
 --- !u!65 &187862600
@@ -7220,6 +7213,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 382321210}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &382853208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1283335085}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 382853209}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &382853209
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1283335085}
+  m_GameObject: {fileID: 382853208}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 974503911}
+  m_Father: {fileID: 492562338}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &384118414
 GameObject:
   m_ObjectHideFlags: 0
@@ -8562,15 +8584,12 @@ MonoBehaviour:
   lvlOfPower: 0
   maxLvlOfPower: 100
   underAttackCooldown: 2
-  startColour: {r: 0, g: 0, b: 0, a: 0}
-  andColour: {r: 0, g: 0, b: 0, a: 0}
+  timeSinceLastAttack: 0
   OnFullCharge:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: Building+BuildingFullyChargedEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  multipleAnimations: 0
-  StagedAnimations: 0
 --- !u!1 &492942663
 GameObject:
   m_ObjectHideFlags: 0
@@ -11752,6 +11771,7 @@ MonoBehaviour:
   target: {fileID: 554456856}
   speed: 55
   isIndependant: 0
+  turretMove: {fileID: 0}
 --- !u!1001 &722448397
 Prefab:
   m_ObjectHideFlags: 0
@@ -14994,10 +15014,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 968585469}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &974503908 stripped
+--- !u!1 &974503908
 GameObject:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100004, guid: d3f477947e1eaaf4bb4c123cc15bd1a2, type: 3}
   m_PrefabInternal: {fileID: 1283335085}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 974503911}
+  - component: {fileID: 974503910}
+  - component: {fileID: 974503909}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!114 &974503909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15010,7 +15043,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentBuilding: {fileID: 0}
-  nodeMaxEnergy: 25
   currentNodeEnergy: 0
   energyBoost: 1
 --- !u!65 &974503910
@@ -15025,6 +15057,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2419485, y: 0.1963176, z: 1.223081}
   m_Center: {x: 0, y: 0.11, z: 0}
+--- !u!4 &974503911
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1283335085}
+  m_GameObject: {fileID: 974503908}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 382853209}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &979911819
 Prefab:
   m_ObjectHideFlags: 0
@@ -26784,7 +26829,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 492562338}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1400803806
 GameObject:
@@ -30593,6 +30638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2055773425}
+  rotateSpeed: 5
 --- !u!124 &1697894326
 Behaviour:
   m_ObjectHideFlags: 0
@@ -31410,10 +31456,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c0e008eb071cd845955325d317fb716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SM: {fileID: 1772816499}
-  TutorialBuilding1: 0
-  TutorialBuilding2: 0
-  TutorialBuilding3: 0
 --- !u!4 &1722938090
 Transform:
   m_ObjectHideFlags: 0
@@ -31560,11 +31602,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee3af2e9a4dbd4242b3943311bb61073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 100
   hitMask:
     serializedVersion: 2
     m_Bits: 35651584
+  laserOn: {fileID: 0}
   damagePerFrame: 1
+  range: 100
 --- !u!1 &1723625796
 GameObject:
   m_ObjectHideFlags: 0
@@ -32679,10 +32722,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c0e008eb071cd845955325d317fb716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SM: {fileID: 1772816499}
-  TutorialBuilding1: 0
-  TutorialBuilding2: 0
-  TutorialBuilding3: 0
 --- !u!114 &1772816484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32726,7 +32765,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c3fba0318f75d8e41aaced7d98ddba7e, type: 3}
   - {fileID: 8300000, guid: e60113c8621665c4c9167b9df15cff41, type: 3}
   - {fileID: 8300000, guid: a852fd9289f4790469bc5ae47121c1ec, type: 3}
-  musicPlayer: {fileID: 1772816482}
+  MusicPlayer: {fileID: 0}
+  voice: []
+  VoicePlayer: {fileID: 0}
 --- !u!4 &1772816500
 Transform:
   m_ObjectHideFlags: 0
@@ -32789,7 +32830,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentBuilding: {fileID: 1973561946}
-  nodeMaxEnergy: 25
   currentNodeEnergy: 0
   energyBoost: 1
 --- !u!65 &1780144825
@@ -35163,15 +35203,12 @@ MonoBehaviour:
   lvlOfPower: 0
   maxLvlOfPower: 100
   underAttackCooldown: 2
-  startColour: {r: 0, g: 0, b: 0, a: 0}
-  andColour: {r: 0, g: 0, b: 0, a: 0}
+  timeSinceLastAttack: 0
   OnFullCharge:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: Building+BuildingFullyChargedEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  multipleAnimations: 0
-  StagedAnimations: 0
 --- !u!114 &1973561947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35184,7 +35221,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentBuilding: {fileID: 0}
-  nodeMaxEnergy: 25
   currentNodeEnergy: 0
   energyBoost: 1
 --- !u!65 &1973561949
@@ -35235,7 +35271,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentBuilding: {fileID: 0}
-  nodeMaxEnergy: 25
   currentNodeEnergy: 0
   energyBoost: 1
 --- !u!65 &1973561953
@@ -35250,6 +35285,52 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.3424983, y: 6.1014867, z: 0.5947392}
   m_Center: {x: -0.0000038146973, y: -0.0000019298107, z: 0.29736927}
+--- !u!1001 &1981467033
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4890324654290402, guid: 528132fc6245ee344a5fa840878c20e7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 14.456753
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890324654290402, guid: 528132fc6245ee344a5fa840878c20e7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 7.162203
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890324654290402, guid: 528132fc6245ee344a5fa840878c20e7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 19.629663
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890324654290402, guid: 528132fc6245ee344a5fa840878c20e7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890324654290402, guid: 528132fc6245ee344a5fa840878c20e7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890324654290402, guid: 528132fc6245ee344a5fa840878c20e7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890324654290402, guid: 528132fc6245ee344a5fa840878c20e7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890324654290402, guid: 528132fc6245ee344a5fa840878c20e7, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963172835775840, guid: 528132fc6245ee344a5fa840878c20e7, type: 2}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 528132fc6245ee344a5fa840878c20e7, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1986321150
 GameObject:
   m_ObjectHideFlags: 0

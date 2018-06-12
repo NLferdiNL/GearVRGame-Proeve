@@ -6,12 +6,17 @@ using UnityEngine;
 /// </summary>
 public class EnterGameFreeze : MonoBehaviour {
 
-	[SerializeField]
-	float timeToFreeze = 5;
+	public float timeToFreeze = 5;
 
-	IEnumerator Start () {
-		Time.timeScale = 0;
-		yield return new WaitForSecondsRealtime(timeToFreeze);
-		Time.timeScale = 1;
-	}
+    public void PauseGame()
+    {
+        StartCoroutine(Pause());
+    }
+
+    IEnumerator Pause()
+    {
+        Time.timeScale = 0;
+        yield return new WaitForSecondsRealtime(timeToFreeze);
+        Time.timeScale = 1;
+    }
 }
