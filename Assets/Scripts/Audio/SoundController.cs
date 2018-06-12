@@ -8,6 +8,7 @@ public class SoundController : MonoBehaviour
 {
 
 	[SerializeField] private SoundManager SM; // Hold the SoundManager.
+    [SerializeField] private EnterGameFreeze EGF; // Hold the EnterGameFreeze.
 
 	public UnityEvent OnReset = new UnityEvent(); // Reset the buildings from true to false and start second section.
 	public UnityEvent NumberChange = new UnityEvent(); // Change in number notification.
@@ -24,9 +25,23 @@ public class SoundController : MonoBehaviour
 	void Awake()
     {
 		Instance = this; // Instance this script.
-	}
+        StartCoroutine(FreezeGame(12, 0));
+    }
 
-	private void Start()
+    IEnumerator FreezeGame(int freeze, int voiceNumber)
+    {
+        yield return new WaitForSeconds(.01f);
+        //SM.MusicPlayer.Pause();
+        SM.MusicPlayer.PlayDelayed(freeze);
+        EGF.timeToFreeze = freeze;
+        EGF.PauseGame();
+        SM.VoicePlayer.clip = SM.VoiceHolder[voiceNumber];
+        SM.VoicePlayer.Play();
+        yield return SM.VoicePlayer;
+        //SM.MusicPlayer.UnPause();
+    }
+
+    private void Start()
     {
 		StartCoroutine(IntroStart()); // Start Ienumerator intro.
 	}
@@ -42,11 +57,15 @@ public class SoundController : MonoBehaviour
 			buildingsCharged[i] = false; // Set charged buildings to false.
 		}
 
-		/*for(int i = 0; i < 3; i++) {
+		for(int i = 0; i < 3; i++) {
 			yield return PlayAndAwait(i);
-			if(!buildingsCharged[0])
-				Debug.Log("Game over");
-		}*/
+		    if (!buildingsCharged[0])
+		        BuildingNotCharged();
+		    if (i == 1)
+		    {
+                StartCoroutine(FreezeGame(7, 1));
+            }
+		}
 
 		yield return PlayRange(0, 3); // Play clips from MusicHolder 0 to 3.
 		
@@ -68,11 +87,12 @@ public class SoundController : MonoBehaviour
 	IEnumerator InBetween()
     {
 		yield return PlayRange(3, 5); // Play clips from MusicHolder 3 to 5.
+        yield return StartCoroutine(FreezeGame(10, 2));
         MidSection(); // Start the mid section of the game.
 	}
 
 	void MidSection()
-    {
+	{
 		if(!buildingsCharged[0] && !buildingsCharged[1] && !buildingsCharged[2]) // If all buildings are not charged.
         {
 			StartCoroutine(MidPartOne()); // Play first section.
@@ -108,6 +128,7 @@ public class SoundController : MonoBehaviour
 		
 	IEnumerator SurvivalStart()
     {
+        yield return StartCoroutine(FreezeGame(7, 3));
 		StartEndless.Invoke(); // Invoke start of endless survival.
 		yield return PlayRange(8, 14); // Play clips from MusicHolder 8 to 14.
 		StartCoroutine(SurvivalEndless()); // Start endless survival section.

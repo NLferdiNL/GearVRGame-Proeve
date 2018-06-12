@@ -21,4 +21,12 @@ public class SoundManager : MonoBehaviour
 
     public AudioSource MusicPlayer; // Play the music one at a time.
 
+    [SerializeField] private AudioClip[] voice; // Hold tutorial clips.
+
+    public AudioClip[] VoiceHolder // Send tutorial clips to other scripts.
+    {
+        get { return voice; }
+    }
+
+    public AudioSource VoicePlayer; // Play an part of the tutorial when called.
 }

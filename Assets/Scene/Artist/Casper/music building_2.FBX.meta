@@ -175,7 +175,27 @@ ModelImporter:
     7400002: target switch music building 2
     7400004: second segment music building 2
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ChargeMat
+    second: {fileID: 2100000, guid: 78af7784fcc01b64690cce7b4dfa87b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 62f31357a28a2e048a872ba9f82884eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TargetFaceMat
+    second: {fileID: 2100000, guid: 95290bb6e4d6b8c48959affba2a157d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TargetMat
+    second: {fileID: 2100000, guid: 3374794381853aa48ad0a7e20c148b1e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
