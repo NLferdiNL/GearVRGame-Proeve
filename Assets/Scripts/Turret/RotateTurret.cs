@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using UnityEngine;
-
-public class RotateTurret : MonoBehaviour {
-
-    //This script is to track where the camera center looks at and lerp the Turret to it.
-    [SerializeField] private SoundManager SM;
-
-	[SerializeField] private Transform turnPiece;
+/// <summary>
+/// This script is to track where the camera center looks at and lerp the Turret to it.
+/// </summary>
+public class RotateTurret : MonoBehaviour
+{
+	[SerializeField] private Transform turnPiece; // TurnPiece of the turret.
     [SerializeField] private Transform target; // Target that script owner rotates to.
 
     [SerializeField] private float speed; // Speed of the rotation.
@@ -14,14 +13,18 @@ public class RotateTurret : MonoBehaviour {
     [SerializeField] private bool isIndependant = false; // Sets whether or not Turret works independant.
 
     [SerializeField] private AudioSource turretMove;
-
+    /// <summary>
+    /// If the turret is independant call IndependantTurret Ienumerator.
+    /// </summary>
     void Start()
     {
         if (isIndependant)
             StartCoroutine(IndependantTurret());
     }
-
-    void FixedUpdate() // Makes the Lerp follows smoothly.
+    /// <summary>
+    /// Makes the Lerp follows smoothly.
+    /// </summary>
+    void FixedUpdate()
     {
         if (target == null)
             return;
@@ -29,26 +32,22 @@ public class RotateTurret : MonoBehaviour {
         TurretRotation(); // Rotate Turret at fixedupdate.
 		TurnPieceRotation(); // Rotate Turret piece at fixedupdate.
 	}
-
-    void TurretRotation() // Lerps this object to look at target.
+    /// <summary>
+    /// // Lerps this object to look at target.
+    /// </summary>
+    void TurretRotation()
     {
-        //StartCoroutine(TurretSfx());
-        Vector3 relativePosition = target.position - transform.position; // Set relativePosition.
-        relativePosition = relativePosition.normalized; // 
-        Vector3 targetRotation = Quaternion.LookRotation(relativePosition).eulerAngles; //
-		targetRotation.x = transform.rotation.eulerAngles.x; // Targets x axis.
-		targetRotation.z = transform.rotation.eulerAngles.z; // Targets z axis.
+        Vector3 relativePosition = target.position - transform.position;
+        relativePosition = relativePosition.normalized;
+        Vector3 targetRotation = Quaternion.LookRotation(relativePosition).eulerAngles;
+		targetRotation.x = transform.rotation.eulerAngles.x;
+		targetRotation.z = transform.rotation.eulerAngles.z;
 
         transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(targetRotation), speed * Time.deltaTime); // Rotate Turret
     }
-    /*
-    IEnumerator TurretSfx()
-    {
-        turretMove.clip = SM.SfxHolder[0];
-        turretMove.Play();
-        yield return turretMove;
-    }*/
-
+    /// <summary>
+    /// Rotate the turnpiece of the laser.
+    /// </summary>
     void TurnPieceRotation() {
 		Vector3 relativePosition = target.position - turnPiece.position;
 		relativePosition = relativePosition.normalized;
@@ -62,7 +61,10 @@ public class RotateTurret : MonoBehaviour {
 
 		turnPiece.localRotation = Quaternion.RotateTowards(turnPiece.localRotation, Quaternion.Euler(targetRotation), speed * Time.deltaTime);
 	}
-
+    /// <summary>
+    /// Makes the Turret independantly able to target enemies automatically if isIndependant is true.
+    /// </summary>
+    /// <returns></returns>
     IEnumerator IndependantTurret()
     {
         while(isIndependant)
