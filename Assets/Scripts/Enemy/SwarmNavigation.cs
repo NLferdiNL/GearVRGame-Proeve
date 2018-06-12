@@ -41,6 +41,38 @@ public class SwarmNavigation : MonoBehaviour {
 	int currentIndexInPath = 1;
 
 	/// <summary>
+	/// The offset for idle animation on X.
+	/// </summary>
+	float positionOffsetX = 0;
+
+
+	/// <summary>
+	/// The offset for the idle animation on Y.
+	/// </summary>
+	float positionOffsetY = 0;
+
+	/// <summary>
+	/// The limit for the offset.
+	/// </summary>
+	float maxPositionOffset = 2;
+
+	/// <summary>
+	/// Used to reverse the offset anim.
+	/// </summary>
+	bool goingLeft = false;
+
+	/// <summary>
+	/// Used to reverse the offset anim.
+	/// </summary>
+	bool goingUp = false;
+
+	/// <summary>
+	/// A bool to be edited from outside to disable the
+	/// navigation.
+	/// </summary>
+	public bool isAttacking = false;
+
+	/// <summary>
 	/// Where am I going according to my Path object?
 	/// </summary>
 	Vector3 target {
@@ -84,11 +116,41 @@ public class SwarmNavigation : MonoBehaviour {
 	/// Handles all the movement and the radardots rotation.
 	/// </summary>
 	private void FixedUpdate() {
-		// Move to next node.
-		MoveTo(target);
+		if(isAttacking) {
+			if(goingLeft) {
+				positionOffsetX += Time.deltaTime;
+				transform.position += Time.deltaTime * transform.right;
 
-		// Make sure it is still facing up.
-		radarDot.LookAt(radarDot.position + Vector3.up);
+				if(positionOffsetX >= maxPositionOffset)
+					goingLeft = true;
+			} else {
+				positionOffsetX -= Time.deltaTime;
+				transform.position -= Time.deltaTime * transform.right;
+				
+				if(positionOffsetX <= -maxPositionOffset)
+					goingLeft = false;
+			}
+
+			if(goingUp) {
+				positionOffsetY += Time.deltaTime;
+				transform.position += Time.deltaTime * transform.up;
+
+				if(positionOffsetY >= maxPositionOffset)
+					goingUp = true;
+			} else {
+				positionOffsetY -= Time.deltaTime;
+				transform.position -= Time.deltaTime * transform.up;
+
+				if(positionOffsetY <= -maxPositionOffset)
+					goingUp = false;
+			}
+		} else {
+			// Move to next node.
+			MoveTo(target);
+
+			// Make sure it is still facing up.
+			radarDot.LookAt(radarDot.position + Vector3.up);
+		}
 	}
 
 	/// <summary>
