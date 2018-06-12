@@ -7,6 +7,9 @@ using UnityEngine;
 /// </summary>
 public class SwarmContainer {
 
+	/// <summary>
+	/// A container for all enemies in existance.
+	/// </summary>
 	static List<Transform> enemies = new List<Transform>();
 	
 	/// <summary>
@@ -54,7 +57,9 @@ public class SwarmContainer {
 	/// </summary>
 	/// <param name="enemy"></param>
 	public static void Remove(Transform enemy) {
+		// Does this enemy exist in the array?
 		if(enemies.IndexOf(enemy) != -1)
+			// Remove it.
 			enemies.Remove(enemy);
 	}
 
@@ -64,9 +69,12 @@ public class SwarmContainer {
 	/// <param name="index"></param>
 	/// <returns></returns>
 	public static Transform GetEnemy(int index) {
+		// Is the index in range?
 		if(index > 0 && index < Count) {
+			// Return the enemy found at the index.
 			return enemies[index];
 		} else {
+			// It wasn't in range, return null.
 			return null;
 		}
 	}
@@ -76,12 +84,17 @@ public class SwarmContainer {
 	/// Useful to clean up a scene too.
 	/// </summary>
 	public static void Cleanup() {
+		// Loop through all enemies.
 		for(int i = Count; i > -1; i++) {
+			// Store a reference to their transform.
 			Transform enemy = enemies[i];
+
+			// Remove the enemy from the array.
 			Remove(enemy);
 
+			// If the enemy exists destroy it.
 			if(enemy != null)
-				Object.Destroy(enemy);
+				Object.Destroy(enemy.gameObject);
 		}
 	}
 }

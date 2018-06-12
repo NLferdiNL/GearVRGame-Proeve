@@ -1,22 +1,65 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
-/// Freeze game on start.
+/// Freeze game on call.
 /// </summary>
-public class EnterGameFreeze : MonoBehaviour {
+public class GameFreeze : MonoBehaviour {
 
-	public float timeToFreeze = 5;
+	/// <summary>
+	/// How long will the game be paused before start.
+	/// </summary>
+	[SerializeField]
+	float timeToFreeze = 5;
 
-    public void PauseGame()
-    {
-        StartCoroutine(Pause());
-    }
+	/// <summary>
+	/// Public instance to call my methods.
+	/// </summary>
+	public GameFreeze instance;
 
-    IEnumerator Pause()
-    {
-        Time.timeScale = 0;
-        yield return new WaitForSecondsRealtime(timeToFreeze);
-        Time.timeScale = 1;
-    }
+	/// <summary>
+	/// Set up the singleton for calling me.
+	/// </summary>
+	void Start() {
+		instance = this;
+	}
+
+	/// <summary>
+	/// Public method to call pausing.
+	/// </summary>
+	public void PauseGame() {
+		StartCoroutine(Pause(timeToFreeze));
+	}
+
+	/// <summary>
+	/// A public method to stop time until condition is met.
+	/// </summary>
+	/// <param name="condition">A condition that needs to be met before restarting time.</param>
+	/// <returns></returns>
+	public IEnumerator PauseUntil(Func<bool> condition) {
+		// Stop time.
+		Time.timeScale = 0;
+
+		// And wait until the condition is met.
+		yield return new WaitUntil(condition);
+
+		// Restart time.
+		Time.timeScale = 1;
+	}
+
+	/// <summary>
+	/// Pause until time to freeze has passed.
+	/// </summary>
+	/// <param name="timeToFreeze"></param>
+	/// <returns></returns>
+	public IEnumerator Pause(float timeToFreeze) {
+		// Set the time we need to meet.
+		float time = Time.timeSinceLevelLoad + timeToFreeze;
+
+		// And then make a lambda that checks that it has paused
+		// so PauseUntil can use it.
+		yield return PauseUntil(() => time <= Time.timeSinceLevelLoad);
+
+	}
 }
