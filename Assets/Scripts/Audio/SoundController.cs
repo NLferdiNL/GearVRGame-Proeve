@@ -16,9 +16,9 @@ public class SoundController : MonoBehaviour
 	public UnityEvent NumberChange = new UnityEvent(); // Change in number notification.
 	public UnityEvent StartEndless = new UnityEvent(); // Start of endless section.
 
-	public static SoundController Instance;
+	public static SoundController Instance; // Instance the script.
 
-    [SerializeField] private GameObject aICompanion;
+    [SerializeField] private GameObject aICompanion; // Gameob
 
 	public bool[] buildingsCharged = new bool[3] { false, false, false }; // bool checks for if buildings are charged.
 
@@ -26,6 +26,9 @@ public class SoundController : MonoBehaviour
 
 	// [0] = Start song. || [4] = First drop. || [5] = Start mid section. || [13] = Second drop. || [15] = Start end loop.
 
+    /// <summary>
+    /// Instance this script and call the FreezeGame 
+    /// </summary>
 	void Awake()
     {
 		Instance = this; // Instance this script.
@@ -61,7 +64,7 @@ public class SoundController : MonoBehaviour
 
 		for(int i = 0; i < 3; i++) {
 			yield return PlayAndAwait(i);
-		    if (!buildingsCharged[0])
+		    if (!buildingsCharged[i])
 		        BuildingNotCharged();
 		    if (i == 1)
 		    {
