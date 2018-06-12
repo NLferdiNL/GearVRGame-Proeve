@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -20,7 +21,7 @@ public class Building : MonoBehaviour, IDamagable
     [SerializeField]
     private float maxLvlOfPower = 100;
     
-    //
+    // 
     [SerializeField]
     float underAttackCooldown = 2f;
     
@@ -28,9 +29,11 @@ public class Building : MonoBehaviour, IDamagable
 	[SerializeField]
     float timeSinceLastAttack = 0;
 	
+    //
     [SerializeField]
     private SoundManager sM;
 
+    //
     private AudioSource buildingSfx;
 
     //
@@ -136,7 +139,7 @@ public class Building : MonoBehaviour, IDamagable
     /// <param name="value"></param>
     public void Damage(float value)
     {
-
+        StartCoroutine(sfxPlayer(0));
         if (timeSinceLastAttack != 0)
             radarDotAnimator.SetBool("underAttack", true);
 
@@ -161,14 +164,22 @@ public class Building : MonoBehaviour, IDamagable
         if (lvlOfPower < maxLvlOfPower)
         {
             lvlOfPower += value;
-            buildingSfx.Play();
+            StartCoroutine(sfxPlayer(0));
         }
 
         if (lvlOfPower > maxLvlOfPower && !fullyHealed)
         {
             fullyHealed = true;
+            StartCoroutine(sfxPlayer(9));
             OnFullCharge.Invoke();
             lvlOfPower = maxLvlOfPower;
         }
+    }
+
+    IEnumerator sfxPlayer(int whatSong)
+    {
+        buildingSfx.clip = sM.SfxHolder[whatSong];
+        buildingSfx.Play();
+        yield return buildingSfx;
     }
 }
