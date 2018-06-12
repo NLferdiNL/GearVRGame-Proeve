@@ -63,7 +63,7 @@ public class SwarmSpawner : MonoBehaviour {
 	/// <summary>
 	/// A reference to the Paths array.
 	/// </summary>
-	public static EnemyNav.Path[] Paths {
+	public static Path[] Paths {
 		get {
 			return instance.paths;
 		}
@@ -89,24 +89,12 @@ public class SwarmSpawner : MonoBehaviour {
 	/// </summary>
 	public int activePath = 0;
 #endif
-	
-	/// <summary>
-	/// Current wave, default to 1 to spawn 1 enemy.
-	/// </summary>
-	int currentWave = 1;
 
 	/// <summary>
 	/// A list of all available paths.
 	/// </summary>
 	[SerializeField]
-    EnemyNav.Path[] paths = new EnemyNav.Path[0];
-
-	/// <summary>
-	/// The time between waves.
-	/// Also used halved as extra time if there are still enemies left.
-	/// </summary>
-	[SerializeField]
-	float timeBetweenSpawns = 5f;
+    Path[] paths = new Path[0];
 
 	/// <summary>
 	/// The array of enemies to instantiate from.
@@ -137,7 +125,7 @@ public class SwarmSpawner : MonoBehaviour {
     /// Sets up a public instance for spawning
     /// enemies without reference to this component.
     /// </summary>
-	void Start() {
+	void Awake() {
 		instance = this;
 	}
 

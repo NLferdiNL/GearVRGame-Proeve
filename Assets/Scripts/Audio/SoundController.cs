@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 /// <summary>
-/// Controls the Music and Voice of the game.
+/// Controls the Music and Voice audio of the game.
 /// </summary>
 public class SoundController : MonoBehaviour
 {
@@ -32,22 +32,47 @@ public class SoundController : MonoBehaviour
 	void Awake()
     {
 		Instance = this; // Instance this script.
-        StartCoroutine(FreezeGame(12, 0));
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="freeze"></param>
+    /// <param name="voiceNumber"></param>
+    /// <returns></returns>
     IEnumerator FreezeGame(int freeze, int voiceNumber)
     {
         aICompanion.SetActive(true);
-        yield return new WaitForSeconds(.01f);
+        yield return null;
+
+        Time.timeScale = 0;
+
         sM.MusicPlayer.PlayDelayed(freeze);
         sM.VoicePlayer.clip = sM.VoiceHolder[voiceNumber];
         sM.VoicePlayer.Play();
-        yield return gF.PauseUntil(() => !sM.VoicePlayer.isPlaying);
+
+        yield return null;
+
+        yield return new WaitUntil(() => !sM.VoicePlayer.isPlaying);
+
+        float time = 0.1f;
+
+        while (time < 1)
+        {
+            time *= 1.25f;
+
+            Time.timeScale = time;
+            yield return null;
+        };
+
+        Time.timeScale = 1;
+
         aICompanion.SetActive(false);
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
+		yield return FreezeGame(12, 0);
+
 		StartCoroutine(IntroStart()); // Start Ienumerator intro.
 	}
 
@@ -68,9 +93,15 @@ public class SoundController : MonoBehaviour
 		        BuildingNotCharged();
 		    if (i == 1)
 		    {
-                //SwarmSpawner.SpawnSwarms(1);
+                SwarmSpawner.SpawnEnemy();
                 StartCoroutine(FreezeGame(7, 1));
-            }
+            }else if (i == 2)
+		    {
+		        SwarmSpawner.SpawnEnemy();
+		    } else if(i == 3)
+		    {
+		        SwarmSpawner.SpawnEnemies(2);
+		    }
 		}
 
 		yield return PlayRange(0, 3); // Play clips from MusicHolder 0 to 3.
@@ -93,6 +124,7 @@ public class SoundController : MonoBehaviour
 	IEnumerator InBetween()
     {
 		yield return PlayRange(3, 5); // Play clips from MusicHolder 3 to 5.
+        SwarmSpawner.SpawnEnemies(3);
         yield return StartCoroutine(FreezeGame(10, 2));
         MidSection(); // Start the mid section of the game.
 	}
@@ -100,22 +132,27 @@ public class SoundController : MonoBehaviour
 	void MidSection()
 	{
 		if(!buildingsCharged[0] && !buildingsCharged[1] && !buildingsCharged[2]) // If all buildings are not charged.
-        {
+		{
+		    SwarmSpawner.SpawnEnemy();
 			StartCoroutine(MidPartOne()); // Play first section.
 		} else if(buildingsCharged[0] && !buildingsCharged[1] && !buildingsCharged[2]) // If building 1 is true and 2 & 3 are false.
-        {
+		{
+		    SwarmSpawner.SpawnEnemies(2);
 			StartCoroutine(MidPartTwo()); // Play second section.
 		} else if(buildingsCharged[0] && buildingsCharged[1] && !buildingsCharged[2]) // If building 1 & 2 are true and 3 is false.
-        {
+		{
+		    SwarmSpawner.SpawnEnemies(2);
 			StartCoroutine(MidPartThree()); // Play third section.
 		} else if(buildingsCharged[0] && buildingsCharged[1] && buildingsCharged[2]) // If all buildings are charged.
-        {
+		{
+		    SwarmSpawner.SpawnEnemies(3);
 			StartCoroutine(SurvivalStart()); // Start the survival section.
 		}
 	}
 	IEnumerator MidPartOne()
     {
 		yield return PlayAndAwait(5); // Play clip 5 from MusicHolder.
+        SwarmSpawner.SpawnEnemy();
         NumberChange.Invoke(); // Call a change in number.
 		MidSection(); // Return to midsection.
 	}

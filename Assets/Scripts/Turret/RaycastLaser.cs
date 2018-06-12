@@ -1,23 +1,24 @@
 ﻿using System.Collections;
 using UnityEngine;
-
+/// <summary>
+/// This script creates the laser and the controls for space and touch.
+/// </summary>
 public class RaycastLaser : MonoBehaviour
 {
-    //This script creates the laser and the controls for space and touch.
-    [SerializeField] private SoundManager SM;
+    [SerializeField] private SoundManager sM; // Hold SoundManager.
 
-    [SerializeField] private LayerMask hitMask;
+    [SerializeField] private LayerMask hitMask; // Hitmask of the laser.
 
-    [SerializeField] private AudioSource laserOn;
+    [SerializeField] private AudioSource laserOn; // Audio of laser turning on.
     
     LineRenderer laserLine; // Line for the laser.
 
-	[SerializeField] private float damagePerFrame = 1;
+	[SerializeField] private float damagePerFrame = 1; // Damage it does per frame.
     public float range; // Sets Range of Line.
 
-    private bool isShooting = true;
+    private bool isShooting = true; // Bool to check if shooting.
     /// <summary>
-    /// 
+    /// Set laser line and make sure it's turned off.
     /// </summary>
     void Awake()
     {
@@ -39,7 +40,7 @@ public class RaycastLaser : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(12);
         laserLine.enabled = true;
-        laserOn.clip = SM.SfxHolder[6];
+        laserOn.clip = sM.SfxHolder[6];
     }
     /// <summary>
     ///  runs Shoot();

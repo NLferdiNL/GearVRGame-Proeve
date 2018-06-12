@@ -37,6 +37,12 @@ public class Swarm : MonoBehaviour, IDamagable {
 	/// </summary>
 	[SerializeField]
 	Transform target;
+
+	/// <summary>
+	/// To trigger the SwarmDeathAnim.
+	/// </summary>
+	[SerializeField]
+	Animator deathAnim;
 	
 	/// <summary>
 	/// A public way to change my target.
@@ -124,8 +130,11 @@ public class Swarm : MonoBehaviour, IDamagable {
 				// Add score.
 				ScoreManager.AddToScore(50);
 
+				// Start my death anim.
+				deathAnim.SetTrigger("OnDeath");
+				
 				// And destroy me.
-				Destroy(gameObject);
+				Destroy(gameObject, 3);
 			}
 		}
 	}
