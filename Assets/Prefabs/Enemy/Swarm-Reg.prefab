@@ -5375,7 +5375,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1534374724587824}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 247105968fcd05849a733b862f87eb86, type: 3}
   m_Controller: {fileID: 9100000, guid: b31cff7c735c6d84bab941d9da96401e, type: 2}
   m_CullingMode: 0
@@ -5435,7 +5435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swarm: {fileID: 114180730535966444}
-  attackRange: 25
+  attackRange: 50
   damagePerFrame: 0.5
 --- !u!114 &114180730535966444
 MonoBehaviour:
@@ -5450,6 +5450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 75
   target: {fileID: 0}
+  deathAnim: {fileID: 95799118866323968}
   _enemyBodies: []
 --- !u!114 &114252008975764278
 MonoBehaviour:
