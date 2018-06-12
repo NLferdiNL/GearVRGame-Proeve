@@ -7,16 +7,10 @@ using UnityEngine;
 /// </summary>
 public class GameFreeze : MonoBehaviour {
 
-	/// <summary>
-	/// How long will the game be paused before start.
-	/// </summary>
-	[SerializeField]
-	float timeToFreeze = 5;
-
-	/// <summary>
-	/// Public instance to call my methods.
-	/// </summary>
-	public GameFreeze instance;
+    /// <summary>
+    /// Public instance to call my methods.
+    /// </summary>
+    public GameFreeze instance;
 
 	/// <summary>
 	/// Set up the singleton for calling me.
@@ -24,14 +18,7 @@ public class GameFreeze : MonoBehaviour {
 	void Start() {
 		instance = this;
 	}
-
-	/// <summary>
-	/// Public method to call pausing.
-	/// </summary>
-	public void PauseGame() {
-		StartCoroutine(Pause(timeToFreeze));
-	}
-
+    
 	/// <summary>
 	/// A public method to stop time until condition is met.
 	/// </summary>
@@ -53,7 +40,7 @@ public class GameFreeze : MonoBehaviour {
 	/// </summary>
 	/// <param name="timeToFreeze"></param>
 	/// <returns></returns>
-	public IEnumerator Pause(float timeToFreeze) {
+	public IEnumerator PauseFor(float timeToFreeze) {
 		// Set the time we need to meet.
 		float time = Time.timeSinceLevelLoad + timeToFreeze;
 

@@ -10,7 +10,7 @@ public class SoundController : MonoBehaviour
 {
 
 	[SerializeField] private SoundManager SM; // Hold the SoundManager.
-    [SerializeField] private EnterGameFreeze EGF; // Hold the EnterGameFreeze.
+    [SerializeField] private GameFreeze GF; // Hold the EnterGameFreeze.
 
 	public UnityEvent OnReset = new UnityEvent(); // Reset the buildings from true to false and start second section.
 	public UnityEvent NumberChange = new UnityEvent(); // Change in number notification.
@@ -34,11 +34,9 @@ public class SoundController : MonoBehaviour
     {
         yield return new WaitForSeconds(.01f);
         SM.MusicPlayer.PlayDelayed(freeze);
-        EGF.timeToFreeze = freeze;
-        EGF.PauseGame();
         SM.VoicePlayer.clip = SM.VoiceHolder[voiceNumber];
         SM.VoicePlayer.Play();
-        yield return SM.VoicePlayer;
+        yield return GF.PauseUntil(() => !SM.VoicePlayer.isPlaying);
     }
 
     private void Start()
@@ -63,6 +61,7 @@ public class SoundController : MonoBehaviour
 		        BuildingNotCharged();
 		    if (i == 1)
 		    {
+                //SwarmSpawner.SpawnSwarms(1);
                 StartCoroutine(FreezeGame(7, 1));
             }
 		}

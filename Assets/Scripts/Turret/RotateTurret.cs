@@ -32,7 +32,7 @@ public class RotateTurret : MonoBehaviour {
 
     void TurretRotation() // Lerps this object to look at target.
     {
-        StartCoroutine(TurretSfx());
+        //StartCoroutine(TurretSfx());
         Vector3 relativePosition = target.position - transform.position; // Set relativePosition.
         relativePosition = relativePosition.normalized; // 
         Vector3 targetRotation = Quaternion.LookRotation(relativePosition).eulerAngles; //
@@ -41,13 +41,13 @@ public class RotateTurret : MonoBehaviour {
 
         transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(targetRotation), speed * Time.deltaTime); // Rotate Turret
     }
-
+    /*
     IEnumerator TurretSfx()
     {
         turretMove.clip = SM.SfxHolder[0];
         turretMove.Play();
         yield return turretMove;
-    }
+    }*/
 
     void TurnPieceRotation() {
 		Vector3 relativePosition = target.position - turnPiece.position;
