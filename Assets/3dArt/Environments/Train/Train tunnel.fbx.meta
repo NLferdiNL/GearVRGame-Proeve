@@ -1,56 +1,17 @@
 fileFormatVersion: 2
-guid: e8ee1092c23f4a9428b2d1f080cfe01b
-timeCreated: 1527855648
+guid: 7a8bf7a4ab9d2484096b1b06bf5521c2
+timeCreated: 1528801504
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: bend1Handle
-    100002: bend1Handle 1
-    100004: group4
-    100006: group5
-    100008: pCylinder38
-    100010: pCylinder38 1
-    100012: pCylinder39
-    100014: pCylinder40
-    100016: pCylinder41
-    100018: pCylinder42
-    100020: pCylinder43
-    100022: //RootNode
-    400000: bend1Handle
-    400002: bend1Handle 1
-    400004: group4
-    400006: group5
-    400008: pCylinder38
-    400010: pCylinder38 1
-    400012: pCylinder39
-    400014: pCylinder40
-    400016: pCylinder41
-    400018: pCylinder42
-    400020: pCylinder43
-    400022: //RootNode
-    2100000: lambert1
-    2300000: pCylinder38
-    2300002: pCylinder38 1
-    2300004: pCylinder39
-    2300006: pCylinder40
-    2300008: pCylinder41
-    2300010: pCylinder42
-    2300012: pCylinder43
-    3300000: pCylinder38
-    3300002: pCylinder38 1
-    3300004: pCylinder39
-    3300006: pCylinder40
-    3300008: pCylinder41
-    3300010: pCylinder42
-    3300012: pCylinder43
-    4300000: pCylinder38
-    4300002: pCylinder40
-    4300004: pCylinder42
-    4300006: pCylinder43
-    4300008: pCylinder38
-    4300010: pCylinder39
-    4300012: pCylinder41
+    100000: //RootNode
+    400000: //RootNode
+    2100000: lambert7
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pCylinder35
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -81,7 +42,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 2
+    globalScale: 30
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -125,7 +86,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
