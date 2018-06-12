@@ -35,6 +35,12 @@ public class AudioData : MonoBehaviour {
 	// Static so no reference to the component is required
 	// to be stored.
 	public static float GetFloat(int range) {
+        if (instance == null)
+        {
+            Debug.LogError("AudioData is non existant but being called.");
+            return 0;
+        }
+
 		return instance.audioSpectrumData[range];
 	}
 }

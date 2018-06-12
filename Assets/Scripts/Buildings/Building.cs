@@ -8,15 +8,15 @@ using UnityEngine.Events;
 /// </summary>
 public class Building : MonoBehaviour, IDamagable
 {
-    // 
+    // These hold the two animators i use one for the animator on the building
     [SerializeField]
     public Animator buildingAnimator, radarDotAnimator;
 
-    // 
+    // This is the amount of power the building currently has and is being changed by the enemy's and turrets 
     [SerializeField]
     private float lvlOfPower = 0;
 
-    // 
+    // This is used as a limiter for the amount of power 
     [SerializeField]
     private float maxLvlOfPower = 100;
     
@@ -28,6 +28,11 @@ public class Building : MonoBehaviour, IDamagable
 	[SerializeField]
     float timeSinceLastAttack = 0;
 	
+    [SerializeField]
+    private SoundManager sM;
+
+    private AudioSource buildingSfx;
+
     //
     [Serializable]
     public class BuildingFullyChargedEvent : UnityEvent { }
@@ -86,6 +91,8 @@ public class Building : MonoBehaviour, IDamagable
     /// </summary>
     void Start()
     {
+        buildingSfx = GetComponent<AudioSource>();
+
         if (buildingAnimator == null)
         {
             buildingAnimator = GetComponentInParent<Animator>();
@@ -154,6 +161,7 @@ public class Building : MonoBehaviour, IDamagable
         if (lvlOfPower < maxLvlOfPower)
         {
             lvlOfPower += value;
+            buildingSfx.Play();
         }
 
         if (lvlOfPower > maxLvlOfPower && !fullyHealed)
