@@ -62,6 +62,8 @@ public class SwarmAttack : MonoBehaviour {
 		if(other.gameObject.GetComponentInChildren<Building>() != null && other.gameObject.layer != LayerMask.NameToLayer("Ground")) {
 			// Start attacking.
 			target = other.transform;
+
+			swarmNavigation.isAttacking = true;
 		}
 	}
 
@@ -75,8 +77,8 @@ public class SwarmAttack : MonoBehaviour {
 
 		if(Vector3.Distance(target.position, transform.position) <= attackRange) {
 			target.SendMessage("Damage", damagePerFrame, SendMessageOptions.DontRequireReceiver);
-			if(!swarmNavigation.isAttacking)
-				swarmNavigation.isAttacking = false;
+			if(swarmNavigation.isAttacking)
+				swarmNavigation.enabled = false;
 		}
 	}
 }

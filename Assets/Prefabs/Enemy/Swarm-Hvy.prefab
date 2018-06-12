@@ -531,10 +531,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4344816073329408}
-  - component: {fileID: 33061928279441242}
   - component: {fileID: 135839580963028386}
   - component: {fileID: 135263252904302670}
-  - component: {fileID: 23363593037551670}
   - component: {fileID: 114953461197384794}
   - component: {fileID: 114134142671989300}
   - component: {fileID: 114899295203163124}
@@ -2269,40 +2267,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23363593037551670
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1397183505601416}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 2f1bb1254cf22fe4d90c0d60f47f7bdb, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!23 &23378845378900252
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -3473,13 +3437,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1103991138055196}
   m_Mesh: {fileID: 4300020, guid: 247105968fcd05849a733b862f87eb86, type: 3}
---- !u!33 &33061928279441242
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1397183505601416}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33079650587894820
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -4030,7 +3987,7 @@ Animator:
   m_GameObject: {fileID: 1853069852218464}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 247105968fcd05849a733b862f87eb86, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b31cff7c735c6d84bab941d9da96401e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
