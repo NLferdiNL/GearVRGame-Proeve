@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class RaycastLaser : MonoBehaviour
 {
     //This script creates the laser and the controls for space and touch.
-    private SoundManager SM;
+    [SerializeField] private SoundManager SM;
 
     [SerializeField] private LayerMask hitMask;
 
@@ -16,46 +17,23 @@ public class RaycastLaser : MonoBehaviour
 
     private bool isShooting = true;
 
-    void Start() // Gets the laserLine component and enables it true at start of the scene.
+    void Awake()
     {
         laserLine = GetComponent<LineRenderer>();
+        laserLine.enabled = false;
+    }
+
+    void Start() // Gets the laserLine component and enables it true at start of the scene.
+    {
+        StartCoroutine(LaserOn());
+    }
+
+    IEnumerator LaserOn()
+    {
+        yield return new WaitForSecondsRealtime(12);
         laserLine.enabled = true;
-        //SM.SfxHolder[6] = laserOn.clip;
-        //laserOn.Play();
+        laserOn.clip = SM.SfxHolder[0];
     }
-
-	void Update()
-    {
-        TestControls();
-    }
-
-    void TestControls()
-    {
-        if (Input.GetKeyDown("space"))
-        {
-            if (isShooting)
-            {
-                DisableEffects();
-            }
-            else if (isShooting == false)
-            {
-                EnableEffects();
-            }
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
-            {
-                if (isShooting)
-                {
-                    DisableEffects();
-                }
-                else if (isShooting == false)
-                {
-                    EnableEffects();
-                }
-            }
-        }
-    }
-
-
 
     void FixedUpdate() // Checks if person hit space or touched on phone and runs Shoot();
     {

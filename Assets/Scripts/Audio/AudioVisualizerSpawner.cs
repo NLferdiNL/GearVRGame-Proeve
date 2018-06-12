@@ -6,30 +6,44 @@
 /// </summary>
 public class AudioVisualizerSpawner : MonoBehaviour {
 
-	// How big will it be?
+	/// <summary>
+	/// How big will it be?
+	/// </summary>
 	[SerializeField]
 	int width = 500;
 
-	// The divider used by the modulo to have multiple visulizer prefabs be the same range.
+	/// <summary>
+	/// The divider used by the modulo to have multiple visulizer prefabs be the same range.
+	/// </summary>
 	[SerializeField]
 	int moduloDivider = 2;
 
-	// A reference to the prefab used to instantiate all visualizers.
+	/// <summary>
+	/// A reference to the prefab used to instantiate all visualizers.
+	/// </summary>
 	[SerializeField]
 	GameObject audioVisualizerPrefab;
 
-	// The type we will be spawned.
+	/// <summary>
+	/// The type we will be spawned.
+	/// </summary>
 	[SerializeField]
 	VisualizerType visualizerType = VisualizerType.StraightOuterToMiddle;
 
-	// A list of VisualizerTypes,
-	// enum to make it easier to understand
-	// what you're selecting.
+	/// <summary>
+	/// A list of VisualizerTypes,
+	/// enum to make it easier to understand
+	/// what you're selecting.
+	/// </summary>
 	public enum VisualizerType {
 		StraightOuterToMiddle = 0,
 		StraightMiddleToOuter = 1
 	}
 
+	/// <summary>
+	/// Gets the selected visualzer typer and
+	/// genererates it accordingly.
+	/// </summary>
 	void Start() {
 		switch(visualizerType) {
 			case VisualizerType.StraightOuterToMiddle:
@@ -58,9 +72,14 @@ public class AudioVisualizerSpawner : MonoBehaviour {
 				break;
 		}
 	}
-
-	// The instantiating and placing of the prefabs is identical for each VisualizerType
-	// so having it seperate from the for loops in Start() is much better.
+	/// <summary>
+	/// The instantiating and placing of the prefabs is identical for each VisualizerType
+	/// so having it seperate from the for loops in Start() is much better.
+	/// </summary>
+	/// <param name="localPosition">Position it's set to.</param>
+	/// <param name="localRotation">Rotation it's set to.</param>
+	/// <param name="range">The range it will listen to.</param>
+	/// <returns></returns>
 	GameObject CreateObject(Vector3 localPosition, Quaternion localRotation, int range) {
 		GameObject obj = Instantiate(audioVisualizerPrefab, transform);
 		obj.transform.localPosition = localPosition;

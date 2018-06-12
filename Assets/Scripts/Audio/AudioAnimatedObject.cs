@@ -7,36 +7,56 @@
 /// </summary>
 public class AudioAnimatedObject : MonoBehaviour {
 
-	// To SetFloat the normalizedTime.
+	/// <summary>
+	/// To SetFloat the normalizedTime.
+	/// </summary>
 	Animator animator;
 
-	// What range on the AudioData?
+	/// <summary>
+	/// What range on the AudioData?
+	/// </summary>
 	public int range = 0;
 
-	// How strong will the float from AudioData be?
+	/// <summary>
+	/// How strong will the float from AudioData be?
+	/// </summary>
 	public float amplify = 2;
 
-	// How fast can the animation move?
+	/// <summary>
+	/// How fast can the animation move?
+	/// </summary>
 	public float barSpeed = 4;
 
-	// To animate the Material color.
+	/// <summary>
+	/// To animate the Material color.
+	/// </summary>
 	public Color color = Color.red;
 
-	// To grab the material.
+	/// <summary>
+	/// To grab the material.
+	/// </summary>
 	[SerializeField]
 	MeshRenderer meshRenderer;
 
-	// To store a reference to the instance of the material
-	// we're editing.
+	/// <summary>
+	/// To store a reference to the instance of the material
+	/// we're editing.
+	/// </summary>
 	Material mat;
 
-	// If no MeshRenderer was set, this is false to prevent errors.
+	/// <summary>
+	/// If no MeshRenderer was set, this is false to prevent errors.
+	/// </summary>
 	bool meshRendererAvailable {
 		get {
 			return meshRenderer != null;
 		}
 	}
 
+	/// <summary>
+	/// Set up the animator and check if there is a MeshRenderer available
+	/// to edit the material of.
+	/// </summary>
 	private void Start() {
 		animator = GetComponent<Animator>();
 		if(meshRendererAvailable) {
@@ -45,6 +65,10 @@ public class AudioAnimatedObject : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Gets the current volume at range, amplfies it by amplfy and gives it to the animator.
+	/// Sets the material's color too.
+	/// </summary>
 	private void FixedUpdate() {
 		animator.SetFloat("time", Mathf.MoveTowards(animator.GetFloat("time"), AudioData.GetFloat(range) * amplify, Time.deltaTime * barSpeed));
 		if(meshRendererAvailable)

@@ -4,6 +4,7 @@ using UnityEngine;
 public class RotateTurret : MonoBehaviour {
 
     //This script is to track where the camera center looks at and lerp the Turret to it.
+    [SerializeField] private SoundManager SM;
 
 	[SerializeField] private Transform turnPiece;
     [SerializeField] private Transform target; // Target that script owner rotates to.
@@ -31,7 +32,8 @@ public class RotateTurret : MonoBehaviour {
 
     void TurretRotation() // Lerps this object to look at target.
     {
-		Vector3 relativePosition = target.position - transform.position; // Set relativePosition.
+        //StartCoroutine(TurretSfx());
+        Vector3 relativePosition = target.position - transform.position; // Set relativePosition.
         relativePosition = relativePosition.normalized; // 
         Vector3 targetRotation = Quaternion.LookRotation(relativePosition).eulerAngles; //
 		targetRotation.x = transform.rotation.eulerAngles.x; // Targets x axis.
@@ -39,8 +41,15 @@ public class RotateTurret : MonoBehaviour {
 
         transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(targetRotation), speed * Time.deltaTime); // Rotate Turret
     }
+    /*
+    IEnumerator TurretSfx()
+    {
+        turretMove.clip = SM.SfxHolder[0];
+        turretMove.Play();
+        yield return turretMove;
+    }*/
 
-	void TurnPieceRotation() {
+    void TurnPieceRotation() {
 		Vector3 relativePosition = target.position - turnPiece.position;
 		relativePosition = relativePosition.normalized;
 		Vector3 targetRotation = Quaternion.LookRotation(relativePosition).eulerAngles;
