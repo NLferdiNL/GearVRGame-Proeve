@@ -17,7 +17,8 @@ public class Building : MonoBehaviour, IDamagable
     [SerializeField]
     private float lvlOfPower = 0;
 
-    // This is used as a limiter for the amount of power 
+    // This is used as a limiter for the amount of power. 
+    // This is needed for the animator
     [SerializeField]
     private float maxLvlOfPower = 100;
     
@@ -164,13 +165,12 @@ public class Building : MonoBehaviour, IDamagable
         if (lvlOfPower < maxLvlOfPower)
         {
             lvlOfPower += value;
-            StartCoroutine(sfxPlayer(0));
         }
 
         if (lvlOfPower > maxLvlOfPower && !fullyHealed)
         {
             fullyHealed = true;
-            StartCoroutine(sfxPlayer(9));
+            StartCoroutine(sfxPlayer(8));
             OnFullCharge.Invoke();
             lvlOfPower = maxLvlOfPower;
         }
