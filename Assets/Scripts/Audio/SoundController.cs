@@ -9,14 +9,16 @@ using UnityEngine.SceneManagement;
 public class SoundController : MonoBehaviour
 {
 
-	[SerializeField] private SoundManager SM; // Hold the SoundManager.
-    [SerializeField] private GameFreeze GF; // Hold the EnterGameFreeze.
+	[SerializeField] private SoundManager sM; // Hold the SoundManager.
+    [SerializeField] private GameFreeze gF; // Hold the EnterGameFreeze.
 
 	public UnityEvent OnReset = new UnityEvent(); // Reset the buildings from true to false and start second section.
 	public UnityEvent NumberChange = new UnityEvent(); // Change in number notification.
 	public UnityEvent StartEndless = new UnityEvent(); // Start of endless section.
 
 	public static SoundController Instance;
+
+    [SerializeField] private GameObject aICompanion;
 
 	public bool[] buildingsCharged = new bool[3] { false, false, false }; // bool checks for if buildings are charged.
 
@@ -32,11 +34,13 @@ public class SoundController : MonoBehaviour
 
     IEnumerator FreezeGame(int freeze, int voiceNumber)
     {
+        aICompanion.SetActive(true);
         yield return new WaitForSeconds(.01f);
-        SM.MusicPlayer.PlayDelayed(freeze);
-        SM.VoicePlayer.clip = SM.VoiceHolder[voiceNumber];
-        SM.VoicePlayer.Play();
-        yield return GF.PauseUntil(() => !SM.VoicePlayer.isPlaying);
+        sM.MusicPlayer.PlayDelayed(freeze);
+        sM.VoicePlayer.clip = sM.VoiceHolder[voiceNumber];
+        sM.VoicePlayer.Play();
+        yield return gF.PauseUntil(() => !sM.VoicePlayer.isPlaying);
+        aICompanion.SetActive(false);
     }
 
     private void Start()
@@ -154,14 +158,14 @@ public class SoundController : MonoBehaviour
 
     IEnumerator PlayAndAwait(int index)
     {
-		SM.MusicPlayer.clip = SM.MusicHolder[index]; // Set clip Musicholder to musicplayer.
-		SM.MusicPlayer.Play(); // Play the clip.
+		sM.MusicPlayer.clip = sM.MusicHolder[index]; // Set clip Musicholder to musicplayer.
+		sM.MusicPlayer.Play(); // Play the clip.
 		yield return AwaitMusic(); // Wait for clip to finish.
 	}
 
     IEnumerator AwaitMusic()
     {
         yield return new WaitForSeconds(.2f); // Wait 0.2f for clip.
-        yield return new WaitUntil(() => !SM.MusicPlayer.isPlaying); // Wait until current clip is done playing.
+        yield return new WaitUntil(() => !sM.MusicPlayer.isPlaying); // Wait until current clip is done playing.
     }
 }
