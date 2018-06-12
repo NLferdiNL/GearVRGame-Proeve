@@ -70,7 +70,7 @@ public class SwarmSpawner : MonoBehaviour {
 		}
 	}
 
-	static SwarmSpawner instance;
+	public static SwarmSpawner instance;
 
 #if UNITY_EDITOR
 	public int activePath = 0;
@@ -101,16 +101,13 @@ public class SwarmSpawner : MonoBehaviour {
 
 	[SerializeField]
 	int maxEnemies = 40;
-
-	// Start() is used for debug purposes only.
-	// The class shouldn't spawn itself.
-	IEnumerator Start() {
+    
+    /// <summary>
+    /// Sets up a public instance for spawning
+    /// enemies without reference to this component.
+    /// </summary>
+	void Start() {
 		instance = this;
-
-		while(true) {
-			yield return new WaitForSeconds(10);
-			SpawnSwarms(3);
-		}
 	}
 
 	public static void SpawnSwarms(int amount) {
@@ -119,7 +116,7 @@ public class SwarmSpawner : MonoBehaviour {
 		}
 	}
 
-	void SpawnEnemy() {
+	public void SpawnEnemy() {
 		if(SwarmContainer.Count >= maxEnemies)
 			return;
 
