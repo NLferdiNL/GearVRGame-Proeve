@@ -75,8 +75,8 @@ public class SwarmAttack : MonoBehaviour {
 
 		if(Vector3.Distance(target.position, transform.position) <= attackRange) {
 			target.SendMessage("Damage", damagePerFrame, SendMessageOptions.DontRequireReceiver);
-			if(swarmNavigation.enabled)
-				swarmNavigation.enabled = false;
+			if(!swarmNavigation.isAttacking)
+				swarmNavigation.isAttacking = false;
 		}
 	}
 }
