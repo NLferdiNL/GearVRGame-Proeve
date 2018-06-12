@@ -32,8 +32,8 @@ public class VolumeChanger : MonoBehaviour
         audioVolumeHolder.SfxVolume = currentSfxVol;
     }
 
-    // Music
-    public void AddMusicVol(int musicVolToAdd)
+	#region Music
+	public void AddMusicVol(int musicVolToAdd)
     {
         if (currentMusicVol < 20)
         {
@@ -50,8 +50,10 @@ public class VolumeChanger : MonoBehaviour
         }
     }
 
-    // Sfx
-    public void AddSfxVol(int sfxVolToAdd)
+	#endregion
+
+	#region SFX
+	public void AddSfxVol(int sfxVolToAdd)
     {
         if (currentMusicVol < 20)
         {
@@ -67,4 +69,5 @@ public class VolumeChanger : MonoBehaviour
             UpdateVolume();
         }
     }
+	#endregion
 }

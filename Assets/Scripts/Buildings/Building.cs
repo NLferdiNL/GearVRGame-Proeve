@@ -74,6 +74,7 @@ public class Building : MonoBehaviour, IDamagable
         {
             buildingAnimator = GetComponentInParent<Animator>();
         }
+
         SoundController.Instance.OnReset.AddListener(SwitchFase);
     }
 
@@ -87,15 +88,19 @@ public class Building : MonoBehaviour, IDamagable
                 radarDotAnimator.SetBool("underAttack", false);
             }
         }
-
-        buildingAnimator.SetFloat("amountOfPower", lvlOfPower / maxLvlOfPower);
+        UpdateLvlOfPower();
     }
 
     void SwitchFase()
     {
-        maxLvlOfPower = 200;
+        //UpdateLvlOfPower();
         buildingAnimator.SetTrigger("nextStageTrigger");
-        Debug.Log("Du Yu Wuk");
+		lvlOfPower = 0;
+    }
+
+    void UpdateLvlOfPower()
+    {
+        buildingAnimator.SetFloat("amountOfPower", lvlOfPower / maxLvlOfPower);
     }
 
     public void Damage(float value)
@@ -119,8 +124,10 @@ public class Building : MonoBehaviour, IDamagable
     {
         if (UnderAttack)
             value *= 0.1f;
-
-        lvlOfPower += value;
+        if (lvlOfPower < maxLvlOfPower)
+        {
+            lvlOfPower += value;
+        }
 
         if (lvlOfPower > maxLvlOfPower && !fullyHealed)
         {

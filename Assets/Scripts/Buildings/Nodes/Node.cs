@@ -7,7 +7,7 @@ public class Node : MonoBehaviour, IDamagable
     public Building parentBuilding;
 
     // _nodeMaxEnergy is called this way because: it tracks the amount of "Power" it passes to the "building".
-    [SerializeField]
+    //[SerializeField]
     private float nodeMaxEnergy = 25;
 
 

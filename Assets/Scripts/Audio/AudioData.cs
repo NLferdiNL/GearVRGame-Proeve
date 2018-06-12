@@ -12,7 +12,7 @@ public class AudioData : MonoBehaviour {
 	float[] audioSpectrumData;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		audioSource = GetComponent<AudioSource>();
 
 		audioSpectrumData = new float[audioRange];

@@ -64,6 +64,9 @@ public class SwarmSpawner : MonoBehaviour {
 
 	GameObject randomEnemyPrefab {
 		get {
+            if (enemyPrefabs == null || enemyPrefabs.Length == 0)
+                return null;
+
 			return enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
 		}
 	}
@@ -90,7 +93,12 @@ public class SwarmSpawner : MonoBehaviour {
 		if(SwarmContainer.Count >= maxEnemies)
 			return;
 
-		GameObject enemyInstance = Instantiate(randomEnemyPrefab, transform.position, Quaternion.identity);
+        GameObject randomEnemyPrefab = this.randomEnemyPrefab;
+
+        if (randomEnemyPrefab == null)
+            return;
+
+        GameObject enemyInstance = Instantiate(randomEnemyPrefab, transform.position, Quaternion.identity);
 		enemyInstance.transform.LookAt(transform);
 
 		SwarmContainer.Add(enemyInstance.transform);

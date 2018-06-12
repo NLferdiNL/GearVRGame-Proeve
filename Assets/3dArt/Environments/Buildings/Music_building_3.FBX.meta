@@ -445,16 +445,16 @@ ModelImporter:
     4300168: TargetBase
     4300170: Front Face
     4300172: Charge Meter
-    7400000: First Segment MusicBuilding_3
-    7400002: TargetSwitch
-    7400004: Second Segment MusicBuilding_3
+    7400000: First Segment Music Building_3
+    7400002: Target Switch Music Building_3
+    7400004: Second Segment Music Building_3
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: 'Material #2'
-    second: {fileID: 2100000, guid: 6cdaa15ac3042bd43beeaab49a54d5c6, type: 2}
+    second: {fileID: 2100000, guid: 38c7a8bcad16e354493c35ecef337f59, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -482,7 +482,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: First Segment MusicBuilding_3
+      name: First Segment Music Building_3
       takeName: Take 001
       firstFrame: 0
       lastFrame: 30
@@ -510,10 +510,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: TargetSwitch
+      name: Target Switch Music Building_3
       takeName: Take 001
       firstFrame: 30
-      lastFrame: 55
+      lastFrame: 35
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -538,10 +538,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Second Segment MusicBuilding_3
+      name: Second Segment Music Building_3
       takeName: Take 001
       firstFrame: 55
-      lastFrame: 92
+      lastFrame: 97
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
