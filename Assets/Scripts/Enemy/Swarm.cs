@@ -108,6 +108,11 @@ public class Swarm : MonoBehaviour, IDamagable {
 	/// </summary>
 	/// <param name="value">Amount to damage</param>
 	public void Damage(float value) {
+		// Prevent destruction of a dead swarm.
+		// This causes errors.
+		if(_enemyBodies.Count == 0)
+			return;
+
 		// Remove the damage done.
 		_health -= value;
 
