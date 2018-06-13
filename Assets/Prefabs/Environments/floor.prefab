@@ -38,6 +38,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4783770539506684}
+  - component: {fileID: 95294168388560750}
   m_Layer: 23
   m_Name: floor
   m_TagString: Untagged
@@ -196,8 +197,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1980211481235518}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4486719, y: 1.9569999, z: -1.0395086}
-  m_LocalScale: {x: 5, y: 0.0003, z: 5}
+  m_LocalPosition: {x: -1.56, y: 1.9609143, z: -1.0071428}
+  m_LocalScale: {x: 5, y: 0.00034285715, z: 5}
   m_Children: []
   m_Father: {fileID: 4783770539506684}
   m_RootOrder: 3
@@ -474,6 +475,23 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95294168388560750
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1275861796427656}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &95532228557553056
 Animator:
   serializedVersion: 3
@@ -532,7 +550,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1980211481235518}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1

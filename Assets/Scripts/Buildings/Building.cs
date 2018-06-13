@@ -165,8 +165,7 @@ public class Building : MonoBehaviour, IDamagable
         {
             lvlOfPower += value;
         }
-
-        if (lvlOfPower > maxLvlOfPower && !fullyHealed)
+        else if (lvlOfPower >= maxLvlOfPower && !fullyHealed)
         {
             fullyHealed = true;
             StartCoroutine(sfxPlayer(8));

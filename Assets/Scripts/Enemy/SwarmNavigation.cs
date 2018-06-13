@@ -45,7 +45,7 @@ public class SwarmNavigation : MonoBehaviour {
 	/// </summary>
 	public bool isAttacking {
 		set {
-			GetComponent<Rigidbody>().useGravity = value;
+			//GetComponent<Rigidbody>().useGravity = value;
 		}
 
 		get {
