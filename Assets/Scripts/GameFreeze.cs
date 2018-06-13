@@ -26,7 +26,7 @@ public class GameFreeze : MonoBehaviour {
 	/// <returns></returns>
 	public IEnumerator PauseUntil(Func<bool> condition) {
 		// Stop time.
-		Time.timeScale = 0;
+		Time.timeScale = 0.25f;
 
 		// And wait until the condition is met.
 		yield return new WaitUntil(condition);

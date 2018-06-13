@@ -1,5 +1,4 @@
-﻿using EnemyNav;
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
 /// Used to make the swarms float around on a set Path.
@@ -46,7 +45,7 @@ public class SwarmNavigation : MonoBehaviour {
 	/// </summary>
 	public bool isAttacking {
 		set {
-			GetComponent<Rigidbody>().useGravity = value;
+			//GetComponent<Rigidbody>().useGravity = value;
 		}
 
 		get {
@@ -63,10 +62,10 @@ public class SwarmNavigation : MonoBehaviour {
 		}
 	}
 
-	/// <summary>
-	/// Holds my path.
-	/// </summary>
-	Path path;
+    /// <summary>
+    /// Holds my path.
+    /// </summary>
+    EnemyNav.Path path;
 
 	/// <summary>
 	/// Sets the component up for use.
@@ -78,7 +77,7 @@ public class SwarmNavigation : MonoBehaviour {
 		// Do I have a path?
 		// If I don't set path to a random one.
 		if(path == null) {
-			SetPath(Path.random);
+			SetPath(EnemyNav.Path.random);
 		}
 
 		// Teleport to my first node in the path.
@@ -90,7 +89,7 @@ public class SwarmNavigation : MonoBehaviour {
 	/// Change my path.
 	/// </summary>
 	/// <param name="path">New Path</param>
-	public void SetPath(Path path) {
+	public void SetPath(EnemyNav.Path path) {
 		this.path = path;
 	}
 

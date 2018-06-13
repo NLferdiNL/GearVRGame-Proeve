@@ -140,7 +140,6 @@ public class Building : MonoBehaviour, IDamagable
     /// <param name="value"></param>
     public void Damage(float value)
     {
-        StartCoroutine(sfxPlayer(0));
         if (timeSinceLastAttack != 0)
             radarDotAnimator.SetBool("underAttack", true);
 
@@ -166,8 +165,7 @@ public class Building : MonoBehaviour, IDamagable
         {
             lvlOfPower += value;
         }
-
-        if (lvlOfPower > maxLvlOfPower && !fullyHealed)
+        else if (lvlOfPower >= maxLvlOfPower && !fullyHealed)
         {
             fullyHealed = true;
             StartCoroutine(sfxPlayer(8));
