@@ -44,9 +44,7 @@ public class SoundController : MonoBehaviour
         aICompanion.SetActive(true);
         yield return null;
 
-        Time.timeScale = 0;
-
-        sM.MusicPlayer.PlayDelayed(freeze);
+        Time.timeScale = 0.25f;
         sM.VoicePlayer.clip = sM.VoiceHolder[voiceNumber];
         sM.VoicePlayer.Play();
 
@@ -54,7 +52,7 @@ public class SoundController : MonoBehaviour
 
         yield return new WaitUntil(() => !sM.VoicePlayer.isPlaying);
 
-        float time = 0.1f;
+        float time = Time.timeScale;
 
         while (time < 1)
         {
@@ -100,17 +98,20 @@ public class SoundController : MonoBehaviour
 			yield return PlayAndAwait(i);
 		    if (!buildingsCharged[i])
 		        BuildingNotCharged();
-		    if (i == 1)
+		    if (i == 0)
 		    {
                 SwarmSpawner.SpawnEnemy();
                 StartCoroutine(FreezeGame(7, 1));
-            }else if (i == 2)
+            }else if (i == 1)
 		    {
 		        SwarmSpawner.SpawnEnemy(); // Spawn a random enemies in the game.
-            } else if(i == 3)
+            } else if (i == 2)
 		    {
 		        SwarmSpawner.SpawnEnemies(2); // Spawn 2 random enemies in the game.
-            }
+		    } else
+		    {
+		        SwarmSpawner.SpawnEnemies(2);
+		    }
 		}
 
 		yield return PlayRange(0, 3); // Play clips from MusicHolder 0 to 3.
@@ -141,9 +142,9 @@ public class SoundController : MonoBehaviour
     /// <returns></returns>
 	IEnumerator InBetween()
     {
-		yield return PlayRange(3, 5); // Play clips from MusicHolder 3 to 5.
+        yield return FreezeGame(10, 2);
+        yield return PlayRange(3, 5); // Play clips from MusicHolder 3 to 5.
         SwarmSpawner.SpawnEnemies(3); // Spawn 3 random enemies in the game.
-        yield return StartCoroutine(FreezeGame(10, 2));
         MidSection(); // Start the mid section of the game.
 	}
     /// <summary>
@@ -152,7 +153,8 @@ public class SoundController : MonoBehaviour
     /// After all 3 are charged then start survival section.
     /// </summary>
 	void MidSection()
-	{
+    {
+        StartCoroutine(CheckCharge());
 		if(!buildingsCharged[0] && !buildingsCharged[1] && !buildingsCharged[2]) // If all buildings are not charged.
 		{
 			StartCoroutine(MidPartOne()); // Play first section.
@@ -167,6 +169,13 @@ public class SoundController : MonoBehaviour
 			StartCoroutine(SurvivalStart()); // Start the survival section.
 		}
 	}
+
+    IEnumerator CheckCharge()
+    {
+        yield return new WaitForSeconds(41);
+        BuildingNotCharged();
+    }
+
     /// <summary>
     /// First part of the midsection.
     /// </summary>
@@ -206,10 +215,12 @@ public class SoundController : MonoBehaviour
     /// </summary>
     /// <returns></returns>
 	IEnumerator SurvivalStart()
-    {
+	{
+	    SwarmSpawner.SpawnEnemies(2);
         yield return StartCoroutine(FreezeGame(7, 3));
 		StartEndless.Invoke(); // Invoke start of endless survival.
 		yield return PlayRange(8, 14); // Play clips from MusicHolder 8 to 14.
+	    SwarmSpawner.SpawnEnemy();
 		StartCoroutine(SurvivalEndless()); // Start endless survival section.
 	}
     /// <summary>
@@ -220,13 +231,19 @@ public class SoundController : MonoBehaviour
     {
         survivalRunning = true;
 
+        int currentEnemies = 2;
+        int increaseEnemies = 1;
         while (survivalRunning)
         {
-            yield return PlayRange(14, 18);
+            yield return PlayRange(14, 16);
+            SwarmSpawner.SpawnEnemies(currentEnemies);
+            yield return PlayRange(16, 18);
+            SwarmSpawner.SpawnEnemies(currentEnemies);
+            currentEnemies += increaseEnemies;
         }
     }
     /// <summary>
-    /// Play clip from min index to max index.
+    /// Play clip from min(inclusive) index to max(exclusive) index.
     /// </summary>
     /// <param name="min"></param>
     /// <param name="max"></param>

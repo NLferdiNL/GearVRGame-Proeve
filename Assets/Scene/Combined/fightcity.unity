@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3736317, g: 0.14869013, b: 0.24707332, a: 1}
+  m_IndirectSpecularColor: {r: 0.37398034, g: 0.14807189, b: 0.24666196, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3390,7 +3390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnPiece: {fileID: 1808132663}
   target: {fileID: 554456856}
-  speed: 55
+  speed: 70
   isIndependant: 0
   turretMove: {fileID: 0}
 --- !u!1001 &719740817
