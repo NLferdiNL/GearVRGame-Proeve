@@ -27,7 +27,7 @@ namespace Gvr.Internal {
       return new AndroidNativeKeyboardProvider();
 #else
       // Other platforms not supported, including iOS and Unity versions w/o the native integraiton.
-      Debug.LogWarning("GVR Keyboard not supported on " + Application.platform);
+      //Debug.LogWarning("GVR Keyboard not supported on " + Application.platform);
       return new DummyKeyboardProvider();
 #endif  // UNITY_EDITOR
     }

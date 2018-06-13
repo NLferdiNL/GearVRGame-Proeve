@@ -33,8 +33,8 @@ namespace Gvr.Internal {
       return new AndroidNativeHeadsetProvider();
 #else
       // Platform not supported.
-      Debug.LogWarning("No Google VR standalone headset / 6DOF support on " +
-          Application.platform + " platform.");
+      //Debug.LogWarning("No Google VR standalone headset / 6DOF support on " +
+      //    Application.platform + " platform.");
       return new DummyHeadsetProvider();
 #endif  // UNITY_EDITOR || UNITY_STANDALONE
     }
