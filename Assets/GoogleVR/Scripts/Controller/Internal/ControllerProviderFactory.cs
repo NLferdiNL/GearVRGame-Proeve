@@ -32,7 +32,7 @@ namespace Gvr.Internal {
       return new AndroidNativeControllerProvider();
 #else
       // Platform not supported.
-      Debug.LogWarning("No controller support on this platform.");
+      //Debug.LogWarning("No controller support on this platform.");
       return new DummyControllerProvider();
 #endif  // UNITY_EDITOR || UNITY_STANDALONE
     }

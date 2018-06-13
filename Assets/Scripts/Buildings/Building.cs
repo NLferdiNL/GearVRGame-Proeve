@@ -140,7 +140,6 @@ public class Building : MonoBehaviour, IDamagable
     /// <param name="value"></param>
     public void Damage(float value)
     {
-        StartCoroutine(sfxPlayer(0));
         if (timeSinceLastAttack != 0)
             radarDotAnimator.SetBool("underAttack", true);
 
