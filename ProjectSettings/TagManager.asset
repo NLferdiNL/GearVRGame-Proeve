@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - NavNode
+  - Music
+  - SFX
   layers:
   - Default
   - TransparentFX
@@ -26,12 +27,12 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Radar
   - Swarm
   - Drone
   - Ground
-  - 
-  - 
+  - Building
+  - ChargingNode
   - 
   - 
   - 

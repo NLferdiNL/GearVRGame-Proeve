@@ -1,75 +1,191 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
+/// <summary>
+/// This Script basicly holds the current lvl of Power for the animator to work with.
+/// Using that lvlOfPower in order to influence the animator of both the building itself and the radarDot
+/// </summary>
 public class Building : MonoBehaviour, IDamagable
 {
-    // This script is used too keep track of the buildings level of power and animate accordingly.
-
+    // These hold the two animators i use one for the animator on the building
     [SerializeField]
-    public Animator buildingAnimator;
+    public Animator buildingAnimator, radarDotAnimator;
 
-    // _lvlOfPower is called this way because: it tracks the amount of "Power" the "building" has.
-    private float _lvlOfPower = 0;
-
+    // This is the amount of power the building currently has and is being changed by the enemy's and turrets 
     [SerializeField]
-    private float _maxLvlOfPower = 100;
+    private float lvlOfPower = 0;
 
-    public Color startColour;
-    public Color andColour;
+    // This is used as a limiter for the amount of power. 
+    // This is needed for the animator
+    [SerializeField]
+    private float maxLvlOfPower = 100;
+    
+    // 
+    [SerializeField]
+    float underAttackCooldown = 2f;
+    
+    //
+	[SerializeField]
+    float timeSinceLastAttack = 0;
+	
+    //
+    [SerializeField]
+    private SoundManager sM;
 
+    //
+    private AudioSource buildingSfx;
+
+    //
+    [Serializable]
+    public class BuildingFullyChargedEvent : UnityEvent { }
+
+    public BuildingFullyChargedEvent OnFullCharge = new BuildingFullyChargedEvent();
+
+    [Serializable]
+    public class BuildingEmptyChargedEvent : UnityEvent { }
+
+    public BuildingEmptyChargedEvent OnEmptyCharge = new BuildingEmptyChargedEvent();
+
+    bool fullyHealed = false;
+
+    /// <summary>
+    /// 
+    /// </summary>
     public float LvlOfPower
     {
         get
         {
-            return _lvlOfPower;
+            return lvlOfPower;
         }
         set
         {
-            _lvlOfPower += value;
+            lvlOfPower += value;
         }
     }
-    
-    public int maxHealth
+    /// <summary>
+    /// 
+    /// </summary>
+    public float MaxHealth
     {
         get
         {
-            return (int)_maxLvlOfPower;
+            return (int)maxLvlOfPower;
         }
     }
-
-    public int health
+    /// <summary>
+    /// 
+    /// </summary>
+    public float Health
     {
         get
         {
-            return (int)_lvlOfPower;
+            return (int)lvlOfPower;
         }
     }
-
-    // Use this for initialization
+    /// <summary>
+    /// 
+    /// </summary>
+    public bool UnderAttack
+    {
+        get
+        {
+            return timeSinceLastAttack < underAttackCooldown;
+        }
+    }
+    /// <summary>
+    /// 
+    /// </summary>
     void Start()
     {
+        buildingSfx = GetComponent<AudioSource>();
+
         if (buildingAnimator == null)
         {
             buildingAnimator = GetComponentInParent<Animator>();
         }
+        SoundController.Instance.OnReset.AddListener(SwitchFase);
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    void FixedUpdate()
+    {
+        if (timeSinceLastAttack < underAttackCooldown)
+        {
+            timeSinceLastAttack += Time.deltaTime;
+            if (timeSinceLastAttack >= underAttackCooldown)
+            {
+                radarDotAnimator.SetBool("underAttack", false);
+            }
+        }
+        UpdateLvlOfPower();
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    void SwitchFase()
+    {
+        //UpdateLvlOfPower();
+        buildingAnimator.SetTrigger("nextStageTrigger");
+		lvlOfPower = 0;
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    void UpdateLvlOfPower()
+    {
+        buildingAnimator.SetFloat("amountOfPower", lvlOfPower / maxLvlOfPower);
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="value"></param>
+    public void Damage(float value)
+    {
+        if (timeSinceLastAttack != 0)
+            radarDotAnimator.SetBool("underAttack", true);
+
+        timeSinceLastAttack = 0;
+
+        lvlOfPower -= value;
+
+        if (fullyHealed)
+            fullyHealed = false;
+            
+
+        if (lvlOfPower < 0)
+        {
+            lvlOfPower = 0;
+            OnEmptyCharge.Invoke();
+        }
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="value"></param>
+    public void Heal(float value)
+    {
+        if (UnderAttack)
+            value *= 0.1f;
+        if (lvlOfPower < maxLvlOfPower)
+        {
+            lvlOfPower += value;
+        }
+        else if (lvlOfPower >= maxLvlOfPower && !fullyHealed)
+        {
+            fullyHealed = true;
+            StartCoroutine(sfxPlayer(8));
+            OnFullCharge.Invoke();
+            lvlOfPower = maxLvlOfPower;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator sfxPlayer(int whatSong)
     {
-        GetComponent<Renderer>().material.color = Color.Lerp(startColour, andColour, 100 / _maxLvlOfPower * _lvlOfPower / 100);
-        buildingAnimator.SetFloat("amountOfPower", _lvlOfPower);
-    }
-
-    public void Damage(int value)
-    {
-        _lvlOfPower -= value;
-    }
-
-    public void Heal(int value)
-    {
-        _lvlOfPower += value;
+        buildingSfx.clip = sM.SfxHolder[whatSong];
+        buildingSfx.Play();
+        yield return buildingSfx;
     }
 }

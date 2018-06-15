@@ -1,0 +1,1553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BassTest" Collapsed="true">
+    <Position X="26" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAIAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\BassTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrAudio" Collapsed="true">
+    <Position X="31.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAOBYAUQADBEAQAoQSQQsSCIBCgAAAAIAgIDAUwABC4=</HashCode>
+      <FileName>Assets\GoogleVR\Legacy\Scripts\Audio\GvrAudio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrAudioListener" Collapsed="true">
+    <Position X="33" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQBAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAQAAAAACEA=</HashCode>
+      <FileName>Assets\GoogleVR\Legacy\Scripts\Audio\GvrAudioListener.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrAudioRoom" Collapsed="true">
+    <Position X="12" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAUAAAAABAIAAAAAAIBoQAAAAAAgAIAIAAAAAAAACEA=</HashCode>
+      <FileName>Assets\GoogleVR\Legacy\Scripts\Audio\GvrAudioRoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrAudioSoundfield" Collapsed="true">
+    <Position X="13.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BQ4jCwAAACQJKEAEQAFEIACgECIAEGAMoABBAJCGO0E=</HashCode>
+      <FileName>Assets\GoogleVR\Legacy\Scripts\Audio\GvrAudioSoundfield.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrAudioSource" Collapsed="true">
+    <Position X="15.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DQRjCSiAAbYJOEAEAAEEAAIAEEMAEkhsoAzQAASGOkE=</HashCode>
+      <FileName>Assets\GoogleVR\Legacy\Scripts\Audio\GvrAudioSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrController" Collapsed="true">
+    <Position X="8.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIABAARAQAAEAAgQAAAAIAAEECAYAAAEAAABMIAAAg=</HashCode>
+      <FileName>Assets\GoogleVR\Legacy\Scripts\GvrController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrControllerVisualManager" Collapsed="true">
+    <Position X="6.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Legacy\Scripts\GvrControllerVisualManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrPointerManager" Collapsed="true">
+    <Position X="31.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Legacy\Scripts\GvrPointerManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrReticlePointer" Collapsed="true">
+    <Position X="7.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAgAAAAiAAAGAAAQAAQAIAYAAwyAQAABBUAQAQAEE=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Cardboard\GvrReticlePointer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrArmModel" Collapsed="true">
+    <Position X="9.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QcBCAwAIggoREUAACANQEwgBhAABQgQKgEIlQAAQ/oA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\ArmModel\GvrArmModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrBaseArmModel" Collapsed="true">
+    <Position X="9.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAQAAgAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\ArmModel\GvrBaseArmModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrControllerInput" Collapsed="true">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCYBBAARFQEAEEAgQAAAAIAAEETCYAAGEABABMMEAEg=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\GvrControllerInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrControllerReticleVisual" Collapsed="true">
+    <Position X="19" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAUUAAABAAAAAQCABIMACAABAAABAAAAAAAAAAAECEA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\GvrControllerReticleVisual.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrControllerVisual" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARMggQHABIkEQQQCliETAADAIAUDTo4IEEAhAIEASUA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\GvrControllerVisual.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GvrLaserPointer" Collapsed="true">
+    <Position X="5.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAgAAAAiAAACAAAAAAQAAAAAAgEAAAAAgAAYCAgEA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\GvrLaserPointer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrLaserVisual" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQQAAAAAAgAEACEAAABJJAADAAkAAEKMAgABAAAoAEg=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\GvrLaserVisual.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GvrRecenterOnlyController" Collapsed="true">
+    <Position X="12" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAQEAAAoQAAAQAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\GvrRecenterOnlyController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrTrackedController" Collapsed="true">
+    <Position X="6.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAACEAEAABAAkAAAAAAAACAAEIAABBAAAACEA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\GvrTrackedController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrControllerTooltipsSimple" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAACAAAgAAQAAAAEAAAAAAAACAAAIAAABAABACEA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\Tooltips\GvrControllerTooltipsSimple.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GvrTooltip" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IEgEAAABAAhAACAAAAUgAoAKEAgCAAAIAAARAAAAiEQ=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\Tooltips\GvrTooltip.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GvrBasePointer" Collapsed="true">
+    <Position X="6.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBAFoAAIAiAAACBEAQBEQAAEGEAgUAAgJAAAAcgBAAE=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\EventSystem\GvrBasePointer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrBasePointerRaycaster" Collapsed="true">
+    <Position X="1.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAQAAAAAAAAAEgAAAAAAAAAAAAAAABgQAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\EventSystem\GvrBasePointerRaycaster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrExecuteEventsExtension" Collapsed="true">
+    <Position X="33" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAgAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\EventSystem\GvrExecuteEventsExtension.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrPointerGraphicRaycaster" Collapsed="true">
+    <Position X="2.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAABICAAEQAAACAAIAIABAAAAgBhAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\EventSystem\GvrPointerGraphicRaycaster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrPointerPhysicsRaycaster" Collapsed="true">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAADAAAABAAAAEAAAAAAMQAIAAAAAgQBAAAEEA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\EventSystem\GvrPointerPhysicsRaycaster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrPointerScrollInput" Collapsed="true">
+    <Position X="33" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAEAAAABCAECCBBAAgCQQiAICAEAIQEJBAQAEAACAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\EventSystem\GvrPointerScrollInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrScrollSettings" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAQ=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\EventSystem\GvrScrollSettings.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GvrAllEventsTrigger" Collapsed="true">
+    <Position X="29.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAmAICBAAAAAAAAAAEAAgIAQIAAAAIQAACQA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\EventSystem\InputModule\GvrAllEventsTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrEventExecutor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AECAAAAAAgAIAAQAAAAAAAAAAgAgAARACAAAAQiAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\EventSystem\InputModule\GvrEventExecutor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GvrPointerInputModule" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AFQAgQIAAAhAAAAAAghAEACAAiAAAAAAACAAMAAQAEA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\EventSystem\InputModule\GvrPointerInputModule.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GvrPointerInputModuleImpl" Collapsed="true">
+    <Position X="29.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQACiIAAgCCAACAigAUABAAAgAAAAACAQgACYAAEQA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\EventSystem\InputModule\GvrPointerInputModuleImpl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrCardboardHelpers" Collapsed="true">
+    <Position X="17.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\GvrCardboardHelpers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrEditorEmulator" Collapsed="true">
+    <Position X="29.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQAASAAAAAgAAAAAwAAEEAAAAAIAAAAQACAAAAAAEI=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\GvrEditorEmulator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrSettings" Collapsed="true">
+    <Position X="15.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAABQAAAAAAAAAACAAAAAAEIgKAgACAAAAACAgA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\GvrSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrUnitySdkVersion" Collapsed="true">
+    <Position X="20.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\GvrUnitySdkVersion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrHeadset" Collapsed="true">
+    <Position X="12" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cAABAAEAQAACAAAIAAAAAAAABABBAAAIABAgAgACSEA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Headset\GvrHeadset.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InstantPreviewHelper" Collapsed="true">
+    <Position X="12" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAIAAAAEA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\InstantPreview\InstantPreviewHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrKeyboard" Collapsed="true">
+    <Position X="19" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQRAAIBQqAAAAQBF4gCAAKAAlBEBgAJSADiAAgACEg=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Keyboard\GvrKeyboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrKeyboardDelegateBase" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAgIAAABQAAAABAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Keyboard\GvrKeyboardDelegateBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrKeyboardIntent" Collapsed="true">
+    <Position X="20.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAIAAAABAAAAAAAQAAIAgAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Keyboard\GvrKeyboardIntent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeyboardState" Collapsed="true">
+    <Position X="15.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACCCAAAAAAAEAAAAIAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrPermissionsRequester" Collapsed="true">
+    <Position X="26" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAACAAAQAAAAAgAABAAAAAIAQAAIBgAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Permissions\GvrPermissionsRequester.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pose3D" Collapsed="true">
+    <Position X="3.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAQAABAAgAAAAAAAAAAAgAABAAAAAAAAAAIA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Pose3D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MutablePose3D" Collapsed="true">
+    <Position X="3.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Pose3D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrInfo" Collapsed="true">
+    <Position X="13.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\PropertyDrawers\GvrInfoDrawer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrInfoDrawer" Collapsed="true">
+    <Position X="15.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAABAAAAAAAAEQACAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\PropertyDrawers\GvrInfoDrawer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrDropdown" Collapsed="true">
+    <Position X="27.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAgIAEAAAAAEgAAAAAAAAAQgAAAAAIgAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\UI\GvrDropdown.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrActivityHelper" Collapsed="true">
+    <Position X="27.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Utilities\GvrActivityHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrDaydreamApi" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACABBAAAIAAEAIAAAAAAAEAoAAAAAIAAAAM=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Utilities\GvrDaydreamApi.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GvrIntent" Collapsed="true">
+    <Position X="17.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAIAAAQAAAAAAAAAACABQAAEAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Utilities\GvrIntent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrMathHelpers" Collapsed="true">
+    <Position X="24.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAwAAAAAAAAAAAAAAAAgAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Utilities\GvrMathHelpers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrUIHelpers" Collapsed="true">
+    <Position X="19" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Utilities\GvrUIHelpers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrVRHelpers" Collapsed="true">
+    <Position X="24.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAABQAEAAAAAAAAAAAAAAAAAAAEAAAAAAAgAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Utilities\GvrVRHelpers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvrVideoPlayerTexture" Collapsed="true">
+    <Position X="22.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAThAJsxBhhAaqMCFxFKpmbCzIAARpIZgRrmlUzASNM=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRCameraComposition" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAiIBAAADAAAAlAAAAIQAQCEAAAAA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Composition\OVRCameraComposition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRComposition" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAQAAAAAABAAAACAAAAAAAAAAAAAAEAAAAAGAAAAA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Composition\OVRComposition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRCompositionUtil" Collapsed="true">
+    <Position X="33" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAACAgAAAAAAAkAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Composition\OVRCompositionUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRDirectComposition" Collapsed="true">
+    <Position X="5.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAGAAAIA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Composition\OVRDirectComposition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRExternalComposition" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAgAAAAAAAAAAAAAAAAABAAAAIAAIAAAAGAAgAA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Composition\OVRExternalComposition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRMRForegroundCameraManager" Collapsed="true">
+    <Position X="26" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAIABAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Composition\OVRExternalComposition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRSandwichComposition" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYxIDAAACABAAABQAAAAAAAABAAAAAAAAEIAAGAAgAA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Composition\OVRSandwichComposition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRBoundary" Collapsed="true">
+    <Position X="27.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAgAAIAAABAAAAEAAAAAAEAAAARIAAAEAAgIA=</HashCode>
+      <FileName>Assets\OVR\Scripts\OVRBoundary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRCameraRig" Collapsed="true">
+    <Position X="29.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAcAIAgIQjACAAAAAAACAMAACADAVCAACAAADgAEAkQ=</HashCode>
+      <FileName>Assets\OVR\Scripts\OVRCameraRig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRExtensions" Collapsed="true">
+    <Position X="19" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAgAAIACAAgIQAQIAAAAQEAgIACAAAgABAAAAAAA=</HashCode>
+      <FileName>Assets\OVR\Scripts\OVRCommon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRNativeBuffer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAABAAACBgBAAAAAAAAAQAAAAAAAAAAAgAABAAAAA=</HashCode>
+      <FileName>Assets\OVR\Scripts\OVRCommon.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OVRDebugHeadController" Collapsed="true">
+    <Position X="13.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAAgAACAAAgUEAAAAAEAAAAAAAAAAAAAQQAAAAEA=</HashCode>
+      <FileName>Assets\OVR\Scripts\OVRDebugHeadController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRDisplay" Collapsed="true">
+    <Position X="17.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gASAAAAAAAAAAABACBAAAAAABAEAAQxAEAQYIAQAAAI=</HashCode>
+      <FileName>Assets\OVR\Scripts\OVRDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRHaptics" Collapsed="true">
+    <Position X="29.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAgAAAAAAAAAAAEAAIAAAAAAAEAA=</HashCode>
+      <FileName>Assets\OVR\Scripts\OVRHaptics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRHapticsClip" Collapsed="true">
+    <Position X="31.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAQCAAAAAAAgAAAAAAAACAA=</HashCode>
+      <FileName>Assets\OVR\Scripts\OVRHapticsClip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRInput" Collapsed="true">
+    <Position X="33" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JCQKAEACgjAUoAnAIAJABQCgIAACAQBQADihCsAACBA=</HashCode>
+      <FileName>Assets\OVR\Scripts\OVRInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRLayerAttribute" Collapsed="true">
+    <Position X="13.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\OVR\Scripts\OVRLayerAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRLint" Collapsed="true">
+    <Position X="15.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQEAAEAEQAAAIIAAAAAAQEAAAAAAAEAAgADCAAAAAgA=</HashCode>
+      <FileName>Assets\OVR\Scripts\OVRLint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRManager" Collapsed="true">
+    <Position X="17.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>bIRONBpcS+CFIW2RAD2g4QADBgHhEhBPSAAVU1zxQWw=</HashCode>
+      <FileName>Assets\OVR\Scripts\OVRManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRMixedReality" Collapsed="true">
+    <Position X="19" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAAAAAAAAAEACAEQAAAAAAAAAAAAQACAAEAAAIA=</HashCode>
+      <FileName>Assets\OVR\Scripts\OVRMixedReality.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVROverlay" Collapsed="true">
+    <Position X="29.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABBAAEAAlCgAAAQACMCIgAUABBhAEAJCAAAaDQgCEg=</HashCode>
+      <FileName>Assets\OVR\Scripts\OVROverlay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRPlatformMenu" Collapsed="true">
+    <Position X="33" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwIIAiAAAAAAAgAQAIAAAAEAACAABABAABAAACIAEA=</HashCode>
+      <FileName>Assets\OVR\Scripts\OVRPlatformMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRPlugin" Collapsed="true">
+    <Position X="13.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>4yd+TDQYTxbUNaGT0iGhNAANIsRgUwtJJPmkFnvQKEM=</HashCode>
+      <FileName>Assets\OVR\Scripts\OVRPlugin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRProfile" Collapsed="true">
+    <Position X="17.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAEYAAgAAEAAgA=</HashCode>
+      <FileName>Assets\OVR\Scripts\OVRProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRTracker" Collapsed="true">
+    <Position X="29.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAATAABAAAAAAAAAAAAAAAAAAAAQQAAAE=</HashCode>
+      <FileName>Assets\OVR\Scripts\OVRTracker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRChromaticAberration" Collapsed="true">
+    <Position X="31.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAAAAACAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRChromaticAberration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRCubemapCapture" Collapsed="true">
+    <Position X="12" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgAAAAAIAgBAIgAAAAAAQAAABAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRCubemapCapture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRDebugInfo" Collapsed="true">
+    <Position X="15.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQJABAARAQoAEVASAC4AAAAKBBICAAQQJQiYWAhAMA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRDebugInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRGazePointer" Collapsed="true">
+    <Position X="20.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwGhAAACAAEBAAAEEEAIgAiCABEQiAggAQAIGAAAUA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRGazePointer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRGearVrControllerTest" Collapsed="true">
+    <Position X="22.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAACAAAAAAAAAAAACAAAAAAAAAgAAQAAAQAAA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRGearVrControllerTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRGrabbable" Collapsed="true">
+    <Position X="24.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CGABAAgAACAAAAAgAgAIAAAACEAAAIQSAABAEAAAAEI=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRGrabbable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRGrabber" Collapsed="true">
+    <Position X="26" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAhIAAAAiAISAoACAA6QMaACEAAAIAAQFAAiAAAgGI=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRGrabber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRGridCube" Collapsed="true">
+    <Position X="27.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAAAAgAAACAAACAAIAAAAEgCAAAAAAgAAAAAIAAQ=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRGridCube.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRMixedRealityCaptureSettings" Collapsed="true">
+    <Position X="20.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DABgBAJAAIABIEQAAAAACAAgAgCBAAABSAAQMABBAAg=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRMixedRealityCaptureSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRModeParms" Collapsed="true">
+    <Position X="22.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAQ=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRModeParms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRMonoscopic" Collapsed="true">
+    <Position X="24.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAABAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRMonoscopic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRPlayerController" Collapsed="true">
+    <Position X="12" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIQBEAIwEyEhAiCBCwhCBIAUAAAECAApYAJUACBBCFA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRPlayerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRProgressIndicator" Collapsed="true">
+    <Position X="19" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAFA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRProgressIndicator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRRaycaster" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAQCABAAAAQAAgAKAAAAAAEAAEAAAwgAAAA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRRaycaster.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OVRResetOrientation" Collapsed="true">
+    <Position X="22.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRResetOrientation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRSceneSampleController" Collapsed="true">
+    <Position X="24.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQIAAAEACAIABAAAAAAAAEBEAAAAAAAAABAAABAAEA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRSceneSampleController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRScreenFade" Collapsed="true">
+    <Position X="26" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CACHEAAQAKAAACAACAAABAAAEAAEIAAAAAAAEEAACEA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRScreenFade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRTrackedRemote" Collapsed="true">
+    <Position X="27.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACAAAACAAAAoAAAAAAAAAAABAAAAAAAAAAAAAiAA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRTrackedRemote.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OVRWaitCursor" Collapsed="true">
+    <Position X="31.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRWaitCursor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RotateWithTarget" Collapsed="true">
+    <Position X="26" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\RotateWithTarget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudioAnimatedObject" Collapsed="true">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAEAAIAiAAAAAAAAAACAAAAAAAAACAAABAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Audio\AudioAnimatedObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudioData" Collapsed="true">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAiAAAAIAAAAAAAAAAABEEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Audio\AudioData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudioVisualizerSpawner" Collapsed="true">
+    <Position X="19" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACCACAAAQAAAAAAAAAAAAgAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\Audio\AudioVisualizerSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudioVolumeHolder" Collapsed="true">
+    <Position X="20.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAGAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Audio\AudioVolumeHolder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoundManager" Collapsed="true">
+    <Position X="12" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAgBABAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\Scripts\Audio\SoundManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tutorial" Collapsed="true">
+    <Position X="13.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBQAAAAkACQAAgAAAAAAQAEgAAAgEAAAAkAgAAAAICQ=</HashCode>
+      <FileName>Assets\Scripts\Audio\Tutorial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UpdateVolumeSlider" Collapsed="true">
+    <Position X="15.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAAEACAAAAgAAAAAAAAAAAAAAAAAAgAEAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Audio\UpdateVolumeSlider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VolumeChanger" Collapsed="true">
+    <Position X="24.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAEAAAgAAAYAAAAEQAAAgAAIAgEAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Audio\VolumeChanger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Building" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwACAGAAigACACIAgAAAAAAAAAIAAAIIAAABARAAAA=</HashCode>
+      <FileName>Assets\Scripts\Buildings\Building.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Node" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQICACAACAADICAAAAAAAAAAAAQAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Buildings\Nodes\Node.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FollowObject" Collapsed="true">
+    <Position X="20.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAgAAAIAAIAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Camera\FollowObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DontDestroyOnLoad" Collapsed="true">
+    <Position X="19" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Data\DontDestroyOnLoad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScoreDisplay" Collapsed="true">
+    <Position X="27.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAQQAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Data\ScoreDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScoreManager" Collapsed="true">
+    <Position X="29.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAACACAAAggAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Data\ScoreManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test" Collapsed="true">
+    <Position X="26" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Data\Test.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Timer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAABACACBQAAAESAAAIAAAAAAACAAAIAgBAAAAQQA=</HashCode>
+      <FileName>Assets\Scripts\Data\Timer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TimerTest" Collapsed="true">
+    <Position X="29.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAABAAAiAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Data\TimerTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Drone" Collapsed="true">
+    <Position X="20.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAGCAAAAEAAAAAAAAAQAAAAAIBABAAAAAgAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\Drone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Swarm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACgCAACEACACAIAAAACAAAAAAAAACIAJAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\Swarm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SwarmAttack" Collapsed="true">
+    <Position X="17.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgABAAAAAiAAAAAAJEAAAAAAAQAAAIAAQBAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\SwarmAttack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwarmContainer" Collapsed="true">
+    <Position X="19" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAggAACAAAAAAAAAABAQAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\SwarmContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwarmNavigation" Collapsed="true">
+    <Position X="20.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAEiAIAAAAIAACAAAAAAAIIAAAABAAAgAAAAg=</HashCode>
+      <FileName>Assets\Scripts\Enemy\SwarmNavigation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwarmSpawner" Collapsed="true">
+    <Position X="22.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhAAAIAAASIAAAEABAAAAAAEAABAAAAAAAAQAoAQAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\SwarmSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnterGameFreeze" Collapsed="true">
+    <Position X="17.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\EnterGameFreeze.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GazeButton" Collapsed="true">
+    <Position X="24.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAgAgAAhAAAAAAAAAAAAAgAAAQAAAIAAAEAI=</HashCode>
+      <FileName>Assets\Scripts\Input\GazeButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GazeInput" Collapsed="true">
+    <Position X="26" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAgAAAAAIAAAAAAAAABAAAAAAAACAAAAQAEA=</HashCode>
+      <FileName>Assets\Scripts\Input\GazeInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoundPool" Collapsed="true">
+    <Position X="13.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SoundPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CamControls" Collapsed="true">
+    <Position X="33" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAQAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Temp\CamControls.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RaycastLaser" Collapsed="true">
+    <Position X="22.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBQAAgAIAgAABAAgAAABAAAAAQAAAAACAAAAAAAAAEE=</HashCode>
+      <FileName>Assets\Scripts\Turret\RaycastLaser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RotateTurret" Collapsed="true">
+    <Position X="24.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAiAAAIAAIAABAAAAAAAAAQAAAAAAgEAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Turret\RotateTurret.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoadAdditive" Collapsed="true">
+    <Position X="17.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\Menu\LoadAdditive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NextSceneButton" Collapsed="true">
+    <Position X="22.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\Menu\NextSceneButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuitGame" Collapsed="true">
+    <Position X="20.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\Scripts\UI\Menu\QuitGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShowAndHide" Collapsed="true">
+    <Position X="33" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\Menu\ShowAndHide.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.Demos.DemoInputManager" Collapsed="true">
+    <Position X="15.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQQASAABACAAAQGCACABBAASSAQCAAEKAAABggANAFA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\DemoInputManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.Demos.DemoSceneManager" Collapsed="true">
+    <Position X="17.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\DemoSceneManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.HelloVR.HeadsetDemoManager" Collapsed="true">
+    <Position X="26" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIiBAACAAAAIABAAAACAAAAAIAAgCAACAiAA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\HelloVR\HeadsetDemoManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.HelloVR.HelloVRManager" Collapsed="true">
+    <Position X="29.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAACAABAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\HelloVR\HelloVRManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.HelloVR.ObjectController" Collapsed="true">
+    <Position X="26" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAASACAABAAAgAAAAAAAAABIAAAAIAAAAAACAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\HelloVR\ObjectController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.KeyboardDemo.KeyboardDelegateExample" Collapsed="true">
+    <Position X="0.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAABAgIEAABQIAAABAAAAAIBAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\KeyboardDemo\KeyboardDelegateExample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.PermissionsDemo.PermissionsFlowManager" Collapsed="true">
+    <Position X="12" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAQAAAAAAAgAAAAAAQAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\PermissionsDemo\PermissionsFlowManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.VideoDemo.AppButtonInput" Collapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\VideoDemo\AppButtonInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.VideoDemo.AutoPlayVideo" Collapsed="true">
+    <Position X="22.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAQCAACAAAAAAAAAgAAAAAAAABAAQAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\VideoDemo\AutoPlayVideo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.VideoDemo.Vector3Event" Collapsed="true">
+    <Position X="19" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.VideoDemo.Vector2Event" Collapsed="true">
+    <Position X="17.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.VideoDemo.FloatEvent" Collapsed="true">
+    <Position X="19" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.VideoDemo.BoolEvent" Collapsed="true">
+    <Position X="27.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.VideoDemo.ButtonEvent" Collapsed="true">
+    <Position X="31.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.VideoDemo.TouchPadEvent" Collapsed="true">
+    <Position X="33" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.VideoDemo.TransformEvent" Collapsed="true">
+    <Position X="12" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.VideoDemo.GameObjectEvent" Collapsed="true">
+    <Position X="22.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.VideoDemo.MenuHandler" Collapsed="true">
+    <Position X="19" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAQEBAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\VideoDemo\MenuHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.VideoDemo.PositionSwapper" Collapsed="true">
+    <Position X="19" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAA4AGgAAAIIIAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\VideoDemo\PositionSwapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.VideoDemo.ScrubberEvents" Collapsed="true">
+    <Position X="31.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAiAAAAQAQAAAAAAAAAQgAAAAAAAMAQAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\VideoDemo\ScrubberEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.VideoDemo.SwitchVideos" Collapsed="true">
+    <Position X="24.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAABIAACACQAAAAAAAAAAgAAAAAAACAAAAAAAWA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\VideoDemo\SwitchVideos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.VideoDemo.ToggleAction" Collapsed="true">
+    <Position X="31.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgEAAACAABAAACAAQAAAAAAAAAFAgAAAAAIAABAA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\VideoDemo\ToggleAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.VideoDemo.VideoControlsManager" Collapsed="true">
+    <Position X="20.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAEAIACQAAAQAAACgBBBKAQAAgAAACRAAAQAAEUA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\VideoDemo\VideoControlsManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleVR.VideoDemo.VideoPlayerReference" Collapsed="true">
+    <Position X="22.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\GoogleVR\Demos\Scripts\VideoDemo\VideoPlayerReference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gvr.Internal.ControllerProviderFactory" Collapsed="true">
+    <Position X="12" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\Internal\ControllerProviderFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gvr.Internal.DummyControllerProvider" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEACAgAIAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\Internal\ControllerProviders\DummyControllerProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Gvr.Internal.EditorControllerProvider" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAQAAEACAkAAAAAAAAAAAACAAAAAAAIABAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\Internal\ControllerProviders\EditorControllerProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Gvr.Internal.EmulatorControllerProvider" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iAAAFAAAAQEACAgAQAAEAAAAAAQIAAAFAgAAABAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\Internal\ControllerProviders\EmulatorControllerProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Gvr.Internal.MouseControllerProvider" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAACBAAAEACkkAAggAAAAgAEAJQgQEAEAABBADEAg=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\Internal\ControllerProviders\MouseControllerProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Gvr.Internal.ControllerState" Collapsed="true">
+    <Position X="13.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABABAAAggAQAASAAAAAAwMAgAACAABBAwkgACRAIAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\Internal\ControllerState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gvr.Internal.EmulatorClientSocket" Collapsed="true">
+    <Position X="31.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FACBAAVEAAAAAIAAAAAEAAAEEggAAAAgAAACAACAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\Internal\Emulator\EmulatorClientSocket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gvr.Internal.EmulatorConfig" Collapsed="true">
+    <Position X="33" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAACAAAAAAAAAAgBAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\Internal\Emulator\EmulatorConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gvr.Internal.EmulatorManager" Collapsed="true">
+    <Position X="15.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAASAACAGCATEACgAAAAACwAGBCAAwAQJEAAIEAxEg=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\Internal\Emulator\EmulatorManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gvr.Internal.HeadsetProviderFactory" Collapsed="true">
+    <Position X="27.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Headset\Internal\HeadsetProviderFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gvr.Internal.DummyHeadsetProvider" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAIAAAAAAABAABAAAAAAAgAgACIAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Headset\Internal\HeadsetProviders\DummyHeadsetProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Gvr.Internal.EditorHeadsetProvider" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAIAAAAAAABAABAAAAAAAgAgACIAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Headset\Internal\HeadsetProviders\EditorHeadsetProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Gvr.Internal.InstantPreview" Collapsed="true">
+    <Position X="31.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADQCAGBAIGAgAEBgBEAABAIKRgQEBAAAYaAgiEKAAGA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\InstantPreview\InstantPreview.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gvr.Internal.InstantPreviewControllerProvider" Collapsed="true">
+    <Position X="33" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAABAAAAAAACAQCAAAAAABAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\InstantPreview\InstantPreviewControllerProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gvr.Internal.KeyboardProviderFactory" Collapsed="true">
+    <Position X="13.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardProviderFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gvr.Internal.AndroidNativeKeyboardProvider" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MCBYQAgoFQAACgmAEIABCAFAJEEMgEEAABCiBBEQsAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardProviders\AndroidNativeKeyboardProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Gvr.Internal.DummyKeyboardProvider" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAEAAACAgAMAAAAAAAAAAEAEAAABAgABAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardProviders\DummyKeyboardProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Gvr.Internal.EmulatorKeyboardProvider" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAEgAACAiAEAAAAAEAgAAEAEAAABAgABAAIAQ=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardProviders\EmulatorKeyboardProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Gvr.Internal.GvrCursorHelper" Collapsed="true">
+    <Position X="24.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAoAAAAAAAAAAAAAAAAAAAEAAAEA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Utilities\GvrCursorHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="proto.Proto.PhoneEvent" Collapsed="true">
+    <Position X="15.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\Internal\Emulator\PhoneEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="proto.PhoneEvent" Collapsed="true">
+    <Position X="13.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>VOEAAAgAASDgJEgAoSAhABkAAEAVAIowA0AEDECkhAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\Internal\Emulator\PhoneEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.EventSystems.OVRInputModule" Collapsed="true">
+    <Position X="12" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABhAeEAogQQ0BhrQBqhwgEESAgoAACgIAAAAQEiJAwA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRInputModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.EventSystems.OVRPhysicsRaycaster" Collapsed="true">
+    <Position X="31.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAACAQAABAAAAQAAAAAAEAAAAAAAABAIgBAAEA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRPhysicsRaycaster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.EventSystems.OVRPointerEventData" Collapsed="true">
+    <Position X="15.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAEAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRPointerEventData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.EventSystems.PointerEventDataExtension" Collapsed="true">
+    <Position X="17.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQAAEAAAA=</HashCode>
+      <FileName>Assets\OVR\Scripts\Util\OVRPointerEventData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyNav.Path" Collapsed="true">
+    <Position X="33" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAGAAAAABAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\SwarmSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperSystems.UnityTools.AutoRotate" Collapsed="true">
+    <Position X="24.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAgAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Wireframe\Examples\Scripts\AutoRotate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperSystems.ImageEffects.WireframeImageEffect" Collapsed="true">
+    <Position X="26" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oARQBAAAAAAAQAAAAQgABAAAAAAAAAAIAAAQIgAACBA=</HashCode>
+      <FileName>Assets\Wireframe\ImageEffect\WireframeImageEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="OVRPose" Collapsed="true">
+    <Position X="22.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAhAAAAAAAAAAAAoAIAIAAAAAAAAIAAAAAAAABAAiA=</HashCode>
+      <FileName>Assets\OVR\Scripts\OVRCommon.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Gvr.Internal.EmulatorGyroEvent" Collapsed="true">
+    <Position X="15.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\Internal\Emulator\EmulatorDataTypes.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Gvr.Internal.EmulatorAccelEvent" Collapsed="true">
+    <Position X="12" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\Internal\Emulator\EmulatorDataTypes.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Gvr.Internal.EmulatorTouchEvent" Collapsed="true">
+    <Position X="19" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQFAAAAAAAEAAEgEACAAAARgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\Internal\Emulator\EmulatorDataTypes.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Gvr.Internal.EmulatorOrientationEvent" Collapsed="true">
+    <Position X="17.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\Internal\Emulator\EmulatorDataTypes.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Gvr.Internal.EmulatorButtonEvent" Collapsed="true">
+    <Position X="13.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\Internal\Emulator\EmulatorDataTypes.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Gvr.Internal.HeadsetState" Collapsed="true">
+    <Position X="20.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAQAAIBQAAAAAAAAAAAgAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Headset\Internal\HeadsetState.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="IGvrArmModelReceiver" Collapsed="true">
+    <Position X="15.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\ArmModel\IGvrArmModelReceiver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IGvrPointerHoverHandler" Collapsed="true">
+    <Position X="20.75" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\EventSystem\GvrEventInterfacesExtension.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IGvrScrollSettings" Collapsed="true">
+    <Position X="22.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\EventSystem\IGvrScrollSettings.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IGvrEventExecutor" Collapsed="true">
+    <Position X="17.25" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAgAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\EventSystem\InputModule\IGvrEventExecutor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IGvrInputModuleController" Collapsed="true">
+    <Position X="19" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAABAAAAAAAAAEACAAAAAAAAAACAAAAAQAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\EventSystem\InputModule\IGvrInputModuleController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IDamagable" Collapsed="true">
+    <Position X="13.75" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACACAAAAACACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interface\IDamagable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Gvr.Internal.IControllerProvider" Collapsed="true">
+    <Position X="12" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEACAgAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\Internal\IControllerProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Gvr.Internal.IHeadsetProvider" Collapsed="true">
+    <Position X="24.25" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAABAABAAAAAAAgAgACIAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Headset\Internal\IHeadsetProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Gvr.Internal.IKeyboardProvider" Collapsed="true">
+    <Position X="26" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAEAAACAgAEAAAAAAAAAAEAEAAABAgABAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Keyboard\Internal\IKeyboardProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="GvrConnectionState" Collapsed="true">
+    <Position X="20.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQQACAAAAAAAAAAAAAAAAAAAAggAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\GvrControllerInput.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GvrControllerApiStatus" Collapsed="true">
+    <Position X="22.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAACAQAAACABAAAAAAAAAAAAAAABQAAAQAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\GvrControllerInput.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GvrControllerBatteryLevel" Collapsed="true">
+    <Position X="24.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAARAAAAAAAAAAAAgAAAAAAgAAAAAEIBA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\GvrControllerInput.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GvrEventType" Collapsed="true">
+    <Position X="27.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAEAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Headset\GvrHeadsetEnums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GvrRecenterEventType" Collapsed="true">
+    <Position X="12" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAEAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Headset\GvrHeadsetEnums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GvrRecenterFlags" Collapsed="true">
+    <Position X="13.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Headset\GvrHeadsetEnums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GvrErrorType" Collapsed="true">
+    <Position X="26" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAIAAAAAACEACAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Headset\GvrHeadsetEnums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GvrSafetyRegionType" Collapsed="true">
+    <Position X="15.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAEAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Headset\GvrHeadsetEnums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GvrKeyboardEvent" Collapsed="true">
+    <Position X="31.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAACAAAAERAAAAAAAAQAAACAAQAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Keyboard\GvrKeyboard.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GvrKeyboardError" Collapsed="true">
+    <Position X="29.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAABAAAAAACAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Keyboard\GvrKeyboard.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GvrKeyboardInputMode" Collapsed="true">
+    <Position X="33" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Keyboard\GvrKeyboard.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Gvr.Internal.EmulatorClientSocketConnectionState" Collapsed="true">
+    <Position X="12" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAACAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Controller\Internal\Emulator\EmulatorClientSocket.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Gvr.Internal.gvr_feature" Collapsed="true">
+    <Position X="13.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Headset\Internal\HeadsetProviders\AndroidNativeHeadsetEnums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Gvr.Internal.gvr_property_type" Collapsed="true">
+    <Position X="15.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAABAAAAEAEAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Headset\Internal\HeadsetProviders\AndroidNativeHeadsetEnums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Gvr.Internal.gvr_value_type" Collapsed="true">
+    <Position X="19" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAYAAAAAAAAAABQAAAAAIAACAAEEAAAAgAEgASA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Headset\Internal\HeadsetProviders\AndroidNativeHeadsetEnums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Gvr.Internal.gvr_recenter_flags" Collapsed="true">
+    <Position X="17.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\GoogleVR\Scripts\Headset\Internal\HeadsetProviders\AndroidNativeHeadsetEnums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

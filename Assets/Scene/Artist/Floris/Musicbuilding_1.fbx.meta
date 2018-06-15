@@ -1,0 +1,490 @@
+fileFormatVersion: 2
+guid: ca4b4a844312387459df7e84c527632b
+timeCreated: 1527515922
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Back_left
+    100002: Back_right
+    100004: bb1
+    100006: bb2
+    100008: bb3
+    100010: bb4
+    100012: bb5
+    100014: bb6
+    100016: bba1
+    100018: bba2
+    100020: bba3
+    100022: bbv1
+    100024: bbv2
+    100026: bbv3
+    100028: Billboards_above_front
+    100030: Billboards_under_back
+    100032: Billboards_under_front
+    100034: Billbords_above_back
+    100036: bo5
+    100038: boa1
+    100040: boa2
+    100042: boa3
+    100044: boa4
+    100046: boa6
+    100048: Building
+    100050: Building_extend_1
+    100052: Building_extend_2
+    100054: Building_ground
+    100056: Building_tower
+    100058: Extend_triangles
+    100060: Front
+    100062: //RootNode
+    100064: p1
+    100066: p2
+    100068: p3
+    100070: p4
+    100072: p5
+    100074: p6
+    100076: Pole_under_back_left
+    100078: Pole_under_back_right
+    100080: Pole_under_front_left
+    100082: Pole_under_front_right
+    100084: Pole_under_mid_left
+    100086: Pole_under_mid_right
+    100088: Poles
+    100090: Ring_big
+    100092: Ring_driehoeken_animatie
+    100094: Ring_mid
+    100096: Ring_small
+    100098: Ring_Triangles_building
+    100100: Shield_back
+    100102: Shield_back 1
+    100104: Shield_left
+    100106: Shield_left 1
+    100108: Shield_right
+    100110: Shield_right 1
+    100112: Triangle_back
+    100114: Triangle_back 1
+    100116: Triangle_back_left
+    100118: Triangle_back_left 1
+    100120: Triangle_back_right
+    100122: Triangle_back_right 1
+    100124: Triangle_extend_big
+    100126: Triangle_front
+    100128: Triangle_front 1
+    100130: Triangle_front_left
+    100132: Triangle_front_left 1
+    100134: Triangle_front_right
+    100136: Triangle_front_right 1
+    100138: Windows_above
+    100140: Windows_mid
+    100142: Windows_under
+    400000: Back_left
+    400002: Back_right
+    400004: bb1
+    400006: bb2
+    400008: bb3
+    400010: bb4
+    400012: bb5
+    400014: bb6
+    400016: bba1
+    400018: bba2
+    400020: bba3
+    400022: bbv1
+    400024: bbv2
+    400026: bbv3
+    400028: Billboards_above_front
+    400030: Billboards_under_back
+    400032: Billboards_under_front
+    400034: Billbords_above_back
+    400036: bo5
+    400038: boa1
+    400040: boa2
+    400042: boa3
+    400044: boa4
+    400046: boa6
+    400048: Building
+    400050: Building_extend_1
+    400052: Building_extend_2
+    400054: Building_ground
+    400056: Building_tower
+    400058: Extend_triangles
+    400060: Front
+    400062: //RootNode
+    400064: p1
+    400066: p2
+    400068: p3
+    400070: p4
+    400072: p5
+    400074: p6
+    400076: Pole_under_back_left
+    400078: Pole_under_back_right
+    400080: Pole_under_front_left
+    400082: Pole_under_front_right
+    400084: Pole_under_mid_left
+    400086: Pole_under_mid_right
+    400088: Poles
+    400090: Ring_big
+    400092: Ring_driehoeken_animatie
+    400094: Ring_mid
+    400096: Ring_small
+    400098: Ring_Triangles_building
+    400100: Shield_back
+    400102: Shield_back 1
+    400104: Shield_left
+    400106: Shield_left 1
+    400108: Shield_right
+    400110: Shield_right 1
+    400112: Triangle_back
+    400114: Triangle_back 1
+    400116: Triangle_back_left
+    400118: Triangle_back_left 1
+    400120: Triangle_back_right
+    400122: Triangle_back_right 1
+    400124: Triangle_extend_big
+    400126: Triangle_front
+    400128: Triangle_front 1
+    400130: Triangle_front_left
+    400132: Triangle_front_left 1
+    400134: Triangle_front_right
+    400136: Triangle_front_right 1
+    400138: Windows_above
+    400140: Windows_mid
+    400142: Windows_under
+    2100000: lambert11
+    2300000: Back_left
+    2300002: Back_right
+    2300004: bb1
+    2300006: bb2
+    2300008: bb3
+    2300010: bb4
+    2300012: bb5
+    2300014: bb6
+    2300016: bba1
+    2300018: bba2
+    2300020: bba3
+    2300022: bbv1
+    2300024: bbv2
+    2300026: bbv3
+    2300028: bo5
+    2300030: boa1
+    2300032: boa2
+    2300034: boa3
+    2300036: boa4
+    2300038: boa6
+    2300040: Building
+    2300042: Building_extend_2
+    2300044: Building_ground
+    2300046: Building_tower
+    2300048: Front
+    2300050: p1
+    2300052: p2
+    2300054: p3
+    2300056: p4
+    2300058: p5
+    2300060: p6
+    2300062: Pole_under_back_left
+    2300064: Pole_under_back_right
+    2300066: Pole_under_front_left
+    2300068: Pole_under_front_right
+    2300070: Pole_under_mid_left
+    2300072: Pole_under_mid_right
+    2300074: Ring_big
+    2300076: Ring_driehoeken_animatie
+    2300078: Ring_mid
+    2300080: Ring_small
+    2300082: Ring_Triangles_building
+    2300084: Shield_back 1
+    2300086: Shield_left 1
+    2300088: Shield_right 1
+    2300090: Triangle_back 1
+    2300092: Triangle_back_left 1
+    2300094: Triangle_back_right 1
+    2300096: Triangle_extend_big
+    2300098: Triangle_front 1
+    2300100: Triangle_front_left 1
+    2300102: Triangle_front_right 1
+    2300104: Windows_above
+    2300106: Windows_mid
+    2300108: Windows_under
+    3300000: Back_left
+    3300002: Back_right
+    3300004: bb1
+    3300006: bb2
+    3300008: bb3
+    3300010: bb4
+    3300012: bb5
+    3300014: bb6
+    3300016: bba1
+    3300018: bba2
+    3300020: bba3
+    3300022: bbv1
+    3300024: bbv2
+    3300026: bbv3
+    3300028: bo5
+    3300030: boa1
+    3300032: boa2
+    3300034: boa3
+    3300036: boa4
+    3300038: boa6
+    3300040: Building
+    3300042: Building_extend_2
+    3300044: Building_ground
+    3300046: Building_tower
+    3300048: Front
+    3300050: p1
+    3300052: p2
+    3300054: p3
+    3300056: p4
+    3300058: p5
+    3300060: p6
+    3300062: Pole_under_back_left
+    3300064: Pole_under_back_right
+    3300066: Pole_under_front_left
+    3300068: Pole_under_front_right
+    3300070: Pole_under_mid_left
+    3300072: Pole_under_mid_right
+    3300074: Ring_big
+    3300076: Ring_driehoeken_animatie
+    3300078: Ring_mid
+    3300080: Ring_small
+    3300082: Ring_Triangles_building
+    3300084: Shield_back 1
+    3300086: Shield_left 1
+    3300088: Shield_right 1
+    3300090: Triangle_back 1
+    3300092: Triangle_back_left 1
+    3300094: Triangle_back_right 1
+    3300096: Triangle_extend_big
+    3300098: Triangle_front 1
+    3300100: Triangle_front_left 1
+    3300102: Triangle_front_right 1
+    3300104: Windows_above
+    3300106: Windows_mid
+    3300108: Windows_under
+    4300000: Ring_big
+    4300002: Building_extend_2
+    4300004: Triangle_extend_big
+    4300006: Triangle_front
+    4300008: Building_ground
+    4300010: Triangle_front_right
+    4300012: Building_tower
+    4300014: Triangle_back_right
+    4300016: Triangle_back
+    4300018: Triangle_back_left
+    4300020: Triangle_front_left
+    4300022: Ring_small
+    4300024: Ring_Triangles_building
+    4300026: Ring_mid
+    4300028: Windows_above
+    4300030: Windows_mid
+    4300032: Windows_under
+    4300034: Building
+    4300036: Back_right
+    4300038: Back_left
+    4300040: Front
+    4300042: Ring_driehoeken_animatie
+    4300044: Shield_back
+    4300046: Shield_left
+    4300048: Shield_right
+    4300050: p1
+    4300052: p2
+    4300054: p3
+    4300056: p4
+    4300058: p5
+    4300060: p6
+    4300062: Pole_under_mid_right
+    4300064: Pole_under_back_right
+    4300066: Pole_under_back_left
+    4300068: Pole_under_mid_left
+    4300070: Pole_under_front_left
+    4300072: Pole_under_front_right
+    4300074: bb1
+    4300076: bb2
+    4300078: bb3
+    4300080: bb4
+    4300082: bb5
+    4300084: bb6
+    4300086: bbv1
+    4300088: bbv2
+    4300090: bbv3
+    4300092: bba1
+    4300094: bba2
+    4300096: bba3
+    4300098: boa1
+    4300100: boa2
+    4300102: boa3
+    4300104: boa4
+    4300106: bo5
+    4300108: boa6
+    7400000: First Segment MusicBuilding_1
+    7400002: ChangeTarget MusicBuilding_1
+    7400004: SecondSegment MusicBuilding_1
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert11
+    second: {fileID: 2100000, guid: a631a1d88b2efd94383cb44ae7002079, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: First Segment MusicBuilding_1
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ChangeTarget MusicBuilding_1
+      takeName: Take 001
+      firstFrame: 40
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SecondSegment MusicBuilding_1
+      takeName: Take 001
+      firstFrame: 50
+      lastFrame: 82.5
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

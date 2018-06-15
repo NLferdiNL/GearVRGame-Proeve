@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <!--   VSdocman config file for current project/solution.-->
+  <activeProfile>default</activeProfile>
+  <appSettings>
+    <add key="VBdocman_comNonCommented"><![CDATA[-1]]></add>
+    <add key="VBdocman_regexFilters"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<filters />]]></add>
+    <add key="VBdocman_customVar1"><![CDATA[]]></add>
+    <add key="VBdocman_comInterface"><![CDATA[-1]]></add>
+    <add key="VBdocman_outputPath"><![CDATA[$(ProjectDir)VSdoc/twoooo/]]></add>
+    <add key="VBdocman_useConditionalCompilation"><![CDATA[0]]></add>
+    <add key="VBdocman_customVar2"><![CDATA[]]></add>
+    <add key="VBdocman_SupportedXamarinIos"><![CDATA[]]></add>
+    <add key="VBdocman_enumSorting"><![CDATA[1]]></add>
+    <add key="VBdocman_comVariable"><![CDATA[-1]]></add>
+    <add key="VBdocman_comStdModule"><![CDATA[-1]]></add>
+    <add key="VBdocman_ListNamespacesWithShortNames"><![CDATA[0]]></add>
+    <add key="VBdocman_comPublic"><![CDATA[-1]]></add>
+    <add key="VBdocman_supportedPlatforms"><![CDATA[]]></add>
+    <add key="VBdocman_comProtected"><![CDATA[-1]]></add>
+    <add key="VBdocman_supportedNetFrameworkClientProfile"><![CDATA[]]></add>
+    <add key="VBdocman_comPrivate"><![CDATA[-1]]></add>
+    <add key="VBdocman_comWriteDescription"><![CDATA[0]]></add>
+    <add key="VBdocman_comProtectedFriend"><![CDATA[-1]]></add>
+    <add key="VBdocman_comObject"><![CDATA[-1]]></add>
+    <add key="VBdocman_comDelegate"><![CDATA[-1]]></add>
+    <add key="VBdocman_supportedXnaFramework"><![CDATA[]]></add>
+    <add key="VBdocman_emptyOutputFolder"><![CDATA[0]]></add>
+    <add key="VBdocman_rootNamespaceCommentStyle"><![CDATA[2]]></add>
+    <add key="VBdocman_comEnumeration"><![CDATA[-1]]></add>
+    <add key="VBdocman_comMethod"><![CDATA[-1]]></add>
+    <add key="VBdocman_comProperty"><![CDATA[-1]]></add>
+    <add key="VBdocman_supportedNetCompactFramework"><![CDATA[]]></add>
+    <add key="VBdocman_removeAttributes"><![CDATA[0]]></add>
+    <add key="VBdocman_externalFilesFolder"><![CDATA[]]></add>
+    <add key="VBdocman_showFormsSeparate"><![CDATA[0]]></add>
+    <add key="VBdocman_generateJscriptSyntax"><![CDATA[-1]]></add>
+    <add key="VBdocman_generateCsharpSyntax"><![CDATA[-1]]></add>
+    <add key="VBdocman_allowMacrosInComments"><![CDATA[0]]></add>
+    <add key="VBdocman_linkForExternalNotInFramework"><![CDATA[0]]></add>
+    <add key="VBdocman_showInherited"><![CDATA[-1]]></add>
+    <add key="VBdocman_templateLocale"><![CDATA[en-US]]></add>
+    <add key="VBdocman_SupportedNetCore"><![CDATA[]]></add>
+    <add key="VBdocman_customVar3"><![CDATA[]]></add>
+    <add key="VBdocman_unbreakSourceLines"><![CDATA[0]]></add>
+    <add key="VBdocman_supportedNetFramework"><![CDATA[4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1]]></add>
+    <add key="VBdocman_pageFooterText"><![CDATA[Generated with <see href="http://www.helixoft.com/vsdocman/overview.html">VSdocman</see>]]></add>
+    <add key="VBdocman_comConstant"><![CDATA[-1]]></add>
+    <add key="VBdocman_supportedOthers"><![CDATA[]]></add>
+    <add key="VBdocman_comForm"><![CDATA[-1]]></add>
+    <add key="VBdocman_comStructure"><![CDATA[-1]]></add>
+    <add key="VBdocman_dontSortSeeAlsoList"><![CDATA[0]]></add>
+    <add key="VBdocman_templateFolder"><![CDATA[$(VSdocmanDir)Templates]]></add>
+    <add key="VBdocman_ConstantValueDisplay"><![CDATA[1]]></add>
+    <add key="VBdocman_helpTitle"><![CDATA[GearVRGame-Proeve Reference]]></add>
+    <add key="VBdocman_insertSourceGlobal"><![CDATA[0]]></add>
+    <add key="VBdocman_SupportedNetStandard"><![CDATA[]]></add>
+    <add key="VBdocman_SupportedXamarinMac"><![CDATA[]]></add>
+    <add key="VBdocman_comFriend"><![CDATA[-1]]></add>
+    <add key="VBdocman_templatePath"><![CDATA[pdf.vbdt]]></add>
+    <add key="VBdocman_comDeclare"><![CDATA[-1]]></add>
+    <add key="VBdocman_conditionalConstants"><![CDATA[]]></add>
+    <add key="VBdocman_SupportedXamarinAndroid"><![CDATA[]]></add>
+    <add key="VBdocman_supportedNetForWindowsStoreApps"><![CDATA[]]></add>
+    <add key="VBdocman_supportedPortableClassLibrary"><![CDATA[]]></add>
+    <add key="VBdocman_generateCppSyntax"><![CDATA[0]]></add>
+    <add key="VBdocman_customTopics"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<topics>
+  <topic>
+    <type>normal</type>
+    <is-default>yes</is-default>
+    <name>GearVRGame-Proeve Reference</name>
+    <id>gearvrgameproeve_reference</id>
+    <comment><![CDATA[<summary></summary>vsdocman_escaped_]_]_></comment>
+    <namespaces />
+    <topics>
+      <topic>
+        <type>placeholder</type>
+        <is-default>no</is-default>
+        <name />
+        <id>e4f24c7460bc4c9a8dbb96707e2fc94e</id>
+        <comment><![CDATA[vsdocman_escaped_]_]_></comment>
+        <namespaces />
+        <topics />
+      </topic>
+    </topics>
+  </topic>
+</topics>]]></add>
+    <add key="VBdocman_generateVbSyntax"><![CDATA[0]]></add>
+    <add key="VBdocman_generateFsharpSyntax"><![CDATA[0]]></add>
+    <add key="VBdocman_comEventDecl"><![CDATA[-1]]></add>
+    <add key="VBdocman_comEvent"><![CDATA[-1]]></add>
+    <add key="VBdocman_rootNamespaceText"><![CDATA[]]></add>
+    <add key="VBdocman_comModulesSaveExcluded"><![CDATA[-1]]></add>
+    <add key="VBdocman_fileNamingConvention"><![CDATA[1]]></add>
+    <add key="VBdocman_comModules_Assets...Wireframe...ImageEffect...WireframeImageEffect.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...Wireframe...Examples...Scripts...AutoRotate.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...PostProcessing...Utilities...CustomMotionTexture...ExampleWheelController.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Video...GvrVideoPlayerTexture.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Utilities...GvrVRHelpers.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Utilities...GvrUIHelpers.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Utilities...GvrMathHelpers.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Utilities...GvrIntent.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Utilities...GvrDaydreamApi.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Utilities...GvrCursorHelper.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Utilities...GvrActivityHelper.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...UI...GvrDropdown.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...PropertyDrawers...GvrInfoDrawer.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Pose3D.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Permissions...GvrPermissionsRequester.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Keyboard...Internal...KeyboardState.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Keyboard...Internal...KeyboardProviders...EmulatorKeyboardProvider.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Keyboard...Internal...KeyboardProviders...DummyKeyboardProvider.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Keyboard...Internal...KeyboardProviders...AndroidNativeKeyboardProvider.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Keyboard...Internal...KeyboardProviderFactory.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Keyboard...Internal...IKeyboardProvider.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Keyboard...GvrKeyboardIntent.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Keyboard...GvrKeyboardDelegateBase.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Keyboard...GvrKeyboard.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...InstantPreview...InstantPreviewHelper.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...InstantPreview...InstantPreviewControllerProvider.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...InstantPreview...InstantPreview.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Headset...Internal...IHeadsetProvider.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Headset...Internal...HeadsetState.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Headset...Internal...HeadsetProviders...EditorHeadsetProvider.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Headset...Internal...HeadsetProviders...DummyHeadsetProvider.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Headset...Internal...HeadsetProviders...AndroidNativeHeadsetProvider.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Headset...Internal...HeadsetProviders...AndroidNativeHeadsetEnums.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Headset...Internal...HeadsetProviderFactory.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Headset...GvrHeadsetEnums.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Headset...GvrHeadset.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...GvrUnitySdkVersion.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...GvrSettings.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...GvrEditorEmulator.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...GvrCardboardHelpers.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...EventSystem...InputModule...IGvrInputModuleController.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...EventSystem...InputModule...IGvrEventExecutor.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...EventSystem...InputModule...GvrPointerInputModuleImpl.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...EventSystem...InputModule...GvrPointerInputModule.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...EventSystem...InputModule...GvrEventExecutor.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...EventSystem...InputModule...GvrAllEventsTrigger.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...EventSystem...IGvrScrollSettings.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...EventSystem...GvrScrollSettings.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...EventSystem...GvrPointerScrollInput.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...EventSystem...GvrPointerPhysicsRaycaster.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...EventSystem...GvrPointerGraphicRaycaster.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...EventSystem...GvrExecuteEventsExtension.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...EventSystem...GvrEventInterfacesExtension.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...EventSystem...GvrBasePointerRaycaster.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...EventSystem...GvrBasePointer.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...Tooltips...GvrTooltip.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...Tooltips...GvrControllerTooltipsSimple.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...Internal...IControllerProvider.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...Internal...Emulator...PhoneEvent.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...Internal...Emulator...EmulatorManager.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...Internal...Emulator...EmulatorDataTypes.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...Internal...Emulator...EmulatorConfig.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...Internal...Emulator...EmulatorClientSocket.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...Internal...ControllerState.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...Internal...ControllerProviders...MouseControllerProvider.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...Internal...ControllerProviders...EmulatorControllerProvider.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...Internal...ControllerProviders...EditorControllerProvider.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...Internal...ControllerProviders...DummyControllerProvider.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...Internal...ControllerProviders...AndroidNativeControllerProvider.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...Internal...ControllerProviderFactory.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...GvrTrackedController.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...GvrRecenterOnlyController.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...GvrLaserVisual.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...GvrLaserPointer.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...GvrControllerVisual.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...GvrControllerReticleVisual.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...GvrControllerInput.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...ArmModel...IGvrArmModelReceiver.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...ArmModel...GvrBaseArmModel.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Controller...ArmModel...GvrArmModel.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Scripts...Cardboard...GvrReticlePointer.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Legacy...Scripts...GvrPointerManager.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Legacy...Scripts...GvrControllerVisualManager.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Legacy...Scripts...GvrController.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Legacy...Scripts...Audio...GvrAudioSource.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Legacy...Scripts...Audio...GvrAudioSoundfield.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Legacy...Scripts...Audio...GvrAudioRoom.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Legacy...Scripts...Audio...GvrAudioListener.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Legacy...Scripts...Audio...GvrAudio.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Demos...Scripts...VideoDemo...VideoPlayerReference.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Demos...Scripts...VideoDemo...VideoControlsManager.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Demos...Scripts...VideoDemo...ToggleAction.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Demos...Scripts...VideoDemo...SwitchVideos.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Demos...Scripts...VideoDemo...ScrubberEvents.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Demos...Scripts...VideoDemo...PositionSwapper.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Demos...Scripts...VideoDemo...MenuHandler.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Demos...Scripts...VideoDemo...InputEvents.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Demos...Scripts...VideoDemo...AutoPlayVideo.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Demos...Scripts...VideoDemo...AppButtonInput.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Demos...Scripts...PermissionsDemo...PermissionsFlowManager.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Demos...Scripts...KeyboardDemo...KeyboardDelegateExample.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Demos...Scripts...HelloVR...ObjectController.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Demos...Scripts...HelloVR...HelloVRManager.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Demos...Scripts...HelloVR...HeadsetDemoManager.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Demos...Scripts...DemoSceneManager.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...GoogleVR...Demos...Scripts...DemoInputManager.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...BDO Assets...Ez Screenshot...Scripts...TextureScale.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...BDO Assets...Ez Screenshot...Scripts...EzSS_Messages.cs"><![CDATA[Off]]></add>
+    <add key="VBdocman_comModules_Assets...BDO Assets...Ez Screenshot...Scripts...EzSS_AspectHelper.cs"><![CDATA[Off]]></add>
+  </appSettings>
+</configuration>
