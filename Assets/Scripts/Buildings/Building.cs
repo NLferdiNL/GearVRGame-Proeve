@@ -18,41 +18,42 @@ public class Building : MonoBehaviour, IDamagable
     private float lvlOfPower = 0;
 
     // This is used as a limiter for the amount of power. 
-    // This is needed for the animator
+    // This is needed for the animator.
     [SerializeField]
     private float maxLvlOfPower = 100;
-    
-    // 
+
+    // This is a variable that sets the amount of time the building stays under attack, 
+    // after the enemy has done damage to the building. 
     [SerializeField]
     float underAttackCooldown = 2f;
-    
-    //
-	[SerializeField]
+
+    // This variable cooperates with "underAttackCooldown" to go in and out of being attacked.
+    [SerializeField]
     float timeSinceLastAttack = 0;
 	
-    //
+    // This soundManager handles the soundeffects for the building.
     [SerializeField]
     private SoundManager sM;
 
-    //
+    // This is where the "AudioSource" of the building itself is placed.
     private AudioSource buildingSfx;
 
-    //
+    // This is a Unity event that is triggered when the building is completely charged. 
     [Serializable]
     public class BuildingFullyChargedEvent : UnityEvent { }
 
     public BuildingFullyChargedEvent OnFullCharge = new BuildingFullyChargedEvent();
 
+    // This is a Unity event that is triggered when the building is completely empty. 
     [Serializable]
     public class BuildingEmptyChargedEvent : UnityEvent { }
 
     public BuildingEmptyChargedEvent OnEmptyCharge = new BuildingEmptyChargedEvent();
 
+    // This bool gets set on true when the building has full power.
     bool fullyHealed = false;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    
     public float LvlOfPower
     {
         get
@@ -64,9 +65,7 @@ public class Building : MonoBehaviour, IDamagable
             lvlOfPower += value;
         }
     }
-    /// <summary>
-    /// 
-    /// </summary>
+
     public float MaxHealth
     {
         get
@@ -74,9 +73,7 @@ public class Building : MonoBehaviour, IDamagable
             return (int)maxLvlOfPower;
         }
     }
-    /// <summary>
-    /// 
-    /// </summary>
+
     public float Health
     {
         get
@@ -84,8 +81,9 @@ public class Building : MonoBehaviour, IDamagable
             return (int)lvlOfPower;
         }
     }
+
     /// <summary>
-    /// 
+    /// The get set for when it is under attack.
     /// </summary>
     public bool UnderAttack
     {
@@ -94,8 +92,10 @@ public class Building : MonoBehaviour, IDamagable
             return timeSinceLastAttack < underAttackCooldown;
         }
     }
+
     /// <summary>
-    /// 
+    /// In this "Start" function I get the components,
+    /// the "Animator" and the "AudioSource" for later use
     /// </summary>
     void Start()
     {
@@ -107,8 +107,11 @@ public class Building : MonoBehaviour, IDamagable
         }
         SoundController.Instance.OnReset.AddListener(SwitchFase);
     }
+
     /// <summary>
-    /// 
+    /// This "FixedUpdate" is mainly used for updating the "radarDot" state 
+    /// (when it needs to be on or off).
+    /// The "lvlOfPower" also gets updated in the "FixedUpdate" for the smoothest transition.
     /// </summary>
     void FixedUpdate()
     {
@@ -122,24 +125,32 @@ public class Building : MonoBehaviour, IDamagable
         }
         UpdateLvlOfPower();
     }
+
     /// <summary>
-    /// 
+    /// "SwitchFase's" sole purpose is to activate a trigger in the "Animator" and to reset the "lvlOfPower".
     /// </summary>
     void SwitchFase()
     {
-        //UpdateLvlOfPower();
         buildingAnimator.SetTrigger("nextStageTrigger");
 		lvlOfPower = 0;
     }
+
     /// <summary>
-    /// 
+    /// This function is made to make it easier to update the power 
+    /// after certain events in the duration of the session.
     /// </summary>
     void UpdateLvlOfPower()
     {
         buildingAnimator.SetFloat("amountOfPower", lvlOfPower / maxLvlOfPower);
     }
+
     /// <summary>
-    /// 
+    /// This function is being used for three things: 
+    /// first thing it does is deal damage to the building,
+    /// second thing it does is set the "radarDot" bool on true 
+    /// so that the "Animator" plays the "radarDot" animation
+    /// and the last thing it does is invoke the "Unity event OnEmptyCharge"
+    /// when there is no more damage to deal.
     /// </summary>
     /// <param name="value"></param>
     public void Damage(float value)
@@ -161,8 +172,11 @@ public class Building : MonoBehaviour, IDamagable
             OnEmptyCharge.Invoke();
         }
     }
+
     /// <summary>
-    /// 
+    /// This does the exact opposite as the function "Damage"
+    /// with an addition of starting an IEnumerator called "sfxPlayer"
+    /// when it is completely charged.
     /// </summary>
     /// <param name="value"></param>
     public void Heal(float value)
@@ -182,6 +196,12 @@ public class Building : MonoBehaviour, IDamagable
         }
     }
 
+    /// <summary>
+    /// An IEnumerator that plays the soundeffects 
+    /// that has an equal int called "whatSong" as the "soundManager".
+    /// </summary>
+    /// <param name="whatSong"></param>
+    /// <returns></returns>
     IEnumerator sfxPlayer(int whatSong)
     {
         buildingSfx.clip = sM.SfxHolder[whatSong];
