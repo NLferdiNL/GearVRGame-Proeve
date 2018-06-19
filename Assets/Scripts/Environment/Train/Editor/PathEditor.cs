@@ -20,6 +20,9 @@ public class PathEditor : Editor
     const float segmentSelectDistanceThreshold = .1f;
     int selectedSegmentIndex = -1;
 
+    /// <summary>
+    /// This function makes sure all functions I made that can be interacted with are seen in the Unity Editor 
+    /// </summary>
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
@@ -57,6 +60,9 @@ public class PathEditor : Editor
         Draw();
     }
 
+    /// <summary>
+    /// This function makes sure the user has certain input combinations for doing stuff. Example: Adding a new segment in the game world and moving the control points
+    /// </summary>
     void Input()
     {
         Event guiEvent = Event.current;
@@ -124,6 +130,9 @@ public class PathEditor : Editor
         HandleUtility.AddDefaultControl(0);
     }
 
+    /// <summary>
+    /// This funtion draws the points and lines so that the user knows what is being made
+    /// </summary>
     void Draw()
     {
         for (int i = 0; i < Path.NumSegments; i++)

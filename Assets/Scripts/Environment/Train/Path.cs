@@ -10,8 +10,10 @@ namespace Curves {
 		[SerializeField, HideInInspector]
 		List<Vector2> points;
 		[SerializeField, HideInInspector]
+        //This can connect the last point and first point back together to close the loop
 		bool isClosed;
 		[SerializeField, HideInInspector]
+        //This brings all the control points back to the position of the anchor point
 		bool autoSetControlPoints;
 
 		public Path(Vector2 centre) {
@@ -30,6 +32,9 @@ namespace Curves {
 			}
 		}
 
+        /// <summary>
+        /// This is the function that connects the first and last point back together if so desired
+        /// </summary>
 		public bool IsClosed {
 			get {
 				return isClosed;
@@ -55,6 +60,9 @@ namespace Curves {
 			}
 		}
 
+        /// <summary>
+        /// This is the function to bring the control points position back to the position of the anchor points if so desired
+        /// </summary>
 		public bool AutoSetControlPoints {
 			get {
 				return autoSetControlPoints;
@@ -69,18 +77,24 @@ namespace Curves {
 			}
 		}
 
+        //How many points there are
 		public int NumPoints {
 			get {
 				return points.Count;
 			}
 		}
 
+        //How many segments there are
 		public int NumSegments {
 			get {
 				return points.Count / 3;
 			}
 		}
 
+        /// <summary>
+        /// Funtion lets the user add another segment into the editor by clicking to add a point and connecting the last point with the new point 
+        /// </summary>
+        /// <param name="anchorPos"></param>
 		public void AddSegment(Vector2 anchorPos) {
 			points.Add(points[points.Count - 1] * 2 - points[points.Count - 2]);
 			points.Add((points[points.Count - 1] + anchorPos) * .5f);
@@ -91,6 +105,11 @@ namespace Curves {
 			}
 		}
 
+        /// <summary>
+        /// Funtion can let the user add a segment in another segment that already exists. Handy if the user forgot to add one somewhere earlier
+        /// </summary>
+        /// <param name="anchorPos"></param>
+        /// <param name="segmentIndex"></param>
 		public void SplitSegment(Vector2 anchorPos, int segmentIndex) {
 			points.InsertRange(segmentIndex * 3 + 2, new Vector2[] { Vector2.zero, anchorPos, Vector2.zero });
 			if(autoSetControlPoints) {
@@ -100,6 +119,10 @@ namespace Curves {
 			}
 		}
 
+        /// <summary>
+        /// Funtion to delete a segment that isn't needed anymore. Also when a segment is deleted it connects the segments either side of the deleted one back together
+        /// </summary>
+        /// <param name="anchorIndex"></param>
 		public void DeleteSegment(int anchorIndex) {
 			if(NumSegments > 2 || !isClosed && NumSegments > 1) {
 				if(anchorIndex == 0) {
@@ -119,6 +142,11 @@ namespace Curves {
 			return new Vector2[] { points[i * 3], points[i * 3 + 1], points[i * 3 + 2], points[LoopIndex(i * 3 + 3)] };
 		}
 
+        /// <summary>
+        /// Lets the user move a point and placing it elsewhere in the world 
+        /// </summary>
+        /// <param name="i"></param>
+        /// <param name="pos"></param>
 		public void MovePoint(int i, Vector2 pos) {
 			Vector2 deltaMove = pos - points[i];
 
@@ -150,7 +178,12 @@ namespace Curves {
 				}
 			}
 		}
-
+        /// <summary>
+        /// Along the line the game places points between points that are evenly spaced throughout and that points don't stretch or shrink
+        /// </summary>
+        /// <param name="spacing"></param>
+        /// <param name="resolution"></param>
+        /// <returns></returns>
 		public Vector2[] CalculateEvenlySpacedPoints(float spacing, float resolution = 1) {
 			List<Vector2> evenlySpacedPoints = new List<Vector2>();
 			evenlySpacedPoints.Add(points[0]);

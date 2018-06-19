@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class Bezier
 {
-
+    //Makes the line drawn between two points drawn in a curve and not in straight lines
     public static Vector2 EvaluateQuadratic(Vector2 a, Vector2 b, Vector2 c, float t)
     {
         Vector2 p0 = Vector2.Lerp(a, b, t);
