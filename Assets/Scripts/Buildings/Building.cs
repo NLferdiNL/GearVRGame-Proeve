@@ -43,12 +43,12 @@ public class Building : MonoBehaviour, IDamagable
 
     public BuildingFullyChargedEvent OnFullCharge = new BuildingFullyChargedEvent();
 
-	[Serializable]
-	public class BuildingEmptyChargedEvent : UnityEvent { }
+    [Serializable]
+    public class BuildingEmptyChargedEvent : UnityEvent { }
 
-	public BuildingEmptyChargedEvent OnEmptyCharge = new BuildingEmptyChargedEvent();
+    public BuildingEmptyChargedEvent OnEmptyCharge = new BuildingEmptyChargedEvent();
 
-	bool fullyHealed = false;
+    bool fullyHealed = false;
 
     /// <summary>
     /// 
@@ -153,11 +153,13 @@ public class Building : MonoBehaviour, IDamagable
 
         if (fullyHealed)
             fullyHealed = false;
+            
 
-		if(lvlOfPower <= 0) {
-			lvlOfPower = 0;
-			OnEmptyCharge.Invoke();
-		}
+        if (lvlOfPower < 0)
+        {
+            lvlOfPower = 0;
+            OnEmptyCharge.Invoke();
+        }
     }
     /// <summary>
     /// 
