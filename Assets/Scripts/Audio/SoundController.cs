@@ -90,12 +90,15 @@ public class SoundController : MonoBehaviour
 	public void CheckBuildingCharge(int buildingNumber)
 	{
 		buildingsCharged[buildingNumber - 1] = true;
-        print("b"+ buildingNumber);
 	}
-    /// <summary>
-    /// Check if buildings 1 to 3 are charged, set and play song and spawn enemies depending on the part in the song.
-    /// </summary>
-    /// <returns>Return PlayAndAwait with clip</returns>
+
+	public void CheckBuildingDischarge(int buildingNumber) {
+		buildingsCharged[buildingNumber - 1] = false;
+	}
+	/// <summary>
+	/// Check if buildings 1 to 3 are charged, set and play song and spawn enemies depending on the part in the song.
+	/// </summary>
+	/// <returns>Return PlayAndAwait with clip</returns>
 	IEnumerator IntroStart() {
 		for(int i = 0; i < buildingsCharged.Length; i++) // For each buildingCharged do below.
         {
@@ -104,22 +107,16 @@ public class SoundController : MonoBehaviour
 
 		for(int i = 0; i < 3; i++) {
 			yield return PlayAndAwait(i);
-		    if (!buildingsCharged[i])
-		        BuildingNotCharged();
+		    
 		    if (i == 0)
 		    {
                 SwarmSpawner.SpawnEnemy();
                 StartCoroutine(FreezeGame(7, 1));
-            }else if (i == 1)
-		    {
-		        SwarmSpawner.SpawnEnemy(); // Spawn a random enemies in the game.
-            } else if (i == 2)
-		    {
-		        SwarmSpawner.SpawnEnemies(2); // Spawn 2 random enemies in the game.
-		    } else if(i == 3)
-		    {
-		        SwarmSpawner.SpawnEnemies(2);
-		    }
+            } else if(i >= 1) {
+		        SwarmSpawner.SpawnEnemies(i);
+				if (!buildingsCharged[i])
+					StartCoroutine(BuildingNotCharged());
+			}
 		}
 
 		yield return PlayRange(0, 3); // Play clips from MusicHolder 0 to 3.
@@ -245,6 +242,9 @@ public class SoundController : MonoBehaviour
         int increaseEnemies = 1;
         while (survivalRunning)
         {
+			if(!buildingsCharged[0] || !buildingsCharged[1] || !buildingsCharged[2]) {
+				StartCoroutine(BuildingNotCharged());
+			}
             yield return PlayRange(14, 16);
             SwarmSpawner.SpawnEnemies(currentEnemies);
             yield return PlayRange(16, 17);
